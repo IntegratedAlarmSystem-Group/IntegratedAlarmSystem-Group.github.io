@@ -1,0 +1,6 @@
+{
+  "name": "IAS, the Integrated Alarm System",
+  "tagline": "Integrated Alarm System repository",
+  "body": "# IAS: the Integrated Alarm System\r\nThe Integrated Alarm System is a tool developed at the [European Southern Observatory](http://www.eso.org) for the [Atacama Large Millimiter/Submillimiter Array]()http://www.almaobservatory.org/) that aims to increase the overall efficiency of the telescope by helping the operators in the control room dealing with abnormal situations.\r\n## Contacts\r\nProject management is a task of Erich Schmid (@eschmid). Alessandro Caproni (@acaproni@ has the technical leadership of the project.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
