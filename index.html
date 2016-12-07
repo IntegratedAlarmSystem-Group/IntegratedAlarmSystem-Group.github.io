@@ -36,8 +36,30 @@
 The alarm system is a message passing facility that routes information about abnormal situations detected from hardware or software to the user in an easy to understand format. 
 The purpose of such tool is to increase the situation awareness of the audience and help understanding the root cause of a chain of problems in order to minimize the reaction time and improve the overall efficiency of the facility.</P>
 
+<P>An alarm system is a basic operator support system for managing abnormal (also called non-nominal) situations and it has the following two functions:
+<UL>
+	<LI>To warn the operator about a situation that is not normal; alarms must be relevant to the operator’s role at the time, indicate what response is required, be presented at a rate the operator can deal with, and be easy to understand.
+	<LI>To serve as an alarm and event log, which can be used for an analysis of incidents and to optimize operations.
+</UL>
+The alarm system must provide useful information and functionality to support the operators’ tasks. 
+Information must be presented and handled in a way that is compatible with human capabilities and limitations, so that the alarm system remains usable for the operators in all situations.</p>
+
+<p align="center"><img src="../images/HighLevel.png"></p>
+
+<p>During a preliminary investigation, it became clear, in particular when taking the ESA system and their experience as an example, that a system that simply presents alarms without any visual context information will not be suitable to satisfy the needs.
+It has been identified that the best representation will be based on high-level status displays of the inherently hierarchical system, with drill-in capabilities to identify the root cause and appropriate action to be taken for any abnormal situation.
+Simple, self-explanatory and above all consistent color coding and audio-visual effects will be used to draw the operators’ attention to problems and assist them in taking the appropriate action. </p>
+
+<p>During our preliminary investigation, in agreement with ESA experience with their alarm system, we have found that the architecture of the ALMA observatory is inherently hierarchical.
+To provide useful information to the operators, such hierarchical structure must be implemented in the alarm system.
+The below, kindly provided by ESA, shows at the left side, the hierarchical structure of the displays provided to the operators and their relation with the model of the monitored system, at the right side. This document describes the hierarchical architecture of the Integrated Alarm System.
+
+<p align="center"><img src="../images/ESA-AS-HIghLevelPicture.png"></p>
+
 <p>IAS is currently developed at the <a href="http://www.eso.org">European Southern Observatory</a> for the <a href="http://www.almaobservatory.org/">Atacama Large Millimiter/Submillimiter Array observatory</a> but it can be used in association with any distributed software system.
-Its architecture is freely inspired to the <a href="http://www.esa.int/ESA">European Space Agency</a> alarm system for the ground based telescopes.  
+Its architecture is freely inspired to the <a href="http://www.esa.int/ESA">European Space Agency</a> alarm system for the ground based telescopes.</p>
+
+<p>A system that simply presents alarms without any visual context information will not be suitable to satisfy the needs. It has been identified that the best representation will be based on high-level status displays of the inherently hierarchical ALMA observatory, with drill-in capabilities to identify the root cause and appropriate action to be taken for any abnormal situation. Simple, self-explanatory and above all consistent colour coding and audio-visual effects will be used to draw the operators’ attention to problems and assist them in taking the appropriate action.   
  
 
 <h2>
