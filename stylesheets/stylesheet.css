@@ -297,6 +297,7 @@ Full-Width Styles
   color: #fff;
   background: url('../images/ias-logo.png') #0090ff no-repeat 40% 40%;
   background-size: 50%;
+  background-position: right;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
