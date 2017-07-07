@@ -1,0 +1,14 @@
+org.eso.ias.cdb
+org.eso.ias.cdb.json
+org.eso.ias.cdb.json.pojos
+org.eso.ias.cdb.pojos
+org.eso.ias.cdb.rdb
+org.eso.ias.plugin
+org.eso.ias.plugin.config
+org.eso.ias.plugin.filter
+org.eso.ias.plugin.publisher
+org.eso.ias.plugin.publisher.impl
+org.eso.ias.plugin.thread
+org.eso.ias.prototype.input.java
+org.eso.ias.prototype.transfer
+org.eso.ias.prototype.transfer.impls

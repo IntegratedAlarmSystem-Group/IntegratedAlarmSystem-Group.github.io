@@ -1,0 +1,61 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module iasRun</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>iasRun</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/osboxes/IntegratedAlarmSystemRoot/lib/python/iasRun.pyc">/home/osboxes/IntegratedAlarmSystemRoot/lib/python/iasRun.pyc</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Sep&nbsp;26,&nbsp;2016<br>
+&nbsp;<br>
+@author:&nbsp;acaproni</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="argparse.html">argparse</a><br>
+</td><td width="25%" valign=top><a href="cmd.html">cmd</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-addUserProps"><strong>addUserProps</strong></a>(propsDict, userProps)</dt><dd><tt>Adds&nbsp;to&nbsp;the&nbsp;dictionary&nbsp;the&nbsp;user&nbsp;properties&nbsp;passed&nbsp;in&nbsp;the&nbsp;command&nbsp;line.<br>
+&nbsp;<br>
+@param&nbsp;propsDict:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;properties&nbsp;in&nbsp;the&nbsp;form&nbsp;name:value<br>
+@param&nbsp;userProps:&nbsp;a&nbsp;list&nbsp;of&nbsp;java&nbsp;properties&nbsp;in&nbsp;the&nbsp;form&nbsp;name=value</tt></dd></dl>
+ <dl><dt><a name="-formatProps"><strong>formatProps</strong></a>(propsDict)</dt><dd><tt>Format&nbsp;the&nbsp;dictionary&nbsp;of&nbsp;properties&nbsp;in&nbsp;a&nbsp;list&nbsp;of&nbsp;strings<br>
+list&nbsp;[&nbsp;"-Dp1=v1",&nbsp;-Dp2=v2"]<br>
+&nbsp;<br>
+@param&nbsp;propsDict:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;properties&nbsp;in&nbsp;the&nbsp;form&nbsp;name:value<br>
+@return&nbsp;A&nbsp;list&nbsp;of&nbsp;java/scala&nbsp;properties</tt></dd></dl>
+ <dl><dt><a name="-javaOpts"><strong>javaOpts</strong></a>()</dt><dd><tt>Handling&nbsp;of&nbsp;JAVA_OPTS&nbsp;environment&nbsp;variable&nbsp;to&nbsp;pass&nbsp;options&nbsp;to&nbsp;java&nbsp;executables&nbsp;differs<br>
+from&nbsp;scala&nbsp;and&nbsp;java:<br>
+*&nbsp;scala&nbsp;passes&nbsp;options&nbsp;to&nbsp;the&nbsp;java&nbsp;executable&nbsp;setting&nbsp;the&nbsp;JAVA_OPTS&nbsp;environment&nbsp;variable<br>
+*&nbsp;java&nbsp;does&nbsp;not&nbsp;recognize&nbsp;JAVA_OPTS&nbsp;but&nbsp;accepts&nbsp;options&nbsp;as&nbsp;parameters&nbsp;in&nbsp;the&nbsp;command&nbsp;line<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+To&nbsp;unify&nbsp;the&nbsp;handling&nbsp;of&nbsp;java&nbsp;option&nbsp;for&nbsp;the&nbsp;2&nbsp;programming&nbsp;languages,<br>
+this&nbsp;method&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;java&nbsp;options&nbsp;(string).<br>
+Depending&nbsp;on&nbsp;the&nbsp;executable&nbsp;they&nbsp;will&nbsp;be&nbsp;passed&nbsp;differently.<br>
+&nbsp;<br>
+@return:&nbsp;A&nbsp;list&nbsp;of&nbsp;java&nbsp;options&nbsp;like&nbsp;['-Xmx512M',&nbsp;'-Xms16M']</tt></dd></dl>
+ <dl><dt><a name="-setProps"><strong>setProps</strong></a>(propsDict, className)</dt><dd><tt>Adds&nbsp;to&nbsp;the&nbsp;passed&nbsp;dictionary,&nbsp;the&nbsp;properties&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;all&nbsp;java/scala<br>
+executables.<br>
+&nbsp;<br>
+These&nbsp;properties&nbsp;are&nbsp;common&nbsp;to&nbsp;all&nbsp;IAS&nbsp;executables&nbsp;and&nbsp;can&nbsp;for&nbsp;example&nbsp;<br>
+be&nbsp;configuration&nbsp;properties.<br>
+&nbsp;<br>
+@param&nbsp;propsDict:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;properties&nbsp;in&nbsp;the&nbsp;form&nbsp;name:value<br>
+@param&nbsp;className&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;class&nbsp;to&nbsp;run</tt></dd></dl>
+</td></tr></table>
+</body></html>

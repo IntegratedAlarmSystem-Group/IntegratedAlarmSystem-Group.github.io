@@ -1,0 +1,113 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module IASApiDocs.JavadocBuilder</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASApiDocs.html"><font color="#ffffff">IASApiDocs</font></a>.JavadocBuilder</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/osboxes/ias/Tools/lib/python/IASApiDocs/JavadocBuilder.py">/home/osboxes/ias/Tools/lib/python/IASApiDocs/JavadocBuilder.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="IASApiDocs.DocGenerator.html#DocGenerator">IASApiDocs.DocGenerator.DocGenerator</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IASApiDocs.JavadocBuilder.html#JavadocBuilder">JavadocBuilder</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="JavadocBuilder">class <strong>JavadocBuilder</strong></a>(<a href="IASApiDocs.DocGenerator.html#DocGenerator">IASApiDocs.DocGenerator.DocGenerator</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Objects&nbsp;from&nbsp;this&nbsp;class&nbsp;generates&nbsp;the&nbsp;javadoc&nbsp;documentation&nbsp;of&nbsp;IAS&nbsp;sources<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="IASApiDocs.JavadocBuilder.html#JavadocBuilder">JavadocBuilder</a></dd>
+<dd><a href="IASApiDocs.DocGenerator.html#DocGenerator">IASApiDocs.DocGenerator.DocGenerator</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="JavadocBuilder-__init__"><strong>__init__</strong></a>(self, srcFolder, dstFolder, includeTestFolder<font color="#909090">=False</font>, outFile<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>)</dt><dd><tt>Constructor<br>
+@param&nbsp;srcFolder:&nbsp;the&nbsp;folder&nbsp;with&nbsp;java&nbsp;sources&nbsp;to&nbsp;generate&nbsp;their&nbsp;documentation<br>
+@param&nbsp;dstFolder:&nbsp;destination&nbsp;folder&nbsp;for&nbsp;javadocs&nbsp;&nbsp;<br>
+@param&nbsp;includeTestFolder:&nbsp;True&nbsp;if&nbsp;the&nbsp;class&nbsp;must&nbsp;generate&nbsp;documentation&nbsp;for&nbsp;the&nbsp;java<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sources&nbsp;in&nbsp;test&nbsp;folders&nbsp;(defaults&nbsp;to&nbsp;False)<br>
+@param&nbsp;outFile:&nbsp;the&nbsp;file&nbsp;where&nbsp;the&nbsp;output&nbsp;generated&nbsp;by&nbsp;calling&nbsp;javadoc&nbsp;must&nbsp;be&nbsp;sent</tt></dd></dl>
+
+<dl><dt><a name="JavadocBuilder-buildJavadocCmd"><strong>buildJavadocCmd</strong></a>(self, dest, srcFolders, pkgs)</dt><dd><tt>Build&nbsp;the&nbsp;command&nbsp;to&nbsp;invoke&nbsp;javadoc&nbsp;with&nbsp;subprocess.call.<br>
+javadoc&nbsp;must&nbsp;be&nbsp;invoked&nbsp;with&nbsp;a&nbsp;command&nbsp;line&nbsp;like<br>
+javadoc&nbsp;-d&nbsp;./html&nbsp;-splitIndex&nbsp;-windowtitle&nbsp;'IAS&nbsp;1.0'&nbsp;-J-Xmx180m&nbsp;-sourcepath&nbsp;./src&nbsp;-subpackages&nbsp;org:com<br>
+&nbsp;<br>
+@param&nbsp;dest&nbsp;The&nbsp;destination&nbsp;folder&nbsp;where&nbsp;javadoc&nbsp;creates&nbsp;html<br>
+@param&nbsp;srcFolders&nbsp;The&nbsp;folders&nbsp;containing&nbsp;java&nbsp;sources<br>
+@param&nbsp;pkgs&nbsp;The&nbsp;package&nbsp;roots&nbsp;(org,&nbsp;com,&nbsp;cern..)<br>
+@return:&nbsp;a&nbsp;list&nbsp;of&nbsp;parameteres&nbsp;to&nbsp;invoke&nbsp;javadoc</tt></dd></dl>
+
+<dl><dt><a name="JavadocBuilder-buildJavadocs"><strong>buildJavadocs</strong></a>(self)</dt><dd><tt>Build&nbsp;the&nbsp;javadocs&nbsp;by&nbsp;reading&nbsp;java&nbsp;sources&nbsp;from&nbsp;the&nbsp;source&nbsp;folder,&nbsp;including<br>
+those&nbsp;in&nbsp;test&nbsp;is&nbsp;needed<br>
+Javadocs&nbsp;will&nbsp;be&nbsp;written&nbsp;in&nbsp;the&nbsp;destination&nbsp;folder.<br>
+&nbsp;<br>
+Generation&nbsp;of&nbsp;jaavadocs&nbsp;is&nbsp;ddelegatred&nbsp;to&nbsp;Oracle'&nbsp;javadoc&nbsp;executable<br>
+&nbsp;<br>
+@return:&nbsp;the&nbsp;code&nbsp;returned&nbsp;by&nbsp;calling&nbsp;javadoc</tt></dd></dl>
+
+<dl><dt><a name="JavadocBuilder-getJavaPackagesRoot"><strong>getJavaPackagesRoot</strong></a>(self, srcFolders)</dt><dd><tt>Get&nbsp;the&nbsp;root&nbsp;folders&nbsp;of&nbsp;the&nbsp;java&nbsp;packages&nbsp;in&nbsp;the&nbsp;passed&nbsp;list&nbsp;of&nbsp;folders<br>
+@param&nbsp;srcFolders:&nbsp;the&nbsp;list&nbsp;of&nbsp;folders&nbsp;containg&nbsp;java&nbsp;sources<br>
+@return:&nbsp;&nbsp;the&nbsp;root&nbsp;of&nbsp;java&nbsp;packages&nbsp;(something&nbsp;like,&nbsp;com,&nbsp;org,...)</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="IASApiDocs.DocGenerator.html#DocGenerator">IASApiDocs.DocGenerator.DocGenerator</a>:<br>
+<dl><dt><a name="JavadocBuilder-checkFolders"><strong>checkFolders</strong></a>(self, src, dst)</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;source&nbsp;and&nbsp;dest&nbsp;folders&nbsp;are&nbsp;valid&nbsp;and&nbsp;if&nbsp;it&nbsp;is&nbsp;not&nbsp;the&nbsp;case,<br>
+throws&nbsp;an&nbsp;exception<br>
+@param&nbsp;src:&nbsp;the&nbsp;folder&nbsp;with&nbsp;java&nbsp;sources&nbsp;to&nbsp;check<br>
+@param&nbsp;dst:&nbsp;destination&nbsp;folder&nbsp;to&nbsp;check</tt></dd></dl>
+
+<dl><dt><a name="JavadocBuilder-containsSources"><strong>containsSources</strong></a>(self, folder, fileExtension)</dt><dd><tt>@param&nbsp;folder:&nbsp;the&nbsp;folder&nbsp;(src&nbsp;or&nbsp;test)&nbsp;to&nbsp;check&nbsp;if&nbsp;contains&nbsp;java&nbsp;sources<br>
+@param&nbsp;fileExtension:&nbsp;the&nbsp;extension&nbsp;of&nbsp;the&nbsp;files&nbsp;that&nbsp;the&nbsp;folder&nbsp;is&nbsp;supposed&nbsp;to&nbsp;contain<br>
+@return:&nbsp;True&nbsp;if&nbsp;the&nbsp;passed&nbsp;folder&nbsp;contains&nbsp;java&nbsp;sources</tt></dd></dl>
+
+<dl><dt><a name="JavadocBuilder-getSrcPaths"><strong>getSrcPaths</strong></a>(self, sourceFolder, includeTestFolder, folderName, fileExtension)</dt><dd><tt>Scan&nbsp;the&nbsp;source&nbsp;folder&nbsp;and&nbsp;return&nbsp;a&nbsp;list&nbsp;of&nbsp;source&nbsp;folders<br>
+containg&nbsp;java&nbsp;files.<br>
+Java&nbsp;source&nbsp;can&nbsp;be&nbsp;contained&nbsp;into&nbsp;src&nbsp;or&nbsp;test&nbsp;(the&nbsp;latter&nbsp;is&nbsp;used&nbsp;only&nbsp;<br>
+if&nbsp;the&nbsp;includeTestFolder&nbsp;parameter&nbsp;is&nbsp;True)<br>
+The&nbsp;search&nbsp;is&nbsp;recursive&nbsp;because&nbsp;a&nbsp;folder&nbsp;can&nbsp;contains&nbsp;several&nbsp;modules<br>
+&nbsp;<br>
+@param&nbsp;sourceFolder:&nbsp;root&nbsp;source&nbsp;folder&nbsp;(generally&nbsp;IAS,&nbsp;passed&nbsp;in&nbsp;the&nbsp;command&nbsp;line)<br>
+@param&nbsp;includeTestFolder:&nbsp;True&nbsp;to&nbsp;inculde&nbsp;test&nbsp;folders&nbsp;in&nbsp;the&nbsp;scan<br>
+@param&nbsp;&nbsp;folderName:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;folder&nbsp;containing&nbsp;the&nbsp;sources&nbsp;like&nbsp;java&nbsp;or&nbsp;python&nbsp;<br>
+@param&nbsp;fileExtension:&nbsp;the&nbsp;extension&nbsp;of&nbsp;the&nbsp;files&nbsp;that&nbsp;the&nbsp;folder&nbsp;is&nbsp;supposed&nbsp;to&nbsp;contain</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="IASApiDocs.DocGenerator.html#DocGenerator">IASApiDocs.DocGenerator.DocGenerator</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
