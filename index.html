@@ -28,11 +28,11 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-      
+
 
 <a id="ias-the-integrated-alarm-system" class="anchor" href="#ias-the-integrated-alarm-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-<P>The Integrated Alarm System (&brvbar;AS) is a software tool whose main purpose is to get alarms and monitor points from different sources and generate alarms to present to the users who can range from operators in the control room, up to engineers sittings at their desks. 
-The alarm system is a message passing facility that routes information about abnormal situations detected from hardware or software to the user in an easy to understand format. 
+<P>The Integrated Alarm System (&brvbar;AS) is a software tool whose main purpose is to get alarms and monitor points from different sources and generate alarms to present to the users who can range from operators in the control room, up to engineers sittings at their desks.
+The alarm system is a message passing facility that routes information about abnormal situations detected from hardware or software to the user in an easy to understand format.
 The purpose of such tool is to increase the situation awareness of the audience and help understanding the root cause of a chain of problems in order to minimize the reaction time and improve the overall efficiency of the facility.</P>
 
 <P>An alarm system is a basic operator support system for managing abnormal (also called non-nominal) situations and it has the following two functions:
@@ -40,7 +40,7 @@ The purpose of such tool is to increase the situation awareness of the audience 
 	<LI>To warn the operator about a situation that is not normal; alarms must be relevant to the operator’s role at the time, indicate what response is required, be presented at a rate the operator can deal with, and be easy to understand.
 	<LI>To serve as an alarm and event log, which can be used for an analysis of incidents and to optimize operations.
 </UL>
-<P>The alarm system must provide useful information and functionality to support the operators’ tasks. 
+<P>The alarm system must provide useful information and functionality to support the operators’ tasks.
 Information must be presented and handled in a way that is compatible with human capabilities and limitations, so that the alarm system remains usable for the operators in all situations.</p>
 
 <p align="center"><img src="../images/HighLevel.png"></p>
@@ -65,11 +65,26 @@ Anybody is very welcome to contribute to the development of the Integrated Alarm
 
 If interested, read the <A href="https://github.com/IntegratedAlarmSystem-Group/ias/blob/master/CONTRIBUTING.md">contributing page</A> in github.
 
-<h3>API documentation</h3>
+<h3>IAS Core documentation</h3>
+This is the core of the Integrated Alarm System. It is composed by several modules, ranging from retriving of data from the different systems to processing of Alarms.
+
 <UL>
 	<LI><A href="apidocs/java/index.html">Java API documentation</A>
 	<LI><A href="apidocs/scala/index.html">Scala API documentation</A>
 	<LI><A href="/apidocs/python">Python API documentation</A>
+</UL>
+
+<h3>IAS Display documentation</h3>
+This is the user interface to display and interact with alarms. It is built using Angular 4 framework.
+<UL>
+	<LI><A href="https://integratedalarmsystem-group.github.io/ias-display/index.html">Angular project documentation</A>
+</UL>
+
+<h3>IAS Webserver documentation</h3>
+This is the web server that supports the IAS Display. It is used to receive and persist alarms received from the IAS Core and communicate them to the IAS Display.
+It is built using the Django-Channels framework.
+<UL>
+	<LI><A href="https://integratedalarmsystem-group.github.io/ias-webserver/index.html">Django Channels Project documentation</A>
 </UL>
 
 <h2>Documents and papers</h2>
@@ -91,10 +106,10 @@ Other interesting documents are listed below.
 <a id="contacts" class="anchor" href="#contacts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contacts</h2>
 
 
-<p>Erich Schmid is the project manager (<a href="https://github.com/eschmid" class="user-mention">@eschmid</a>). 
+<p>Erich Schmid is the project manager (<a href="https://github.com/eschmid" class="user-mention">@eschmid</a>).
 <BR>Alessandro Caproni (<a href="https://github.com/acaproni" class="user-mention">@acaproni</a>) is the technical leader.
 
-<P><a href="https://twitter.com/acaproni_eso" class="twitter-follow-button" data-show-count="false">Follow on twitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></P> 
+<P><a href="https://twitter.com/acaproni_eso" class="twitter-follow-button" data-show-count="false">Follow on twitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></P>
 
       </section>
     </div>
@@ -106,7 +121,7 @@ Other interesting documents are listed below.
       </footer>
     </div>
 
-    
+
 
   </body>
 </html>
