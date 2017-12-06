@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASApiDocs.html"><font color="#ffffff">IASApiDocs</font></a>.PydocBuilder</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/osboxes/ias/Tools/lib/python/IASApiDocs/PydocBuilder.py">/home/osboxes/ias/Tools/lib/python/IASApiDocs/PydocBuilder.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/osboxes/ias/Tools/src/python/IASApiDocs/PydocBuilder.py">/home/osboxes/ias/Tools/src/python/IASApiDocs/PydocBuilder.py</a></font></td></tr></table>
     <p><tt>API&nbsp;python&nbsp;documentation&nbsp;builder.<br>
 &nbsp;<br>
 Created&nbsp;on&nbsp;Jul&nbsp;7,&nbsp;2017<br>
@@ -56,17 +56,22 @@ Created&nbsp;on&nbsp;Jul&nbsp;7,&nbsp;2017<br>
 <hr>
 Methods defined here:<br>
 <dl><dt><a name="PydocBuilder-__init__"><strong>__init__</strong></a>(self, srcFolder, dstFolder, includeTestFolder<font color="#909090">=False</font>, outFile<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>)</dt><dd><tt>Constructor<br>
-@param&nbsp;srcFolder:&nbsp;the&nbsp;folder&nbsp;with&nbsp;java&nbsp;sources&nbsp;to&nbsp;generate&nbsp;their&nbsp;documentation<br>
-@param&nbsp;dstFolder:&nbsp;destination&nbsp;folder&nbsp;for&nbsp;javadocs&nbsp;&nbsp;<br>
-@param&nbsp;includeTestFolder:&nbsp;True&nbsp;if&nbsp;the&nbsp;class&nbsp;must&nbsp;generate&nbsp;documentation&nbsp;for&nbsp;the&nbsp;java<br>
+@param&nbsp;srcFolder:&nbsp;the&nbsp;folder&nbsp;with&nbsp;python&nbsp;sources&nbsp;to&nbsp;generate&nbsp;their&nbsp;documentation<br>
+@param&nbsp;dstFolder:&nbsp;destination&nbsp;folder&nbsp;for&nbsp;pydocs&nbsp;&nbsp;<br>
+@param&nbsp;includeTestFolder:&nbsp;True&nbsp;if&nbsp;the&nbsp;class&nbsp;must&nbsp;generate&nbsp;documentation&nbsp;for&nbsp;the&nbsp;python<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sources&nbsp;in&nbsp;test&nbsp;folders&nbsp;(defaults&nbsp;to&nbsp;False)<br>
-@param&nbsp;outFile:&nbsp;the&nbsp;file&nbsp;where&nbsp;the&nbsp;output&nbsp;generated&nbsp;by&nbsp;calling&nbsp;javadoc&nbsp;must&nbsp;be&nbsp;sent</tt></dd></dl>
+@param&nbsp;outFile:&nbsp;the&nbsp;file&nbsp;where&nbsp;the&nbsp;output&nbsp;generated&nbsp;by&nbsp;calling&nbsp;pydoc&nbsp;must&nbsp;be&nbsp;sent</tt></dd></dl>
 
 <dl><dt><a name="PydocBuilder-buildPydocs"><strong>buildPydocs</strong></a>(self)</dt><dd><tt>Build&nbsp;the&nbsp;pydocs&nbsp;<br>
 &nbsp;<br>
 Generation&nbsp;of&nbsp;pydocs&nbsp;is&nbsp;delegated&nbsp;to&nbsp;pydoc&nbsp;executable<br>
 &nbsp;<br>
-@return:&nbsp;the&nbsp;code&nbsp;returned&nbsp;by&nbsp;calling&nbsp;javadoc</tt></dd></dl>
+@return:&nbsp;the&nbsp;code&nbsp;returned&nbsp;by&nbsp;calling&nbsp;pydoc</tt></dd></dl>
+
+<dl><dt><a name="PydocBuilder-getPythonFilesInFolder"><strong>getPythonFilesInFolder</strong></a>(self, folder)</dt><dd><tt>Get&nbsp;the&nbsp;python&nbsp;sources&nbsp;in&nbsp;the&nbsp;passed&nbsp;folder<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;these&nbsp;files&nbsp;are&nbsp;python&nbsp;scripts&nbsp;that&nbsp;do&nbsp;not&nbsp;belong<br>
+to&nbsp;a&nbsp;python&nbsp;module</tt></dd></dl>
 
 <hr>
 Methods inherited from <a href="IASApiDocs.DocGenerator.html#DocGenerator">IASApiDocs.DocGenerator.DocGenerator</a>:<br>

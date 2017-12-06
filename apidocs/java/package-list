@@ -3,6 +3,9 @@ org.eso.ias.cdb.json
 org.eso.ias.cdb.json.pojos
 org.eso.ias.cdb.pojos
 org.eso.ias.cdb.rdb
+org.eso.ias.converter
+org.eso.ias.converter.config
+org.eso.ias.kafkautils
 org.eso.ias.plugin
 org.eso.ias.plugin.config
 org.eso.ias.plugin.filter
