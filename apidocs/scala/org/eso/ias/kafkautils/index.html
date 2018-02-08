@@ -235,6 +235,14 @@
                         <a href="KafkaHelper.html" title="A helper class providing useful methods and constants for Kafka">KafkaHelper</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="KafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener."></a>
+                        <a href="KafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener.">KafkaIasiosConsumer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic."></a>
+                        <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic.">KafkaIasiosProducer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module"></a>
                         <a href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module">KafkaUtilsException</a>
                       </li><li class="current-entities indented4">
@@ -274,6 +282,54 @@
       </span>
       <span class="symbol">
         <a title="" href="../prototype/index.html"><span class="name">prototype</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.supervisor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="supervisor"></a><a id="supervisor:supervisor"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#supervisor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../supervisor/index.html"><span class="name">supervisor</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.test" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="test"></a><a id="test:test"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#test" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../test/index.html"><span class="name">test</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.webserversender" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="webserversender"></a><a id="webserversender:webserversender"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#webserversender" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../webserversender/index.html"><span class="name">webserversender</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
@@ -333,6 +389,56 @@
       
       <p class="shortcomment cmt">A helper class providing useful methods and constants for Kafka
 </p>
+    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KafkaIasiosConsumerextendsSimpleStringConsumer.KafkaConsumerListener"></a><a id="KafkaIasiosConsumer:KafkaIasiosConsumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html#KafkaIasiosConsumerextendsSimpleStringConsumer.KafkaConsumerListener" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener." href="KafkaIasiosConsumer.html"><span class="name">KafkaIasiosConsumer</span></a><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic
+from the SimpleStringConsumer and forwards IASIOs to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic
+from the SimpleStringConsumer and forwards IASIOs to the listener.
+&lt;P&gt;
+Filtering is based on the ID of the IASIOs _and_ IASValue type:
+- if the ID of the received String is contained in <code><span class="extype" name="#acceptedIds">#acceptedIds</span></code>
+  then the IASIO is forwarded to the listener otherwise is rejected.
+- if the type of the <code><span class="extype" name="IASValue">IASValue</span></code> is contained in <code><span class="extype" name="#acceptedtypes">#acceptedtypes</span></code>
+  then the IASIO is forwarded to the listener otherwise is rejected.</p><p>&lt;BR&gt;If the caller does not set any filter, then all the received IASIOs
+will be forwarded to the listener.
+IDs and type are evaluated in AND.
+</p></div></div>
+    </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KafkaIasiosProducerextendsObject"></a><a id="KafkaIasiosProducer:KafkaIasiosProducer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html#KafkaIasiosProducerextendsObject" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="KafkaIasioProducer writes IASValue in the kafka topic." href="KafkaIasiosProducer.html"><span class="name">KafkaIasiosProducer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">KafkaIasioProducer writes <code><span class="extype" name="IASValue">IASValue</span></code> in the kafka topic.</p><div class="fullcomment"><div class="comment cmt"><p>KafkaIasioProducer writes <code><span class="extype" name="IASValue">IASValue</span></code> in the kafka topic.
+&lt;P&gt;
+The producer converts the IASValues to string with the serializer.
+&lt;P&gt;
+KafkaIasioProducer delegates the publishing to <code><a href="SimpleStringProducer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a></code>.
+For methods that do not specify partition and key, the partition is
+set to the ID of the IASValue and no partition is used.
+</p></div></div>
     </li><li name="org.eso.ias.kafkautils.KafkaUtilsException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="KafkaUtilsExceptionextendsException"></a><a id="KafkaUtilsException:KafkaUtilsException"></a>
       <span class="permalink">

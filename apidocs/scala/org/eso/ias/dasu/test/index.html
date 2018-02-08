@@ -215,6 +215,10 @@
       
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place."></a>
+                        <a href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place.">CheckDasuOutputTimestamps</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels)."></a>
                         <a href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels).">Dasu7ASCEsTest</a>
                       </li><li class="current-entities indented5">
@@ -223,16 +227,16 @@
                         <a href="DasuOneASCETest.html" title="Test the DASU with one ASCE and the MinMaxThreshold TF.">DasuOneASCETest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="DasuOneAsceCommon.html" title="Setup the DASU with one ASCE as it is reused by more than one test"></a>
+                        <a href="DasuOneAsceCommon.html" title="Setup the DASU with one ASCE as it is reused by more than one test">DasuOneAsceCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue."></a>
                         <a href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue.">DasuWithKafkaPubSubTest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="JsonPublisherTest.html" title="Test the writing of the output of the DASU in a JSON file."></a>
                         <a href="JsonPublisherTest.html" title="Test the writing of the output of the DASU in a JSON file.">JsonPublisherTest</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="class" href="TestInputSubscriber.html" title="The input subscriber to send event to the DASU   *"></a>
-                        <a href="TestInputSubscriber.html" title="The input subscriber to send event to the DASU   *">TestInputSubscriber</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TopologyTest.html" title="Test the Topology"></a>
@@ -292,10 +296,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.dasu.test.Dasu7ASCEsTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Dasu7ASCEsTestextendsFlatSpecwithOutputListener"></a><a id="Dasu7ASCEsTest:Dasu7ASCEsTest"></a>
+              <ol><li name="org.eso.ias.dasu.test.CheckDasuOutputTimestamps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CheckDasuOutputTimestampsextendsFlatSpecwithBeforeAndAfter"></a><a id="CheckDasuOutputTimestamps:CheckDasuOutputTimestamps"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/index.html#Dasu7ASCEsTestextendsFlatSpecwithOutputListener" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/index.html#CheckDasuOutputTimestampsextendsFlatSpecwithBeforeAndAfter" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -304,14 +308,35 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Test the DASU with 7 ASCEs (in 3 levels)." href="Dasu7ASCEsTest.html"><span class="name">Dasu7ASCEsTest</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></span>
+        <a title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place." href="CheckDasuOutputTimestamps.html"><span class="name">CheckDasuOutputTimestamps</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Checks the timestamps of the output produced by a DASU
+when inputs change and when the auto-refresh is in place.</p><div class="fullcomment"><div class="comment cmt"><p>Checks the timestamps of the output produced by a DASU
+when inputs change and when the auto-refresh is in place.</p><p>The test uses the DasuWithOneASCE DASU defined in the CDB
+by submitting inputs and checking the fields of output
+published (or not published by the DASU.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="https://github.com/IntegratedAlarmSystem-Group/ias/issues/52" target="_blank">Issue #52 on github</a></p></span></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.Dasu7ASCEsTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Dasu7ASCEsTestextendsFlatSpec"></a><a id="Dasu7ASCEsTest:Dasu7ASCEsTest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/index.html#Dasu7ASCEsTestextendsFlatSpec" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Test the DASU with 7 ASCEs (in 3 levels)." href="Dasu7ASCEsTest.html"><span class="name">Dasu7ASCEsTest</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></span>
       </span>
       
       <p class="shortcomment cmt">Test the DASU with 7 ASCEs (in 3 levels).</p><div class="fullcomment"><div class="comment cmt"><p>Test the DASU with 7 ASCEs (in 3 levels).
-There i sno special meaning between connections as this is a test
-to check if the flow of inputs and outputs is hendled correctly.
+There is no special meaning between connections as this is a test
+to check if the flow of inputs and outputs is handled correctly.
 However this also shows a way to reuse transfer functions (multiplicity
-and threshold are part of the ComputingElemnt) plus a user defined one,
+and threshold are part of the ComputingElement) plus a user defined one,
 the AverageTempsTF.
 In a real case we probably do not want to have so many ASCEs but
 it is perfectly allowed.</p><p>The logs of the test show the topology of the ASCEs of this test.
@@ -319,16 +344,16 @@ At the bottom level, there is one ASCE, that takes all the for temperatures and 
 average values. This is just to provide an example of a synthetic parameter.
 At the middle there are 5 ASCEs that get a temperature and
 check it against the a threshold to generate alarms. One of such temperatures
-is the average produced at level .
+is the average produced at level 1.
 All 5 alarms produced by the ASCEs are sent in input to the last ASCE_AlarmsThreshold,
 in the second and last level: this ASCE applies the multiplicity with a threshold of 3</p><p>The DASU takes in input 4 temperatures, calculates their average and produces an alarm
 if at least three of them are out of the nominal range.</p><p>The configurations of DASU, ASCE, TF and IASIOs are all stored
 in the CDB folder.
 </p></div></div>
     </li><li name="org.eso.ias.dasu.test.DasuOneASCETest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="DasuOneASCETestextendsFlatSpecwithOutputListener"></a><a id="DasuOneASCETest:DasuOneASCETest"></a>
+      <a id="DasuOneASCETestextendsFlatSpecwithBeforeAndAfter"></a><a id="DasuOneASCETest:DasuOneASCETest"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/index.html#DasuOneASCETestextendsFlatSpecwithOutputListener" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/index.html#DasuOneASCETestextendsFlatSpecwithBeforeAndAfter" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -337,12 +362,30 @@ in the CDB folder.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Test the DASU with one ASCE and the MinMaxThreshold TF." href="DasuOneASCETest.html"><span class="name">DasuOneASCETest</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></span>
+        <a title="Test the DASU with one ASCE and the MinMaxThreshold TF." href="DasuOneASCETest.html"><span class="name">DasuOneASCETest</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span></span>
       </span>
       
       <p class="shortcomment cmt">Test the DASU with one ASCE and the MinMaxThreshold TF.</p><div class="fullcomment"><div class="comment cmt"><p>Test the DASU with one ASCE and the MinMaxThreshold TF.</p><p>Being a simple case, this test will do some basic tests.</p><p>The configurations of DASU, ASCE, TF and IASIOs are all stored
 in the CDB folder.
 </p></div></div>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DasuOneAsceCommonextendsOutputListener"></a><a id="DasuOneAsceCommon:DasuOneAsceCommon"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/index.html#DasuOneAsceCommonextendsOutputListener" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Setup the DASU with one ASCE as it is reused by more than one test" href="DasuOneAsceCommon.html"><span class="name">DasuOneAsceCommon</span></a><span class="result"> extends <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Setup the DASU with one ASCE as it is reused by more
+than one test
+</p>
     </li><li name="org.eso.ias.dasu.test.DasuWithKafkaPubSubTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="DasuWithKafkaPubSubTestextendsFlatSpecwithSimpleStringConsumer.KafkaConsumerListener"></a><a id="DasuWithKafkaPubSubTest:DasuWithKafkaPubSubTest"></a>
       <span class="permalink">
@@ -386,23 +429,6 @@ produced by the DASU has been pushed in the kafka queue
       
       <p class="shortcomment cmt"> Test the writing of the output of the DASU
  in a JSON file.</p>
-    </li><li name="org.eso.ias.dasu.test.TestInputSubscriber" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TestInputSubscriberextendsInputSubscriber"></a><a id="TestInputSubscriber:TestInputSubscriber"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/index.html#TestInputSubscriberextendsInputSubscriber" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a title="The input subscriber to send event to the DASU   *" href="TestInputSubscriber.html"><span class="name">TestInputSubscriber</span></a><span class="result"> extends <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"> The input subscriber to send event to the DASU   *
-</p>
     </li><li name="org.eso.ias.dasu.test.TopologyTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TopologyTestextendsFlatSpec"></a><a id="TopologyTest:TopologyTest"></a>
       <span class="permalink">

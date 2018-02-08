@@ -232,7 +232,7 @@ for scala implementators of the transfer function.
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="../../component/test/transfer/ThrowExceptionTF.html" class="extype" name="org.eso.ias.component.test.transfer.ThrowExceptionTF">ThrowExceptionTF</a>, <a href="../../component/test/transfer/TransferExample.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExample">TransferExample</a>, <a href="../../dasu/test/transferfunction/AverageTempsTF.html" class="extype" name="org.eso.ias.dasu.test.transferfunction.AverageTempsTF">AverageTempsTF</a>, <a href="impls/MinMaxThresholdTF.html" class="extype" name="org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a>, <a href="impls/MultiplicityTF.html" class="extype" name="org.eso.ias.prototype.transfer.impls.MultiplicityTF">MultiplicityTF</a></div>
+            <div class="subClasses hiddenContent"><a href="../../component/test/transfer/CopyTF.html" class="extype" name="org.eso.ias.component.test.transfer.CopyTF">CopyTF</a>, <a href="../../component/test/transfer/ThrowExceptionTF.html" class="extype" name="org.eso.ias.component.test.transfer.ThrowExceptionTF">ThrowExceptionTF</a>, <a href="../../component/test/transfer/TransferExample.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExample">TransferExample</a>, <a href="../../dasu/test/transferfunction/AverageTempsTF.html" class="extype" name="org.eso.ias.dasu.test.transferfunction.AverageTempsTF">AverageTempsTF</a>, <a href="impls/MinMaxThresholdTF.html" class="extype" name="org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a>, <a href="impls/MultiplicityTF.html" class="extype" name="org.eso.ias.prototype.transfer.impls.MultiplicityTF">MultiplicityTF</a></div>
           </div></div>
         
 
@@ -317,9 +317,9 @@ for scala implementators of the transfer function.
       </span>
       
       <p class="shortcomment cmt">Produces the output of the component by evaluating the inputs.</p><div class="fullcomment"><div class="comment cmt"><p>Produces the output of the component by evaluating the inputs.</p><p>&lt;EM&gt;IMPLEMENTATION NOTE&lt;/EM&gt;
-The <code><span class="extype" name="HeteroInOut">HeteroInOut</span></code> is immutable. The easiest way to produce
+The <code><span class="extype" name="InOut">InOut</span></code> is immutable. The easiest way to produce
 the output to return is to execute the methods of the actualOutput
-that return a new HeteroInOut.
+that returns a new InOut.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the computed value to set as output of the ASCE</p></dd></dl></div>
     </li><li name="org.eso.ias.prototype.transfer.TransferExecutor#initialize" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="initialize():Unit"></a>

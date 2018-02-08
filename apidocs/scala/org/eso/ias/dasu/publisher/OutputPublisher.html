@@ -151,6 +151,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.dasu">dasu</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="DirectInputSubscriber.html" title="The input subscriber to send event to the DASU"></a>
+                        <a href="DirectInputSubscriber.html" title="The input subscriber to send event to the DASU">DirectInputSubscriber</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="JsonWriterPublisher.html" title="The publisher of IASValues produced by the DASU in a JSON-like format."></a>
                         <a href="JsonWriterPublisher.html" title="The publisher of IASValues produced by the DASU in a JSON-like format.">JsonWriterPublisher</a>
                       </li><li class="current-entities indented5">
@@ -211,7 +215,7 @@ release all the acquired resources.
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="JsonWriterPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.JsonWriterPublisher">JsonWriterPublisher</a>, <a href="KafkaPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.KafkaPublisher">KafkaPublisher</a>, <a href="ListenerOutputPublisherImpl.html" class="extype" name="org.eso.ias.dasu.publisher.ListenerOutputPublisherImpl">ListenerOutputPublisherImpl</a></div>
+            <div class="subClasses hiddenContent"><a href="JsonWriterPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.JsonWriterPublisher">JsonWriterPublisher</a>, <a href="KafkaPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.KafkaPublisher">KafkaPublisher</a>, <a href="ListenerOutputPublisherImpl.html" class="extype" name="org.eso.ias.dasu.publisher.ListenerOutputPublisherImpl">ListenerOutputPublisherImpl</a>, <a href="../../supervisor/Supervisor.html" class="extype" name="org.eso.ias.supervisor.Supervisor">Supervisor</a></div>
           </div></div>
         
 
@@ -261,10 +265,10 @@ release all the acquired resources.
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="org.eso.ias.dasu.publisher.OutputPublisher#cleanUp" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="cleanUp():scala.util.Try[Unit]"></a><a id="cleanUp():Try[Unit]"></a>
+              <ol><li name="org.eso.ias.dasu.publisher.OutputPublisher#cleanUpPublisher" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="cleanUpPublisher():scala.util.Try[Unit]"></a><a id="cleanUpPublisher():Try[Unit]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/publisher/OutputPublisher.html#cleanUp():scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/publisher/OutputPublisher.html#cleanUpPublisher():scala.util.Try[Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -273,14 +277,14 @@ release all the acquired resources.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cleanUp</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">cleanUpPublisher</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Release all the acquired resources.</p>
-    </li><li name="org.eso.ias.dasu.publisher.OutputPublisher#initialize" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="initialize():scala.util.Try[Unit]"></a><a id="initialize():Try[Unit]"></a>
+    </li><li name="org.eso.ias.dasu.publisher.OutputPublisher#initializePublisher" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="initializePublisher():scala.util.Try[Unit]"></a><a id="initializePublisher():Try[Unit]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/publisher/OutputPublisher.html#initialize():scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/publisher/OutputPublisher.html#initializePublisher():scala.util.Try[Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -289,7 +293,7 @@ release all the acquired resources.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">initializePublisher</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       <p class="shortcomment cmt"> Initialize the subscriber.</p><div class="fullcomment"><div class="comment cmt"><p> Initialize the subscriber.</p><p> The subscriber is supposed to acquire the resource and do all

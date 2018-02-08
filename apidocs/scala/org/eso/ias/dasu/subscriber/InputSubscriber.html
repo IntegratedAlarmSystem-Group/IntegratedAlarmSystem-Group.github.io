@@ -200,7 +200,7 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="KafkaSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.KafkaSubscriber">KafkaSubscriber</a>, <a href="../test/TestInputSubscriber.html" class="extype" name="org.eso.ias.dasu.test.TestInputSubscriber">TestInputSubscriber</a></div>
+            <div class="subClasses hiddenContent"><a href="../publisher/DirectInputSubscriber.html" class="extype" name="org.eso.ias.dasu.publisher.DirectInputSubscriber">DirectInputSubscriber</a>, <a href="KafkaSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.KafkaSubscriber">KafkaSubscriber</a>, <a href="../../supervisor/Supervisor.html" class="extype" name="org.eso.ias.supervisor.Supervisor">Supervisor</a></div>
           </div></div>
         
 
@@ -250,10 +250,10 @@
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="org.eso.ias.dasu.subscriber.InputSubscriber#cleanUp" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="cleanUp():scala.util.Try[Unit]"></a><a id="cleanUp():Try[Unit]"></a>
+              <ol><li name="org.eso.ias.dasu.subscriber.InputSubscriber#cleanUpSubscriber" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="cleanUpSubscriber():scala.util.Try[Unit]"></a><a id="cleanUpSubscriber():Try[Unit]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/InputSubscriber.html#cleanUp():scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/subscriber/InputSubscriber.html#cleanUpSubscriber():scala.util.Try[Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -262,15 +262,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cleanUp</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">cleanUpSubscriber</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       <p class="shortcomment cmt"> CleanUp and release the resources
 </p>
-    </li><li name="org.eso.ias.dasu.subscriber.InputSubscriber#initialize" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="initialize():scala.util.Try[Unit]"></a><a id="initialize():Try[Unit]"></a>
+    </li><li name="org.eso.ias.dasu.subscriber.InputSubscriber#initializeSubscriber" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="initializeSubscriber():scala.util.Try[Unit]"></a><a id="initializeSubscriber():Try[Unit]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/InputSubscriber.html#initialize():scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/subscriber/InputSubscriber.html#initializeSubscriber():scala.util.Try[Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -279,15 +279,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">initializeSubscriber</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       <p class="shortcomment cmt"> Initialize the subscriber</p><div class="fullcomment"><div class="comment cmt"><p> Initialize the subscriber</p><p> The get events, start() must be called
 </p></div></div>
-    </li><li name="org.eso.ias.dasu.subscriber.InputSubscriber#start" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="start(listener:org.eso.ias.dasu.subscriber.InputsListener,acceptedInputs:Set[String]):scala.util.Try[Unit]"></a><a id="start(InputsListener,Set[String]):Try[Unit]"></a>
+    </li><li name="org.eso.ias.dasu.subscriber.InputSubscriber#startSubscriber" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="startSubscriber(listener:org.eso.ias.dasu.subscriber.InputsListener,acceptedInputs:Set[String]):scala.util.Try[Unit]"></a><a id="startSubscriber(InputsListener,Set[String]):Try[Unit]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/InputSubscriber.html#start(listener:org.eso.ias.dasu.subscriber.InputsListener,acceptedInputs:Set[String]):scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/subscriber/InputSubscriber.html#startSubscriber(listener:org.eso.ias.dasu.subscriber.InputsListener,acceptedInputs:Set[String]):scala.util.Try[Unit]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -296,7 +296,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">start</span><span class="params">(<span name="listener">listener: <a href="InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a></span>, <span name="acceptedInputs">acceptedInputs: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">startSubscriber</span><span class="params">(<span name="listener">listener: <a href="InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a></span>, <span name="acceptedInputs">acceptedInputs: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Start to get events and forward them to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>Start to get events and forward them to the listener.</p><p>IASIOs whose ID is not in the acceptedInputs set are discarded.

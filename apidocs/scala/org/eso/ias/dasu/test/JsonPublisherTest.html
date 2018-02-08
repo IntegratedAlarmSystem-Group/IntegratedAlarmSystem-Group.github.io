@@ -167,6 +167,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.dasu.test">test</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place."></a>
+                        <a href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place.">CheckDasuOutputTimestamps</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels)."></a>
                         <a href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels).">Dasu7ASCEsTest</a>
                       </li><li class="current-entities indented5">
@@ -175,16 +179,16 @@
                         <a href="DasuOneASCETest.html" title="Test the DASU with one ASCE and the MinMaxThreshold TF.">DasuOneASCETest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="DasuOneAsceCommon.html" title="Setup the DASU with one ASCE as it is reused by more than one test"></a>
+                        <a href="DasuOneAsceCommon.html" title="Setup the DASU with one ASCE as it is reused by more than one test">DasuOneAsceCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue."></a>
                         <a href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue.">DasuWithKafkaPubSubTest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="" title="Test the writing of the output of the DASU in a JSON file."></a>
                         <a href="" title="Test the writing of the output of the DASU in a JSON file.">JsonPublisherTest</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="class" href="TestInputSubscriber.html" title="The input subscriber to send event to the DASU   *"></a>
-                        <a href="TestInputSubscriber.html" title="The input subscriber to send event to the DASU   *">TestInputSubscriber</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TopologyTest.html" title="Test the Topology"></a>
@@ -1347,9 +1351,9 @@
       
       
     </li><li name="org.eso.ias.dasu.test.JsonPublisherTest#dasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dasu:org.eso.ias.dasu.Dasu"></a><a id="dasu:Dasu"></a>
+      <a id="dasu:org.eso.ias.dasu.DasuImpl"></a><a id="dasu:DasuImpl"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/JsonPublisherTest.html#dasu:org.eso.ias.dasu.Dasu" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/JsonPublisherTest.html#dasu:org.eso.ias.dasu.DasuImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1358,7 +1362,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dasu</span><span class="result">: <a href="../Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></span>
+        <span class="name">dasu</span><span class="result">: <a href="../DasuImpl.html" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a></span>
       </span>
       
       
@@ -1375,6 +1379,22 @@
       </span>
       <span class="symbol">
         <span class="name">dasuId</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.JsonPublisherTest#dasuIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dasuIdentifier:org.eso.ias.prototype.input.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/JsonPublisherTest.html#dasuIdentifier:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dasuIdentifier</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
       </span>
       
       
@@ -1631,9 +1651,9 @@
       
       
     </li><li name="org.eso.ias.dasu.test.JsonPublisherTest#inputsProvider" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="inputsProvider:org.eso.ias.dasu.test.TestInputSubscriber"></a><a id="inputsProvider:TestInputSubscriber"></a>
+      <a id="inputsProvider:org.eso.ias.dasu.publisher.DirectInputSubscriber"></a><a id="inputsProvider:DirectInputSubscriber"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/JsonPublisherTest.html#inputsProvider:org.eso.ias.dasu.test.TestInputSubscriber" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/JsonPublisherTest.html#inputsProvider:org.eso.ias.dasu.publisher.DirectInputSubscriber" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1642,7 +1662,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsProvider</span><span class="result">: <a href="TestInputSubscriber.html" class="extype" name="org.eso.ias.dasu.test.TestInputSubscriber">TestInputSubscriber</a></span>
+        <span class="name">inputsProvider</span><span class="result">: <a href="../publisher/DirectInputSubscriber.html" class="extype" name="org.eso.ias.dasu.publisher.DirectInputSubscriber">DirectInputSubscriber</a></span>
       </span>
       
       
@@ -2132,6 +2152,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Suite</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.JsonPublisherTest#supervId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="supervId:org.eso.ias.prototype.input.Identifier"></a><a id="supervId:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/JsonPublisherTest.html#supervId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">supervId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

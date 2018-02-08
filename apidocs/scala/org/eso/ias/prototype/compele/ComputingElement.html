@@ -342,9 +342,9 @@ respecting its refresh rate.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.prototype.compele.ComputingElement#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:org.eso.ias.prototype.input.Identifier,_output:org.eso.ias.prototype.input.InOut[T],initialInputs:Set[org.eso.ias.prototype.input.InOut[_]],tfSetting:org.eso.ias.prototype.transfer.TransferFunctionSetting,props:java.util.Properties):org.eso.ias.prototype.compele.ComputingElement[T]"></a><a id="&lt;init&gt;:ComputingElement[T]"></a>
+      <a id="&lt;init&gt;(asceIdentifier:org.eso.ias.prototype.input.Identifier,_output:org.eso.ias.prototype.input.InOut[T],initialInputs:Set[org.eso.ias.prototype.input.InOut[_]],tfSetting:org.eso.ias.prototype.transfer.TransferFunctionSetting,props:java.util.Properties):org.eso.ias.prototype.compele.ComputingElement[T]"></a><a id="&lt;init&gt;:ComputingElement[T]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#&lt;init&gt;(id:org.eso.ias.prototype.input.Identifier,_output:org.eso.ias.prototype.input.InOut[T],initialInputs:Set[org.eso.ias.prototype.input.InOut[_]],tfSetting:org.eso.ias.prototype.transfer.TransferFunctionSetting,props:java.util.Properties):org.eso.ias.prototype.compele.ComputingElement[T]" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#&lt;init&gt;(asceIdentifier:org.eso.ias.prototype.input.Identifier,_output:org.eso.ias.prototype.input.InOut[T],initialInputs:Set[org.eso.ias.prototype.input.InOut[_]],tfSetting:org.eso.ias.prototype.transfer.TransferFunctionSetting,props:java.util.Properties):org.eso.ias.prototype.compele.ComputingElement[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -353,7 +353,7 @@ respecting its refresh rate.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ComputingElement</span><span class="params">(<span name="id">id: <a href="../input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="_output">_output: <a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.compele.ComputingElement.T">T</span>]</span>, <span name="initialInputs">initialInputs: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[_]]</span>, <span name="tfSetting">tfSetting: <a href="../transfer/TransferFunctionSetting.html" class="extype" name="org.eso.ias.prototype.transfer.TransferFunctionSetting">TransferFunctionSetting</a></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
+        <span class="name">ComputingElement</span><span class="params">(<span name="asceIdentifier">asceIdentifier: <a href="../input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="_output">_output: <a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.compele.ComputingElement.T">T</span>]</span>, <span name="initialInputs">initialInputs: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[_]]</span>, <span name="tfSetting">tfSetting: <a href="../transfer/TransferFunctionSetting.html" class="extype" name="org.eso.ias.prototype.transfer.TransferFunctionSetting">TransferFunctionSetting</a></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p>
@@ -490,6 +490,22 @@ class)</p><p>This method sets the validity of the output from the validity of it
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.prototype.compele.ComputingElement#asceIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="asceIdentifier:org.eso.ias.prototype.input.Identifier"></a><a id="asceIdentifier:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#asceIdentifier:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asceIdentifier</span><span class="result">: <a href="../input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -604,6 +620,25 @@ class)</p><p>This method sets the validity of the output from the validity of it
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.prototype.compele.ComputingElement#getOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOutput():(org.eso.ias.prototype.input.InOut[_],org.eso.ias.prototype.input.Validity)"></a><a id="getOutput():(InOut[_],Validity)"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#getOutput():(org.eso.ias.prototype.input.InOut[_],org.eso.ias.prototype.input.Validity)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOutput</span><span class="params">()</span><span class="result">: (<a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[_], <a href="../input/Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>)</span>
+      </span>
+      
+      <p class="shortcomment cmt">Return the last computed output and its validity updated
+with the current validity of the inputs.</p><div class="fullcomment"><div class="comment cmt"><p>Return the last computed output and its validity updated
+with the current validity of the inputs.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the output and its validity</p></dd></dl></div>
     </li><li name="org.eso.ias.prototype.compele.ComputingElement#getState" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getState():org.eso.ias.prototype.compele.AsceStates.State"></a><a id="getState():State"></a>
       <span class="permalink">
@@ -642,9 +677,9 @@ class)</p><p>This method sets the validity of the output from the validity of it
               
         </dd></dl></div>
     </li><li name="org.eso.ias.prototype.compele.ComputingElement#id" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="id:org.eso.ias.prototype.input.Identifier"></a><a id="id:Identifier"></a>
+      <a id="id:String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#id:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#id:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -653,10 +688,10 @@ class)</p><p>This method sets the validity of the output from the validity of it
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">id</span><span class="result">: <a href="../input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">id</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">The ID of the ASCE</p>
     </li><li name="org.eso.ias.prototype.compele.ComputingElement#initialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="initialize():org.eso.ias.prototype.compele.AsceStates.State"></a><a id="initialize():State"></a>
       <span class="permalink">
@@ -944,9 +979,9 @@ to update the output i.e. to execute the transfer function.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.prototype.compele.ComputingElement">ComputingElement</a> → AnyRef → Any</dd></dl></div>
     </li><li name="org.eso.ias.prototype.compele.ComputingElement#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="update(iasios:List[org.eso.ias.prototype.input.InOut[_]]):(Option[org.eso.ias.prototype.input.InOut[T]],org.eso.ias.prototype.compele.AsceStates.State)"></a><a id="update(List[InOut[_]]):(Option[InOut[T]],State)"></a>
+      <a id="update(iasValues:Set[org.eso.ias.prototype.input.java.IASValue[_]]):(org.eso.ias.prototype.input.InOut[T],org.eso.ias.prototype.input.Validity,org.eso.ias.prototype.compele.AsceStates.State)"></a><a id="update(Set[IASValue[_]]):(InOut[T],Validity,State)"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#update(iasios:List[org.eso.ias.prototype.input.InOut[_]]):(Option[org.eso.ias.prototype.input.InOut[T]],org.eso.ias.prototype.compele.AsceStates.State)" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#update(iasValues:Set[org.eso.ias.prototype.input.java.IASValue[_]]):(org.eso.ias.prototype.input.InOut[T],org.eso.ias.prototype.input.Validity,org.eso.ias.prototype.compele.AsceStates.State)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -955,24 +990,7 @@ to update the output i.e. to execute the transfer function.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.List">List</span>[<a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[_]]</span>)</span><span class="result">: (<span class="extype" name="scala.Option">Option</span>[<a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.compele.ComputingElement.T">T</span>]], <a href="AsceStates$.html#State=org.eso.ias.prototype.compele.AsceStates.Value" class="extmbr" name="org.eso.ias.prototype.compele.AsceStates.State">State</a>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Update the output of the ACS when the inputs is a set of IASIOs.</p><div class="fullcomment"><div class="comment cmt"><p>Update the output of the ACS when the inputs is a set of IASIOs.</p><p>This method is here mostly for testing and delegate to  update(iasValues: Set[IASValue[_]])
-</p></div><dl class="paramcmts block"><dt class="param">iasios</dt><dd class="cmt"><p>the new inputs</p></dd></dl></div>
-    </li><li name="org.eso.ias.prototype.compele.ComputingElement#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="update(iasValues:Set[org.eso.ias.prototype.input.java.IASValue[_]]):(Option[org.eso.ias.prototype.input.InOut[T]],org.eso.ias.prototype.compele.AsceStates.State)"></a><a id="update(Set[IASValue[_]]):(Option[InOut[T]],State)"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/compele/ComputingElement.html#update(iasValues:Set[org.eso.ias.prototype.input.java.IASValue[_]]):(Option[org.eso.ias.prototype.input.InOut[T]],org.eso.ias.prototype.compele.AsceStates.State)" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="iasValues">iasValues: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: (<span class="extype" name="scala.Option">Option</span>[<a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.compele.ComputingElement.T">T</span>]], <a href="AsceStates$.html#State=org.eso.ias.prototype.compele.AsceStates.Value" class="extmbr" name="org.eso.ias.prototype.compele.AsceStates.State">State</a>)</span>
+        <span class="name">update</span><span class="params">(<span name="iasValues">iasValues: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: (<a href="../input/InOut.html" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.compele.ComputingElement.T">T</span>], <a href="../input/Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>, <a href="AsceStates$.html#State=org.eso.ias.prototype.compele.AsceStates.Value" class="extmbr" name="org.eso.ias.prototype.compele.AsceStates.State">State</a>)</span>
       </span>
       
       <p class="shortcomment cmt">The DASU sent a new set of inputs: they replace the old inputs and
@@ -980,8 +998,11 @@ trigger the execution of the TF to create a new output.</p><div class="fullcomme
 trigger the execution of the TF to create a new output.
 If some of the inputs of the ASCE is not yet initialized, it has a null/empty
 value and the ASCE cannot run the TF neither produce the output.
-</p></div><dl class="paramcmts block"><dt class="param">iasValues</dt><dd class="cmt"><p>the new inputs received from the DASU</p></dd><dt>returns</dt><dd class="cmt"><p>the new output generated applying the TF to the inputs and the new state of the ASCE
-        The otput is None if at least one of the inputs has not yet been initialized</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">iasValues</dt><dd class="cmt"><p>the new inputs received from the DASU</p></dd><dt>returns</dt><dd class="cmt"><p>A tuple with 3 fields:
+			   1) the new output generated applying the TF to the inputs and the new state of the ASCE
+           The output is None if at least one of the inputs has not yet been initialized
+        2) the actual validity
+        3) the state of the ASCE</p></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">

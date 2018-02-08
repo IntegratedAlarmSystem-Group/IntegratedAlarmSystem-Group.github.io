@@ -214,17 +214,21 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.dasu">dasu</a></dd></dl></div>
     </li><li class="current-entities indented4">
-                        <a class="object" href="" title=""></a>
-                        <a class="class" href="Dasu.html" title="The Distributed Alarm System Unit or DASU."></a>
-                        <a href="Dasu.html" title="The Distributed Alarm System Unit or DASU.">Dasu</a>
+                        <a class="object" href="" title="Companion object"></a>
+                        <a class="class" href="Dasu.html" title="The Distributed Alarm System Unit (DASU)."></a>
+                        <a href="Dasu.html" title="The Distributed Alarm System Unit (DASU).">Dasu</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="DasuImpl$.html" title=""></a>
+                        <a class="class" href="DasuImpl.html" title="The implementation of the DASU."></a>
+                        <a href="DasuImpl.html" title="The implementation of the DASU.">DasuImpl</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="IasiosReceiver$.html" title="Companion object"></a>
                         <a class="class" href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB."></a>
                         <a href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB.">IasiosReceiver</a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="TimeScheduler$.html" title="Companion object with definitions of constants"></a>
-                        <a class="class" href="TimeScheduler.html" title="The TimeScheduler helps setting the time interval to generate the output when no new inputs arrive."></a>
-                        <a href="TimeScheduler.html" title="The TimeScheduler helps setting the time interval to generate the output when no new inputs arrive.">TimeScheduler</a>
+                        <a class="object" href="StatsCollector$.html" title="Companion object with definitions of constants"></a>
+                        <a class="class" href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU."></a>
+                        <a href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU.">StatsCollector</a>
                       </li>
               </ul>
             </div>
@@ -255,7 +259,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Companion object</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -360,10 +364,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.Dasu#DeafaultStatisticsTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DeafaultStatisticsTimeInterval:Int"></a>
+    </li><li name="org.eso.ias.dasu.Dasu#DefaultMinAllowedRefreshRate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultMinAllowedRefreshRate:Int"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu$.html#DeafaultStatisticsTimeInterval:Int" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu$.html#DefaultMinAllowedRefreshRate:Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -372,14 +376,14 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">DeafaultStatisticsTimeInterval</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">DefaultMinAllowedRefreshRate</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
-      <p class="shortcomment cmt">The time interval to log statistics (minutes)</p>
-    </li><li name="org.eso.ias.dasu.Dasu#StatisticsTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StatisticsTimeInterval:Int"></a>
+      <p class="shortcomment cmt">The minimum possible refresh rate</p>
+    </li><li name="org.eso.ias.dasu.Dasu#MinAllowedRefreshRatePropName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MinAllowedRefreshRatePropName:String"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu$.html#StatisticsTimeInterval:Int" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu$.html#MinAllowedRefreshRatePropName:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -388,26 +392,10 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">StatisticsTimeInterval</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">MinAllowedRefreshRatePropName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">The actual time interval to log statistics (minutes)</p>
-    </li><li name="org.eso.ias.dasu.Dasu#StatisticsTimeIntervalPropName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StatisticsTimeIntervalPropName:String"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu$.html#StatisticsTimeIntervalPropName:String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">StatisticsTimeIntervalPropName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">The name of the java property to set the statistics generation time interval</p>
+      <p class="shortcomment cmt">The name of the java property to set the minimum allowed refresh rate</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">

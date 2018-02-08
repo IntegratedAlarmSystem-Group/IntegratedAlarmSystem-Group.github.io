@@ -191,16 +191,12 @@
                         <a href="InOut.html" title="A  InOut holds the value of an input or output of the IAS.">InOut</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="InOutValue.html" title="The value of the HIO is associated to a timestamp corresponding to the update time of the value."></a>
-                        <a href="InOutValue.html" title="The value of the HIO is associated to a timestamp corresponding to the update time of the value.">InOutValue</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="object" href="JavaConverter$.html" title="Converter methods from java to scala and vice-versa."></a>
                         <a href="JavaConverter$.html" title="Converter methods from java to scala and vice-versa.">JavaConverter</a>
                       </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="object" href="Validity$.html" title="The validity of an alarm or value of a monitor point for example if the value of a monitor point is not updated as expected (network problem?)."></a>
-                        <a href="Validity$.html" title="The validity of an alarm or value of a monitor point for example if the value of a monitor point is not updated as expected (network problem?).">Validity</a>
+                        <a class="object" href="Validity$.html" title=""></a>
+                        <a class="class" href="Validity.html" title="The validity of an alarm or monitor point value is a measure of how much the value reflects actual situation of a monitored system."></a>
+                        <a href="Validity.html" title="The validity of an alarm or monitor point value is a measure of how much the value reflects actual situation of a monitored system.">Validity</a>
                       </li><li name="org.eso.ias.prototype.transfer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transfer"></a><a id="transfer:transfer"></a>
       <span class="permalink">
@@ -359,41 +355,55 @@ Identifier of the parent.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="A  InOut holds the value of an input or output of the IAS." href="InOut.html"><span class="name">InOut</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Int">Int</span></span>, <span name="mode">mode: <a href="../../plugin/OperationalMode.html" class="extype" name="org.eso.ias.plugin.OperationalMode">OperationalMode</a></span>, <span name="validity">validity: <a href="Validity$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.prototype.input.Validity.Value">Validity.Value</a></span>, <span name="iasType">iasType: <a href="java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="A  InOut holds the value of an input or output of the IAS." href="InOut.html"><span class="name">InOut</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>, <span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span></span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Int">Int</span></span>, <span name="mode">mode: <a href="java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>, <span name="fromIasValueValidity">fromIasValueValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>]</span>, <span name="iasType">iasType: <a href="java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       <p class="shortcomment cmt">A  <code>InOut</code> holds the value of an input or output
 of the IAS.</p><div class="fullcomment"><div class="comment cmt"><p>A  <code>InOut</code> holds the value of an input or output
 of the IAS.
 Objects of this type constitutes both the input of ASCEs and the output
-they produce.</p><p>The type of a InOut can be a double, an integer, an
+they produce. They are supposed to live into a ASCE only: their representation
+in the BSDB is the IASValue[_].</p><p>The type of a InOut can be a double, an integer, an
 array of integers and many other customized types.</p><p>The actual value is an Option because there is no
 value associated before it comes for example from the HW.
-Nevertheless the <code>InOut</code> exists</p><p>The refresh rate is used in two ways: to assess the validity for the inputs
-coming from external monitored systems or generated by IAS DASUs.
+Nevertheless the <code>InOut</code> exists.</p><p>The refresh rate is used to assess the validity for the inputs
+coming from external monitored systems or generated by IAS ASCEs.
 The DASU uses the refreshRate to send the IASIO in output back to
 the BSDB.
 The refrshRate of IASIOs generated by ASCEs running inside a DASU that are not
-the output of DASUs are ignored.</p><p><code>InOut</code> is immutable.
-</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>IASType</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.prototype.input.InOutValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="InOutValue[T]extendsProductwithSerializable"></a><a id="InOutValue[T]:InOutValue[T]"></a>
+the output of DASUs are ignored.</p><p>If the InOut is the input of a ASCE, it has the validity received from the IASValue
+in the fromIasValueValidity. Otherwise the validity depends on the validity of the
+IASValues in input to the ASCE.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>IASType</p></span><span class="cmt"><p>isOutput()
+During is entire life, a IASIO is either one of the inputs or the output
+of the ACSE so the fromIasValueValidity is either defined or empty:
+- If it is empty it remains empty forwver;
+- if it is defined it will remain defined forever
+This invariant is checked is several parts of the code.
+<code>InOut</code> is immutable.</p></span><span class="cmt"><p>getValidity(dependantIasios: Option[Set[InOut[_]]])
+This invariant, is also used for recognizing if the InoOut is an output
+of the ACSE</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.Validity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ValidityextendsOrdered[org.eso.ias.prototype.input.Validity]"></a><a id="Validity:Validity"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/index.html#InOutValue[T]extendsProductwithSerializable" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/index.html#ValidityextendsOrdered[org.eso.ias.prototype.input.Validity]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="The value of the HIO is associated to a timestamp corresponding to the update time of the value." href="InOutValue.html"><span class="name">InOutValue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOutValue.T">T</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="The validity of an alarm or monitor point value is a measure of how much the value reflects actual situation of a monitored system." href="Validity.html"><span class="name">Validity</span></a><span class="result"> extends <span class="extype" name="scala.Ordered">Ordered</span>[<a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">The value of the HIO is associated
-to a timestamp corresponding to the update time of
-the value.</p>
+      <p class="shortcomment cmt">The validity of an alarm or monitor point value is a measure of
+how much the value reflects actual situation of a monitored system.</p><div class="fullcomment"><div class="comment cmt"><p>The validity of an alarm or monitor point value is a measure of
+how much the value reflects actual situation of a monitored system.</p><p>Basically, if the value is produced propagated in time then it is reliable
+otherwise is unreliable.</p><p>An invalid value or alarm is displaied with a proper color coding
+(or other visualization strategy) to let the operator aware that
+the information provided by the IAS might not reflect the actual situation.</p><p>The Validity is immutable
+</p></div></div>
     </li></ol>
             </div>
 
@@ -464,11 +474,10 @@ the value.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="The validity of an alarm or value of a monitor point for example if the value of a monitor point is not updated as expected (network problem?)." href="Validity$.html"><span class="name">Validity</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+        <a title="" href="Validity$.html"><span class="name">Validity</span></a>
       </span>
       
-      <p class="shortcomment cmt">The validity of an alarm or value of a monitor point for example if the value
-of a monitor point is not updated as expected (network problem?).</p>
+      
     </li>
               </ol>
             </div>

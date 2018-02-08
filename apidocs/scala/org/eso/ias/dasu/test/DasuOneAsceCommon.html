@@ -167,6 +167,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.dasu.test">test</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place."></a>
+                        <a href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place.">CheckDasuOutputTimestamps</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels)."></a>
                         <a href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels).">Dasu7ASCEsTest</a>
                       </li><li class="current-entities indented5">
@@ -175,16 +179,16 @@
                         <a href="DasuOneASCETest.html" title="Test the DASU with one ASCE and the MinMaxThreshold TF.">DasuOneASCETest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="" title="Setup the DASU with one ASCE as it is reused by more than one test"></a>
+                        <a href="" title="Setup the DASU with one ASCE as it is reused by more than one test">DasuOneAsceCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue."></a>
                         <a href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue.">DasuWithKafkaPubSubTest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="JsonPublisherTest.html" title="Test the writing of the output of the DASU in a JSON file."></a>
                         <a href="JsonPublisherTest.html" title="Test the writing of the output of the DASU in a JSON file.">JsonPublisherTest</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="class" href="" title="The input subscriber to send event to the DASU   *"></a>
-                        <a href="" title="The input subscriber to send event to the DASU   *">TestInputSubscriber</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TopologyTest.html" title="Test the Topology"></a>
@@ -198,8 +202,8 @@
       <div id="definition">
         <div class="big-circle class">c</div>
         <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.eso">eso</a>.<a href="../../index.html" class="extype" name="org.eso.ias">ias</a>.<a href="../index.html" class="extype" name="org.eso.ias.dasu">dasu</a>.<a href="index.html" class="extype" name="org.eso.ias.dasu.test">test</a></p>
-        <h1>TestInputSubscriber<span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html" title="Permalink">
+        <h1>DasuOneAsceCommon<span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -212,17 +216,18 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TestInputSubscriber</span><span class="result"> extends <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>
+        <span class="name">DasuOneAsceCommon</span><span class="result"> extends <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p> The input subscriber to send event to the DASU   *
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Setup the DASU with one ASCE as it is reused by more
+than one test
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -248,7 +253,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.dasu.test.TestInputSubscriber"><span>TestInputSubscriber</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputSubscriber"><span>InputSubscriber</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.dasu.test.DasuOneAsceCommon"><span>DasuOneAsceCommon</span></li><li class="in" name="org.eso.ias.dasu.publisher.OutputListener"><span>OutputListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -268,10 +273,10 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.eso.ias.dasu.test.TestInputSubscriber#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():org.eso.ias.dasu.test.TestInputSubscriber"></a><a id="&lt;init&gt;:TestInputSubscriber"></a>
+              <ol><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(autoRefreshTimeInterval:Long):org.eso.ias.dasu.test.DasuOneAsceCommon"></a><a id="&lt;init&gt;:DasuOneAsceCommon"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#&lt;init&gt;():org.eso.ias.dasu.test.TestInputSubscriber" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#&lt;init&gt;(autoRefreshTimeInterval:Long):org.eso.ias.dasu.test.DasuOneAsceCommon" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -280,10 +285,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TestInputSubscriber</span><span class="params">()</span>
+        <span class="name">DasuOneAsceCommon</span><span class="params">(<span name="autoRefreshTimeInterval">autoRefreshTimeInterval: <span class="extype" name="scala.Long">Long</span></span>)</span>
       </span>
       
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">autoRefreshTimeInterval</dt><dd class="cmt"><p>The auto-refresh time (msec) to pass to the DASU</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -297,7 +302,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -313,7 +318,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html###():Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -329,7 +334,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -345,7 +350,7 @@
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -358,10 +363,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.TestInputSubscriber#cleanUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cleanUp():scala.util.Try[Unit]"></a><a id="cleanUp():Try[Unit]"></a>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#buildDasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buildDasu():Option[org.eso.ias.dasu.DasuImpl]"></a><a id="buildDasu():Option[DasuImpl]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#cleanUp():scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#buildDasu():Option[org.eso.ias.dasu.DasuImpl]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -370,14 +375,78 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cleanUp</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">buildDasu</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../DasuImpl.html" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">CleanUp and release the resources</p><div class="fullcomment"><div class="comment cmt"><p>CleanUp and release the resources</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.test.TestInputSubscriber">TestInputSubscriber</a> → <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#buildValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buildValue(d:Double):org.eso.ias.prototype.input.java.IASValue[_]"></a><a id="buildValue(Double):IASValue[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#buildValue(d:Double):org.eso.ias.prototype.input.java.IASValue[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildValue</span><span class="params">(<span name="d">d: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#cdbFiles" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cdbFiles:org.eso.ias.cdb.json.CdbJsonFiles"></a><a id="cdbFiles:CdbJsonFiles"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#cdbFiles:org.eso.ias.cdb.json.CdbJsonFiles" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cdbFiles</span><span class="result">: <a href="../../cdb/json/CdbJsonFiles.html" class="extype" name="org.eso.ias.cdb.json.CdbJsonFiles">CdbJsonFiles</a></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#cdbParentPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cdbParentPath:java.nio.file.Path"></a><a id="cdbParentPath:Path"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#cdbParentPath:java.nio.file.Path" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cdbParentPath</span><span class="result">: <span class="extype" name="java.nio.file.Path">Path</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#cdbReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cdbReader:org.eso.ias.cdb.CdbReader"></a><a id="cdbReader:CdbReader"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#cdbReader:org.eso.ias.cdb.CdbReader" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cdbReader</span><span class="result">: <a href="../../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#clone():Object" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -398,10 +467,74 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#converterId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="converterId:org.eso.ias.prototype.input.Identifier"></a><a id="converterId:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#converterId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">converterId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#dasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dasu:Option[org.eso.ias.dasu.DasuImpl]"></a><a id="dasu:Option[DasuImpl]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#dasu:Option[org.eso.ias.dasu.DasuImpl]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dasu</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../DasuImpl.html" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a>]</span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#dasuId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dasuId:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#dasuId:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dasuId</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#dasuIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dasuIdentifier:org.eso.ias.prototype.input.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#dasuIdentifier:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dasuIdentifier</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -417,7 +550,7 @@
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -433,7 +566,7 @@
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -455,7 +588,7 @@
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -474,7 +607,7 @@
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -490,26 +623,42 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.TestInputSubscriber#initialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="initialize():scala.util.Try[Unit]"></a><a id="initialize():Try[Unit]"></a>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#inputID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="inputID:org.eso.ias.prototype.input.Identifier"></a><a id="inputID:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#initialize():scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#inputID:org.eso.ias.prototype.input.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">inputID</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
       </span>
       
-      <p class="shortcomment cmt">Initialize</p><div class="fullcomment"><div class="comment cmt"><p>Initialize</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.test.TestInputSubscriber">TestInputSubscriber</a> → <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#inputsProvider" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="inputsProvider:org.eso.ias.dasu.publisher.DirectInputSubscriber"></a><a id="inputsProvider:DirectInputSubscriber"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#inputsProvider:org.eso.ias.dasu.publisher.DirectInputSubscriber" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inputsProvider</span><span class="result">: <a href="../publisher/DirectInputSubscriber.html" class="extype" name="org.eso.ias.dasu.publisher.DirectInputSubscriber">DirectInputSubscriber</a></span>
+      </span>
+      
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -522,10 +671,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#monSysId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="monSysId:org.eso.ias.prototype.input.Identifier"></a><a id="monSysId:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#monSysId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">monSysId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -541,7 +706,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#notify():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -560,7 +725,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -576,10 +741,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.TestInputSubscriber#sendInputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sendInputs(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit"></a><a id="sendInputs(Set[IASValue[_]]):Unit"></a>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#outputEvent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputEvent(output:org.eso.ias.prototype.input.java.IASValue[_]):Unit"></a><a id="outputEvent(IASValue[_]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#sendInputs(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#outputEvent(output:org.eso.ias.prototype.input.java.IASValue[_]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -588,14 +753,30 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sendInputs</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">outputEvent</span><span class="params">(<span name="output">output: <a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt"> Send the passed inputs to the listener</p><div class="fullcomment"><div class="comment cmt"><p> Send the passed inputs to the listener</p></div><dl class="paramcmts block"><dt class="param">iasios</dt><dd class="cmt"><p>the inputs to be processed by the DASU</p></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.TestInputSubscriber#start" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="start(listener:org.eso.ias.dasu.subscriber.InputsListener,acceptedInputs:Set[String]):scala.util.Try[Unit]"></a><a id="start(InputsListener,Set[String]):Try[Unit]"></a>
+      <p class="shortcomment cmt">Notifies about a new output produced by the DASU</p><div class="fullcomment"><div class="comment cmt"><p>Notifies about a new output produced by the DASU</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.test.DasuOneAsceCommon">DasuOneAsceCommon</a> → <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#outputPublisher" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher"></a><a id="outputPublisher:OutputPublisher"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#start(listener:org.eso.ias.dasu.subscriber.InputsListener,acceptedInputs:Set[String]):scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputPublisher</span><span class="result">: <a href="../publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#outputStringifiedEvent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputStringifiedEvent(outputStr:String):Unit"></a><a id="outputStringifiedEvent(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#outputStringifiedEvent(outputStr:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -604,15 +785,100 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">start</span><span class="params">(<span name="listener">listener: <a href="../subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a></span>, <span name="acceptedInputs">acceptedInputs: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">outputStringifiedEvent</span><span class="params">(<span name="outputStr">outputStr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Start to get events and forward them to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>Start to get events and forward them to the listener.</p><p>IASIOs whose ID is not in the acceptedInputs set are discarded.
-</p></div><dl class="paramcmts block"><dt class="param">listener</dt><dd class="cmt"><p>the listener of events</p></dd><dt class="param">acceptedInputs</dt><dd class="cmt"><p>the IDs of the inputs accepted by the listener</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.test.TestInputSubscriber">TestInputSubscriber</a> → <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
+      <p class="shortcomment cmt">Notifies about a new output produced by the DASU
+ formatted as String
+</p><div class="fullcomment"><div class="comment cmt"><p>Notifies about a new output produced by the DASU
+ formatted as String
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.test.DasuOneAsceCommon">DasuOneAsceCommon</a> → <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#outputStringsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outputStringsReceived:scala.collection.mutable.ArrayBuffer[String]"></a><a id="outputStringsReceived:ArrayBuffer[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#outputStringsReceived:scala.collection.mutable.ArrayBuffer[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputStringsReceived</span><span class="result">: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The output, formatted as strings, published by the DASU
+</p>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#outputValuesReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outputValuesReceived:scala.collection.mutable.ArrayBuffer[org.eso.ias.prototype.input.java.IASValue[_]]"></a><a id="outputValuesReceived:ArrayBuffer[IASValue[_]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#outputValuesReceived:scala.collection.mutable.ArrayBuffer[org.eso.ias.prototype.input.java.IASValue[_]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputValuesReceived</span><span class="result">: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The output values published by the DASU
+</p>
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#pluginId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pluginId:org.eso.ias.prototype.input.Identifier"></a><a id="pluginId:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#pluginId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pluginId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#stringSerializer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stringSerializer:Option[org.eso.ias.prototype.input.java.IasValueJsonSerializer]"></a><a id="stringSerializer:Option[IasValueJsonSerializer]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#stringSerializer:Option[org.eso.ias.prototype.input.java.IasValueJsonSerializer]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stringSerializer</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../prototype/input/java/IasValueJsonSerializer.html" class="extype" name="org.eso.ias.prototype.input.java.IasValueJsonSerializer">IasValueJsonSerializer</a>]</span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.test.DasuOneAsceCommon#supervId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="supervId:org.eso.ias.prototype.input.Identifier"></a><a id="supervId:Identifier"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#supervId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">supervId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -628,7 +894,7 @@
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#toString():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -644,7 +910,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#wait():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -666,7 +932,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -688,7 +954,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/TestInputSubscriber.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneAsceCommon.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -719,8 +985,8 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.dasu.subscriber.InputSubscriber">
-              <h3>Inherited from <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></h3>
+        <div class="parent" name="org.eso.ias.dasu.publisher.OutputListener">
+              <h3>Inherited from <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

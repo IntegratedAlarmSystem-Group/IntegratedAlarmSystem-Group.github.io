@@ -15,3 +15,4 @@ org.eso.ias.plugin.thread
 org.eso.ias.prototype.input.java
 org.eso.ias.prototype.transfer
 org.eso.ias.prototype.transfer.impls
+org.eso.ias.webserversender

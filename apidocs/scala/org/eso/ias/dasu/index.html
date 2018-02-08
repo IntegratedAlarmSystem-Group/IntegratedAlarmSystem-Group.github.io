@@ -278,17 +278,21 @@
       
       
     </li><li class="current-entities indented4">
-                        <a class="object" href="Dasu$.html" title=""></a>
-                        <a class="class" href="Dasu.html" title="The Distributed Alarm System Unit or DASU."></a>
-                        <a href="Dasu.html" title="The Distributed Alarm System Unit or DASU.">Dasu</a>
+                        <a class="object" href="Dasu$.html" title="Companion object"></a>
+                        <a class="class" href="Dasu.html" title="The Distributed Alarm System Unit (DASU)."></a>
+                        <a href="Dasu.html" title="The Distributed Alarm System Unit (DASU).">Dasu</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="DasuImpl$.html" title=""></a>
+                        <a class="class" href="DasuImpl.html" title="The implementation of the DASU."></a>
+                        <a href="DasuImpl.html" title="The implementation of the DASU.">DasuImpl</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="IasiosReceiver$.html" title="Companion object"></a>
                         <a class="class" href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB."></a>
                         <a href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB.">IasiosReceiver</a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="TimeScheduler$.html" title="Companion object with definitions of constants"></a>
-                        <a class="class" href="TimeScheduler.html" title="The TimeScheduler helps setting the time interval to generate the output when no new inputs arrive."></a>
-                        <a href="TimeScheduler.html" title="The TimeScheduler helps setting the time interval to generate the output when no new inputs arrive.">TimeScheduler</a>
+                        <a class="object" href="StatsCollector$.html" title="Companion object with definitions of constants"></a>
+                        <a class="class" href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU."></a>
+                        <a href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU.">StatsCollector</a>
                       </li><li name="org.eso.ias.kafkautils" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="kafkautils"></a><a id="kafkautils:kafkautils"></a>
       <span class="permalink">
@@ -334,6 +338,54 @@
       </span>
       <span class="symbol">
         <a title="" href="../prototype/index.html"><span class="name">prototype</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.supervisor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="supervisor"></a><a id="supervisor:supervisor"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#supervisor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../supervisor/index.html"><span class="name">supervisor</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.test" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="test"></a><a id="test:test"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#test" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../test/index.html"><span class="name">test</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.webserversender" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="webserversender"></a><a id="webserversender:webserversender"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#webserversender" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../webserversender/index.html"><span class="name">webserversender</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
@@ -400,10 +452,37 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.dasu.Dasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="DasuextendsInputsListenerwithRunnable"></a><a id="Dasu:Dasu"></a>
+              <ol><li name="org.eso.ias.dasu.Dasu" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DasuextendsInputsListener"></a><a id="Dasu:Dasu"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#DasuextendsInputsListenerwithRunnable" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#DasuextendsInputsListener" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Distributed Alarm System Unit (DASU)." href="Dasu.html"><span class="name">Dasu</span></a><span class="result"> extends <a href="subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Distributed Alarm System Unit (DASU).</p><div class="fullcomment"><div class="comment cmt"><p>The Distributed Alarm System Unit (DASU).</p><p>The DASU, once notified of new inputs received from the BSDB (or other sources),
+forwards the IASIOs to the ASCEs to produce the output.
+If no new inputs arrived the DASU generate the output anyhow to notify that the DASU is alive.
+At a first glance it seems enough to check the validity of the last set of inputs to assign
+the validity of the output.</p><p>The DASU is initialized in the constructor: to let it start processing events,
+the start() method must be called.</p><p>The DASU must update the output even if it does not receive any input
+to refresh the output and send it to the BSDB.
+The automatic refresh of the output when no new inputs arrive is not active by default
+but need to be activated by calling enableAutoRefreshOfOutput(true).</p><p>Newly received inputs are immediately processed unless they arrive so often
+to need the CPU running at 100%. In this case the DASU delayed the evaluation
+of the output collecting the inputs intil the throttling time interval elapses.
+</p></div></div>
+    </li><li name="org.eso.ias.dasu.DasuImpl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DasuImplextendsDasu"></a><a id="DasuImpl:DasuImpl"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#DasuImplextendsDasu" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -412,36 +491,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="The Distributed Alarm System Unit or DASU." href="Dasu.html"><span class="name">Dasu</span></a><span class="result"> extends <a href="subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a> with <span class="extype" name="java.lang.Runnable">Runnable</span></span>
+        <a title="The implementation of the DASU." href="DasuImpl.html"><span class="name">DasuImpl</span></a><span class="result"> extends <a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></span>
       </span>
       
-      <p class="shortcomment cmt">The Distributed Alarm System Unit or DASU.</p><div class="fullcomment"><div class="comment cmt"><p>The Distributed Alarm System Unit or DASU.</p><p>The DASU, once notified of new inputs received from the BSDB (or other sources),
-sends the IASIOs to the ASCEs to produce the output.
-If no new inputs arrived the DASU generate the output anyhow to notify that the DASU is alive.
-At a first glance it seems enough to check the validity of the last set of inputs to assign
-the validity of the output.</p><p>The DASU is initialized in the constructor but to let it start processing events,
-the start() method must be called.</p><p>The DASU must update the output even if it does not receive any input
-to refresh the output and send it to the BSDB.
-After generating the output, the DASU schedules a timer task for refreshing
-the output. This task must be executed only if no inputs arrive before otherwiise
-must be cancelled and anew scheduled.
-The calculation of the point in time to refresh the output is delegated to <a href="TimeScheduler.html" class="extype" name="org.eso.ias.dasu.TimeScheduler">TimeScheduler</a>.
-The refresh of the output when no inputs arrive must be explicitly activate
-and can be suspended resumed at any time.</p><p>The automatic refresh of the output when no new input arrive is not active by default
-but need to be activated by calling enableAutoRefreshOfOutput()</p><p>Newly received inputs are immediately processed unless they arrive so often
-to risk to have the CPU running at 100%.
-Normally the DASU has a thread that refreshes the output even if there are no inputs:
-it must be explicitly started by invoking autoUpdateOfOutput that will normally be done by the
-Supervisor.
-In the case that the automatic refresh rate of the input has been activated, newly received
-inputs are immediately processed only if the next refresh is not scheduled before
-the minimum allowed refresh rate. If it is the case then the inputs are buffered
-and will be processed later.
-This is a very easy strategy that avoids rescheduling the refresh after
-each publication of the output.
-<a href="TimeScheduler.html" class="extype" name="org.eso.ias.dasu.TimeScheduler">TimeScheduler</a> was thought to implement a more complex heuristic but
-we will not use it unless we will need it.
-</p></div></div>
+      <p class="shortcomment cmt">The implementation of the DASU.</p><div class="fullcomment"><div class="comment cmt"><p>The implementation of the DASU.</p><p>A DASU normally has 2 threads running:
+- the automatic resending of the output when no new input arrives
+- a thread for the throttling to avoid that processing too many
+  inputs takes 100% CPU</p></div></div>
     </li><li name="org.eso.ias.dasu.IasiosReceiver" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="IasiosReceiverextendsSimpleStringConsumer.KafkaConsumerListener"></a><a id="IasiosReceiver:IasiosReceiver"></a>
       <span class="permalink">
@@ -466,10 +522,10 @@ This is not the most efficient way as it requires to parse JSON strings
 to decide if a value must be accepted or rejected.</p><p>IasiosReceiver objects store the IASValue received in the last time interval
 in a map so that the last received values, override the oldest ones.
 </p></div></div>
-    </li><li name="org.eso.ias.dasu.TimeScheduler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TimeSchedulerextendsAnyRef"></a><a id="TimeScheduler:TimeScheduler"></a>
+    </li><li name="org.eso.ias.dasu.StatsCollector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StatsCollectorextendsAnyRef"></a><a id="StatsCollector:StatsCollector"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#TimeSchedulerextendsAnyRef" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#StatsCollectorextendsAnyRef" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -478,30 +534,12 @@ in a map so that the last received values, override the oldest ones.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="The TimeScheduler helps setting the time interval to generate the output when no new inputs arrive." href="TimeScheduler.html"><span class="name">TimeScheduler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="StasCollector generates and publish statistics of the generation of the output by the DASU." href="StatsCollector.html"><span class="name">StatsCollector</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <p class="shortcomment cmt">The TimeScheduler helps setting the time interval to generate the
-output when no new inputs arrive.</p><div class="fullcomment"><div class="comment cmt"><p>The TimeScheduler helps setting the time interval to generate the
-output when no new inputs arrive.</p><p>Note that this time has nothing to do to the update when new inputs arrive:
-in that case the update of the output happens immediately</p><p>After updating the output, the DASU does nothing until a new set of inputs
-is submitted. The output must be regenerated even if there are no new inputs
-at least to assess its validity.</p><p>At first approximation, the refresh must be scheduled at the minimum
-refresh rate of all the inputs to be able to catch the case of
-that input becoming invalid.</p><p>The refresh rate should also take into account the execution time of
-the update of the output by all the ASCEs.
-In first approximation given
-- m = min refresh rate (minRefreshRate) between all possible inputs
-      and the output of the ASCE
-- e = average execution time of the TF
-- a - a margin to anticipate the generation of the output to reduce
-      the risk to be too late
-the next refresh must be scheduled in m-e-a msecs.</p><p>However if m-e is too short then the update is executed too often wasting
-too much CPU. So m-e must be limited to give other processes the possibility
-to get CPU time. This will be important when many DASUs will run in the
-same supervisor.</p><p>The getNextRefreshTime is supposed to be called after each generation of the output
-to schedule the next execution when no new inputs arrive.
-This seems also the best place to log some statistics
+      <p class="shortcomment cmt">StasCollector generates and publish statistics of the generation of the output
+by the DASU.</p><div class="fullcomment"><div class="comment cmt"><p>StasCollector generates and publish statistics of the generation of the output
+by the DASU.</p><p>The method updateStats is expected to be calles after each generation of the output by the DASU.
 </p></div></div>
     </li></ol>
             </div>
@@ -523,7 +561,23 @@ This seems also the best place to log some statistics
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="Dasu$.html"><span class="name">Dasu</span></a>
+        <a title="Companion object" href="Dasu$.html"><span class="name">Dasu</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Companion object</p>
+    </li><li name="org.eso.ias.dasu.DasuImpl" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DasuImpl"></a><a id="DasuImpl:DasuImpl"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#DasuImpl" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DasuImpl$.html"><span class="name">DasuImpl</span></a>
       </span>
       
       
@@ -543,10 +597,10 @@ This seems also the best place to log some statistics
       </span>
       
       <p class="shortcomment cmt">Companion object</p>
-    </li><li name="org.eso.ias.dasu.TimeScheduler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TimeScheduler"></a><a id="TimeScheduler:TimeScheduler"></a>
+    </li><li name="org.eso.ias.dasu.StatsCollector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StatsCollector"></a><a id="StatsCollector:StatsCollector"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#TimeScheduler" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#StatsCollector" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -555,7 +609,7 @@ This seems also the best place to log some statistics
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Companion object with definitions of constants" href="TimeScheduler$.html"><span class="name">TimeScheduler</span></a>
+        <a title="Companion object with definitions of constants" href="StatsCollector$.html"><span class="name">StatsCollector</span></a>
       </span>
       
       <p class="shortcomment cmt">Companion object with definitions of constants</p>

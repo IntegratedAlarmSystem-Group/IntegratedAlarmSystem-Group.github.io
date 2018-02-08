@@ -167,6 +167,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.dasu.test">test</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place."></a>
+                        <a href="CheckDasuOutputTimestamps.html" title="Checks the timestamps of the output produced by a DASU when inputs change and when the auto-refresh is in place.">CheckDasuOutputTimestamps</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels)."></a>
                         <a href="Dasu7ASCEsTest.html" title="Test the DASU with 7 ASCEs (in 3 levels).">Dasu7ASCEsTest</a>
                       </li><li class="current-entities indented5">
@@ -175,16 +179,16 @@
                         <a href="" title="Test the DASU with one ASCE and the MinMaxThreshold TF.">DasuOneASCETest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="DasuOneAsceCommon.html" title="Setup the DASU with one ASCE as it is reused by more than one test"></a>
+                        <a href="DasuOneAsceCommon.html" title="Setup the DASU with one ASCE as it is reused by more than one test">DasuOneAsceCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue."></a>
                         <a href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue.">DasuWithKafkaPubSubTest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="JsonPublisherTest.html" title="Test the writing of the output of the DASU in a JSON file."></a>
                         <a href="JsonPublisherTest.html" title="Test the writing of the output of the DASU in a JSON file.">JsonPublisherTest</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="class" href="TestInputSubscriber.html" title="The input subscriber to send event to the DASU   *"></a>
-                        <a href="TestInputSubscriber.html" title="The input subscriber to send event to the DASU   *">TestInputSubscriber</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TopologyTest.html" title="Test the Topology"></a>
@@ -212,7 +216,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">DasuOneASCETest</span><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></span>
+        <span class="name">DasuOneASCETest</span><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span></span>
       </span>
       </h4>
 
@@ -223,7 +227,7 @@ in the CDB folder.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a>, <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span>, <span class="extype" name="org.scalatest.FlatSpecLike">FlatSpecLike</span>, <span class="extype" name="org.scalatest.Documenting">Documenting</span>, <span class="extype" name="org.scalatest.Alerting">Alerting</span>, <span class="extype" name="org.scalatest.Notifying">Notifying</span>, <span class="extype" name="org.scalatest.Informing">Informing</span>, <span class="extype" name="org.scalatest.words.CanVerb">CanVerb</span>, <span class="extype" name="org.scalatest.words.MustVerb">MustVerb</span>, <span class="extype" name="org.scalatest.words.ShouldVerb">ShouldVerb</span>, <span class="extype" name="org.scalatest.TestRegistration">TestRegistration</span>, <span class="extype" name="org.scalatest.TestSuite">TestSuite</span>, <span class="extype" name="org.scalatest.Suite">Suite</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="org.scalatest.Assertions">Assertions</span>, <span class="extype" name="org.scalactic.TripleEquals">TripleEquals</span>, <span class="extype" name="org.scalactic.TripleEqualsSupport">TripleEqualsSupport</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span>, <span class="extype" name="org.scalatest.SuiteMixin">SuiteMixin</span>, <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span>, <span class="extype" name="org.scalatest.FlatSpecLike">FlatSpecLike</span>, <span class="extype" name="org.scalatest.Documenting">Documenting</span>, <span class="extype" name="org.scalatest.Alerting">Alerting</span>, <span class="extype" name="org.scalatest.Notifying">Notifying</span>, <span class="extype" name="org.scalatest.Informing">Informing</span>, <span class="extype" name="org.scalatest.words.CanVerb">CanVerb</span>, <span class="extype" name="org.scalatest.words.MustVerb">MustVerb</span>, <span class="extype" name="org.scalatest.words.ShouldVerb">ShouldVerb</span>, <span class="extype" name="org.scalatest.TestRegistration">TestRegistration</span>, <span class="extype" name="org.scalatest.TestSuite">TestSuite</span>, <span class="extype" name="org.scalatest.Suite">Suite</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="org.scalatest.Assertions">Assertions</span>, <span class="extype" name="org.scalactic.TripleEquals">TripleEquals</span>, <span class="extype" name="org.scalactic.TripleEqualsSupport">TripleEqualsSupport</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -249,7 +253,7 @@ in the CDB folder.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.dasu.test.DasuOneASCETest"><span>DasuOneASCETest</span></li><li class="in" name="org.eso.ias.dasu.publisher.OutputListener"><span>OutputListener</span></li><li class="in" name="org.scalatest.FlatSpec"><span>FlatSpec</span></li><li class="in" name="org.scalatest.FlatSpecLike"><span>FlatSpecLike</span></li><li class="in" name="org.scalatest.Documenting"><span>Documenting</span></li><li class="in" name="org.scalatest.Alerting"><span>Alerting</span></li><li class="in" name="org.scalatest.Notifying"><span>Notifying</span></li><li class="in" name="org.scalatest.Informing"><span>Informing</span></li><li class="in" name="org.scalatest.words.CanVerb"><span>CanVerb</span></li><li class="in" name="org.scalatest.words.MustVerb"><span>MustVerb</span></li><li class="in" name="org.scalatest.words.ShouldVerb"><span>ShouldVerb</span></li><li class="in" name="org.scalatest.TestRegistration"><span>TestRegistration</span></li><li class="in" name="org.scalatest.TestSuite"><span>TestSuite</span></li><li class="in" name="org.scalatest.Suite"><span>Suite</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.scalatest.Assertions"><span>Assertions</span></li><li class="in" name="org.scalactic.TripleEquals"><span>TripleEquals</span></li><li class="in" name="org.scalactic.TripleEqualsSupport"><span>TripleEqualsSupport</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.dasu.test.DasuOneASCETest"><span>DasuOneASCETest</span></li><li class="in" name="org.scalatest.BeforeAndAfter"><span>BeforeAndAfter</span></li><li class="in" name="org.scalatest.SuiteMixin"><span>SuiteMixin</span></li><li class="in" name="org.scalatest.FlatSpec"><span>FlatSpec</span></li><li class="in" name="org.scalatest.FlatSpecLike"><span>FlatSpecLike</span></li><li class="in" name="org.scalatest.Documenting"><span>Documenting</span></li><li class="in" name="org.scalatest.Alerting"><span>Alerting</span></li><li class="in" name="org.scalatest.Notifying"><span>Notifying</span></li><li class="in" name="org.scalatest.Informing"><span>Informing</span></li><li class="in" name="org.scalatest.words.CanVerb"><span>CanVerb</span></li><li class="in" name="org.scalatest.words.MustVerb"><span>MustVerb</span></li><li class="in" name="org.scalatest.words.ShouldVerb"><span>ShouldVerb</span></li><li class="in" name="org.scalatest.TestRegistration"><span>TestRegistration</span></li><li class="in" name="org.scalatest.TestSuite"><span>TestSuite</span></li><li class="in" name="org.scalatest.Suite"><span>Suite</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.scalatest.Assertions"><span>Assertions</span></li><li class="in" name="org.scalactic.TripleEquals"><span>TripleEquals</span></li><li class="in" name="org.scalactic.TripleEqualsSupport"><span>TripleEqualsSupport</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -746,6 +750,22 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TripleEqualsSupport</dd></dl></div>
+    </li><li name="org.scalatest.BeforeAndAfter#after" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="after(fun:=&gt;Any)(implicitpos:org.scalactic.source.Position):Unit"></a><a id="after(⇒Any)(Position):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#after(fun:=&gt;Any)(implicitpos:org.scalactic.source.Position):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">after</span><span class="params">(<span name="fun">fun: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="pos">pos: <span class="extype" name="org.scalactic.source.Position">Position</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>BeforeAndAfter</dd></dl></div>
     </li><li name="org.scalatest.FlatSpecLike#alert" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="alert:org.scalatest.Alerter"></a><a id="alert:Alerter"></a>
       <span class="permalink">
@@ -954,6 +974,22 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Assertions</dd></dl></div>
+    </li><li name="org.scalatest.BeforeAndAfter#before" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="before(fun:=&gt;Any)(implicitpos:org.scalactic.source.Position):Unit"></a><a id="before(⇒Any)(Position):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#before(fun:=&gt;Any)(implicitpos:org.scalactic.source.Position):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">before</span><span class="params">(<span name="fun">fun: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="pos">pos: <span class="extype" name="org.scalactic.source.Position">Position</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>BeforeAndAfter</dd></dl></div>
     </li><li name="org.scalatest.FlatSpecLike#behave" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="behave:org.scalatest.words.BehaveWord"></a><a id="behave:BehaveWord"></a>
       <span class="permalink">
@@ -986,22 +1022,6 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#buildValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="buildValue(d:Double):org.eso.ias.prototype.input.java.IASValue[_]"></a><a id="buildValue(Double):IASValue[_]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#buildValue(d:Double):org.eso.ias.prototype.input.java.IASValue[_]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">buildValue</span><span class="params">(<span name="d">d: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>
-      </span>
-      
-      
     </li><li name="org.scalatest.Assertions#cancel" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cancel(cause:Throwable)(implicitpos:org.scalactic.source.Position):Nothing"></a><a id="cancel(Throwable)(Position):Nothing"></a>
       <span class="permalink">
@@ -1066,54 +1086,6 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Assertions</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#cdbFiles" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cdbFiles:org.eso.ias.cdb.json.CdbJsonFiles"></a><a id="cdbFiles:CdbJsonFiles"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#cdbFiles:org.eso.ias.cdb.json.CdbJsonFiles" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cdbFiles</span><span class="result">: <a href="../../cdb/json/CdbJsonFiles.html" class="extype" name="org.eso.ias.cdb.json.CdbJsonFiles">CdbJsonFiles</a></span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#cdbParentPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cdbParentPath:java.nio.file.Path"></a><a id="cdbParentPath:Path"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#cdbParentPath:java.nio.file.Path" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cdbParentPath</span><span class="result">: <span class="extype" name="java.nio.file.Path">Path</span></span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#cdbReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cdbReader:org.eso.ias.cdb.CdbReader"></a><a id="cdbReader:CdbReader"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#cdbReader:org.eso.ias.cdb.CdbReader" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cdbReader</span><span class="result">: <a href="../../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -1330,54 +1302,6 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ShouldVerb</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#converterId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="converterId:org.eso.ias.prototype.input.Identifier"></a><a id="converterId:Identifier"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#converterId:org.eso.ias.prototype.input.Identifier" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">converterId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#dasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dasu:org.eso.ias.dasu.Dasu"></a><a id="dasu:Dasu"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#dasu:org.eso.ias.dasu.Dasu" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dasu</span><span class="result">: <a href="../Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#dasuId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dasuId:String"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#dasuId:String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dasuId</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      
-      
     </li><li name="org.scalactic.TripleEqualsSupport#defaultEquality" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultEquality[A]:org.scalactic.Equality[A]"></a><a id="defaultEquality[A]:Equality[A]"></a>
       <span class="permalink">
@@ -1458,6 +1382,22 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Suite</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#f" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="f:org.eso.ias.dasu.test.DasuOneAsceCommon"></a><a id="f:DasuOneAsceCommon"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#f:org.eso.ias.dasu.test.DasuOneAsceCommon" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">f</span><span class="result">: <a href="DasuOneAsceCommon.html" class="extype" name="org.eso.ias.dasu.test.DasuOneAsceCommon">DasuOneAsceCommon</a></span>
+      </span>
+      
+      
     </li><li name="org.scalatest.Assertions#fail" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fail(cause:Throwable)(implicitpos:org.scalactic.source.Position):Nothing"></a><a id="fail(Throwable)(Position):Nothing"></a>
       <span class="permalink">
@@ -1614,38 +1554,6 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike → Informing</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#inputID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="inputID:org.eso.ias.prototype.input.Identifier"></a><a id="inputID:Identifier"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#inputID:org.eso.ias.prototype.input.Identifier" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">inputID</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#inputsProvider" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="inputsProvider:org.eso.ias.dasu.test.TestInputSubscriber"></a><a id="inputsProvider:TestInputSubscriber"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#inputsProvider:org.eso.ias.dasu.test.TestInputSubscriber" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">inputsProvider</span><span class="result">: <a href="TestInputSubscriber.html" class="extype" name="org.eso.ias.dasu.test.TestInputSubscriber">TestInputSubscriber</a></span>
-      </span>
-      
-      
     </li><li name="org.scalatest.Assertions#intercept" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="intercept[T&lt;:AnyRef](f:=&gt;Any)(implicitclassTag:scala.reflect.ClassTag[T],implicitpos:org.scalactic.source.Position):T"></a><a id="intercept[T&lt;:AnyRef](⇒Any)(ClassTag[T],Position):T"></a>
       <span class="permalink">
@@ -1742,22 +1650,6 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike → Documenting</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#monSysId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="monSysId:org.eso.ias.prototype.input.Identifier"></a><a id="monSysId:Identifier"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#monSysId:org.eso.ias.prototype.input.Identifier" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">monSysId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -1844,58 +1736,6 @@ in the CDB folder.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#outputEvent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="outputEvent(output:org.eso.ias.prototype.input.java.IASValue[_]):Unit"></a><a id="outputEvent(IASValue[_]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#outputEvent(output:org.eso.ias.prototype.input.java.IASValue[_]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">outputEvent</span><span class="params">(<span name="output">output: <a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Notifies about a new output produced by the DASU</p><div class="fullcomment"><div class="comment cmt"><p>Notifies about a new output produced by the DASU</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.test.DasuOneASCETest">DasuOneASCETest</a> → <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#outputPublisher" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher"></a><a id="outputPublisher:OutputPublisher"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">outputPublisher</span><span class="result">: <a href="../publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#outputStringifiedEvent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="outputStringifiedEvent(outputStr:String):Unit"></a><a id="outputStringifiedEvent(String):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#outputStringifiedEvent(outputStr:String):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">outputStringifiedEvent</span><span class="params">(<span name="outputStr">outputStr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Notifies about a new output produced by the DASU
- formatted as String
-</p><div class="fullcomment"><div class="comment cmt"><p>Notifies about a new output produced by the DASU
- formatted as String
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.test.DasuOneASCETest">DasuOneASCETest</a> → <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></dd></dl></div>
     </li><li name="org.scalatest.Assertions#pending" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pending:org.scalatest.Assertionwithorg.scalatest.PendingStatement"></a><a id="pending:AssertionwithPendingStatement"></a>
       <span class="permalink">
@@ -1928,22 +1768,6 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Assertions</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#pluginId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="pluginId:org.eso.ias.prototype.input.Identifier"></a><a id="pluginId:Identifier"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#pluginId:org.eso.ias.prototype.input.Identifier" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pluginId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
-      </span>
-      
-      
     </li><li name="org.scalatest.FlatSpecLike#registerIgnoredTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="registerIgnoredTest(testText:String,testTags:org.scalatest.Tag*)(testFun:=&gt;Any)(implicitpos:org.scalactic.source.Position):Unit"></a><a id="registerIgnoredTest(String,Tag*)(⇒Any)(Position):Unit"></a>
       <span class="permalink">
@@ -1992,7 +1816,7 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Suite</dd></dl></div>
-    </li><li name="org.scalatest.FlatSpecLike#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.scalatest.BeforeAndAfter#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(testName:Option[String],args:org.scalatest.Args):org.scalatest.Status"></a><a id="run(Option[String],Args):Status"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#run(testName:Option[String],args:org.scalatest.Args):org.scalatest.Status" title="Permalink">
@@ -2007,7 +1831,7 @@ in the CDB folder.
         <span class="name">run</span><span class="params">(<span name="testName">testName: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="args">args: <span class="extype" name="org.scalatest.Args">Args</span></span>)</span><span class="result">: <span class="extype" name="org.scalatest.Status">Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlatSpecLike → Suite</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BeforeAndAfter → SuiteMixin</dd></dl></div>
     </li><li name="org.scalatest.Suite#runNestedSuites" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runNestedSuites(args:org.scalatest.Args):org.scalatest.Status"></a><a id="runNestedSuites(Args):Status"></a>
       <span class="permalink">
@@ -2024,7 +1848,7 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Suite</dd></dl></div>
-    </li><li name="org.scalatest.FlatSpecLike#runTest" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.scalatest.BeforeAndAfter#runTest" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runTest(testName:String,args:org.scalatest.Args):org.scalatest.Status"></a><a id="runTest(String,Args):Status"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#runTest(testName:String,args:org.scalatest.Args):org.scalatest.Status" title="Permalink">
@@ -2039,7 +1863,7 @@ in the CDB folder.
         <span class="name">runTest</span><span class="params">(<span name="testName">testName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="args">args: <span class="extype" name="org.scalatest.Args">Args</span></span>)</span><span class="result">: <span class="extype" name="org.scalatest.Status">Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike → TestSuite → Suite</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>BeforeAndAfter → SuiteMixin</dd></dl></div>
     </li><li name="org.scalatest.FlatSpecLike#runTests" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runTests(testName:Option[String],args:org.scalatest.Args):org.scalatest.Status"></a><a id="runTests(Option[String],Args):Status"></a>
       <span class="permalink">
@@ -2088,22 +1912,6 @@ in the CDB folder.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.test.DasuOneASCETest#stringSerializer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="stringSerializer:Option[org.eso.ias.prototype.input.java.IasValueJsonSerializer]"></a><a id="stringSerializer:Option[IasValueJsonSerializer]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/DasuOneASCETest.html#stringSerializer:Option[org.eso.ias.prototype.input.java.IasValueJsonSerializer]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stringSerializer</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../prototype/input/java/IasValueJsonSerializer.html" class="extype" name="org.eso.ias.prototype.input.java.IasValueJsonSerializer">IasValueJsonSerializer</a>]</span>
-      </span>
-      
-      
     </li><li name="org.scalatest.FlatSpecLike#styleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="styleName:String"></a>
       <span class="permalink">
@@ -2447,8 +2255,10 @@ in the CDB folder.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.dasu.publisher.OutputListener">
-              <h3>Inherited from <a href="../publisher/OutputListener.html" class="extype" name="org.eso.ias.dasu.publisher.OutputListener">OutputListener</a></h3>
+        <div class="parent" name="org.scalatest.BeforeAndAfter">
+              <h3>Inherited from <span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span></h3>
+            </div><div class="parent" name="org.scalatest.SuiteMixin">
+              <h3>Inherited from <span class="extype" name="org.scalatest.SuiteMixin">SuiteMixin</span></h3>
             </div><div class="parent" name="org.scalatest.FlatSpec">
               <h3>Inherited from <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></h3>
             </div><div class="parent" name="org.scalatest.FlatSpecLike">

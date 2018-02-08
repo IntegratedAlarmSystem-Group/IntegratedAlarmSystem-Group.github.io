@@ -155,6 +155,14 @@
                         <a href="KafkaHelper.html" title="A helper class providing useful methods and constants for Kafka">KafkaHelper</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="KafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener."></a>
+                        <a href="KafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener.">KafkaIasiosConsumer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic."></a>
+                        <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic.">KafkaIasiosProducer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module"></a>
                         <a href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module">KafkaUtilsException</a>
                       </li><li class="current-entities indented4">
@@ -259,9 +267,9 @@ as the assignment of consumers to partitions is left to kafka in this version.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.kafkautils.SimpleStringConsumer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(servers:String,topicName:String,consumerID:String,listener:org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener):org.eso.ias.kafkautils.SimpleStringConsumer"></a><a id="&lt;init&gt;:SimpleStringConsumer"></a>
+      <a id="&lt;init&gt;(servers:String,topicName:String,consumerID:String):org.eso.ias.kafkautils.SimpleStringConsumer"></a><a id="&lt;init&gt;:SimpleStringConsumer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/SimpleStringConsumer.html#&lt;init&gt;(servers:String,topicName:String,consumerID:String,listener:org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener):org.eso.ias.kafkautils.SimpleStringConsumer" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/SimpleStringConsumer.html#&lt;init&gt;(servers:String,topicName:String,consumerID:String):org.eso.ias.kafkautils.SimpleStringConsumer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -270,7 +278,7 @@ as the assignment of consumers to partitions is left to kafka in this version.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SimpleStringConsumer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="java.lang.String">String</span></span>, <span name="consumerID">consumerID: <span class="extype" name="java.lang.String">String</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></span>)</span>
+        <span class="name">SimpleStringConsumer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="java.lang.String">String</span></span>, <span name="consumerID">consumerID: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       
       
@@ -566,6 +574,23 @@ as the assignment of consumers to partitions is left to kafka in this version.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.SimpleStringConsumer#notifyListener" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyListener(strToNotify:String):Unit"></a><a id="notifyListener(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/SimpleStringConsumer.html#notifyListener(strToNotify:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyListener</span><span class="params">(<span name="strToNotify">strToNotify: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Notify the passed string to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>Notify the passed string to the listener.
+</p></div><dl class="paramcmts block"><dt class="param">strToNotify</dt><dd class="cmt"><p>The string to notify to the listener</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.eso.ias.kafkautils">org.eso.ias.kafkautils</a>] </dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.SimpleStringConsumer#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run():Unit"></a>
       <span class="permalink">
@@ -621,9 +646,9 @@ as the assignment of consumers to partitions is left to kafka in this version.
 The defaults are used if not found in the parameter
 </p></div><dl class="paramcmts block"><dt class="param">userPros</dt><dd class="cmt"><p>The user defined kafka properties</p></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.SimpleStringConsumer#startGettingEvents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition):Unit"></a><a id="startGettingEvents(StartPosition):Unit"></a>
+      <a id="startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition,listener:org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener):Unit"></a><a id="startGettingEvents(StartPosition,KafkaConsumerListener):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/SimpleStringConsumer.html#startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/SimpleStringConsumer.html#startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition,listener:org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -632,7 +657,7 @@ The defaults are used if not found in the parameter
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">startGettingEvents</span><span class="params">(<span name="startReadingFrom">startReadingFrom: <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition">StartPosition</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">startGettingEvents</span><span class="params">(<span name="startReadingFrom">startReadingFrom: <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition">StartPosition</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Start polling events from the kafka channel.</p><div class="fullcomment"><div class="comment cmt"><p>Start polling events from the kafka channel.
@@ -640,7 +665,7 @@ The defaults are used if not found in the parameter
 This method starts the thread that polls the kafka topic
 and returns after the consumer has been assigned to at least
 one partition.
-</p></div><dl class="paramcmts block"><dt class="param">startReadingFrom</dt><dd class="cmt"><p>Starting position in the kafka partition</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of timeout subscribing to the kafkatopic</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">startReadingFrom</dt><dd class="cmt"><p>Starting position in the kafka partition</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener of events published in the topic</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of timeout subscribing to the kafkatopic</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

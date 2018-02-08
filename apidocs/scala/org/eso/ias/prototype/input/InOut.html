@@ -175,16 +175,12 @@
                         <a href="" title="A  InOut holds the value of an input or output of the IAS.">InOut</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="InOutValue.html" title="The value of the HIO is associated to a timestamp corresponding to the update time of the value."></a>
-                        <a href="InOutValue.html" title="The value of the HIO is associated to a timestamp corresponding to the update time of the value.">InOutValue</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="object" href="JavaConverter$.html" title="Converter methods from java to scala and vice-versa."></a>
                         <a href="JavaConverter$.html" title="Converter methods from java to scala and vice-versa.">JavaConverter</a>
                       </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="object" href="Validity$.html" title="The validity of an alarm or value of a monitor point for example if the value of a monitor point is not updated as expected (network problem?)."></a>
-                        <a href="Validity$.html" title="The validity of an alarm or value of a monitor point for example if the value of a monitor point is not updated as expected (network problem?).">Validity</a>
+                        <a class="object" href="Validity$.html" title=""></a>
+                        <a class="class" href="Validity.html" title="The validity of an alarm or monitor point value is a measure of how much the value reflects actual situation of a monitored system."></a>
+                        <a href="Validity.html" title="The validity of an alarm or monitor point value is a measure of how much the value reflects actual situation of a monitored system.">Validity</a>
                       </li>
               </ul>
             </div>
@@ -210,7 +206,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">InOut</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Int">Int</span></span>, <span name="mode">mode: <a href="../../plugin/OperationalMode.html" class="extype" name="org.eso.ias.plugin.OperationalMode">OperationalMode</a></span>, <span name="validity">validity: <a href="Validity$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.prototype.input.Validity.Value">Validity.Value</a></span>, <span name="iasType">iasType: <a href="java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">InOut</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>, <span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span></span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Int">Int</span></span>, <span name="mode">mode: <a href="java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>, <span name="fromIasValueValidity">fromIasValueValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>]</span>, <span name="iasType">iasType: <a href="java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -218,16 +214,26 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A  <code>InOut</code> holds the value of an input or output
 of the IAS.
 Objects of this type constitutes both the input of ASCEs and the output
-they produce.</p><p>The type of a InOut can be a double, an integer, an
+they produce. They are supposed to live into a ASCE only: their representation
+in the BSDB is the IASValue[_].</p><p>The type of a InOut can be a double, an integer, an
 array of integers and many other customized types.</p><p>The actual value is an Option because there is no
 value associated before it comes for example from the HW.
-Nevertheless the <code>InOut</code> exists</p><p>The refresh rate is used in two ways: to assess the validity for the inputs
-coming from external monitored systems or generated by IAS DASUs.
+Nevertheless the <code>InOut</code> exists.</p><p>The refresh rate is used to assess the validity for the inputs
+coming from external monitored systems or generated by IAS ASCEs.
 The DASU uses the refreshRate to send the IASIO in output back to
 the BSDB.
 The refrshRate of IASIOs generated by ASCEs running inside a DASU that are not
-the output of DASUs are ignored.</p><p><code>InOut</code> is immutable.
-</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>IASType</p></span></dd></dl><div class="toggleContainer block">
+the output of DASUs are ignored.</p><p>If the InOut is the input of a ASCE, it has the validity received from the IASValue
+in the fromIasValueValidity. Otherwise the validity depends on the validity of the
+IASValues in input to the ASCE.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>IASType</p></span><span class="cmt"><p>isOutput()
+During is entire life, a IASIO is either one of the inputs or the output
+of the ACSE so the fromIasValueValidity is either defined or empty:
+- If it is empty it remains empty forwver;
+- if it is defined it will remain defined forever
+This invariant is checked is several parts of the code.
+<code>InOut</code> is immutable.</p></span><span class="cmt"><p>getValidity(dependantIasios: Option[Set[InOut[_]]])
+This invariant, is also used for recognizing if the InoOut is an output
+of the ACSE</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -278,9 +284,9 @@ the output of DASUs are ignored.</p><p><code>InOut</code> is immutable.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.prototype.input.InOut#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:org.eso.ias.prototype.input.Identifier,refreshRate:Int,iasType:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.InOut[A]"></a><a id="&lt;init&gt;:InOut[A]"></a>
+      <a id="&lt;init&gt;(value:Option[_&gt;:A],timestamp:Long,id:org.eso.ias.prototype.input.Identifier,refreshRate:Int,mode:org.eso.ias.prototype.input.java.OperationalMode,fromIasValueValidity:Option[org.eso.ias.prototype.input.Validity],iasType:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.InOut[A]"></a><a id="&lt;init&gt;:InOut[A]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#&lt;init&gt;(id:org.eso.ias.prototype.input.Identifier,refreshRate:Int,iasType:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#&lt;init&gt;(value:Option[_&gt;:A],timestamp:Long,id:org.eso.ias.prototype.input.Identifier,refreshRate:Int,mode:org.eso.ias.prototype.input.java.OperationalMode,fromIasValueValidity:Option[org.eso.ias.prototype.input.Validity],iasType:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -289,25 +295,7 @@ the output of DASUs are ignored.</p><p><code>InOut</code> is immutable.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">InOut</span><span class="params">(<span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Int">Int</span></span>, <span name="iasType">iasType: <a href="java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Auxiliary constructor for the case when the InOut has no value
-associated
-</p>
-    </li><li name="org.eso.ias.prototype.input.InOut#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(value:Option[_&gt;:A],id:org.eso.ias.prototype.input.Identifier,refreshRate:Int,mode:org.eso.ias.plugin.OperationalMode,validity:org.eso.ias.prototype.input.Validity.Value,iasType:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.InOut[A]"></a><a id="&lt;init&gt;:InOut[A]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#&lt;init&gt;(value:Option[_&gt;:A],id:org.eso.ias.prototype.input.Identifier,refreshRate:Int,mode:org.eso.ias.plugin.OperationalMode,validity:org.eso.ias.prototype.input.Validity.Value,iasType:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">InOut</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Int">Int</span></span>, <span name="mode">mode: <a href="../../plugin/OperationalMode.html" class="extype" name="org.eso.ias.plugin.OperationalMode">OperationalMode</a></span>, <span name="validity">validity: <a href="Validity$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.prototype.input.Validity.Value">Validity.Value</a></span>, <span name="iasType">iasType: <a href="java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span>
+        <span class="name">InOut</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>, <span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span></span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Int">Int</span></span>, <span name="mode">mode: <a href="java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>, <span name="fromIasValueValidity">fromIasValueValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>]</span>, <span name="iasType">iasType: <a href="java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p>
@@ -369,22 +357,6 @@ associated
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.prototype.input.InOut#actualValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="actualValue:org.eso.ias.prototype.input.InOutValue[A]"></a><a id="actualValue:InOutValue[A]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#actualValue:org.eso.ias.prototype.input.InOutValue[A]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">actualValue</span><span class="result">: <a href="InOutValue.html" class="extype" name="org.eso.ias.prototype.input.InOutValue">InOutValue</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
-      </span>
-      
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -401,6 +373,26 @@ associated
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#assessTimeValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="assessTimeValidity():org.eso.ias.prototype.input.Validity"></a><a id="assessTimeValidity():Validity"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#assessTimeValidity():org.eso.ias.prototype.input.Validity" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">assessTimeValidity</span><span class="params">()</span><span class="result">: <a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Establish and return the validity depending on the
+expected refresh rate and the latest update
+</p><div class="fullcomment"><div class="comment cmt"><p>Establish and return the validity depending on the
+expected refresh rate and the latest update
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the minimum validity</p></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -463,6 +455,22 @@ associated
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#fromIasValueValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fromIasValueValidity:Option[org.eso.ias.prototype.input.Validity]"></a><a id="fromIasValueValidity:Option[Validity]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#fromIasValueValidity:Option[org.eso.ias.prototype.input.Validity]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromIasValueValidity</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -482,6 +490,74 @@ associated
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#getValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValidity(dependantIasios:Set[org.eso.ias.prototype.input.InOut[_]]):org.eso.ias.prototype.input.Validity"></a><a id="getValidity(Set[InOut[_]]):Validity"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#getValidity(dependantIasios:Set[org.eso.ias.prototype.input.InOut[_]]):org.eso.ias.prototype.input.Validity" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValidity</span><span class="params">(<span name="dependantIasios">dependantIasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[_]]</span>)</span><span class="result">: <a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the validity of a IASIO that has dependant monitor points</p><div class="fullcomment"><div class="comment cmt"><p>Get the validity of a IASIO that has dependant monitor points</p><p>This is the case of the output produced by a ASCE
+</p></div><dl class="paramcmts block"><dt class="param">dependantIasios</dt><dd class="cmt"><p>The IASIOs whose this IASIOs depends on
+                       for establishing the validity</p></dd><dt>returns</dt><dd class="cmt"><p>the actual validity</p></dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#getValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValidity():org.eso.ias.prototype.input.Validity"></a><a id="getValidity():Validity"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#getValidity():org.eso.ias.prototype.input.Validity" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValidity</span><span class="params">()</span><span class="result">: <a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the validity of a IASIO that has no dependant monitor points</p><div class="fullcomment"><div class="comment cmt"><p>Get the validity of a IASIO that has no dependant monitor points</p><p>This is the case of the inputs of a ASCE generated from IASValues
+received from the BSDB
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the actual validity</p></dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#getValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValidity(dependantIasios:Option[Set[org.eso.ias.prototype.input.InOut[_]]]):org.eso.ias.prototype.input.Validity"></a><a id="getValidity(Option[Set[InOut[_]]]):Validity"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#getValidity(dependantIasios:Option[Set[org.eso.ias.prototype.input.InOut[_]]]):org.eso.ias.prototype.input.Validity" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValidity</span><span class="params">(<span name="dependantIasios">dependantIasios: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[_]]]</span>)</span><span class="result">: <a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the actual validity.</p><div class="fullcomment"><div class="comment cmt"><p>Get the actual validity.</p><p>The validity depends on
+- fromIasValueValidity, the validity inherited while converting
+  from IASValue (if Any)
+  (this option applies to the inputs of a ASCE)
+- the validity of the dependants inputs (if any)
+  (this applies to the output of the ASCE whose validity depends
+  on the validity of the inputs)
+- the last update time vs the actual time and the refresh rate</p><p>There is a invariant between fromIasValueValidity and dependantIasios:
+only one of the 2 must be a None while the other option is always a Some.
+In fact a IASIO in a ASCE can only be a input of the
+output: if it is an input then it is a IASValue that once converted to a IASIO
+must have the fromIasValueValidity defined but has no dependants;
+if it is the output of a ASCE then it is not generated by a IASValue and
+its fromIasValueValidity is always None but it has dependatIasios, the
+one used to calculate the TF.
+</p></div><dl class="paramcmts block"><dt class="param">dependantIasios</dt><dd class="cmt"><p>The IASIOs whose this IASIOs depends on
+       for establishing the validity, if any.</p></dd><dt>returns</dt><dd class="cmt"><p>the actual validity</p></dd></dl></div>
     </li><li name="org.eso.ias.prototype.input.InOut#iasType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="iasType:org.eso.ias.prototype.input.java.IASTypes"></a><a id="iasType:IASTypes"></a>
       <span class="permalink">
@@ -530,10 +606,27 @@ associated
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.eso.ias.prototype.input.InOut#mode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mode:org.eso.ias.plugin.OperationalMode"></a><a id="mode:OperationalMode"></a>
+    </li><li name="org.eso.ias.prototype.input.InOut#isOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isOutput():Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#mode:org.eso.ias.plugin.OperationalMode" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#isOutput():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isOutput</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if this IASIO is the generated by the ASCE,
+        lase otherwise (i.e. the input of the ASCE)</p></dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#mode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mode:org.eso.ias.prototype.input.java.OperationalMode"></a><a id="mode:OperationalMode"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#mode:org.eso.ias.prototype.input.java.OperationalMode" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -542,7 +635,7 @@ associated
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mode</span><span class="result">: <a href="../../plugin/OperationalMode.html" class="extype" name="org.eso.ias.plugin.OperationalMode">OperationalMode</a></span>
+        <span class="name">mode</span><span class="result">: <a href="java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>
       </span>
       
       
@@ -632,6 +725,22 @@ associated
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#timestamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="timestamp:Long"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#timestamp:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timestamp</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.prototype.input.InOut#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
@@ -648,7 +757,7 @@ associated
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a> → AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.prototype.input.InOut#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.prototype.input.InOut#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="update[B&gt;:org.eso.ias.prototype.input.java.IASValue[A]](iasValue:B):org.eso.ias.prototype.input.InOut[A]"></a><a id="update[B&gt;:IASValue[A]](B):InOut[A]"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/prototype/input/InOut.html#update[B&gt;:org.eso.ias.prototype.input.java.IASValue[A]](iasValue:B):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
@@ -664,32 +773,12 @@ associated
       </span>
       
       <p class="shortcomment cmt">Update the value of this IASIO with the IASValue received from the
-BSDB</p><div class="fullcomment"><div class="comment cmt"><p>Update the value of this IASIO with the IASValue received from the
-BSDB</p><p>TODO: the validity must also be updated when it will be sent
-      by the plugin (@see Issue #19 on github)
-</p></div></div>
-    </li><li name="org.eso.ias.prototype.input.InOut#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="update[B&gt;:A](newValue:Option[B],valid:org.eso.ias.prototype.input.Validity.Value):org.eso.ias.prototype.input.InOut[A]"></a><a id="update[B&gt;:A](Option[B],Validity.Value):InOut[A]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#update[B&gt;:A](newValue:Option[B],valid:org.eso.ias.prototype.input.Validity.Value):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">update</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span></span>]</span><span class="params">(<span name="newValue">newValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.eso.ias.prototype.input.InOut.update.B">B</span>]</span>, <span name="valid">valid: <a href="Validity$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.prototype.input.Validity.Value">Validity.Value</a></span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Update the value and validity of the monitor point
-</p><div class="fullcomment"><div class="comment cmt"><p>Update the value and validity of the monitor point
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new InOut with updated value and validity</p></dd></dl></div>
+BSDB
+</p>
     </li><li name="org.eso.ias.prototype.input.InOut#updateMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="updateMode(newMode:org.eso.ias.plugin.OperationalMode):org.eso.ias.prototype.input.InOut[A]"></a><a id="updateMode(OperationalMode):InOut[A]"></a>
+      <a id="updateMode(newMode:org.eso.ias.prototype.input.java.OperationalMode):org.eso.ias.prototype.input.InOut[A]"></a><a id="updateMode(OperationalMode):InOut[A]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#updateMode(newMode:org.eso.ias.plugin.OperationalMode):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#updateMode(newMode:org.eso.ias.prototype.input.java.OperationalMode):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -698,15 +787,15 @@ BSDB</p><p>TODO: the validity must also be updated when it will be sent
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">updateMode</span><span class="params">(<span name="newMode">newMode: <a href="../../plugin/OperationalMode.html" class="extype" name="org.eso.ias.plugin.OperationalMode">OperationalMode</a></span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
+        <span class="name">updateMode</span><span class="params">(<span name="newMode">newMode: <a href="java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Update the mode of the monitor point
 </p>
-    </li><li name="org.eso.ias.prototype.input.InOut#updateValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="updateValidity(valid:org.eso.ias.prototype.input.Validity.Value):org.eso.ias.prototype.input.InOut[A]"></a><a id="updateValidity(Validity.Value):InOut[A]"></a>
+    </li><li name="org.eso.ias.prototype.input.InOut#updateValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateValue[B&gt;:A](newValue:Option[B],minDepValidity:Option[org.eso.ias.prototype.input.Validity]):org.eso.ias.prototype.input.InOut[A]"></a><a id="updateValue[B&gt;:A](Option[B],Option[Validity]):InOut[A]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#updateValidity(valid:org.eso.ias.prototype.input.Validity.Value):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#updateValue[B&gt;:A](newValue:Option[B],minDepValidity:Option[org.eso.ias.prototype.input.Validity]):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -715,12 +804,13 @@ BSDB</p><p>TODO: the validity must also be updated when it will be sent
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">updateValidity</span><span class="params">(<span name="valid">valid: <a href="Validity$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.prototype.input.Validity.Value">Validity.Value</a></span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
+        <span class="name">updateValue</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span></span>]</span><span class="params">(<span name="newValue">newValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.eso.ias.prototype.input.InOut.updateValue.B">B</span>]</span>, <span name="minDepValidity">minDepValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>]</span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Update the validity of the monitor point
-</p>
-    </li><li name="org.eso.ias.prototype.input.InOut#updateValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Update the value and min dependant validity of the monitor point
+</p><div class="fullcomment"><div class="comment cmt"><p>Update the value and min dependant validity of the monitor point
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new InOut with updated value and validity</p></dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#updateValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="updateValue[B&gt;:A](newValue:Option[B]):org.eso.ias.prototype.input.InOut[A]"></a><a id="updateValue[B&gt;:A](Option[B]):InOut[A]"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/prototype/input/InOut.html#updateValue[B&gt;:A](newValue:Option[B]):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
@@ -735,24 +825,27 @@ BSDB</p><p>TODO: the validity must also be updated when it will be sent
         <span class="name">updateValue</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span></span>]</span><span class="params">(<span name="newValue">newValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.eso.ias.prototype.input.InOut.updateValue.B">B</span>]</span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Update the value of the monitor point
-</p>
-    </li><li name="org.eso.ias.prototype.input.InOut#validity" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="validity:org.eso.ias.prototype.input.Validity.Value"></a><a id="validity:Validity.Value"></a>
+      <p class="shortcomment cmt">Update the value of a monitor point that has no dependant monitor points
+i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Update the value of a monitor point that has no dependant monitor points
+i.e. that is not calculated by a TF.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new InOut with updated value and validity</p></dd></dl></div>
+    </li><li name="org.eso.ias.prototype.input.InOut#updatedInheritedValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updatedInheritedValidity(validity:Option[org.eso.ias.prototype.input.Validity]):org.eso.ias.prototype.input.InOut[A]"></a><a id="updatedInheritedValidity(Option[Validity]):InOut[A]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#validity:org.eso.ias.prototype.input.Validity.Value" title="Permalink">
+      <a href="../../../../../org/eso/ias/prototype/input/InOut.html#updatedInheritedValidity(validity:Option[org.eso.ias.prototype.input.Validity]):org.eso.ias.prototype.input.InOut[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">validity</span><span class="result">: <a href="Validity$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.prototype.input.Validity.Value">Validity.Value</a></span>
+        <span class="name">updatedInheritedValidity</span><span class="params">(<span name="validity">validity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.prototype.input.Validity">Validity</a>]</span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.prototype.input.InOut">InOut</a>[<span class="extype" name="org.eso.ias.prototype.input.InOut.A">A</span>]</span>
       </span>
       
-      
+      <p class="shortcomment cmt">Update the inherited validity, i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Update the inherited validity, i.e. the validity received from a IASValue
+</p></div></div>
     </li><li name="org.eso.ias.prototype.input.InOut#value" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="value:Option[_&gt;:A]"></a>
       <span class="permalink">
