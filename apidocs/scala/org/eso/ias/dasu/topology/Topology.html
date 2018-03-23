@@ -374,6 +374,22 @@ other DASUs or produced by ASCEs running in this DASU.</p><p>The nodes constitut
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.topology.Topology#asceIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="asceIds:scala.collection.immutable.Set[String]"></a><a id="asceIds:Set[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/topology/Topology.html#asceIds:scala.collection.immutable.Set[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asceIds</span><span class="result">: <span class="extype" name="scala.collection.immutable.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The Ids of the ASCEs running in the DASU</p>
     </li><li name="org.eso.ias.dasu.topology.Topology#asceOutputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asceOutputs:Set[String]"></a>
       <span class="permalink">
@@ -408,6 +424,43 @@ other DASUs or produced by ASCEs running in this DASU.</p><p>The nodes constitut
       
       <p class="shortcomment cmt">Return the ID of the ASCE whose output has the passed ID.</p><div class="fullcomment"><div class="comment cmt"><p>Return the ID of the ASCE whose output has the passed ID.
 </p></div><dl class="paramcmts block"><dt class="param">outputId</dt><dd class="cmt"><p>The id of the of the output</p></dd><dt>returns</dt><dd class="cmt"><p>the ID, if any, of the ASCE that produces the passed output ID</p></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.topology.Topology#asceTopology" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="asceTopology:Map[String,org.eso.ias.dasu.topology.AsceTopology]"></a><a id="asceTopology:Map[String,AsceTopology]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/topology/Topology.html#asceTopology:Map[String,org.eso.ias.dasu.topology.AsceTopology]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asceTopology</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="AsceTopology.html" class="extype" name="org.eso.ias.dasu.topology.AsceTopology">AsceTopology</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The map associating each ASCE ID to its topology
+</p>
+    </li><li name="org.eso.ias.dasu.topology.Topology#ascesOfInput" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ascesOfInput:Map[String,Set[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/topology/Topology.html#ascesOfInput:Map[String,Set[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ascesOfInput</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The IDs of the ASCEs that require an input.</p><div class="fullcomment"><div class="comment cmt"><p>The IDs of the ASCEs that require an input.</p><p>Note the this map also includes the IDs of the IASIOs
+produced by ASCEs in the topology that are in input to other
+ASCEs running in this DASU</p><p>The key is the ID of the input;
+the value is the list of the ACSE that require that input
+</p></div></div>
     </li><li name="org.eso.ias.dasu.topology.Topology#buildLevels" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="buildLevels():List[Set[String]]"></a>
       <span class="permalink">
@@ -625,23 +678,23 @@ by ASCEs running in the DASU).
               
         </dd></dl></div>
     </li><li name="org.eso.ias.dasu.topology.Topology#inputsOfAsce" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputsOfAsce(asceId:String):Option[Set[String]]"></a><a id="inputsOfAsce(String):Option[Set[String]]"></a>
+      <a id="inputsOfAsce:Map[String,Set[String]]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/topology/Topology.html#inputsOfAsce(asceId:String):Option[Set[String]]" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/topology/Topology.html#inputsOfAsce:Map[String,Set[String]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsOfAsce</span><span class="params">(<span name="asceId">asceId: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">inputsOfAsce</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Return the inputs requested by the ASCE with the passed ID
-</p><div class="fullcomment"><div class="comment cmt"><p>Return the inputs requested by the ASCE with the passed ID
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the input accepted by the ASCE with the passed ID</p></dd></dl></div>
+      <p class="shortcomment cmt">The IDs of the inputs of each ASCE</p><div class="fullcomment"><div class="comment cmt"><p>The IDs of the inputs of each ASCE</p><p>The key is the ID of the ASCE;
+the value is the set of the IDs of the inputs of the ASCE
+</p></div></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">

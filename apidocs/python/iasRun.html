@@ -1,6 +1,6 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: module iasRun</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head><body bgcolor="#f0f0f8">
 
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
@@ -49,13 +49,14 @@ this&nbsp;method&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;java&nbsp;options&nb
 Depending&nbsp;on&nbsp;the&nbsp;executable&nbsp;they&nbsp;will&nbsp;be&nbsp;passed&nbsp;differently.<br>
 &nbsp;<br>
 @return:&nbsp;A&nbsp;list&nbsp;of&nbsp;java&nbsp;options&nbsp;like&nbsp;['-Xmx512M',&nbsp;'-Xms16M']</tt></dd></dl>
- <dl><dt><a name="-setProps"><strong>setProps</strong></a>(propsDict, className)</dt><dd><tt>Adds&nbsp;to&nbsp;the&nbsp;passed&nbsp;dictionary,&nbsp;the&nbsp;properties&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;all&nbsp;java/scala<br>
+ <dl><dt><a name="-setProps"><strong>setProps</strong></a>(propsDict, className, logFileNameId)</dt><dd><tt>Adds&nbsp;to&nbsp;the&nbsp;passed&nbsp;dictionary,&nbsp;the&nbsp;properties&nbsp;to&nbsp;be&nbsp;passed&nbsp;to&nbsp;all&nbsp;java/scala<br>
 executables.<br>
 &nbsp;<br>
 These&nbsp;properties&nbsp;are&nbsp;common&nbsp;to&nbsp;all&nbsp;IAS&nbsp;executables&nbsp;and&nbsp;can&nbsp;for&nbsp;example&nbsp;<br>
 be&nbsp;configuration&nbsp;properties.<br>
 &nbsp;<br>
 @param&nbsp;propsDict:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;properties&nbsp;in&nbsp;the&nbsp;form&nbsp;name:value<br>
-@param&nbsp;className&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;class&nbsp;to&nbsp;run</tt></dd></dl>
+@param&nbsp;className&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;class&nbsp;to&nbsp;run&nbsp;<br>
+@param&nbsp;logFileNameId&nbsp;A&nbsp;string&nbsp;identifier&nbsp;to&nbsp;append&nbsp;to&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;log&nbsp;file</tt></dd></dl>
 </td></tr></table>
 </body></html>

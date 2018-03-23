@@ -259,9 +259,9 @@ set to the ID of the IASValue and no partition is used.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(servers:String,topic:String,clientID:String,serializer:org.eso.ias.prototype.input.java.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer"></a><a id="&lt;init&gt;:KafkaIasiosProducer"></a>
+      <a id="&lt;init&gt;(servers:String,topic:String,clientID:String,serializer:org.eso.ias.types.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer"></a><a id="&lt;init&gt;:KafkaIasiosProducer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#&lt;init&gt;(servers:String,topic:String,clientID:String,serializer:org.eso.ias.prototype.input.java.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#&lt;init&gt;(servers:String,topic:String,clientID:String,serializer:org.eso.ias.types.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -270,7 +270,7 @@ set to the ID of the IASValue and no partition is used.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">KafkaIasiosProducer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="clientID">clientID: <span class="extype" name="java.lang.String">String</span></span>, <span name="serializer">serializer: <a href="../prototype/input/java/IasValueStringSerializer.html" class="extype" name="org.eso.ias.prototype.input.java.IasValueStringSerializer">IasValueStringSerializer</a></span>)</span>
+        <span class="name">KafkaIasiosProducer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="clientID">clientID: <span class="extype" name="java.lang.String">String</span></span>, <span name="serializer">serializer: <a href="../types/IasValueStringSerializer.html" class="extype" name="org.eso.ias.types.IasValueStringSerializer">IasValueStringSerializer</a></span>)</span>
       </span>
       
       
@@ -569,9 +569,9 @@ want be sure they have all been sent.</p>
               
         </dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(Collection[IASValue[_]],Integer,String,Int,TimeUnit):Unit"></a>
+      <a id="push(values:java.util.Collection[org.eso.ias.types.IASValue[_]],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(Collection[IASValue[_]],Integer,String,Int,TimeUnit):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.types.IASValue[_]],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -580,7 +580,7 @@ want be sure they have all been sent.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Synchronously pushes the passed value in the topic.</p><div class="fullcomment"><div class="comment cmt"><p>Synchronously pushes the passed value in the topic.
@@ -589,11 +589,11 @@ This method synchronously pushes each value using the passed timeout.
 &lt;P&gt;
 This method pushes all the values with the same partition/key so it is not very
 convenient. You should probably prefer <code><span class="extype" name="#push(Collection,int,TimeUnit)">#push(Collection,int,TimeUnit)</span></code>.
-</p></div><dl class="paramcmts block"><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">values</dt><dd class="cmt"><p>The not <code>null</code> nor empty collection of values to publish in the topic</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(Collection[IASValue[_]],Int,TimeUnit):Unit"></a>
+      <a id="push(values:java.util.Collection[org.eso.ias.types.IASValue[_]],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(Collection[IASValue[_]],Int,TimeUnit):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.types.IASValue[_]],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -602,7 +602,7 @@ convenient. You should probably prefer <code><span class="extype" name="#push(Co
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Synchronously pushes the passed values in the topic with default key and partition.</p><div class="fullcomment"><div class="comment cmt"><p>Synchronously pushes the passed values in the topic with default key and partition.
@@ -610,9 +610,9 @@ convenient. You should probably prefer <code><span class="extype" name="#push(Co
 This method synchronously pushes each value using the passed timeout.
 </p></div><dl class="paramcmts block"><dt class="param">values</dt><dd class="cmt"><p>The not <code>null</code> nor empty collection of values to publish in the topic</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]]):Unit"></a><a id="push(Collection[IASValue[_]]):Unit"></a>
+      <a id="push(values:java.util.Collection[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="push(Collection[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -621,7 +621,7 @@ This method synchronously pushes each value using the passed timeout.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Asynchronously pushes a set of IASValues in a kafka topic.</p><div class="fullcomment"><div class="comment cmt"><p>Asynchronously pushes a set of IASValues in a kafka topic.
@@ -629,9 +629,9 @@ This method synchronously pushes each value using the passed timeout.
 This method pushes each value with the default partition/key.
 </p></div><dl class="paramcmts block"><dt class="param">values</dt><dd class="cmt"><p>The not <code>null</code> nor empty collection of values to publish in the topic</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]],partition:Integer,key:String):Unit"></a><a id="push(Collection[IASValue[_]],Integer,String):Unit"></a>
+      <a id="push(values:java.util.Collection[org.eso.ias.types.IASValue[_]],partition:Integer,key:String):Unit"></a><a id="push(Collection[IASValue[_]],Integer,String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.prototype.input.java.IASValue[_]],partition:Integer,key:String):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(values:java.util.Collection[org.eso.ias.types.IASValue[_]],partition:Integer,key:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -640,7 +640,7 @@ This method pushes each value with the default partition/key.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Asynchronously pushes a set of IASValues in a kafka topic.</p><div class="fullcomment"><div class="comment cmt"><p>Asynchronously pushes a set of IASValues in a kafka topic.
@@ -649,9 +649,9 @@ This method pushes all the values with the same partition/key so it is not very
 convenient. You should probably prefer <code><span class="extype" name="#push(Collection)">#push(Collection)</span></code>
 </p></div><dl class="paramcmts block"><dt class="param">values</dt><dd class="cmt"><p>The not <code>null</code> nor empty collection of values to publish in the topic</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition to use for sending all the values in the coillection</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key  to use for sending all the values in the coillection</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(value:org.eso.ias.prototype.input.java.IASValue[_]):Unit"></a><a id="push(IASValue[_]):Unit"></a>
+      <a id="push(value:org.eso.ias.types.IASValue[_]):Unit"></a><a id="push(IASValue[_]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.prototype.input.java.IASValue[_]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.types.IASValue[_]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -660,16 +660,16 @@ convenient. You should probably prefer <code><span class="extype" name="#push(Co
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Asynchronously pushes a IASValue in a kafka topic with default partition and key
 </p><div class="fullcomment"><div class="comment cmt"><p>Asynchronously pushes a IASValue in a kafka topic with default partition and key
 </p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> value to publish in the topic</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(value:org.eso.ias.prototype.input.java.IASValue[_],partition:Integer,key:String):Unit"></a><a id="push(IASValue[_],Integer,String):Unit"></a>
+      <a id="push(value:org.eso.ias.types.IASValue[_],partition:Integer,key:String):Unit"></a><a id="push(IASValue[_],Integer,String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.prototype.input.java.IASValue[_],partition:Integer,key:String):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.types.IASValue[_],partition:Integer,key:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -678,15 +678,15 @@ convenient. You should probably prefer <code><span class="extype" name="#push(Co
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Asynchronously pushes a IASValue in a kafka topic.</p><div class="fullcomment"><div class="comment cmt"><p>Asynchronously pushes a IASValue in a kafka topic.
 </p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> value to publish in the topic</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(value:org.eso.ias.prototype.input.java.IASValue[_],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(IASValue[_],Int,TimeUnit):Unit"></a>
+      <a id="push(value:org.eso.ias.types.IASValue[_],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(IASValue[_],Int,TimeUnit):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.prototype.input.java.IASValue[_],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.types.IASValue[_],timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -695,15 +695,15 @@ convenient. You should probably prefer <code><span class="extype" name="#push(Co
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Synchronously pushes the passed value in the topic with default key and partition.</p><div class="fullcomment"><div class="comment cmt"><p>Synchronously pushes the passed value in the topic with default key and partition.
 </p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> IASValue to publish in the topic</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(value:org.eso.ias.prototype.input.java.IASValue[_],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(IASValue[_],Integer,String,Int,TimeUnit):Unit"></a>
+      <a id="push(value:org.eso.ias.types.IASValue[_],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(IASValue[_],Integer,String,Int,TimeUnit):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.prototype.input.java.IASValue[_],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#push(value:org.eso.ias.types.IASValue[_],partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -712,7 +712,7 @@ convenient. You should probably prefer <code><span class="extype" name="#push(Co
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="value">value: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Synchronously pushes the passed value in the topic

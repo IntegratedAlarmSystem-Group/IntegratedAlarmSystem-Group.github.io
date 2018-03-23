@@ -275,9 +275,9 @@ In that case the received monitor point is lost.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.converter.ValueMapper#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(configDao:org.eso.ias.converter.config.IasioConfigurationDAO,iasValueStrSerializer:org.eso.ias.prototype.input.java.IasValueStringSerializer,converterID:String):org.eso.ias.converter.ValueMapper"></a><a id="&lt;init&gt;:ValueMapper"></a>
+      <a id="&lt;init&gt;(configDao:org.eso.ias.converter.config.IasioConfigurationDAO,iasValueStrSerializer:org.eso.ias.types.IasValueStringSerializer,converterID:String):org.eso.ias.converter.ValueMapper"></a><a id="&lt;init&gt;:ValueMapper"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/ValueMapper.html#&lt;init&gt;(configDao:org.eso.ias.converter.config.IasioConfigurationDAO,iasValueStrSerializer:org.eso.ias.prototype.input.java.IasValueStringSerializer,converterID:String):org.eso.ias.converter.ValueMapper" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/ValueMapper.html#&lt;init&gt;(configDao:org.eso.ias.converter.config.IasioConfigurationDAO,iasValueStrSerializer:org.eso.ias.types.IasValueStringSerializer,converterID:String):org.eso.ias.converter.ValueMapper" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -286,7 +286,7 @@ In that case the received monitor point is lost.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ValueMapper</span><span class="params">(<span name="configDao">configDao: <a href="config/IasioConfigurationDAO.html" class="extype" name="org.eso.ias.converter.config.IasioConfigurationDAO">IasioConfigurationDAO</a></span>, <span name="iasValueStrSerializer">iasValueStrSerializer: <a href="../prototype/input/java/IasValueStringSerializer.html" class="extype" name="org.eso.ias.prototype.input.java.IasValueStringSerializer">IasValueStringSerializer</a></span>, <span name="converterID">converterID: <span class="extype" name="java.lang.String">String</span></span>)</span>
+        <span class="name">ValueMapper</span><span class="params">(<span name="configDao">configDao: <a href="config/IasioConfigurationDAO.html" class="extype" name="org.eso.ias.converter.config.IasioConfigurationDAO">IasioConfigurationDAO</a></span>, <span name="iasValueStrSerializer">iasValueStrSerializer: <a href="../types/IasValueStringSerializer.html" class="extype" name="org.eso.ias.types.IasValueStringSerializer">IasValueStringSerializer</a></span>, <span name="converterID">converterID: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       
       
@@ -635,9 +635,9 @@ to send to the core of the IAS
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.eso.ias.converter.ValueMapper#translate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="translate(remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.java.IASValue[_]"></a><a id="translate(MonitorPointData,IASTypes):IASValue[_]"></a>
+      <a id="translate(remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.types.IASTypes,receptionTStamp:Long):org.eso.ias.types.IASValue[_]"></a><a id="translate(MonitorPointData,IASTypes,Long):IASValue[_]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/ValueMapper.html#translate(remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.prototype.input.java.IASTypes):org.eso.ias.prototype.input.java.IASValue[_]" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/ValueMapper.html#translate(remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.types.IASTypes,receptionTStamp:Long):org.eso.ias.types.IASValue[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -646,14 +646,14 @@ to send to the core of the IAS
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">translate</span><span class="params">(<span name="remoteSystemData">remoteSystemData: <a href="../plugin/publisher/MonitorPointData.html" class="extype" name="org.eso.ias.plugin.publisher.MonitorPointData">MonitorPointData</a></span>, <span name="type">type: <a href="../prototype/input/java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a></span>)</span><span class="result">: <a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>
+        <span class="name">translate</span><span class="params">(<span name="remoteSystemData">remoteSystemData: <a href="../plugin/publisher/MonitorPointData.html" class="extype" name="org.eso.ias.plugin.publisher.MonitorPointData">MonitorPointData</a></span>, <span name="type">type: <a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a></span>, <span name="receptionTStamp">receptionTStamp: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>
       </span>
       
       <p class="shortcomment cmt">Convert the <code><span class="extype" name="MonitorPointData">MonitorPointData</span></code> received by a plugin
 to a <code><span class="extype" name="IASValue">IASValue</span></code> to send to the core of the IAS
 </p><div class="fullcomment"><div class="comment cmt"><p>Convert the <code><span class="extype" name="MonitorPointData">MonitorPointData</span></code> received by a plugin
 to a <code><span class="extype" name="IASValue">IASValue</span></code> to send to the core of the IAS
-</p></div><dl class="paramcmts block"><dt class="param">remoteSystemData</dt><dd class="cmt"><p>the monitor point to translate</p></dd><dt class="param">type</dt><dd class="cmt"><p>the type of the monitor point</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue corresponding on the monitor point</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">remoteSystemData</dt><dd class="cmt"><p>the monitor point to translate</p></dd><dt class="param">type</dt><dd class="cmt"><p>the type of the monitor point</p></dd><dt class="param">receptionTStamp</dt><dd class="cmt"><p>the timestamp when the monitor point data has been received</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue corresponding on the monitor point</p></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">

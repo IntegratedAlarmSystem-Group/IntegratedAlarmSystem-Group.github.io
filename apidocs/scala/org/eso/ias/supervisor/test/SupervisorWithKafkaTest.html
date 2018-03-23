@@ -191,7 +191,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Test the Supervisor connected to the kafka BSDB.</p><p>Note that supervisor, IASIOs producer and consumer are created once
 at the beginning of the test and reused along the different tests</p><p>The configuration of this Supervisor is in the JSON CDB.</p><p>The supervisor runs 2 DASU with one ASCE each and
-checks the generation of the output by its DASUs and their ASCEs
+checks the generation of the outputs by its DASUs and their ASCEs
 when some input is read from the kafka topic.</p><p>This test is meant to check the loop only so each DASU has only one ASCE
 that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>The test
 - runs the supervisor
@@ -968,22 +968,6 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Assertions</dd></dl></div>
-    </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#autorefreshTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="autorefreshTimeInterval:Long"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#autorefreshTimeInterval:Long" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">autorefreshTimeInterval</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">The auto-refresh time interval (msecs)</p>
     </li><li name="org.scalatest.BeforeAndAfter#before" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="before(fun:=&gt;Any)(implicitpos:org.scalactic.source.Position):Unit"></a><a id="before(⇒Any)(Position):Unit"></a>
       <span class="permalink">
@@ -1049,9 +1033,9 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#buildIasioToSubmit" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="buildIasioToSubmit(identifier:org.eso.ias.prototype.input.Identifier,value:Double):org.eso.ias.prototype.input.java.IASValue[_]"></a><a id="buildIasioToSubmit(Identifier,Double):IASValue[_]"></a>
+      <a id="buildIasioToSubmit(identifier:org.eso.ias.types.Identifier,value:Double):org.eso.ias.types.IASValue[_]"></a><a id="buildIasioToSubmit(Identifier,Double):IASValue[_]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#buildIasioToSubmit(identifier:org.eso.ias.prototype.input.Identifier,value:Double):org.eso.ias.prototype.input.java.IASValue[_]" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#buildIasioToSubmit(identifier:org.eso.ias.types.Identifier,value:Double):org.eso.ias.types.IASValue[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1060,7 +1044,7 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buildIasioToSubmit</span><span class="params">(<span name="identifier">identifier: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="value">value: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>
+        <span class="name">buildIasioToSubmit</span><span class="params">(<span name="identifier">identifier: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="value">value: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>
       </span>
       
       <p class="shortcomment cmt">Build a IASVlaue to submit to the BSDB
@@ -1394,9 +1378,9 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ShouldVerb</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#converterId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="converterId:org.eso.ias.prototype.input.Identifier"></a><a id="converterId:Identifier"></a>
+      <a id="converterId:org.eso.ias.types.Identifier"></a><a id="converterId:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#converterId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#converterId:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1405,7 +1389,7 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">converterId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">converterId</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       
@@ -1490,9 +1474,9 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Suite</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#factory" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="factory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.prototype.input.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber,org.eso.ias.cdb.CdbReader)=&gt;org.eso.ias.dasu.DasuImpl"></a><a id="factory:(DasuDao,Identifier,OutputPublisher,InputSubscriber,CdbReader)⇒DasuImpl"></a>
+      <a id="factory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber,org.eso.ias.cdb.CdbReader)=&gt;org.eso.ias.dasu.DasuImpl"></a><a id="factory:(DasuDao,Identifier,OutputPublisher,InputSubscriber,CdbReader)⇒DasuImpl"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#factory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.prototype.input.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber,org.eso.ias.cdb.CdbReader)=&gt;org.eso.ias.dasu.DasuImpl" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#factory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber,org.eso.ias.cdb.CdbReader)=&gt;org.eso.ias.dasu.DasuImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1501,7 +1485,7 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">factory</span><span class="result">: (<a href="../../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>, <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a>, <a href="../../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a>, <a href="../../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>, <a href="../../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a>) ⇒ <a href="../../dasu/DasuImpl.html" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a></span>
+        <span class="name">factory</span><span class="result">: (<a href="../../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>, <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>, <a href="../../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a>, <a href="../../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>, <a href="../../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a>) ⇒ <a href="../../dasu/DasuImpl.html" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a></span>
       </span>
       
       <p class="shortcomment cmt">The test uses real DASu i.e.</p><div class="fullcomment"><div class="comment cmt"><p>The test uses real DASu i.e. the factory instantiates a DasuImpl</p></div></div>
@@ -1842,9 +1826,9 @@ to this consumer
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike → Documenting</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#monSysId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="monSysId:org.eso.ias.prototype.input.Identifier"></a><a id="monSysId:Identifier"></a>
+      <a id="monSysId:org.eso.ias.types.Identifier"></a><a id="monSysId:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#monSysId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#monSysId:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1853,7 +1837,7 @@ to this consumer
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">monSysId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">monSysId</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       
@@ -1992,9 +1976,9 @@ to this consumer
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Assertions</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#pluginId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="pluginId:org.eso.ias.prototype.input.Identifier"></a><a id="pluginId:Identifier"></a>
+      <a id="pluginId:org.eso.ias.types.Identifier"></a><a id="pluginId:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#pluginId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#pluginId:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2003,14 +1987,14 @@ to this consumer
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">pluginId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">pluginId</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#receivedIasValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="receivedIasValues:scala.collection.mutable.ListBuffer[org.eso.ias.prototype.input.java.IASValue[_]]"></a><a id="receivedIasValues:ListBuffer[IASValue[_]]"></a>
+      <a id="receivedIasValues:scala.collection.mutable.ListBuffer[org.eso.ias.types.IASValue[_]]"></a><a id="receivedIasValues:ListBuffer[IASValue[_]]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#receivedIasValues:scala.collection.mutable.ListBuffer[org.eso.ias.prototype.input.java.IASValue[_]]" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#receivedIasValues:scala.collection.mutable.ListBuffer[org.eso.ias.types.IASValue[_]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2019,7 +2003,7 @@ to this consumer
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">receivedIasValues</span><span class="result">: <span class="extype" name="scala.collection.mutable.ListBuffer">ListBuffer</span>[<a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>
+        <span class="name">receivedIasValues</span><span class="result">: <span class="extype" name="scala.collection.mutable.ListBuffer">ListBuffer</span>[<a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>
       </span>
       
       <p class="shortcomment cmt">All the values read from the BSDB</p>
@@ -2136,9 +2120,9 @@ to this consumer
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike → Suite</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#serializer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="serializer:org.eso.ias.prototype.input.java.IasValueStringSerializer"></a><a id="serializer:IasValueStringSerializer"></a>
+      <a id="serializer:org.eso.ias.types.IasValueStringSerializer"></a><a id="serializer:IasValueStringSerializer"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#serializer:org.eso.ias.prototype.input.java.IasValueStringSerializer" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#serializer:org.eso.ias.types.IasValueStringSerializer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2147,7 +2131,7 @@ to this consumer
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">serializer</span><span class="result">: <a href="../../prototype/input/java/IasValueStringSerializer.html" class="extype" name="org.eso.ias.prototype.input.java.IasValueStringSerializer">IasValueStringSerializer</a></span>
+        <span class="name">serializer</span><span class="result">: <a href="../../types/IasValueStringSerializer.html" class="extype" name="org.eso.ias.types.IasValueStringSerializer">IasValueStringSerializer</a></span>
       </span>
       
       <p class="shortcomment cmt">The serializer to JSON strings</p>
@@ -2184,9 +2168,9 @@ to this consumer
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#strenghtID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="strenghtID:org.eso.ias.prototype.input.Identifier"></a><a id="strenghtID:Identifier"></a>
+      <a id="strenghtID:org.eso.ias.types.Identifier"></a><a id="strenghtID:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#strenghtID:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#strenghtID:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2195,7 +2179,7 @@ to this consumer
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">strenghtID</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">strenghtID</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       <p class="shortcomment cmt">The ID of the strenght processed by a DASU of the Supervisor</p>
@@ -2278,11 +2262,11 @@ to this consumer
         <span class="name">supervisor</span><span class="result">: <a href="../Supervisor.html" class="extype" name="org.eso.ias.supervisor.Supervisor">Supervisor</a></span>
       </span>
       
-      
+      <p class="shortcomment cmt">The supervisor to test</p>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#supervisorId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="supervisorId:org.eso.ias.prototype.input.Identifier"></a><a id="supervisorId:Identifier"></a>
+      <a id="supervisorId:org.eso.ias.types.Identifier"></a><a id="supervisorId:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#supervisorId:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#supervisorId:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2291,7 +2275,7 @@ to this consumer
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">supervisorId</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">supervisorId</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       <p class="shortcomment cmt">The identifier of the supervisor</p>
@@ -2328,9 +2312,9 @@ to this consumer
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlatSpecLike → Suite</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.SupervisorWithKafkaTest#temperatureID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="temperatureID:org.eso.ias.prototype.input.Identifier"></a><a id="temperatureID:Identifier"></a>
+      <a id="temperatureID:org.eso.ias.types.Identifier"></a><a id="temperatureID:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#temperatureID:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/SupervisorWithKafkaTest.html#temperatureID:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2339,7 +2323,7 @@ to this consumer
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">temperatureID</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">temperatureID</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       <p class="shortcomment cmt">The ID of the temeprature processed by a DASU of the Supervisor</p>

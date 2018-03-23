@@ -326,9 +326,9 @@ of the output collecting the inputs intil the throttling time interval elapses.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.dasu.Dasu#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.prototype.input.Identifier):org.eso.ias.dasu.Dasu"></a><a id="&lt;init&gt;:Dasu"></a>
+      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.Dasu"></a><a id="&lt;init&gt;:Dasu"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.prototype.input.Identifier):org.eso.ias.dasu.Dasu" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.Dasu" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -337,10 +337,11 @@ of the output collecting the inputs intil the throttling time interval elapses.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Dasu</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>)</span>
+        <span class="name">Dasu</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="tolerance">tolerance: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt">create a DASU with the given identifier</p><div class="fullcomment"><div class="comment cmt"><p>create a DASU with the given identifier</p></div><dl class="paramcmts block"><dt class="param">dasuIdentifier</dt><dd class="cmt"><p>the identifier of the DASU</p></dd></dl></div>
+      <p class="shortcomment cmt">create a DASU with the given identifier</p><div class="fullcomment"><div class="comment cmt"><p>create a DASU with the given identifier</p></div><dl class="paramcmts block"><dt class="param">dasuIdentifier</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>the refresh rate (seconds) to automatically re-send the last calculated
+                   output even if it did not change</p></dd><dt class="param">tolerance</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -418,9 +419,9 @@ while the validity could change.
       
       <p class="shortcomment cmt">The IDs of the inputs of the DASU</p>
     </li><li name="org.eso.ias.dasu.Dasu#inputsReceived" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="inputsReceived(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
+      <a id="inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu.html#inputsReceived(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -429,7 +430,7 @@ while the validity could change.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Updates the output with the inputs received
@@ -523,6 +524,39 @@ while the validity could change.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#autoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="autoSendTimeInterval:Integer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#autoSendTimeInterval:Integer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">autoSendTimeInterval</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.Dasu#autoSendTimeIntervalMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="autoSendTimeIntervalMillis:Long"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#autoSendTimeIntervalMillis:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">autoSendTimeIntervalMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"> Auto send time interval in milliseconds
+</p>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -548,9 +582,9 @@ while the validity could change.
               
         </dd></dl></div>
     </li><li name="org.eso.ias.dasu.Dasu#dasuIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dasuIdentifier:org.eso.ias.prototype.input.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
+      <a id="dasuIdentifier:org.eso.ias.types.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu.html#dasuIdentifier:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#dasuIdentifier:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -559,7 +593,7 @@ while the validity could change.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dasuIdentifier</span><span class="result">: <a href="../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">dasuIdentifier</span><span class="result">: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       
@@ -792,6 +826,39 @@ if not overridden by a java property
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#tolerance" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tolerance:Integer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#tolerance:Integer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tolerance</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.dasu.Dasu#toleranceMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toleranceMillis:Long"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#toleranceMillis:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toleranceMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"> The tolerance in milliseconds
+</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">

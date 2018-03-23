@@ -183,8 +183,8 @@
                         <a href="DasuOneAsceCommon.html" title="Setup the DASU with one ASCE as it is reused by more than one test">DasuOneAsceCommon</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue."></a>
-                        <a href="DasuWithKafkaPubSubTest.html" title="test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue.">DasuWithKafkaPubSubTest</a>
+                        <a class="class" href="DasuWithKafkaPubSubTest.html" title="Test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue."></a>
+                        <a href="DasuWithKafkaPubSubTest.html" title="Test if the DASU is capable to get events from the IASIO kafka queue and publish the result in the same queue.">DasuWithKafkaPubSubTest</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="JsonPublisherTest.html" title="Test the writing of the output of the DASU in a JSON file."></a>
@@ -224,7 +224,7 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Checks the timestamps of the output produced by a DASU
 when inputs change and when the auto-refresh is in place.</p><p>The test uses the DasuWithOneASCE DASU defined in the CDB
 by submitting inputs and checking the fields of output
-published (or not published by the DASU.
+published (or not published) by the DASU.
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="https://github.com/IntegratedAlarmSystem-Group/ias/issues/52" target="_blank">Issue #52 on github</a></p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -977,9 +977,9 @@ published (or not published by the DASU.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Assertions</dd></dl></div>
     </li><li name="org.eso.ias.dasu.test.CheckDasuOutputTimestamps#autoRefreshTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="autoRefreshTime:Long"></a>
+      <a id="autoRefreshTime:Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/test/CheckDasuOutputTimestamps.html#autoRefreshTime:Long" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/CheckDasuOutputTimestamps.html#autoRefreshTime:Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -988,7 +988,7 @@ published (or not published by the DASU.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">autoRefreshTime</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+        <span class="name">autoRefreshTime</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       
@@ -2106,6 +2106,22 @@ published (or not published by the DASU.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlatSpec → AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.test.CheckDasuOutputTimestamps#tolerance" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tolerance:Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/test/CheckDasuOutputTimestamps.html#tolerance:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tolerance</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
     </li><li name="org.scalactic.TripleEquals#typeCheckedConstraint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="typeCheckedConstraint[A,B](implicitequivalenceOfA:org.scalactic.Equivalence[A],implicitev:B&lt;:&lt;A):org.scalactic.CanEqual[A,B]"></a><a id="typeCheckedConstraint[A,B](Equivalence[A],&lt;:&lt;[B,A]):CanEqual[A,B]"></a>
       <span class="permalink">

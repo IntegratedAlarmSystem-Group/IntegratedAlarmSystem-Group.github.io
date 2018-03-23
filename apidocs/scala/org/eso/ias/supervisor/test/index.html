@@ -275,7 +275,7 @@
       
       <p class="shortcomment cmt">Test the Supervisor connected to the kafka BSDB.</p><div class="fullcomment"><div class="comment cmt"><p>Test the Supervisor connected to the kafka BSDB.</p><p>Note that supervisor, IASIOs producer and consumer are created once
 at the beginning of the test and reused along the different tests</p><p>The configuration of this Supervisor is in the JSON CDB.</p><p>The supervisor runs 2 DASU with one ASCE each and
-checks the generation of the output by its DASUs and their ASCEs
+checks the generation of the outputs by its DASUs and their ASCEs
 when some input is read from the kafka topic.</p><p>This test is meant to check the loop only so each DASU has only one ASCE
 that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>The test
 - runs the supervisor

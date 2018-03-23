@@ -228,9 +228,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.webserversender.WebServerSender#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,webserverUri:String,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener):org.eso.ias.webserversender.WebServerSender"></a><a id="&lt;init&gt;:WebServerSender"></a>
+      <a id="&lt;init&gt;(senderID:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener):org.eso.ias.webserversender.WebServerSender"></a><a id="&lt;init&gt;:WebServerSender"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#&lt;init&gt;(id:String,webserverUri:String,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener):org.eso.ias.webserversender.WebServerSender" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#&lt;init&gt;(senderID:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener):org.eso.ias.webserversender.WebServerSender" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -239,30 +239,12 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">WebServerSender</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="webserverUri">webserverUri: <span class="extype" name="java.lang.String">String</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.webserversender.WebServerSender.WebServerSenderListener">WebServerSenderListener</span></span>)</span>
+        <span class="name">WebServerSender</span><span class="params">(<span name="senderID">senderID: <span class="extype" name="java.lang.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.webserversender.WebServerSender.WebServerSenderListener">WebServerSenderListener</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt">Constructor
 </p><div class="fullcomment"><div class="comment cmt"><p>Constructor
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>Identifier of the KafkaWebSocketConnector</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener of the messages received by the server</p></dd></dl></div>
-    </li><li name="org.eso.ias.webserversender.WebServerSender#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,kafkaTopic:String,webserverUri:String,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener):org.eso.ias.webserversender.WebServerSender"></a><a id="&lt;init&gt;:WebServerSender"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#&lt;init&gt;(id:String,kafkaTopic:String,webserverUri:String,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener):org.eso.ias.webserversender.WebServerSender" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">WebServerSender</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="kafkaTopic">kafkaTopic: <span class="extype" name="java.lang.String">String</span></span>, <span name="webserverUri">webserverUri: <span class="extype" name="java.lang.String">String</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.webserversender.WebServerSender.WebServerSenderListener">WebServerSenderListener</span></span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Constructor
-</p><div class="fullcomment"><div class="comment cmt"><p>Constructor
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>Identifier of the KafkaWebSocketConnector</p></dd><dt class="param">kafkaTopic</dt><dd class="cmt"><p>Topic defined to send messages to the IAS Core to the IAS Web Server</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener of the messages received by the server</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">senderID</dt><dd class="cmt"><p>Identifier of the WebServerSender</p></dd><dt class="param">props</dt><dd class="cmt"><p>the properties to get kafka servers, topic names and webserver uri</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener of the messages sent to the websocket server</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -454,9 +436,9 @@
               
         </dd></dl></div>
     </li><li name="org.eso.ias.webserversender.WebServerSender#iasioReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="iasioReceived(event:org.eso.ias.prototype.input.java.IASValue[_]):Unit"></a><a id="iasioReceived(IASValue[_]):Unit"></a>
+      <a id="iasioReceived(event:org.eso.ias.types.IASValue[_]):Unit"></a><a id="iasioReceived(IASValue[_]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#iasioReceived(event:org.eso.ias.prototype.input.java.IASValue[_]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#iasioReceived(event:org.eso.ias.types.IASValue[_]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -465,7 +447,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">iasioReceived</span><span class="params">(<span name="event">event: <a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">iasioReceived</span><span class="params">(<span name="event">event: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">This method could get notifications for messages

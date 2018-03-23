@@ -244,9 +244,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.supervisor.test.DasuMock#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.prototype.input.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,outputIdentifier:org.eso.ias.prototype.input.Identifier):org.eso.ias.supervisor.test.DasuMock"></a><a id="&lt;init&gt;:DasuMock"></a>
+      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,outputIdentifier:org.eso.ias.types.Identifier):org.eso.ias.supervisor.test.DasuMock"></a><a id="&lt;init&gt;:DasuMock"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.prototype.input.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,outputIdentifier:org.eso.ias.prototype.input.Identifier):org.eso.ias.supervisor.test.DasuMock" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,outputIdentifier:org.eso.ias.types.Identifier):org.eso.ias.supervisor.test.DasuMock" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -255,7 +255,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DasuMock</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="outputPublisher">outputPublisher: <a href="../../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="../../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="cdbReader">cdbReader: <a href="../../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="outputIdentifier">outputIdentifier: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>)</span>
+        <span class="name">DasuMock</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="outputPublisher">outputPublisher: <a href="../../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="../../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="cdbReader">cdbReader: <a href="../../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="outputIdentifier">outputIdentifier: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">cdbReader</dt><dd class="cmt"><p>the CDB reader to get the configuration of the DASU from the CDB</p></dd></dl></div>
@@ -350,6 +350,40 @@
       
       <p class="shortcomment cmt">The configuration of the ASCEs that run in the DASU
 </p>
+    </li><li name="org.eso.ias.dasu.Dasu#autoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="autoSendTimeInterval:Integer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#autoSendTimeInterval:Integer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">autoSendTimeInterval</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#autoSendTimeIntervalMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="autoSendTimeIntervalMillis:Long"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#autoSendTimeIntervalMillis:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">autoSendTimeIntervalMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"> Auto send time interval in milliseconds
+</p><div class="fullcomment"><div class="comment cmt"><p> Auto send time interval in milliseconds
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.DasuMock#cleanUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cleanUp():Unit"></a>
       <span class="permalink">
@@ -409,9 +443,9 @@
       
       <p class="shortcomment cmt">DASU configuration from CDB</p>
     </li><li name="org.eso.ias.dasu.Dasu#dasuIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dasuIdentifier:org.eso.ias.prototype.input.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
+      <a id="dasuIdentifier:org.eso.ias.types.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#dasuIdentifier:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#dasuIdentifier:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -420,7 +454,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dasuIdentifier</span><span class="result">: <a href="../../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">dasuIdentifier</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
@@ -601,9 +635,9 @@ while the validity could change.
       
       <p class="shortcomment cmt">The inputs of the DASU</p>
     </li><li name="org.eso.ias.supervisor.test.DasuMock#inputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputsReceived(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
+      <a id="inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#inputsReceived(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -612,7 +646,7 @@ while the validity could change.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Updates the output with the inputs received
@@ -772,9 +806,9 @@ and simulate the sending of the output
       
       <p class="shortcomment cmt">How many times the Supervisor started the DASU</p>
     </li><li name="org.eso.ias.supervisor.test.DasuMock#output" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="output:org.eso.ias.prototype.input.java.IASValue[_]"></a><a id="output:IASValue[_]"></a>
+      <a id="output:org.eso.ias.types.IASValue[_]"></a><a id="output:IASValue[_]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#output:org.eso.ias.prototype.input.java.IASValue[_]" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#output:org.eso.ias.types.IASValue[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -783,7 +817,7 @@ and simulate the sending of the output
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">output</span><span class="result">: <a href="../../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]</span>
+        <span class="name">output</span><span class="result">: <a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>
       </span>
       
       <p class="shortcomment cmt">The output published when inputs are received</p>
@@ -858,6 +892,40 @@ if not overridden by a java property
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#tolerance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tolerance:Integer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#tolerance:Integer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tolerance</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#toleranceMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toleranceMillis:Long"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#toleranceMillis:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toleranceMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"> The tolerance in milliseconds
+</p><div class="fullcomment"><div class="comment cmt"><p> The tolerance in milliseconds
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.DasuMock#unexpectedInputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="unexpectedInputsReceived:scala.collection.mutable.ArrayBuffer[String]"></a><a id="unexpectedInputsReceived:ArrayBuffer[String]"></a>
       <span class="permalink">

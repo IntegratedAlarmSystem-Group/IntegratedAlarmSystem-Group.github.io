@@ -207,7 +207,7 @@ from the SimpleStringConsumer and forwards IASIOs to the listener.
 Filtering is based on the ID of the IASIOs _and_ IASValue type:
 - if the ID of the received String is contained in <code><span class="extype" name="#acceptedIds">#acceptedIds</span></code>
   then the IASIO is forwarded to the listener otherwise is rejected.
-- if the type of the <code><span class="extype" name="IASValue">IASValue</span></code> is contained in <code><span class="extype" name="#acceptedtypes">#acceptedtypes</span></code>
+- if the type of the <code><span class="extype" name="IASValue">IASValue</span></code> is contained in <code><span class="extype" name="#acceptedTypes">#acceptedTypes</span></code>
   then the IASIO is forwarded to the listener otherwise is rejected.</p><p>&lt;BR&gt;If the caller does not set any filter, then all the received IASIOs
 will be forwarded to the listener.
 IDs and type are evaluated in AND.
@@ -262,9 +262,9 @@ IDs and type are evaluated in AND.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(servers:String,topicName:String,consumerID:String,idsOfIDsToAccept:java.util.Set[String],idsOfTypesToAccept:java.util.Set[org.eso.ias.prototype.input.java.IASTypes]):org.eso.ias.kafkautils.KafkaIasiosConsumer"></a><a id="&lt;init&gt;:KafkaIasiosConsumer"></a>
+      <a id="&lt;init&gt;(servers:String,topicName:String,consumerID:String,idsOfIDsToAccept:java.util.Set[String],idsOfTypesToAccept:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.kafkautils.KafkaIasiosConsumer"></a><a id="&lt;init&gt;:KafkaIasiosConsumer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#&lt;init&gt;(servers:String,topicName:String,consumerID:String,idsOfIDsToAccept:java.util.Set[String],idsOfTypesToAccept:java.util.Set[org.eso.ias.prototype.input.java.IASTypes]):org.eso.ias.kafkautils.KafkaIasiosConsumer" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#&lt;init&gt;(servers:String,topicName:String,consumerID:String,idsOfIDsToAccept:java.util.Set[String],idsOfTypesToAccept:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.kafkautils.KafkaIasiosConsumer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -273,7 +273,7 @@ IDs and type are evaluated in AND.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">KafkaIasiosConsumer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="java.lang.String">String</span></span>, <span name="consumerID">consumerID: <span class="extype" name="java.lang.String">String</span></span>, <span name="idsOfIDsToAccept">idsOfIDsToAccept: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="idsOfTypesToAccept">idsOfTypesToAccept: <span class="extype" name="java.util.Set">Set</span>[<a href="../prototype/input/java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a>]</span>)</span>
+        <span class="name">KafkaIasiosConsumer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="java.lang.String">String</span></span>, <span name="consumerID">consumerID: <span class="extype" name="java.lang.String">String</span></span>, <span name="idsOfIDsToAccept">idsOfIDsToAccept: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="idsOfTypesToAccept">idsOfTypesToAccept: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>)</span>
       </span>
       
       <p class="shortcomment cmt">Build a FilteredStringConsumer with the passed initial filters.</p><div class="fullcomment"><div class="comment cmt"><p>Build a FilteredStringConsumer with the passed initial filters.
@@ -371,9 +371,9 @@ IDs and type are evaluated in AND.
 </p><div class="fullcomment"><div class="comment cmt"><p>Add the passed IDs to the filter
 </p></div><dl class="paramcmts block"><dt class="param">idsToAdd</dt><dd class="cmt"><p>The filters to add</p></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#addTypesToFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="addTypesToFilter(typesToAdd:java.util.Set[org.eso.ias.prototype.input.java.IASTypes]):Unit"></a><a id="addTypesToFilter(Set[IASTypes]):Unit"></a>
+      <a id="addTypesToFilter(typesToAdd:java.util.Set[org.eso.ias.types.IASTypes]):Unit"></a><a id="addTypesToFilter(Set[IASTypes]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#addTypesToFilter(typesToAdd:java.util.Set[org.eso.ias.prototype.input.java.IASTypes]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#addTypesToFilter(typesToAdd:java.util.Set[org.eso.ias.types.IASTypes]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -382,7 +382,7 @@ IDs and type are evaluated in AND.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addTypesToFilter</span><span class="params">(<span name="typesToAdd">typesToAdd: <span class="extype" name="java.util.Set">Set</span>[<a href="../prototype/input/java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">addTypesToFilter</span><span class="params">(<span name="typesToAdd">typesToAdd: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Add the passed alarm types to the filter
@@ -640,9 +640,9 @@ IDs and type are evaluated in AND.
               
         </dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#setFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setFilter(idsToAccept:java.util.Set[String],typesToAccept:java.util.Set[org.eso.ias.prototype.input.java.IASTypes]):Unit"></a><a id="setFilter(Set[String],Set[IASTypes]):Unit"></a>
+      <a id="setFilter(idsToAccept:java.util.Set[String],typesToAccept:java.util.Set[org.eso.ias.types.IASTypes]):Unit"></a><a id="setFilter(Set[String],Set[IASTypes]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#setFilter(idsToAccept:java.util.Set[String],typesToAccept:java.util.Set[org.eso.ias.prototype.input.java.IASTypes]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#setFilter(idsToAccept:java.util.Set[String],typesToAccept:java.util.Set[org.eso.ias.types.IASTypes]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -651,7 +651,7 @@ IDs and type are evaluated in AND.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setFilter</span><span class="params">(<span name="idsToAccept">idsToAccept: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="typesToAccept">typesToAccept: <span class="extype" name="java.util.Set">Set</span>[<a href="../prototype/input/java/IASTypes.html" class="extype" name="org.eso.ias.prototype.input.java.IASTypes">IASTypes</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setFilter</span><span class="params">(<span name="idsToAccept">idsToAccept: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="typesToAccept">typesToAccept: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Set the filtering to the passed set of IDs, discarding the

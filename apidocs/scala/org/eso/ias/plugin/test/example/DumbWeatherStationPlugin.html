@@ -483,9 +483,9 @@ or a hardware device and so on
               
         </dd></dl></div>
     </li><li name="org.eso.ias.plugin.Plugin#getPluginOperationalMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPluginOperationalMode():java.util.Optional[org.eso.ias.prototype.input.java.OperationalMode]"></a><a id="getPluginOperationalMode():Optional[OperationalMode]"></a>
+      <a id="getPluginOperationalMode():java.util.Optional[org.eso.ias.types.OperationalMode]"></a><a id="getPluginOperationalMode():Optional[OperationalMode]"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/plugin/test/example/DumbWeatherStationPlugin.html#getPluginOperationalMode():java.util.Optional[org.eso.ias.prototype.input.java.OperationalMode]" title="Permalink">
+      <a href="../../../../../../org/eso/ias/plugin/test/example/DumbWeatherStationPlugin.html#getPluginOperationalMode():java.util.Optional[org.eso.ias.types.OperationalMode]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -494,7 +494,7 @@ or a hardware device and so on
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPluginOperationalMode</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../../../prototype/input/java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a>]</span>
+        <span class="name">getPluginOperationalMode</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../../../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Return the operational mode of the plugin.</p><div class="fullcomment"><div class="comment cmt"><p>Return the operational mode of the plugin.
@@ -671,9 +671,9 @@ The new refresh rate is bounded by a minimum (<code><span class="extype" name="M
 and a maximum (<code><span class="extype" name="MonitoredValue#maxAllowedRefreshRate">MonitoredValue#maxAllowedRefreshRate</span></code>) values.
 </p></div><dl class="paramcmts block"><dt class="param">mPointId</dt><dd class="cmt"><p>The not <code>null</code> nor empty ID of a monitored point</p></dd><dt class="param">newRefreshRate</dt><dd class="cmt"><p>the requested new refresh rate</p></dd><dt>returns</dt><dd class="cmt"><p>the refresh rate effectively set for the monitored value</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Plugin.html" class="extype" name="org.eso.ias.plugin.Plugin">Plugin</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../PluginException.html" class="extype" name="org.eso.ias.plugin.PluginException"><code>PluginException</code></a> if the monitored value with the passed ID does not exist</p></span></dd></dl></div>
     </li><li name="org.eso.ias.plugin.Plugin#setOperationalMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setOperationalMode(mPointId:String,opMode:org.eso.ias.prototype.input.java.OperationalMode):org.eso.ias.prototype.input.java.OperationalMode"></a><a id="setOperationalMode(String,OperationalMode):OperationalMode"></a>
+      <a id="setOperationalMode(mPointId:String,opMode:org.eso.ias.types.OperationalMode):org.eso.ias.types.OperationalMode"></a><a id="setOperationalMode(String,OperationalMode):OperationalMode"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/plugin/test/example/DumbWeatherStationPlugin.html#setOperationalMode(mPointId:String,opMode:org.eso.ias.prototype.input.java.OperationalMode):org.eso.ias.prototype.input.java.OperationalMode" title="Permalink">
+      <a href="../../../../../../org/eso/ias/plugin/test/example/DumbWeatherStationPlugin.html#setOperationalMode(mPointId:String,opMode:org.eso.ias.types.OperationalMode):org.eso.ias.types.OperationalMode" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -682,7 +682,7 @@ and a maximum (<code><span class="extype" name="MonitoredValue#maxAllowedRefresh
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setOperationalMode</span><span class="params">(<span name="mPointId">mPointId: <span class="extype" name="java.lang.String">String</span></span>, <span name="opMode">opMode: <a href="../../../prototype/input/java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>)</span><span class="result">: <a href="../../../prototype/input/java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>
+        <span class="name">setOperationalMode</span><span class="params">(<span name="mPointId">mPointId: <span class="extype" name="java.lang.String">String</span></span>, <span name="opMode">opMode: <a href="../../../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>)</span><span class="result">: <a href="../../../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>
       </span>
       
       <p class="shortcomment cmt">Set the operational mode of a monitor point value.</p><div class="fullcomment"><div class="comment cmt"><p>Set the operational mode of a monitor point value.
@@ -691,9 +691,9 @@ Note that this value is effectively sent to the core of the IAS only if
 not overridden by the plugin operational mode
 </p></div><dl class="paramcmts block"><dt class="param">mPointId</dt><dd class="cmt"><p>the ID of the monitor point to set the operation mode</p></dd><dt class="param">opMode</dt><dd class="cmt"><p>The not <code>null</code> operational mode to set</p></dd><dt>returns</dt><dd class="cmt"><p>The old operational mode of the monitor point</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Plugin.html" class="extype" name="org.eso.ias.plugin.Plugin">Plugin</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../PluginException.html" class="extype" name="org.eso.ias.plugin.PluginException"><code>PluginException</code></a> if the monitored value with the passed ID does not exist</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>#pluginOperationalMode</p></span></dd></dl></div>
     </li><li name="org.eso.ias.plugin.Plugin#setPluginOperationalMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setPluginOperationalMode(opMode:org.eso.ias.prototype.input.java.OperationalMode):Unit"></a><a id="setPluginOperationalMode(OperationalMode):Unit"></a>
+      <a id="setPluginOperationalMode(opMode:org.eso.ias.types.OperationalMode):Unit"></a><a id="setPluginOperationalMode(OperationalMode):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/plugin/test/example/DumbWeatherStationPlugin.html#setPluginOperationalMode(opMode:org.eso.ias.prototype.input.java.OperationalMode):Unit" title="Permalink">
+      <a href="../../../../../../org/eso/ias/plugin/test/example/DumbWeatherStationPlugin.html#setPluginOperationalMode(opMode:org.eso.ias.types.OperationalMode):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -702,7 +702,7 @@ not overridden by the plugin operational mode
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setPluginOperationalMode</span><span class="params">(<span name="opMode">opMode: <a href="../../../prototype/input/java/OperationalMode.html" class="extype" name="org.eso.ias.prototype.input.java.OperationalMode">OperationalMode</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPluginOperationalMode</span><span class="params">(<span name="opMode">opMode: <a href="../../../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Set the operational mode of the plugin overriding the

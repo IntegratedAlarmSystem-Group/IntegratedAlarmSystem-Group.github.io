@@ -260,9 +260,11 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The implementation of the DASU.</p><p>A DASU normally has 2 threads running:
-- the automatic resending of the output when no new input arrives
+- the automatic sending of the output when no new input arrives
+  or the output did not change
 - a thread for the throttling to avoid that processing too many
-  inputs takes 100% CPU</p></div><div class="toggleContainer block">
+  inputs takes 100% CPU
+</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -313,9 +315,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.dasu.DasuImpl#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.prototype.input.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,autoSendTimeInterval:Long):org.eso.ias.dasu.DasuImpl"></a><a id="&lt;init&gt;:DasuImpl"></a>
+      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.DasuImpl"></a><a id="&lt;init&gt;:DasuImpl"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.prototype.input.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,autoSendTimeInterval:Long):org.eso.ias.dasu.DasuImpl" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.DasuImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -324,11 +326,11 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DasuImpl</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>, <span name="outputPublisher">outputPublisher: <a href="publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="cdbReader">cdbReader: <a href="../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="scala.Long">Long</span></span>)</span>
+        <span class="name">DasuImpl</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="outputPublisher">outputPublisher: <a href="publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="cdbReader">cdbReader: <a href="../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="tolerance">tolerance: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">cdbReader</dt><dd class="cmt"><p>the CDB reader to get the configuration of the DASU from the CDB</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>refresh rate (msec) to automatically send the output
-                            when no new inputs have been received</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">cdbReader</dt><dd class="cmt"><p>the CDB reader to get the configuration of the DASU from the CDB</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>refresh rate (sec) to automatically send the output
+                            even if it did not change</p></dd><dt class="param">tolerance</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -421,9 +423,9 @@
       <p class="shortcomment cmt">The configuration of the ASCEs that run in the DASU
 </p>
     </li><li name="org.eso.ias.dasu.DasuImpl#asceThatProducesTheOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="asceThatProducesTheOutput:org.eso.ias.prototype.compele.ComputingElement[_]"></a><a id="asceThatProducesTheOutput:ComputingElement[_]"></a>
+      <a id="asceThatProducesTheOutput:org.eso.ias.asce.ComputingElement[_]"></a><a id="asceThatProducesTheOutput:ComputingElement[_]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#asceThatProducesTheOutput:org.eso.ias.prototype.compele.ComputingElement[_]" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#asceThatProducesTheOutput:org.eso.ias.asce.ComputingElement[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -432,14 +434,14 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">asceThatProducesTheOutput</span><span class="result">: <a href="../prototype/compele/ComputingElement.html" class="extype" name="org.eso.ias.prototype.compele.ComputingElement">ComputingElement</a>[_]</span>
+        <span class="name">asceThatProducesTheOutput</span><span class="result">: <a href="../asce/ComputingElement.html" class="extype" name="org.eso.ias.asce.ComputingElement">ComputingElement</a>[_]</span>
       </span>
       
       <p class="shortcomment cmt">The ASCE that produces the output</p>
     </li><li name="org.eso.ias.dasu.DasuImpl#asces" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="asces:Map[String,org.eso.ias.prototype.compele.ComputingElement[_]]"></a><a id="asces:Map[String,ComputingElement[_]]"></a>
+      <a id="asces:Map[String,org.eso.ias.asce.ComputingElement[_]]"></a><a id="asces:Map[String,ComputingElement[_]]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#asces:Map[String,org.eso.ias.prototype.compele.ComputingElement[_]]" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#asces:Map[String,org.eso.ias.asce.ComputingElement[_]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -448,7 +450,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">asces</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../prototype/compele/ComputingElement.html" class="extype" name="org.eso.ias.prototype.compele.ComputingElement">ComputingElement</a>[_]]</span>
+        <span class="name">asces</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../asce/ComputingElement.html" class="extype" name="org.eso.ias.asce.ComputingElement">ComputingElement</a>[_]]</span>
       </span>
       
       
@@ -468,10 +470,10 @@
       </span>
       
       
-    </li><li name="org.eso.ias.dasu.DasuImpl#autoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="autoSendTimeInterval:Long"></a>
+    </li><li name="org.eso.ias.dasu.Dasu#autoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="autoSendTimeInterval:Integer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#autoSendTimeInterval:Long" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#autoSendTimeInterval:Integer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -480,10 +482,28 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">autoSendTimeInterval</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+        <span class="name">autoSendTimeInterval</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
       </span>
       
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#autoSendTimeIntervalMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="autoSendTimeIntervalMillis:Long"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#autoSendTimeIntervalMillis:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">autoSendTimeIntervalMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
       
+      <p class="shortcomment cmt"> Auto send time interval in milliseconds
+</p><div class="fullcomment"><div class="comment cmt"><p> Auto send time interval in milliseconds
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#autoSendTimerTask" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="autoSendTimerTask:java.util.concurrent.atomic.AtomicReference[java.util.concurrent.ScheduledFuture[_]]"></a><a id="autoSendTimerTask:AtomicReference[ScheduledFuture[_]]"></a>
       <span class="permalink">
@@ -581,9 +601,9 @@
       
       
     </li><li name="org.eso.ias.dasu.Dasu#dasuIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dasuIdentifier:org.eso.ias.prototype.input.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
+      <a id="dasuIdentifier:org.eso.ias.types.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#dasuIdentifier:org.eso.ias.prototype.input.Identifier" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#dasuIdentifier:org.eso.ias.types.Identifier" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -592,7 +612,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dasuIdentifier</span><span class="result">: <a href="../prototype/input/Identifier.html" class="extype" name="org.eso.ias.prototype.input.Identifier">Identifier</a></span>
+        <span class="name">dasuIdentifier</span><span class="result">: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
@@ -719,6 +739,23 @@ while the validity could change.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.dasu.DasuImpl#fullRunningIdsOfInputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fullRunningIdsOfInputs:java.util.Map[String,String]"></a><a id="fullRunningIdsOfInputs:Map[String,String]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#fullRunningIdsOfInputs:java.util.Map[String,String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fullRunningIdsOfInputs</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The fullRuning Ids of the received inputs
+</p>
     </li><li name="org.eso.ias.dasu.DasuImpl#getAsceIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getAsceIds():Set[String]"></a>
       <span class="permalink">
@@ -734,7 +771,7 @@ while the validity could change.
         <span class="name">getAsceIds</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">The IDs of the ASCEs running in the DASU</p><div class="fullcomment"><div class="comment cmt"><p>The IDs of the ASCEs running in the DASU</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a> → <a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the IDs of the ASCEs running in the DASU</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a> → <a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -769,7 +806,23 @@ while the validity could change.
         <span class="name">getInputIds</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">The inputs of the DASU</p><div class="fullcomment"><div class="comment cmt"><p>The inputs of the DASU</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a> → <a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the IDs of the inputs of the DASU</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a> → <a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.DasuImpl#getInputsOfAsce" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getInputsOfAsce(id:String):Set[String]"></a><a id="getInputsOfAsce(String):Set[String]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#getInputsOfAsce(id:String):Set[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInputsOfAsce</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the IDs of the of the inputs of the ASCE with the given ID</p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -838,9 +891,9 @@ while the validity could change.
       
       
     </li><li name="org.eso.ias.dasu.DasuImpl#inputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputsReceived(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
+      <a id="inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#inputsReceived(iasios:Set[org.eso.ias.prototype.input.java.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -849,10 +902,10 @@ while the validity could change.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Updates the output with new inputs have been received from the BSDB.</p><div class="fullcomment"><div class="comment cmt"><p>Updates the output with new inputs have been received from the BSDB.</p><p>This method is not invoked while automatically re-sending the last computed value.
+      <p class="shortcomment cmt">New inputs have been received from the BSDB.</p><div class="fullcomment"><div class="comment cmt"><p>New inputs have been received from the BSDB.</p><p>This method is not invoked while automatically re-sending the last computed value.
 Such value is in fact stored into lastSentOutput and does not trigger
 a recalculation by the DASU.
 </p></div><dl class="paramcmts block"><dt class="param">iasios</dt><dd class="cmt"><p>the inputs received</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.DasuImpl">DasuImpl</a> → <a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a> → <a href="subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a></dd><dt>See also</dt><dd><span class="cmt"><p>InputsListener</p></span></dd></dl></div>
@@ -873,9 +926,9 @@ a recalculation by the DASU.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#lastCalculatedOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lastCalculatedOutput:java.util.concurrent.atomic.AtomicReference[Option[org.eso.ias.prototype.input.java.IASValue[_]]]"></a><a id="lastCalculatedOutput:AtomicReference[Option[IASValue[_]]]"></a>
+      <a id="lastCalculatedOutput:java.util.concurrent.atomic.AtomicReference[Option[org.eso.ias.types.IASValue[_]]]"></a><a id="lastCalculatedOutput:AtomicReference[Option[IASValue[_]]]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#lastCalculatedOutput:java.util.concurrent.atomic.AtomicReference[Option[org.eso.ias.prototype.input.java.IASValue[_]]]" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#lastCalculatedOutput:java.util.concurrent.atomic.AtomicReference[Option[org.eso.ias.types.IASValue[_]]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -884,15 +937,15 @@ a recalculation by the DASU.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">lastCalculatedOutput</span><span class="result">: <span class="extype" name="java.util.concurrent.atomic.AtomicReference">AtomicReference</span>[<span class="extype" name="scala.Option">Option</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]]</span>
+        <span class="name">lastCalculatedOutput</span><span class="result">: <span class="extype" name="java.util.concurrent.atomic.AtomicReference">AtomicReference</span>[<span class="extype" name="scala.Option">Option</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]]</span>
       </span>
       
-      <p class="shortcomment cmt"> The last calculated output
+      <p class="shortcomment cmt"> The last calculated output by ASCEs
 </p>
     </li><li name="org.eso.ias.dasu.DasuImpl#lastSentOutputAndValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lastSentOutputAndValidity:java.util.concurrent.atomic.AtomicReference[Option[(org.eso.ias.prototype.input.java.IASValue[_],org.eso.ias.prototype.input.java.IasValidity)]]"></a><a id="lastSentOutputAndValidity:AtomicReference[Option[(IASValue[_],IasValidity)]]"></a>
+      <a id="lastSentOutputAndValidity:java.util.concurrent.atomic.AtomicReference[Option[(org.eso.ias.types.InOut[_],org.eso.ias.types.IasValidity)]]"></a><a id="lastSentOutputAndValidity:AtomicReference[Option[(InOut[_],IasValidity)]]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#lastSentOutputAndValidity:java.util.concurrent.atomic.AtomicReference[Option[(org.eso.ias.prototype.input.java.IASValue[_],org.eso.ias.prototype.input.java.IasValidity)]]" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#lastSentOutputAndValidity:java.util.concurrent.atomic.AtomicReference[Option[(org.eso.ias.types.InOut[_],org.eso.ias.types.IasValidity)]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -901,7 +954,7 @@ a recalculation by the DASU.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">lastSentOutputAndValidity</span><span class="result">: <span class="extype" name="java.util.concurrent.atomic.AtomicReference">AtomicReference</span>[<span class="extype" name="scala.Option">Option</span>[(<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_], <a href="../prototype/input/java/IasValidity.html" class="extype" name="org.eso.ias.prototype.input.java.IasValidity">IasValidity</a>)]]</span>
+        <span class="name">lastSentOutputAndValidity</span><span class="result">: <span class="extype" name="java.util.concurrent.atomic.AtomicReference">AtomicReference</span>[<span class="extype" name="scala.Option">Option</span>[(<a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[_], <a href="../types/IasValidity.html" class="extype" name="org.eso.ias.types.IasValidity">IasValidity</a>)]]</span>
       </span>
       
       <p class="shortcomment cmt"> The last sent output and validity
@@ -946,6 +999,27 @@ a recalculation by the DASU.
       <p class="shortcomment cmt">The point in time of the last time when
 the output has been generated and published
 </p>
+    </li><li name="org.eso.ias.dasu.DasuImpl#mustSendOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mustSendOutput(oldOutput:org.eso.ias.types.InOut[_],oldValidity:org.eso.ias.types.Validity,newOutput:org.eso.ias.types.InOut[_],newValidity:org.eso.ias.types.Validity):Boolean"></a><a id="mustSendOutput(InOut[_],Validity,InOut[_],Validity):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#mustSendOutput(oldOutput:org.eso.ias.types.InOut[_],oldValidity:org.eso.ias.types.Validity,newOutput:org.eso.ias.types.InOut[_],newValidity:org.eso.ias.types.Validity):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mustSendOutput</span><span class="params">(<span name="oldOutput">oldOutput: <a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[_]</span>, <span name="oldValidity">oldValidity: <a href="../types/Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a></span>, <span name="newOutput">newOutput: <a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[_]</span>, <span name="newValidity">newValidity: <a href="../types/Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Check if the new output must be sent to the BSDB
+i.e if its mode or value or validity has changed
+</p><div class="fullcomment"><div class="comment cmt"><p>Check if the new output must be sent to the BSDB
+i.e if its mode or value or validity has changed
+</p></div><dl class="paramcmts block"><dt class="param">oldOutput</dt><dd class="cmt"><p>the last output sent to the BSDB</p></dd><dt class="param">oldValidity</dt><dd class="cmt"><p>the last validity sent to the BSDB</p></dd><dt class="param">newOutput</dt><dd class="cmt"><p>the new output</p></dd><dt class="param">newValidity</dt><dd class="cmt"><p>the new validity</p></dd><dt>returns</dt><dd class="cmt"><p>true if the new output changed from the last sent output
+             and must be sent to the BSDB and false otherwise</p></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -963,9 +1037,9 @@ the output has been generated and published
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#notYetProcessedInputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="notYetProcessedInputs:scala.collection.mutable.Map[String,org.eso.ias.prototype.input.java.IASValue[_]]"></a><a id="notYetProcessedInputs:Map[String,IASValue[_]]"></a>
+      <a id="notYetProcessedInputs:java.util.Map[String,org.eso.ias.types.IASValue[_]]"></a><a id="notYetProcessedInputs:Map[String,IASValue[_]]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#notYetProcessedInputs:scala.collection.mutable.Map[String,org.eso.ias.prototype.input.java.IASValue[_]]" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#notYetProcessedInputs:java.util.Map[String,org.eso.ias.types.IASValue[_]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -974,12 +1048,12 @@ the output has been generated and published
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">notYetProcessedInputs</span><span class="result">: <span class="extype" name="scala.collection.mutable.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>
+        <span class="name">notYetProcessedInputs</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>
       </span>
       
       <p class="shortcomment cmt">Values that have been received in input from plugins or other DASUs (BSDB)
-and not yet processed</p><div class="fullcomment"><div class="comment cmt"><p>Values that have been received in input from plugins or other DASUs (BSDB)
-and not yet processed</p><p>TODO: protect the map against access from multiple threads
+and not yet processed by the ASCEs</p><div class="fullcomment"><div class="comment cmt"><p>Values that have been received in input from plugins or other DASUs (BSDB)
+and not yet processed by the ASCEs</p><p>TODO: protect the map against access from multiple threads
 </p></div></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -1035,44 +1109,6 @@ and not yet processed</p><p>TODO: protect the map against access from multiple t
       </span>
       
       
-    </li><li name="org.eso.ias.dasu.DasuImpl#outputRefreshRate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="outputRefreshRate:Option[Int]"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#outputRefreshRate:Option[Int]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">outputRefreshRate</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.dasu.DasuImpl#publishOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="publishOutput(calculatedOutput:Option[org.eso.ias.prototype.input.java.IASValue[_]]):Unit"></a><a id="publishOutput(Option[IASValue[_]]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#publishOutput(calculatedOutput:Option[org.eso.ias.prototype.input.java.IASValue[_]]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">publishOutput</span><span class="params">(<span name="calculatedOutput">calculatedOutput: <span class="extype" name="scala.Option">Option</span>[<a href="../prototype/input/java/IASValue.html" class="extype" name="org.eso.ias.prototype.input.java.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Publish the passed output to the BSDB.</p><div class="fullcomment"><div class="comment cmt"><p>Publish the passed output to the BSDB.</p><p>The value effectively sent to the BSDB depends on the
-passed parameter and the last sent value.</p><p>The calculated output has the validity calculated when it has been produced;
-if the calculatedoutput is empty, the validity must be updated as the
-validity of one of the inputs could have been changed in the mean time
-</p></div><dl class="paramcmts block"><dt class="param">calculatedOutput</dt><dd class="cmt"><p>the last calculated output (it has the last validity)
-                        it is empty if this method has been called
-                        without calculating an output (automatic sending for example)</p></dd></dl></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#scheduledExecutor" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scheduledExecutor:org.eso.ias.dasu.executorthread.ScheduledExecutor"></a><a id="scheduledExecutor:ScheduledExecutor"></a>
       <span class="permalink">
@@ -1226,6 +1262,40 @@ if not overridden by a java property
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#tolerance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tolerance:Integer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#tolerance:Integer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tolerance</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#toleranceMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toleranceMillis:Long"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#toleranceMillis:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toleranceMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"> The tolerance in milliseconds
+</p><div class="fullcomment"><div class="comment cmt"><p> The tolerance in milliseconds
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">

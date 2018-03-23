@@ -1,6 +1,6 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: module IASTools.FileSupport</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head><body bgcolor="#f0f0f8">
 
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
@@ -28,7 +28,7 @@
     
 <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl>
-<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
 </font></dt><dd>
 <dl>
 <dt><font face="helvetica, arial"><a href="IASTools.FileSupport.html#FileSupport">FileSupport</a>
@@ -39,13 +39,13 @@
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="FileSupport">class <strong>FileSupport</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="FileSupport">class <strong>FileSupport</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>Support&nbsp;method&nbsp;for&nbsp;IAS&nbsp;files&nbsp;and&nbsp;folders<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="FileSupport-__init__"><strong>__init__</strong></a>(self, fileName, fileType<font color="#909090">=None</font>)</dt><dd><tt>Constructor<br>
+<dl><dt><a name="FileSupport-__init__"><strong>__init__</strong></a>(self, fileName, fileType=None)</dt><dd><tt>Constructor<br>
 &nbsp;<br>
 @param&nbsp;filename:&nbsp;The&nbsp;mae&nbsp;of&nbsp;the&nbsp;file<br>
 @param&nbsp;fileType:&nbsp;The&nbsp;type&nbsp;of&nbsp;the&nbsp;file&nbsp;(one&nbsp;in&nbsp;iasFileType)&nbsp;or&nbsp;None</tt></dd></dl>
@@ -63,7 +63,7 @@ the&nbsp;response&nbsp;time&nbsp;of&nbsp;the&nbsp;script.<br>
 @param&nbsp;fileName:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;file&nbsp;to&nbsp;look&nbsp;for<br>
 @param&nbsp;fileType:&nbsp;the&nbsp;type&nbsp;(iasFileType)&nbsp;of&nbsp;file&nbsp;to&nbsp;look&nbsp;for&nbsp;(example&nbsp;BINARY,LIB...)<br>
 @return:&nbsp;if&nbsp;the&nbsp;file&nbsp;is&nbsp;found&nbsp;The&nbsp;full&nbsp;path&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;throws&nbsp;a&nbsp;IOError&nbsp;exception</tt></dd></dl>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;throws&nbsp;a&nbsp;OSError&nbsp;exception</tt></dd></dl>
 
 <dl><dt><a name="FileSupport-recursivelyLookForFile"><strong>recursivelyLookForFile</strong></a>(self, folder)</dt><dd><tt>Search&nbsp;recursively&nbsp;for&nbsp;a&nbsp;file&nbsp;in&nbsp;the&nbsp;given&nbsp;folder<br>
 &nbsp;<br>
@@ -74,17 +74,17 @@ the&nbsp;response&nbsp;time&nbsp;of&nbsp;the&nbsp;script.<br>
 
 <hr>
 Class methods defined here:<br>
-<dl><dt><a name="FileSupport-createLogsFolder"><strong>createLogsFolder</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Create&nbsp;the&nbsp;folder&nbsp;of&nbsp;los&nbsp;as&nbsp;defined&nbsp;in&nbsp;IAS_LOGS_FOLDER<br>
+<dl><dt><a name="FileSupport-createLogsFolder"><strong>createLogsFolder</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;the&nbsp;folder&nbsp;of&nbsp;los&nbsp;as&nbsp;defined&nbsp;in&nbsp;IAS_LOGS_FOLDER<br>
 if&nbsp;it&nbsp;does&nbsp;not&nbsp;exists&nbsp;ALREADY<br>
 &nbsp;<br>
 An&nbsp;exception&nbsp;is&nbsp;thrown&nbsp;in&nbsp;case&nbsp;of&nbsp;error</tt></dd></dl>
 
-<dl><dt><a name="FileSupport-createTmpFolder"><strong>createTmpFolder</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Create&nbsp;the&nbsp;folder&nbsp;for&nbsp;temporary&nbsp;files&nbsp;as&nbsp;defined&nbsp;in&nbsp;IAS_TMP_FOLDER<br>
+<dl><dt><a name="FileSupport-createTmpFolder"><strong>createTmpFolder</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;the&nbsp;folder&nbsp;for&nbsp;temporary&nbsp;files&nbsp;as&nbsp;defined&nbsp;in&nbsp;IAS_TMP_FOLDER<br>
 if&nbsp;it&nbsp;does&nbsp;not&nbsp;exists&nbsp;ALREADY<br>
 &nbsp;<br>
 An&nbsp;exception&nbsp;is&nbsp;thrown&nbsp;in&nbsp;case&nbsp;of&nbsp;error</tt></dd></dl>
 
-<dl><dt><a name="FileSupport-getIASFolders"><strong>getIASFolders</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders.<br>
+<dl><dt><a name="FileSupport-getIASFolders"><strong>getIASFolders</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders.<br>
 At&nbsp;the&nbsp;present&nbsp;it&nbsp;only&nbsp;contains&nbsp;the&nbsp;current&nbsp;module<br>
 (the&nbsp;parent&nbsp;of&nbsp;the&nbsp;current&nbsp;folder&nbsp;i.e.&nbsp;assumes&nbsp;that<br>
 the&nbsp;tscript&nbsp;runs&nbsp;in&nbsp;src&nbsp;that&nbsp;is&nbsp;the&nbsp;typical&nbsp;case<br>
@@ -97,9 +97,9 @@ The&nbsp;tuple&nbsp;returned&nbsp;is&nbsp;ordered&nbsp;by&nbsp;priority.<br>
 &nbsp;@return&nbsp;A&nbsp;ordered&nbsp;tuple&nbsp;with&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(at&nbsp;the&nbsp;present&nbsp;the&nbsp;current&nbsp;module&nbsp;and&nbsp;IAS_ROOT)</tt></dd></dl>
 
-<dl><dt><a name="FileSupport-getIASRoot"><strong>getIASRoot</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>@return&nbsp;the&nbsp;IAS_ROOT</tt></dd></dl>
+<dl><dt><a name="FileSupport-getIASRoot"><strong>getIASRoot</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>@return&nbsp;the&nbsp;IAS_ROOT</tt></dd></dl>
 
-<dl><dt><a name="FileSupport-getIASSearchFolders"><strong>getIASSearchFolders</strong></a>(cls, fileType)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;folders&nbsp;to&nbsp;search&nbsp;for&nbsp;a&nbsp;a&nbsp;given&nbsp;file&nbsp;type<br>
+<dl><dt><a name="FileSupport-getIASSearchFolders"><strong>getIASSearchFolders</strong></a>(fileType)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;folders&nbsp;to&nbsp;search&nbsp;for&nbsp;a&nbsp;a&nbsp;given&nbsp;file&nbsp;type<br>
 &nbsp;<br>
 @param&nbsp;fileType:&nbsp;the&nbsp;type&nbsp;(iasFileType)&nbsp;of&nbsp;file&nbsp;to&nbsp;look&nbsp;for&nbsp;(example&nbsp;BINARY,LIB...)<br>
 @return&nbsp;a&nbsp;list&nbsp;with&nbsp;the&nbsp;order&nbsp;folders&nbsp;to&nbsp;search&nbsp;for&nbsp;a&nbsp;file&nbsp;of&nbsp;the&nbsp;given&nbsp;name</tt></dd></dl>
@@ -123,16 +123,33 @@ Data and other attributes defined here:<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-access"><strong>access</strong></a>(...)</dt><dd><tt><a href="#-access">access</a>(path,&nbsp;mode)&nbsp;-&gt;&nbsp;True&nbsp;if&nbsp;granted,&nbsp;False&nbsp;otherwise<br>
+<td width="100%"><dl><dt><a name="-access"><strong>access</strong></a>(path, mode, *, dir_fd=None, effective_ids=False, follow_symlinks=True)</dt><dd><tt>Use&nbsp;the&nbsp;real&nbsp;uid/gid&nbsp;to&nbsp;test&nbsp;for&nbsp;access&nbsp;to&nbsp;a&nbsp;path.<br>
 &nbsp;<br>
-Use&nbsp;the&nbsp;real&nbsp;uid/gid&nbsp;to&nbsp;test&nbsp;for&nbsp;access&nbsp;to&nbsp;a&nbsp;path.&nbsp;&nbsp;Note&nbsp;that&nbsp;most<br>
-operations&nbsp;will&nbsp;use&nbsp;the&nbsp;effective&nbsp;uid/gid,&nbsp;therefore&nbsp;this&nbsp;routine&nbsp;can<br>
-be&nbsp;used&nbsp;in&nbsp;a&nbsp;suid/sgid&nbsp;environment&nbsp;to&nbsp;test&nbsp;if&nbsp;the&nbsp;invoking&nbsp;user&nbsp;has&nbsp;the<br>
-specified&nbsp;access&nbsp;to&nbsp;the&nbsp;path.&nbsp;&nbsp;The&nbsp;mode&nbsp;argument&nbsp;can&nbsp;be&nbsp;F_OK&nbsp;to&nbsp;test<br>
-existence,&nbsp;or&nbsp;the&nbsp;inclusive-OR&nbsp;of&nbsp;R_OK,&nbsp;W_OK,&nbsp;and&nbsp;X_OK.</tt></dd></dl>
- <dl><dt><a name="-getcwd"><strong>getcwd</strong></a>(...)</dt><dd><tt><a href="#-getcwd">getcwd</a>()&nbsp;-&gt;&nbsp;path<br>
+&nbsp;&nbsp;path<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Path&nbsp;to&nbsp;be&nbsp;tested;&nbsp;can&nbsp;be&nbsp;string&nbsp;or&nbsp;bytes<br>
+&nbsp;&nbsp;mode<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Operating-system&nbsp;mode&nbsp;bitfield.&nbsp;&nbsp;Can&nbsp;be&nbsp;F_OK&nbsp;to&nbsp;test&nbsp;existence,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;the&nbsp;inclusive-OR&nbsp;of&nbsp;R_OK,&nbsp;W_OK,&nbsp;and&nbsp;X_OK.<br>
+&nbsp;&nbsp;dir_fd<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;not&nbsp;None,&nbsp;it&nbsp;should&nbsp;be&nbsp;a&nbsp;file&nbsp;descriptor&nbsp;open&nbsp;to&nbsp;a&nbsp;directory,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;path&nbsp;should&nbsp;be&nbsp;relative;&nbsp;path&nbsp;will&nbsp;then&nbsp;be&nbsp;relative&nbsp;to&nbsp;that<br>
+&nbsp;&nbsp;&nbsp;&nbsp;directory.<br>
+&nbsp;&nbsp;effective_ids<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;True,&nbsp;access&nbsp;will&nbsp;use&nbsp;the&nbsp;effective&nbsp;uid/gid&nbsp;instead&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;real&nbsp;uid/gid.<br>
+&nbsp;&nbsp;follow_symlinks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;False,&nbsp;and&nbsp;the&nbsp;last&nbsp;element&nbsp;of&nbsp;the&nbsp;path&nbsp;is&nbsp;a&nbsp;symbolic&nbsp;link,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;access&nbsp;will&nbsp;examine&nbsp;the&nbsp;symbolic&nbsp;link&nbsp;itself&nbsp;instead&nbsp;of&nbsp;the&nbsp;file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;link&nbsp;points&nbsp;to.<br>
 &nbsp;<br>
-Return&nbsp;a&nbsp;string&nbsp;representing&nbsp;the&nbsp;current&nbsp;working&nbsp;directory.</tt></dd></dl>
+dir_fd,&nbsp;effective_ids,&nbsp;and&nbsp;follow_symlinks&nbsp;may&nbsp;not&nbsp;be&nbsp;implemented<br>
+&nbsp;&nbsp;on&nbsp;your&nbsp;platform.&nbsp;&nbsp;If&nbsp;they&nbsp;are&nbsp;unavailable,&nbsp;using&nbsp;them&nbsp;will&nbsp;raise&nbsp;a<br>
+&nbsp;&nbsp;NotImplementedError.<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;most&nbsp;operations&nbsp;will&nbsp;use&nbsp;the&nbsp;effective&nbsp;uid/gid,&nbsp;therefore&nbsp;this<br>
+&nbsp;&nbsp;routine&nbsp;can&nbsp;be&nbsp;used&nbsp;in&nbsp;a&nbsp;suid/sgid&nbsp;environment&nbsp;to&nbsp;test&nbsp;if&nbsp;the&nbsp;invoking&nbsp;user<br>
+&nbsp;&nbsp;has&nbsp;the&nbsp;specified&nbsp;access&nbsp;to&nbsp;the&nbsp;path.</tt></dd></dl>
+ <dl><dt><a name="-getcwd"><strong>getcwd</strong></a>()</dt><dd><tt>Return&nbsp;a&nbsp;unicode&nbsp;string&nbsp;representing&nbsp;the&nbsp;current&nbsp;working&nbsp;directory.</tt></dd></dl>
 </td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#55aa55">
@@ -142,5 +159,5 @@ Return&nbsp;a&nbsp;string&nbsp;representing&nbsp;the&nbsp;current&nbsp;working&n
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>W_OK</strong> = 2<br>
 <strong>X_OK</strong> = 1<br>
-<strong>environ</strong> = {'IAS_LOGS_FOLDER': '/home/acaproni/IasRoot/logs...ak/exports/share/:/usr/local/share/:/usr/share/'}</td></tr></table>
+<strong>environ</strong> = environ({'HOME': '/home/acaproni', 'DISPLAY': 'l...UTF-8', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s'})</td></tr></table>
 </body></html>
