@@ -167,6 +167,14 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.asce.transfer">transfer</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="IasIO.html" title="The view of an InOut for the TF"></a>
+                        <a href="IasIO.html" title="The view of an InOut for the TF">IasIO</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF"></a>
+                        <a href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF">IasIOJ</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user."></a>
                         <a href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user.">JavaTransfer</a>
                       </li><li class="current-entities indented5">
@@ -179,8 +187,8 @@
                         <a href="ScalaTransfer.html" title="ScalaTransfer calls the scala transfer function provided by the user.">ScalaTransfer</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementators of the transfer function."></a>
-                        <a href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementators of the transfer function.">ScalaTransferExecutor</a>
+                        <a class="class" href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementations of the transfer function."></a>
+                        <a href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementations of the transfer function.">ScalaTransferExecutor</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TransferExecutor.html" title="TransferExecutor is the abstract for the implementators of the transfer function in java."></a>
@@ -285,9 +293,9 @@ java. Scala implementations of the TF are therefore more performant (in principl
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.asce.transfer.TransferFunctionSetting#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(className:String,language:org.eso.ias.asce.transfer.TransferFunctionLanguage.Value,threadFactory:java.util.concurrent.ThreadFactory):org.eso.ias.asce.transfer.TransferFunctionSetting"></a><a id="&lt;init&gt;:TransferFunctionSetting"></a>
+      <a id="&lt;init&gt;(className:String,language:org.eso.ias.asce.transfer.TransferFunctionLanguage.Value,templateInstance:Option[Int],threadFactory:java.util.concurrent.ThreadFactory):org.eso.ias.asce.transfer.TransferFunctionSetting"></a><a id="&lt;init&gt;:TransferFunctionSetting"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting.html#&lt;init&gt;(className:String,language:org.eso.ias.asce.transfer.TransferFunctionLanguage.Value,threadFactory:java.util.concurrent.ThreadFactory):org.eso.ias.asce.transfer.TransferFunctionSetting" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting.html#&lt;init&gt;(className:String,language:org.eso.ias.asce.transfer.TransferFunctionLanguage.Value,templateInstance:Option[Int],threadFactory:java.util.concurrent.ThreadFactory):org.eso.ias.asce.transfer.TransferFunctionSetting" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -296,7 +304,7 @@ java. Scala implementations of the TF are therefore more performant (in principl
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TransferFunctionSetting</span><span class="params">(<span name="className">className: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="language">language: <a href="TransferFunctionLanguage$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.asce.transfer.TransferFunctionLanguage.Value">TransferFunctionLanguage.Value</a></span>, <span name="threadFactory">threadFactory: <span class="extype" name="java.util.concurrent.ThreadFactory">ThreadFactory</span></span>)</span>
+        <span class="name">TransferFunctionSetting</span><span class="params">(<span name="className">className: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="language">language: <a href="TransferFunctionLanguage$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="org.eso.ias.asce.transfer.TransferFunctionLanguage.Value">TransferFunctionLanguage.Value</a></span>, <span name="templateInstance">templateInstance: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="threadFactory">threadFactory: <span class="extype" name="java.util.concurrent.ThreadFactory">ThreadFactory</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p>
@@ -507,9 +515,9 @@ java. Scala implementations of the TF are therefore more performant (in principl
               
         </dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.TransferFunctionSetting#initialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="initialize(asceId:String,asceRunningId:String,props:java.util.Properties):Boolean"></a><a id="initialize(String,String,Properties):Boolean"></a>
+      <a id="initialize(asceId:String,asceRunningId:String,validityTimeFrame:Long,props:java.util.Properties):Boolean"></a><a id="initialize(String,String,Long,Properties):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting.html#initialize(asceId:String,asceRunningId:String,props:java.util.Properties):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting.html#initialize(asceId:String,asceRunningId:String,validityTimeFrame:Long,props:java.util.Properties):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -518,7 +526,7 @@ java. Scala implementations of the TF are therefore more performant (in principl
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">(<span name="asceId">asceId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="asceRunningId">asceRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">initialize</span><span class="params">(<span name="asceId">asceId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="asceRunningId">asceRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="validityTimeFrame">validityTimeFrame: <span class="extype" name="scala.Long">Long</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <p class="shortcomment cmt">Load, build and initialize the object to run

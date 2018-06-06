@@ -159,6 +159,10 @@
                         <a href="DasuDao.html" title="The pojo for a DASU">DasuDao</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="DasuToDeployDao.html" title="The DAO with the DASU to be deployed in a Supervisor."></a>
+                        <a href="DasuToDeployDao.html" title="The DAO with the DASU to be deployed in a Supervisor.">DasuToDeployDao</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="IasDao.html" title="Global configuration for the IAS"></a>
                         <a href="IasDao.html" title="Global configuration for the IAS">IasDao</a>
                       </li><li class="current-entities indented5">
@@ -185,6 +189,10 @@
                         <span class="separator"></span>
                         <a class="class" href="TFLanguageDao.html" title="The programming language supported by the TF."></a>
                         <a href="TFLanguageDao.html" title="The programming language supported by the TF.">TFLanguageDao</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TemplateDao.html" title="The DAO for the template needed to support replication of identical devices."></a>
+                        <a href="TemplateDao.html" title="The DAO for the template needed to support replication of identical devices.">TemplateDao</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TransferFunctionDao.html" title="The DAO to handle the definition of the transfer function."></a>
@@ -344,10 +352,10 @@ by moving its properties into the DASU pojo.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#addDasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="addDasu(dasu:org.eso.ias.cdb.pojos.DasuDao):Unit"></a><a id="addDasu(DasuDao):Unit"></a>
+    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#addDasuToDeploy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addDasuToDeploy(dtd:org.eso.ias.cdb.pojos.DasuToDeployDao):Unit"></a><a id="addDasuToDeploy(DasuToDeployDao):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#addDasu(dasu:org.eso.ias.cdb.pojos.DasuDao):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#addDasuToDeploy(dtd:org.eso.ias.cdb.pojos.DasuToDeployDao):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -356,14 +364,14 @@ by moving its properties into the DASU pojo.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addDasu</span><span class="params">(<span name="dasu">dasu: <a href="DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">addDasuToDeploy</span><span class="params">(<span name="dtd">dtd: <a href="DasuToDeployDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuToDeployDao">DasuToDeployDao</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Puts the passed DASU in the list of tDASUs that
 run in this supervisor
 </p><div class="fullcomment"><div class="comment cmt"><p>Puts the passed DASU in the list of tDASUs that
 run in this supervisor
-</p></div><dl class="paramcmts block"><dt class="param">dasu</dt><dd class="cmt"><p>The DASU to add</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">dtd</dt><dd class="cmt"><p>The DASU to deploy to add</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -501,23 +509,7 @@ DASUs is limited to their IDs.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#getDasus" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getDasus():java.util.Set[org.eso.ias.cdb.pojos.DasuDao]"></a><a id="getDasus():Set[DasuDao]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#getDasus():java.util.Set[org.eso.ias.cdb.pojos.DasuDao]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getDasus</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>]</span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#getDasusIDs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#getDasusIDs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDasusIDs():java.util.Set[String]"></a><a id="getDasusIDs():Set[String]"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#getDasusIDs():java.util.Set[String]" title="Permalink">
@@ -530,6 +522,22 @@ DASUs is limited to their IDs.
       </span>
       <span class="symbol">
         <span class="name">getDasusIDs</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IDs of all the DASUSs of this supervisor</p></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#getDasusToDeploy" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getDasusToDeploy():java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]"></a><a id="getDasusToDeploy():Set[DasuToDeployDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#getDasusToDeploy():java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDasusToDeploy</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="DasuToDeployDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuToDeployDao">DasuToDeployDao</a>]</span>
       </span>
       
       
@@ -668,7 +676,7 @@ DASUs is limited to their IDs.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#removeDasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#removeDasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="removeDasu(dasuId:String):Unit"></a><a id="removeDasu(String):Unit"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#removeDasu(dasuId:String):Unit" title="Permalink">
@@ -683,11 +691,15 @@ DASUs is limited to their IDs.
         <span class="name">removeDasu</span><span class="params">(<span name="dasuId">dasuId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
-    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#removeDasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="removeDasu(dasu:org.eso.ias.cdb.pojos.DasuDao):Unit"></a><a id="removeDasu(DasuDao):Unit"></a>
+      <p class="shortcomment cmt">Remove the passed DASU with the given ID
+from the set of DASUs to deploy
+</p><div class="fullcomment"><div class="comment cmt"><p>Remove the passed DASU with the given ID
+from the set of DASUs to deploy
+</p></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>The ID of the DASU to deploy to remove</p></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#removeDasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeDasu(dtd:org.eso.ias.cdb.pojos.DasuToDeployDao):Unit"></a><a id="removeDasu(DasuToDeployDao):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#removeDasu(dasu:org.eso.ias.cdb.pojos.DasuDao):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#removeDasu(dtd:org.eso.ias.cdb.pojos.DasuToDeployDao):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -696,7 +708,25 @@ DASUs is limited to their IDs.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">removeDasu</span><span class="params">(<span name="dasu">dasu: <a href="DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">removeDasu</span><span class="params">(<span name="dtd">dtd: <a href="DasuToDeployDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuToDeployDao">DasuToDeployDao</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Remove the passed DASU from the set of DASUs to deploy
+</p><div class="fullcomment"><div class="comment cmt"><p>Remove the passed DASU from the set of DASUs to deploy
+</p></div><dl class="paramcmts block"><dt class="param">dtd</dt><dd class="cmt"><p>The DASU to deploy to remove</p></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.SupervisorDao#setDasusToDeploy" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setDasusToDeploy(dasusToDeploy:java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]):Unit"></a><a id="setDasusToDeploy(Set[DasuToDeployDao]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/SupervisorDao.html#setDasusToDeploy(dasusToDeploy:java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDasusToDeploy</span><span class="params">(<span name="dasusToDeploy">dasusToDeploy: <span class="extype" name="java.util.Set">Set</span>[<a href="DasuToDeployDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuToDeployDao">DasuToDeployDao</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       

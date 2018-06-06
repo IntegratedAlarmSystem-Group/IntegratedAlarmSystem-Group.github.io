@@ -149,6 +149,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.supervisor">supervisor</a></dd></dl></div>
+    </li><li name="org.eso.ias.supervisor.test.tf" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tf"></a><a id="tf:tf"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/index.html#tf" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="tf/index.html"><span class="name">tf</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.supervisor.test">test</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <a class="object" href="DasuMock$.html" title="Companion object"></a>
                         <a class="class" href="" title="A mockup of the DASUs to run in the Supervisor without the complexity of DASUs and ASCEs"></a>
@@ -161,6 +177,18 @@
                         <span class="separator"></span>
                         <a class="class" href="SupervisorWithKafkaTest.html" title="Test the Supervisor connected to the kafka BSDB."></a>
                         <a href="SupervisorWithKafkaTest.html" title="Test the Supervisor connected to the kafka BSDB.">SupervisorWithKafkaTest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SupervisorWithTemplatesTest.html" title=""></a>
+                        <a href="SupervisorWithTemplatesTest.html" title="">SupervisorWithTemplatesTest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TemplateHelperTest.html" title="Test the TemplateHelper class"></a>
+                        <a href="TemplateHelperTest.html" title="Test the TemplateHelper class">TemplateHelperTest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TemplatedInputTest.html" title="This test checks if the the TF running in a templated ASCE is able to get the inputs by their IDs by calling getValue."></a>
+                        <a href="TemplatedInputTest.html" title="This test checks if the the TF running in a templated ASCE is able to get the inputs by their IDs by calling getValue.">TemplatedInputTest</a>
                       </li>
               </ul>
             </div>
@@ -244,9 +272,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.supervisor.test.DasuMock#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,outputIdentifier:org.eso.ias.types.Identifier):org.eso.ias.supervisor.test.DasuMock"></a><a id="&lt;init&gt;:DasuMock"></a>
+      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,dasuDao:org.eso.ias.cdb.pojos.DasuDao,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber):org.eso.ias.supervisor.test.DasuMock"></a><a id="&lt;init&gt;:DasuMock"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,outputIdentifier:org.eso.ias.types.Identifier):org.eso.ias.supervisor.test.DasuMock" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,dasuDao:org.eso.ias.cdb.pojos.DasuDao,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber):org.eso.ias.supervisor.test.DasuMock" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -255,10 +283,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DasuMock</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="outputPublisher">outputPublisher: <a href="../../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="../../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="cdbReader">cdbReader: <a href="../../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="outputIdentifier">outputIdentifier: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>)</span>
+        <span class="name">DasuMock</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="dasuDao">dasuDao: <a href="../../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a></span>, <span name="outputPublisher">outputPublisher: <a href="../../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="../../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">cdbReader</dt><dd class="cmt"><p>the CDB reader to get the configuration of the DASU from the CDB</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuDao</dt><dd class="cmt"><p>the DASU configuration</p></dd><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -342,7 +370,7 @@
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">asceDaos</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="../../cdb/pojos/AsceDao.html" class="extype" name="org.eso.ias.cdb.pojos.AsceDao">AsceDao</a>]</span>
@@ -426,22 +454,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.supervisor.test.DasuMock#dasuDao" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dasuDao:org.eso.ias.cdb.pojos.DasuDao"></a><a id="dasuDao:DasuDao"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#dasuDao:org.eso.ias.cdb.pojos.DasuDao" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dasuDao</span><span class="result">: <a href="../../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">DASU configuration from CDB</p>
     </li><li name="org.eso.ias.dasu.Dasu#dasuIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dasuIdentifier:org.eso.ias.types.Identifier"></a><a id="dasuIdentifier:Identifier"></a>
       <span class="permalink">
@@ -532,6 +544,26 @@ while the validity could change.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#fromTemplate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromTemplate:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#fromTemplate:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromTemplate</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"> True if the DASU has been generated from a template,
+ False otherwise
+</p><div class="fullcomment"><div class="comment cmt"><p> True if the DASU has been generated from a template,
+ False otherwise
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.DasuMock#getAsceIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getAsceIds():Set[String]"></a>
       <span class="permalink">
@@ -857,6 +889,26 @@ and simulate the sending of the output
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.eso.ias.dasu.Dasu#templateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="templateInstance:Option[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#templateInstance:Option[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">templateInstance</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The number of the instance if the DASU has been generated
+from a template; empty otherwise
+</p><div class="fullcomment"><div class="comment cmt"><p>The number of the instance if the DASU has been generated
+from a template; empty otherwise
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="org.eso.ias.dasu.Dasu#throttling" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="throttling:Long"></a>
       <span class="permalink">

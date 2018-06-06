@@ -165,6 +165,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.network" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/plugin/index.html#network" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="network/index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
     </li><li name="org.eso.ias.plugin.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="publisher"></a><a id="publisher:publisher"></a>
       <span class="permalink">
@@ -233,6 +249,10 @@
                         <span class="separator"></span>
                         <a class="class" href="PluginException.html" title="The exception returned by the Plugin"></a>
                         <a href="PluginException.html" title="The exception returned by the Plugin">PluginException</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="ReplicatedIdsMapper.html" title="The mapper of monitor points ID to concrete ID in case the plugin is replicated."></a>
+                        <a href="ReplicatedIdsMapper.html" title="The mapper of monitor points ID to concrete ID in case the plugin is replicated.">ReplicatedIdsMapper</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="Sample.html" title="A sample of the value read from the remote system."></a>
@@ -331,9 +351,9 @@ filtering, like the operational mode, the validity and the identifier.</p><p>&lt
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.plugin.ValueToSend#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,filteredValue:org.eso.ias.plugin.filter.FilteredValue,opMode:org.eso.ias.types.OperationalMode):org.eso.ias.plugin.ValueToSend"></a><a id="&lt;init&gt;:ValueToSend"></a>
+      <a id="&lt;init&gt;(id:String,filteredValue:org.eso.ias.plugin.filter.FilteredValue,opMode:org.eso.ias.types.OperationalMode,actualValidity:org.eso.ias.types.IasValidity):org.eso.ias.plugin.ValueToSend"></a><a id="&lt;init&gt;:ValueToSend"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/plugin/ValueToSend.html#&lt;init&gt;(id:String,filteredValue:org.eso.ias.plugin.filter.FilteredValue,opMode:org.eso.ias.types.OperationalMode):org.eso.ias.plugin.ValueToSend" title="Permalink">
+      <a href="../../../../org/eso/ias/plugin/ValueToSend.html#&lt;init&gt;(id:String,filteredValue:org.eso.ias.plugin.filter.FilteredValue,opMode:org.eso.ias.types.OperationalMode,actualValidity:org.eso.ias.types.IasValidity):org.eso.ias.plugin.ValueToSend" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -342,34 +362,15 @@ filtering, like the operational mode, the validity and the identifier.</p><p>&lt
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ValueToSend</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="filteredValue">filteredValue: <a href="filter/FilteredValue.html" class="extype" name="org.eso.ias.plugin.filter.FilteredValue">FilteredValue</a></span>, <span name="opMode">opMode: <a href="../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>)</span>
+        <span class="name">ValueToSend</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="filteredValue">filteredValue: <a href="filter/FilteredValue.html" class="extype" name="org.eso.ias.plugin.filter.FilteredValue">FilteredValue</a></span>, <span name="opMode">opMode: <a href="../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>, <span name="actualValidity">actualValidity: <a href="../types/IasValidity.html" class="extype" name="org.eso.ias.types.IasValidity">IasValidity</a></span>)</span>
       </span>
       
       <p class="shortcomment cmt">Builds a <code>ValueToSend</code> from the passed <code>FilteredValue</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Builds a <code>ValueToSend</code> from the passed <code>FilteredValue</code>.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The ID of the value</p></dd><dt class="param">filteredValue</dt><dd class="cmt"><p>The value produced applying the filter</p></dd><dt class="param">opMode</dt><dd class="cmt"><p>The operational mode</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.ValueToSend#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,value:Any,samples:java.util.List[org.eso.ias.plugin.filter.Filter.ValidatedSample],monitoredSystemTimestamp:Long):org.eso.ias.plugin.ValueToSend"></a><a id="&lt;init&gt;:ValueToSend"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/plugin/ValueToSend.html#&lt;init&gt;(id:String,value:Any,samples:java.util.List[org.eso.ias.plugin.filter.Filter.ValidatedSample],monitoredSystemTimestamp:Long):org.eso.ias.plugin.ValueToSend" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ValueToSend</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="samples">samples: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="org.eso.ias.plugin.filter.Filter.ValidatedSample">ValidatedSample</span>]</span>, <span name="monitoredSystemTimestamp">monitoredSystemTimestamp: <span class="extype" name="scala.Long">Long</span></span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Builds a ValueToSend with a unknown operational mode
-and unreliable.</p><div class="fullcomment"><div class="comment cmt"><p>Builds a ValueToSend with a unknown operational mode
-and unreliable.
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The ID of the value</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value to send to the IAS core</p></dd><dt class="param">samples</dt><dd class="cmt"><p>The history of samples used by the filter to produce the value</p></dd><dt class="param">monitoredSystemTimestamp</dt><dd class="cmt"><p>The timestamp when the value has been provided by the monitored system</p></dd></dl></div>
     </li><li name="org.eso.ias.plugin.ValueToSend#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,value:Any,samples:java.util.List[org.eso.ias.plugin.filter.Filter.ValidatedSample],monitoredSystemTimestamp:Long,opMode:org.eso.ias.types.OperationalMode,iasValidity:org.eso.ias.types.IasValidity):org.eso.ias.plugin.ValueToSend"></a><a id="&lt;init&gt;:ValueToSend"></a>
+      <a id="&lt;init&gt;(id:String,value:Any,samples:java.util.List[org.eso.ias.plugin.filter.Filter.EnrichedSample],monitoredSystemTimestamp:Long,opMode:org.eso.ias.types.OperationalMode,iasValidity:org.eso.ias.types.IasValidity):org.eso.ias.plugin.ValueToSend"></a><a id="&lt;init&gt;:ValueToSend"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/plugin/ValueToSend.html#&lt;init&gt;(id:String,value:Any,samples:java.util.List[org.eso.ias.plugin.filter.Filter.ValidatedSample],monitoredSystemTimestamp:Long,opMode:org.eso.ias.types.OperationalMode,iasValidity:org.eso.ias.types.IasValidity):org.eso.ias.plugin.ValueToSend" title="Permalink">
+      <a href="../../../../org/eso/ias/plugin/ValueToSend.html#&lt;init&gt;(id:String,value:Any,samples:java.util.List[org.eso.ias.plugin.filter.Filter.EnrichedSample],monitoredSystemTimestamp:Long,opMode:org.eso.ias.types.OperationalMode,iasValidity:org.eso.ias.types.IasValidity):org.eso.ias.plugin.ValueToSend" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -378,7 +379,7 @@ and unreliable.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ValueToSend</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="samples">samples: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="org.eso.ias.plugin.filter.Filter.ValidatedSample">ValidatedSample</span>]</span>, <span name="monitoredSystemTimestamp">monitoredSystemTimestamp: <span class="extype" name="scala.Long">Long</span></span>, <span name="opMode">opMode: <a href="../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>, <span name="iasValidity">iasValidity: <a href="../types/IasValidity.html" class="extype" name="org.eso.ias.types.IasValidity">IasValidity</a></span>)</span>
+        <span class="name">ValueToSend</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="samples">samples: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="org.eso.ias.plugin.filter.Filter.EnrichedSample">EnrichedSample</span>]</span>, <span name="monitoredSystemTimestamp">monitoredSystemTimestamp: <span class="extype" name="scala.Long">Long</span></span>, <span name="opMode">opMode: <a href="../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>, <span name="iasValidity">iasValidity: <a href="../types/IasValidity.html" class="extype" name="org.eso.ias.types.IasValidity">IasValidity</a></span>)</span>
       </span>
       
       
@@ -742,6 +743,27 @@ and unreliable.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.plugin.ValueToSend#withId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withId(newId:String):org.eso.ias.plugin.ValueToSend"></a><a id="withId(String):ValueToSend"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/plugin/ValueToSend.html#withId(newId:String):org.eso.ias.plugin.ValueToSend" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withId</span><span class="params">(<span name="newId">newId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.plugin.ValueToSend">ValueToSend</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Builds and return a new <code>ValueToSend</code> with the assigned
+ID.</p><div class="fullcomment"><div class="comment cmt"><p>Builds and return a new <code>ValueToSend</code> with the assigned
+ID.
+This method supports replication that changes the ID before sending
+the value to the BSDB
+</p></div><dl class="paramcmts block"><dt class="param">newId</dt><dd class="cmt"><p>The new ID of the value to send to the BSDB</p></dd><dt>returns</dt><dd class="cmt"><p>A new value with the passed ID</p></dd></dl></div>
     </li><li name="org.eso.ias.plugin.ValueToSend#withMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withMode(opMode:org.eso.ias.types.OperationalMode):org.eso.ias.plugin.ValueToSend"></a><a id="withMode(OperationalMode):ValueToSend"></a>
       <span class="permalink">

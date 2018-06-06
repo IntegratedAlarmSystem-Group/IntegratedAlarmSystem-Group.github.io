@@ -349,10 +349,10 @@
       
       <p class="shortcomment cmt">Read the DASU configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the DASU configuration from the CDB.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty DASU identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The DASU red from the file</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the DASU</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.cdb.CdbReader#getDasusForSupervisor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getDasusForSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuDao]"></a><a id="getDasusForSupervisor(String):Set[DasuDao]"></a>
+    </li><li name="org.eso.ias.cdb.CdbReader#getDasusToDeployInSupervisor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getDasusToDeployInSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]"></a><a id="getDasusToDeployInSupervisor(String):Set[DasuToDeployDao]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getDasusForSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuDao]" title="Permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getDasusToDeployInSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -361,11 +361,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDasusForSupervisor</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>]</span>
+        <span class="name">getDasusToDeployInSupervisor</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="pojos/DasuToDeployDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuToDeployDao">DasuToDeployDao</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Return the DASUs belonging to the given Supervisor.</p><div class="fullcomment"><div class="comment cmt"><p>Return the DASUs belonging to the given Supervisor.
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the supervisor</p></dd><dt>returns</dt><dd class="cmt"><p>A set of DASUs running in the supervisor with the passed id</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading CDB or if the
+      <p class="shortcomment cmt">Return the DASUs to deploy in the Supervisor with the given identifier
+</p><div class="fullcomment"><div class="comment cmt"><p>Return the DASUs to deploy in the Supervisor with the given identifier
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the supervisor</p></dd><dt>returns</dt><dd class="cmt"><p>A set of DASUs to deploy in the supervisor with the passed id</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading CDB or if the
                         supervisor with the give identifier does not exist</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getIas" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getIas():java.util.Optional[org.eso.ias.cdb.pojos.IasDao]"></a><a id="getIas():Optional[IasDao]"></a>
@@ -454,6 +455,23 @@
       
       <p class="shortcomment cmt">Read the supervisor configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the supervisor configuration from the CDB.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty supervisor identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The Supervisor red from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the Supervisor</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getTemplate" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getTemplate(template_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TemplateDao]"></a><a id="getTemplate(String):Optional[TemplateDao]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getTemplate(template_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TemplateDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplate</span><span class="params">(<span name="template_id">template_id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Read the ttemplate configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the ttemplate configuration from the CDB.
+</p></div><dl class="paramcmts block"><dt class="param">template_id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the template</p></dd><dt>returns</dt><dd class="cmt"><p>The template read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading from the CDB</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getTransferFunction" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getTransferFunction(tf_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TransferFunctionDao]"></a><a id="getTransferFunction(String):Optional[TransferFunctionDao]"></a>
       <span class="permalink">

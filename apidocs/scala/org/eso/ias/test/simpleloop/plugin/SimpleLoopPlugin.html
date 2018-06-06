@@ -252,9 +252,9 @@ at each step.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.test.simpleloop.plugin.SimpleLoopPlugin#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(config:org.eso.ias.plugin.config.PluginConfig,sender:org.eso.ias.plugin.publisher.MonitorPointSender):org.eso.ias.test.simpleloop.plugin.SimpleLoopPlugin"></a><a id="&lt;init&gt;:SimpleLoopPlugin"></a>
+      <a id="&lt;init&gt;(config:org.eso.ias.plugin.config.PluginConfig,sender:org.eso.ias.plugin.publisher.MonitorPointSender,hbProducer:org.eso.ias.heartbeat.HbProducer):org.eso.ias.test.simpleloop.plugin.SimpleLoopPlugin"></a><a id="&lt;init&gt;:SimpleLoopPlugin"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/test/simpleloop/plugin/SimpleLoopPlugin.html#&lt;init&gt;(config:org.eso.ias.plugin.config.PluginConfig,sender:org.eso.ias.plugin.publisher.MonitorPointSender):org.eso.ias.test.simpleloop.plugin.SimpleLoopPlugin" title="Permalink">
+      <a href="../../../../../../org/eso/ias/test/simpleloop/plugin/SimpleLoopPlugin.html#&lt;init&gt;(config:org.eso.ias.plugin.config.PluginConfig,sender:org.eso.ias.plugin.publisher.MonitorPointSender,hbProducer:org.eso.ias.heartbeat.HbProducer):org.eso.ias.test.simpleloop.plugin.SimpleLoopPlugin" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -263,7 +263,7 @@ at each step.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SimpleLoopPlugin</span><span class="params">(<span name="config">config: <a href="../../../plugin/config/PluginConfig.html" class="extype" name="org.eso.ias.plugin.config.PluginConfig">PluginConfig</a></span>, <span name="sender">sender: <a href="../../../plugin/publisher/MonitorPointSender.html" class="extype" name="org.eso.ias.plugin.publisher.MonitorPointSender">MonitorPointSender</a></span>)</span>
+        <span class="name">SimpleLoopPlugin</span><span class="params">(<span name="config">config: <a href="../../../plugin/config/PluginConfig.html" class="extype" name="org.eso.ias.plugin.config.PluginConfig">PluginConfig</a></span>, <span name="sender">sender: <a href="../../../plugin/publisher/MonitorPointSender.html" class="extype" name="org.eso.ias.plugin.publisher.MonitorPointSender">MonitorPointSender</a></span>, <span name="hbProducer">hbProducer: <a href="../../../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>)</span>
       </span>
       
       
@@ -523,6 +523,8 @@ at each step.
       </span>
       
       <p class="shortcomment cmt">A  monitor point value has been updated and must be forwarded to the core of the IAS.</p><div class="fullcomment"><div class="comment cmt"><p>A  monitor point value has been updated and must be forwarded to the core of the IAS.
+&lt;P&gt;
+If the plugin is replicated, the ID of the value is changed before publishing.
 </p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The value to send to the core of the IAS</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../plugin/Plugin.html" class="extype" name="org.eso.ias.plugin.Plugin">Plugin</a> → <a href="../../../plugin/ChangeValueListener.html" class="extype" name="org.eso.ias.plugin.ChangeValueListener">ChangeValueListener</a></dd><dt>See also</dt><dd><span class="cmt"><p>ChangeValueListener#monitoredValueUpdated(ValueToSend)</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
@@ -633,7 +635,7 @@ with the same ID ) cannot be added to the map.
       
       <p class="shortcomment cmt">Change the refresh rate of the monitor point with the passed ID.</p><div class="fullcomment"><div class="comment cmt"><p>Change the refresh rate of the monitor point with the passed ID.
 &lt;P&gt;
-The new refresh rate is bounded by a minimum (<code><span class="extype" name="MonitoredValue#minAllowedRefreshRate">MonitoredValue#minAllowedRefreshRate</span></code>)
+The new refresh rate is bounded by a minimum (<code><span class="extype" name="MonitoredValue#minAllowedSendRate">MonitoredValue#minAllowedSendRate</span></code>)
 and a maximum (<code><span class="extype" name="MonitoredValue#maxAllowedRefreshRate">MonitoredValue#maxAllowedRefreshRate</span></code>) values.
 </p></div><dl class="paramcmts block"><dt class="param">mPointId</dt><dd class="cmt"><p>The not <code>null</code> nor empty ID of a monitored point</p></dd><dt class="param">newRefreshRate</dt><dd class="cmt"><p>the requested new refresh rate</p></dd><dt>returns</dt><dd class="cmt"><p>the refresh rate effectively set for the monitored value</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../plugin/Plugin.html" class="extype" name="org.eso.ias.plugin.Plugin">Plugin</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../../plugin/PluginException.html" class="extype" name="org.eso.ias.plugin.PluginException"><code>PluginException</code></a> if the monitored value with the passed ID does not exist</p></span></dd></dl></div>
     </li><li name="org.eso.ias.plugin.Plugin#setOperationalMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">

@@ -166,6 +166,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.component.test">test</a></dd></dl></div>
     </li><li class="current-entities indented6">
+                        <a class="object" href="ConstraintValidityTF$.html" title="Companion"></a>
+                        <a class="class" href="ConstraintValidityTF.html" title="The TF to check the functioning of the setting of the validity with constraints."></a>
+                        <a href="ConstraintValidityTF.html" title="The TF to check the functioning of the setting of the validity with constraints.">ConstraintValidityTF</a>
+                      </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="class" href="CopyTF.html" title="A scala TransferExecutor for testing purposes."></a>
                         <a href="CopyTF.html" title="A scala TransferExecutor for testing purposes.">CopyTF</a>
@@ -212,7 +216,31 @@
           <div id="comment" class="fullcommenttop"></div>
         
 
-      
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
 
       <div id="template">
         <div id="allMembers">
@@ -220,10 +248,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.component.test.transfer.CopyTF" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="CopyTFextendsScalaTransferExecutor[org.eso.ias.types.AlarmSample]"></a><a id="CopyTF:CopyTF"></a>
+              <ol><li name="org.eso.ias.component.test.transfer.ConstraintValidityTF" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ConstraintValidityTFextendsScalaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="ConstraintValidityTF:ConstraintValidityTF"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#CopyTFextendsScalaTransferExecutor[org.eso.ias.types.AlarmSample]" title="Permalink">
+      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#ConstraintValidityTFextendsScalaTransferExecutor[org.eso.ias.types.Alarm]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -232,7 +260,28 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A scala TransferExecutor for testing purposes." href="CopyTF.html"><span class="name">CopyTF</span></a><span class="result"> extends <a href="../../../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../../../types/AlarmSample.html" class="extype" name="org.eso.ias.types.AlarmSample">AlarmSample</a>]</span>
+        <a title="The TF to check the functioning of the setting of the validity with constraints." href="ConstraintValidityTF.html"><span class="name">ConstraintValidityTF</span></a><span class="result"> extends <a href="../../../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The TF to check the functioning of the setting of the validity
+with constraints.</p><div class="fullcomment"><div class="comment cmt"><p>The TF to check the functioning of the setting of the validity
+with constraints.</p><p>The TF ignores the values of the inputs (it is not the purpose of this TF)
+and set the validity constraints according to the string contained in the
+input with ID constraintSetterID
+</p></div></div>
+    </li><li name="org.eso.ias.component.test.transfer.CopyTF" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CopyTFextendsScalaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="CopyTF:CopyTF"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#CopyTFextendsScalaTransferExecutor[org.eso.ias.types.Alarm]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A scala TransferExecutor for testing purposes." href="CopyTF.html"><span class="name">CopyTF</span></a><span class="result"> extends <a href="../../../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
       </span>
       
       <p class="shortcomment cmt">A scala TransferExecutor for testing purposes.</p><div class="fullcomment"><div class="comment cmt"><p>A scala TransferExecutor for testing purposes.</p><p>The purpose of this class is to check the updating of the
@@ -259,9 +308,9 @@ exception is properly caught and the TF not executed any longer.
 In this case the state of the ASCE must change to TFBroken.
 </p></div></div>
     </li><li name="org.eso.ias.component.test.transfer.TransferExample" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TransferExampleextendsScalaTransferExecutor[org.eso.ias.types.AlarmSample]"></a><a id="TransferExample:TransferExample"></a>
+      <a id="TransferExampleextendsScalaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="TransferExample:TransferExample"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#TransferExampleextendsScalaTransferExecutor[org.eso.ias.types.AlarmSample]" title="Permalink">
+      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#TransferExampleextendsScalaTransferExecutor[org.eso.ias.types.Alarm]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -270,16 +319,16 @@ In this case the state of the ASCE must change to TFBroken.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A scala TransferExecutor for testing purposes" href="TransferExample.html"><span class="name">TransferExample</span></a><span class="result"> extends <a href="../../../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../../../types/AlarmSample.html" class="extype" name="org.eso.ias.types.AlarmSample">AlarmSample</a>]</span>
+        <a title="A scala TransferExecutor for testing purposes" href="TransferExample.html"><span class="name">TransferExample</span></a><span class="result"> extends <a href="../../../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
       </span>
       
       <p class="shortcomment cmt">A scala TransferExecutor for testing purposes
 </p><div class="fullcomment"><div class="comment cmt"><p>A scala TransferExecutor for testing purposes
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>TransferExecutor</p></span></dd></dl></div>
     </li><li name="org.eso.ias.component.test.transfer.TransferExecutorImpl" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TransferExecutorImplextendsJavaTransferExecutor"></a><a id="TransferExecutorImpl:TransferExecutorImpl"></a>
+      <a id="TransferExecutorImplextendsJavaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="TransferExecutorImpl:TransferExecutorImpl"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#TransferExecutorImplextendsJavaTransferExecutor" title="Permalink">
+      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#TransferExecutorImplextendsJavaTransferExecutor[org.eso.ias.types.Alarm]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -288,7 +337,7 @@ In this case the state of the ASCE must change to TFBroken.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A java transfer function for testing" href="TransferExecutorImpl.html"><span class="name">TransferExecutorImpl</span></a><span class="result"> extends <a href="../../../asce/transfer/JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a></span>
+        <a title="A java transfer function for testing" href="TransferExecutorImpl.html"><span class="name">TransferExecutorImpl</span></a><span class="result"> extends <a href="../../../asce/transfer/JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
       </span>
       
       <p class="shortcomment cmt">A java transfer function for testing
@@ -298,7 +347,28 @@ In this case the state of the ASCE must change to TFBroken.
 
         
 
-        
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.eso.ias.component.test.transfer.ConstraintValidityTF" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConstraintValidityTF"></a><a id="ConstraintValidityTF:ConstraintValidityTF"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/component/test/transfer/index.html#ConstraintValidityTF" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Companion" href="ConstraintValidityTF$.html"><span class="name">ConstraintValidityTF</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Companion</p>
+    </li>
+              </ol>
+            </div>
 
         
 

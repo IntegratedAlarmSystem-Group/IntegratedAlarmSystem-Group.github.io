@@ -149,6 +149,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.supervisor">supervisor</a></dd></dl></div>
+    </li><li name="org.eso.ias.supervisor.test.tf" visbl="pub" class="indented6 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tf"></a><a id="tf:tf"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/index.html#tf" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="tf/index.html"><span class="name">tf</span></a>
+      </span>
+      
+      
     </li><li class="current-entities indented5">
                         <a class="object" href="DasuMock$.html" title="Companion object"></a>
                         <a class="class" href="DasuMock.html" title="A mockup of the DASUs to run in the Supervisor without the complexity of DASUs and ASCEs"></a>
@@ -161,6 +177,18 @@
                         <span class="separator"></span>
                         <a class="class" href="SupervisorWithKafkaTest.html" title="Test the Supervisor connected to the kafka BSDB."></a>
                         <a href="SupervisorWithKafkaTest.html" title="Test the Supervisor connected to the kafka BSDB.">SupervisorWithKafkaTest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SupervisorWithTemplatesTest.html" title=""></a>
+                        <a href="SupervisorWithTemplatesTest.html" title="">SupervisorWithTemplatesTest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TemplateHelperTest.html" title="Test the TemplateHelper class"></a>
+                        <a href="TemplateHelperTest.html" title="Test the TemplateHelper class">TemplateHelperTest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TemplatedInputTest.html" title="This test checks if the the TF running in a templated ASCE is able to get the inputs by their IDs by calling getValue."></a>
+                        <a href="TemplatedInputTest.html" title="This test checks if the the TF running in a templated ASCE is able to get the inputs by their IDs by calling getValue.">TemplatedInputTest</a>
                       </li>
               </ul>
             </div>
@@ -285,6 +313,76 @@ that run the MinMaxTF against one input only. This way the CDB is simple.</p><p>
 - run a IASIOs consumer (iasiosConsumer) that listen to all the IASIOs
   written in the BDSB i.e. those published by the producer and
   those published by the DASUs running in the Supervisor</p><p>The test submit some IASIOs and checks what is published in the BSDB.
+</p></div></div>
+    </li><li name="org.eso.ias.supervisor.test.SupervisorWithTemplatesTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SupervisorWithTemplatesTestextendsFlatSpec"></a><a id="SupervisorWithTemplatesTest:SupervisorWithTemplatesTest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/index.html#SupervisorWithTemplatesTestextendsFlatSpec" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SupervisorWithTemplatesTest.html"><span class="name">SupervisorWithTemplatesTest</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.supervisor.test.TemplateHelperTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TemplateHelperTestextendsFlatSpec"></a><a id="TemplateHelperTest:TemplateHelperTest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/index.html#TemplateHelperTestextendsFlatSpec" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Test the TemplateHelper class" href="TemplateHelperTest.html"><span class="name">TemplateHelperTest</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Test the TemplateHelper class</p><div class="fullcomment"><div class="comment cmt"><p>Test the TemplateHelper class</p><p>The test uses the CDB in test/CDB and the DasusToDeploy defined in
+the SupervisorWithTemplates Supervisor.
+</p></div></div>
+    </li><li name="org.eso.ias.supervisor.test.TemplatedInputTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TemplatedInputTestextendsFlatSpec"></a><a id="TemplatedInputTest:TemplatedInputTest"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/index.html#TemplatedInputTestextendsFlatSpec" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="This test checks if the the TF running in a templated ASCE is able to get the inputs by their IDs by calling getValue." href="TemplatedInputTest.html"><span class="name">TemplatedInputTest</span></a><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">This test checks if the the TF running in a templated ASCE
+is able to get the inputs by their IDs by calling getValue.</p><div class="fullcomment"><div class="comment cmt"><p>This test checks if the the TF running in a templated ASCE
+is able to get the inputs by their IDs by calling getValue.</p><p>It instantiates a templated DASU with one ASCE that
+sums 2 inputs of type Long.
+One input is from a non templated input while the other
+one is templated.
+The TF gets the values of the inputs by calling getEval
+and not directly accessing the map.
+getEval must recognize the templated and not templated parameters.
+For templated parameters, getValue must take into account the
+instance of the DASU/ASCE.</p><p>The test instantiates the DASU with the ASCE and send the inputs.
+Finally, it checks the output.</p><p>The test, instantiates a real DASU and ASCE i.e. no mock used here.</p><p>The configuration is read from test/CDB:
+Supervisor: SupervisorToTestInputs
+Template: TemplToTestInputs
+DASU: DasuToTestInputs
+ASCE: AsceToTestInputs
+Inputs:
+  Templated: TemplatedId (Long)
+  Non Templated: NonTemplatedId (Long)
+Output: TemplatedOutId (Long)
 </p></div></div>
     </li></ol>
             </div>
