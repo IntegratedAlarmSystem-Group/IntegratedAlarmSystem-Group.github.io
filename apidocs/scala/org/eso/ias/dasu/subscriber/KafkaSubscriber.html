@@ -158,7 +158,7 @@
                         <a class="trait" href="InputsListener.html" title="A listener of inputs like the DASU"></a>
                         <a href="InputsListener.html" title="A listener of inputs like the DASU">InputsListener</a>
                       </li><li class="current-entities indented5">
-                        <span class="separator"></span>
+                        <a class="object" href="KafkaSubscriber$.html" title=""></a>
                         <a class="class" href="" title="Read IASValues from the kafka queue and forward them to the DASU for processing."></a>
                         <a href="" title="Read IASValues from the kafka queue and forward them to the DASU for processing.">KafkaSubscriber</a>
                       </li>
@@ -168,14 +168,16 @@
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <a href="KafkaSubscriber$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.eso">eso</a>.<a href="../../index.html" class="extype" name="org.eso.ias">ias</a>.<a href="../index.html" class="extype" name="org.eso.ias.dasu">dasu</a>.<a href="index.html" class="extype" name="org.eso.ias.dasu.subscriber">subscriber</a></p>
-        <h1>KafkaSubscriber<span class="permalink">
+        <h1><a href="KafkaSubscriber$.html" title="See companion object">KafkaSubscriber</a><span class="permalink">
       <a href="../../../../../org/eso/ias/dasu/subscriber/KafkaSubscriber.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="KafkaSubscriber$.html" title="See companion object">object KafkaSubscriber</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -242,9 +244,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.dasu.subscriber.KafkaSubscriber#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuId:String,topicName:String,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber"></a><a id="&lt;init&gt;:KafkaSubscriber"></a>
+      <a id="&lt;init&gt;(dasuId:String,kafkaConsumer:org.eso.ias.kafkautils.KafkaIasiosConsumer,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber"></a><a id="&lt;init&gt;:KafkaSubscriber"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/KafkaSubscriber.html#&lt;init&gt;(dasuId:String,topicName:String,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/subscriber/KafkaSubscriber.html#&lt;init&gt;(dasuId:String,kafkaConsumer:org.eso.ias.kafkautils.KafkaIasiosConsumer,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -253,44 +255,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">KafkaSubscriber</span><span class="params">(<span name="dasuId">dasuId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
+        <span class="name">KafkaSubscriber</span><span class="params">(<span name="dasuId">dasuId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="kafkaConsumer">kafkaConsumer: <a href="../../kafkautils/KafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer">KafkaIasiosConsumer</a></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt">Auxiliary constructor with default servers list
-</p><div class="fullcomment"><div class="comment cmt"><p>Auxiliary constructor with default servers list
-</p></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">topicName</dt><dd class="cmt"><p>the name of the kafka topic to poll events from</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.subscriber.KafkaSubscriber#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuId:String,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber"></a><a id="&lt;init&gt;:KafkaSubscriber"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/KafkaSubscriber.html#&lt;init&gt;(dasuId:String,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">KafkaSubscriber</span><span class="params">(<span name="dasuId">dasuId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Auxiliary constructor with default topic and servers list</p><div class="fullcomment"><div class="comment cmt"><p>Auxiliary constructor with default topic and servers list</p></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.subscriber.KafkaSubscriber#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuId:String,serversList:String,topicName:String,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber"></a><a id="&lt;init&gt;:KafkaSubscriber"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/KafkaSubscriber.html#&lt;init&gt;(dasuId:String,serversList:String,topicName:String,props:java.util.Properties):org.eso.ias.dasu.subscriber.KafkaSubscriber" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">KafkaSubscriber</span><span class="params">(<span name="dasuId">dasuId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="serversList">serversList: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">serversList</dt><dd class="cmt"><p>the list of kafka brojkers to connect to</p></dd><dt class="param">topicName</dt><dd class="cmt"><p>the name of the kafka topic to poll events from</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd></dl></div>
     </li></ol>
             </div>
 

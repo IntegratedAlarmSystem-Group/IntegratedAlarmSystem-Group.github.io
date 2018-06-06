@@ -399,9 +399,9 @@
               
         </dd></dl></div>
     </li><li name="org.eso.ias.converter.ConverterConfig#converterStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="converterStream(cID:String,props:java.util.Properties):org.eso.ias.converter.ConverterStream"></a><a id="converterStream(String,Properties):ConverterStream"></a>
+      <a id="converterStream(cID:String,kafkaBrokers:java.util.Optional[String],props:java.util.Properties):org.eso.ias.converter.ConverterStream"></a><a id="converterStream(String,Optional[String],Properties):ConverterStream"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/ConverterConfig.html#converterStream(cID:String,props:java.util.Properties):org.eso.ias.converter.ConverterStream" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/ConverterConfig.html#converterStream(cID:String,kafkaBrokers:java.util.Optional[String],props:java.util.Properties):org.eso.ias.converter.ConverterStream" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -410,7 +410,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">converterStream</span><span class="params">(<span name="cID">cID: <span class="extype" name="java.lang.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span><span class="result">: <a href="ConverterStream.html" class="extype" name="org.eso.ias.converter.ConverterStream">ConverterStream</a></span>
+        <span class="name">converterStream</span><span class="params">(<span name="cID">cID: <span class="extype" name="java.lang.String">String</span></span>, <span name="kafkaBrokers">kafkaBrokers: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span><span class="result">: <a href="ConverterStream.html" class="extype" name="org.eso.ias.converter.ConverterStream">ConverterStream</a></span>
       </span>
       
       
@@ -506,6 +506,22 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.converter.ConverterConfig#hbProducer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hbProducer(cID:String,kafkaBrokers:java.util.Optional[String],props:java.util.Properties):org.eso.ias.heartbeat.HbProducer"></a><a id="hbProducer(String,Optional[String],Properties):HbProducer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/converter/ConverterConfig.html#hbProducer(cID:String,kafkaBrokers:java.util.Optional[String],props:java.util.Properties):org.eso.ias.heartbeat.HbProducer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbProducer</span><span class="params">(<span name="cID">cID: <span class="extype" name="java.lang.String">String</span></span>, <span name="kafkaBrokers">kafkaBrokers: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span><span class="result">: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>
+      </span>
+      
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">

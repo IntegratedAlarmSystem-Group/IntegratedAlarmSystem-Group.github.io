@@ -165,6 +165,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.network" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/plugin/index.html#network" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="network/index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
     </li><li name="org.eso.ias.plugin.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="publisher"></a><a id="publisher:publisher"></a>
       <span class="permalink">
@@ -235,6 +251,10 @@
                         <a href="PluginException.html" title="The exception returned by the Plugin">PluginException</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="ReplicatedIdsMapper.html" title="The mapper of monitor points ID to concrete ID in case the plugin is replicated."></a>
+                        <a href="ReplicatedIdsMapper.html" title="The mapper of monitor points ID to concrete ID in case the plugin is replicated.">ReplicatedIdsMapper</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="Sample.html" title="A sample of the value read from the remote system."></a>
                         <a href="Sample.html" title="A sample of the value read from the remote system.">Sample</a>
                       </li><li class="current-entities indented4">
@@ -291,13 +311,20 @@ The MonitoredValue main tasks are:
 	&lt;LI&gt;if the value has not been sent to the IAS when the refresh time interval elapses,
      send the value again to the core
 &lt;/UL&gt;
-&lt;P&gt;The <code>MonitoredValue</code> sends the value the <code><span class="extype" name="#listener">#listener</span></code>, that
+&lt;P&gt;The <code>MonitoredValue</code> sends the value to the <code><span class="extype" name="#listener">#listener</span></code>, that
 will send it to the core of the IAS:
 &lt;UL&gt;
 	&lt;LI&gt;immediately if the generated value changed
-	&lt;LI&gt;after the time interval elapses by a timer task.
+	&lt;LI&gt;periodically by a timer task.
 &lt;/UL&gt;
 A timer task implemented by the <code><span class="extype" name="#run()">#run()</span></code> resend to the core the last value sent.
+&lt;BR&gt;Note that he periodic sending time interval is a global parameter
+of the plugin (of the IAS, actually) and must not be confused with the
+<code><span class="extype" name="#refreshRate">#refreshRate</span></code> of the monitor point that is the time interval
+that the monitor point is refreshed by the device.
+The validity depends on the time when the value has been produced by the remote
+system against the refresh rate and the actual time: the IAS periodic sending
+of the value does not play a role in the assessment of the validity.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -349,9 +376,9 @@ A timer task implemented by the <code><span class="extype" name="#run()">#run()<
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.plugin.MonitoredValue#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,refreshRate:Long,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener):org.eso.ias.plugin.MonitoredValue"></a><a id="&lt;init&gt;:MonitoredValue"></a>
+      <a id="&lt;init&gt;(id:String,refreshRate:Long,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener,iasPeriodicSendingTime:Int):org.eso.ias.plugin.MonitoredValue"></a><a id="&lt;init&gt;:MonitoredValue"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/plugin/MonitoredValue.html#&lt;init&gt;(id:String,refreshRate:Long,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener):org.eso.ias.plugin.MonitoredValue" title="Permalink">
+      <a href="../../../../org/eso/ias/plugin/MonitoredValue.html#&lt;init&gt;(id:String,refreshRate:Long,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener,iasPeriodicSendingTime:Int):org.eso.ias.plugin.MonitoredValue" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -360,16 +387,17 @@ A timer task implemented by the <code><span class="extype" name="#run()">#run()<
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MonitoredValue</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Long">Long</span></span>, <span name="executorSvc">executorSvc: <span class="extype" name="java.util.concurrent.ScheduledExecutorService">ScheduledExecutorService</span></span>, <span name="listener">listener: <a href="ChangeValueListener.html" class="extype" name="org.eso.ias.plugin.ChangeValueListener">ChangeValueListener</a></span>)</span>
+        <span class="name">MonitoredValue</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Long">Long</span></span>, <span name="executorSvc">executorSvc: <span class="extype" name="java.util.concurrent.ScheduledExecutorService">ScheduledExecutorService</span></span>, <span name="listener">listener: <a href="ChangeValueListener.html" class="extype" name="org.eso.ias.plugin.ChangeValueListener">ChangeValueListener</a></span>, <span name="iasPeriodicSendingTime">iasPeriodicSendingTime: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt">Build a <code><a href="" class="extype" name="org.eso.ias.plugin.MonitoredValue">MonitoredValue</a></code> with the default filter, <code><span class="extype" name="NoneFilter">NoneFilter</span></code>
 </p><div class="fullcomment"><div class="comment cmt"><p>Build a <code><a href="" class="extype" name="org.eso.ias.plugin.MonitoredValue">MonitoredValue</a></code> with the default filter, <code><span class="extype" name="NoneFilter">NoneFilter</span></code>
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The identifier of the value</p></dd><dt class="param">refreshRate</dt><dd class="cmt"><p>The refresh time interval</p></dd><dt class="param">executorSvc</dt><dd class="cmt"><p>The executor to schedule the thread</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The identifier of the value</p></dd><dt class="param">refreshRate</dt><dd class="cmt"><p>The refresh time interval</p></dd><dt class="param">executorSvc</dt><dd class="cmt"><p>The executor to schedule the thread</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener</p></dd><dt class="param">iasPeriodicSendingTime</dt><dd class="cmt"><p>The time interval (secs)
+          to periodically send the last computed value to the BSDB</p></dd></dl></div>
     </li><li name="org.eso.ias.plugin.MonitoredValue#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,refreshRate:Long,filter:org.eso.ias.plugin.filter.Filter,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener):org.eso.ias.plugin.MonitoredValue"></a><a id="&lt;init&gt;:MonitoredValue"></a>
+      <a id="&lt;init&gt;(id:String,refreshRate:Long,filter:org.eso.ias.plugin.filter.Filter,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener,iasPeriodicSendingTime:Int):org.eso.ias.plugin.MonitoredValue"></a><a id="&lt;init&gt;:MonitoredValue"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/plugin/MonitoredValue.html#&lt;init&gt;(id:String,refreshRate:Long,filter:org.eso.ias.plugin.filter.Filter,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener):org.eso.ias.plugin.MonitoredValue" title="Permalink">
+      <a href="../../../../org/eso/ias/plugin/MonitoredValue.html#&lt;init&gt;(id:String,refreshRate:Long,filter:org.eso.ias.plugin.filter.Filter,executorSvc:java.util.concurrent.ScheduledExecutorService,listener:org.eso.ias.plugin.ChangeValueListener,iasPeriodicSendingTime:Int):org.eso.ias.plugin.MonitoredValue" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -378,7 +406,7 @@ A timer task implemented by the <code><span class="extype" name="#run()">#run()<
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MonitoredValue</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Long">Long</span></span>, <span name="filter">filter: <a href="filter/Filter.html" class="extype" name="org.eso.ias.plugin.filter.Filter">Filter</a></span>, <span name="executorSvc">executorSvc: <span class="extype" name="java.util.concurrent.ScheduledExecutorService">ScheduledExecutorService</span></span>, <span name="listener">listener: <a href="ChangeValueListener.html" class="extype" name="org.eso.ias.plugin.ChangeValueListener">ChangeValueListener</a></span>)</span>
+        <span class="name">MonitoredValue</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Long">Long</span></span>, <span name="filter">filter: <a href="filter/Filter.html" class="extype" name="org.eso.ias.plugin.filter.Filter">Filter</a></span>, <span name="executorSvc">executorSvc: <span class="extype" name="java.util.concurrent.ScheduledExecutorService">ScheduledExecutorService</span></span>, <span name="listener">listener: <a href="ChangeValueListener.html" class="extype" name="org.eso.ias.plugin.ChangeValueListener">ChangeValueListener</a></span>, <span name="iasPeriodicSendingTime">iasPeriodicSendingTime: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       
       
@@ -586,7 +614,7 @@ A timer task implemented by the <code><span class="extype" name="#run()">#run()<
       </span>
       
       <p class="shortcomment cmt">Get and return the value to send i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Get and return the value to send i.e. the value
-returned applying the <code><a href="filter/index.html" class="extype" name="org.eso.ias.plugin.filter">#filter</a></code> to the #history of samples.
+generated applying the <code><a href="filter/index.html" class="extype" name="org.eso.ias.plugin.filter">#filter</a></code> to the #history of samples.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The value to send</p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
@@ -731,11 +759,48 @@ not overridden by the plugin operational mode
       
       <p class="shortcomment cmt">Set the new refresh rate for the monitored value with the given identifier.</p><div class="fullcomment"><div class="comment cmt"><p>Set the new refresh rate for the monitored value with the given identifier.
 &lt;P&gt;
-If the periodic send is disabled, this method sets the new time interval
-but does not reactivate the periodic send that must be done by
-<code><span class="extype" name="#enablePeriodicNotification(boolean)">#enablePeriodicNotification(boolean)</span></code>.
-</p></div><dl class="paramcmts block"><dt class="param">newRefreshRate</dt><dd class="cmt"><p>The new refresh rate (msecs), must be greater then <code><span class="extype" name="#minAllowedRefreshRate">#minAllowedRefreshRate</span></code>
-                      and less then <code><span class="extype" name="#maxAllowedRefreshRate">#maxAllowedRefreshRate</span></code></p></dd><dt>returns</dt><dd class="cmt"><p>The new refresh rate (msec)</p></dd></dl></div>
+This method sets the refresh rate at which the monitored value is retrieved from
+the remote monitored system and not the time the value is periodically
+sent to the BSDB if its value did not change.
+&lt;P&gt;
+Setting this value affects the evaluation of the validity.
+</p></div><dl class="paramcmts block"><dt class="param">newRefreshRate</dt><dd class="cmt"><p>The new refresh rate (msecs), must be greater
+                      then <code><span class="extype" name="#minAllowedSendRate">#minAllowedSendRate</span></code></p></dd><dt>returns</dt><dd class="cmt"><p>The new refresh rate (msec)</p></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.MonitoredValue#shutdown" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="shutdown():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/plugin/MonitoredValue.html#shutdown():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shutdown</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Stops the periodic thread and release all the resources
+</p>
+    </li><li name="org.eso.ias.plugin.MonitoredValue#start" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="start():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/plugin/MonitoredValue.html#start():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">start</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Start the MonitorValue basically activating
+the timer thread
+</p>
     </li><li name="org.eso.ias.plugin.MonitoredValue#submitSample" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="submitSample(s:org.eso.ias.plugin.Sample):Unit"></a><a id="submitSample(Sample):Unit"></a>
       <span class="permalink">

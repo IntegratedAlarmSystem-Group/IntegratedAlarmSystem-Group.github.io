@@ -7,10 +7,13 @@ org.eso.ias.cdb.pojos
 org.eso.ias.cdb.rdb
 org.eso.ias.converter
 org.eso.ias.converter.config
+org.eso.ias.heartbeat
+org.eso.ias.heartbeat.serializer
 org.eso.ias.kafkautils
 org.eso.ias.plugin
 org.eso.ias.plugin.config
 org.eso.ias.plugin.filter
+org.eso.ias.plugin.network
 org.eso.ias.plugin.publisher
 org.eso.ias.plugin.publisher.impl
 org.eso.ias.plugin.thread

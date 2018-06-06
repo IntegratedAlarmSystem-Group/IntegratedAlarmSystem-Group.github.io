@@ -200,7 +200,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">MinMaxThresholdTFJava</span><span class="result"> extends <a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a></span>
+        <span class="name">MinMaxThresholdTFJava</span><span class="result"> extends <a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
       </span>
       </h4>
 
@@ -227,7 +227,7 @@ are converted in double.</p><p>The value of the Min and Max thresholds are passe
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a>, <a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>], <a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -274,9 +274,9 @@ are converted in double.</p><p>The value of the Min and Max thresholds are passe
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(cEleId:String,cEleRunningId:String,props:java.util.Properties):org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava"></a><a id="&lt;init&gt;:MinMaxThresholdTFJava"></a>
+      <a id="&lt;init&gt;(cEleId:String,cEleRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava"></a><a id="&lt;init&gt;:MinMaxThresholdTFJava"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#&lt;init&gt;(cEleId:String,cEleRunningId:String,props:java.util.Properties):org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava" title="Permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#&lt;init&gt;(cEleId:String,cEleRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -285,7 +285,7 @@ are converted in double.</p><p>The value of the Min and Max thresholds are passe
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MinMaxThresholdTFJava</span><span class="params">(<span name="cEleId">cEleId: <span class="extype" name="java.lang.String">String</span></span>, <span name="cEleRunningId">cEleRunningId: <span class="extype" name="java.lang.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
+        <span class="name">MinMaxThresholdTFJava</span><span class="params">(<span name="cEleId">cEleId: <span class="extype" name="java.lang.String">String</span></span>, <span name="cEleRunningId">cEleRunningId: <span class="extype" name="java.lang.String">String</span></span>, <span name="validityTimeFrame">validityTimeFrame: <span class="extype" name="scala.Long">Long</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
       </span>
       
       
@@ -420,9 +420,9 @@ are converted in double.</p><p>The value of the Min and Max thresholds are passe
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava#eval" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="eval(compInputs:java.util.Map[String,org.eso.ias.types.IASValue[_]],actualOutput:org.eso.ias.types.IASValue[_]):org.eso.ias.types.IASValue[_]"></a><a id="eval(Map[String,IASValue[_]],IASValue[_]):IASValue[_]"></a>
+      <a id="eval(compInputs:java.util.Map[String,org.eso.ias.asce.transfer.IasIOJ[_]],actualOutput:org.eso.ias.asce.transfer.IasIOJ[org.eso.ias.types.Alarm]):org.eso.ias.asce.transfer.IasIOJ[org.eso.ias.types.Alarm]"></a><a id="eval(Map[String,IasIOJ[_]],IasIOJ[Alarm]):IasIOJ[Alarm]"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#eval(compInputs:java.util.Map[String,org.eso.ias.types.IASValue[_]],actualOutput:org.eso.ias.types.IASValue[_]):org.eso.ias.types.IASValue[_]" title="Permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#eval(compInputs:java.util.Map[String,org.eso.ias.asce.transfer.IasIOJ[_]],actualOutput:org.eso.ias.asce.transfer.IasIOJ[org.eso.ias.types.Alarm]):org.eso.ias.asce.transfer.IasIOJ[org.eso.ias.types.Alarm]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -431,7 +431,7 @@ are converted in double.</p><p>The value of the Min and Max thresholds are passe
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eval</span><span class="params">(<span name="compInputs">compInputs: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="../../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>, <span name="actualOutput">actualOutput: <a href="../../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <a href="../../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>
+        <span class="name">eval</span><span class="params">(<span name="compInputs">compInputs: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="../IasIOJ.html" class="extype" name="org.eso.ias.asce.transfer.IasIOJ">IasIOJ</a>[_]]</span>, <span name="actualOutput">actualOutput: <a href="../IasIOJ.html" class="extype" name="org.eso.ias.asce.transfer.IasIOJ">IasIOJ</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>)</span><span class="result">: <a href="../IasIOJ.html" class="extype" name="org.eso.ias.asce.transfer.IasIOJ">IasIOJ</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the computed value to set as output of the ASCE</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava">MinMaxThresholdTFJava</a> → <a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a></dd><dt>See also</dt><dd><span class="cmt"><p>JavaTransferExecutor#eval(Map, IASValue)</p></span></dd></dl></div>
@@ -476,6 +476,45 @@ are converted in double.</p><p>The value of the Min and Max thresholds are passe
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#getTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTemplateInstance():java.util.Optional[Integer]"></a><a id="getTemplateInstance():Optional[Integer]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#getTemplateInstance():java.util.Optional[Integer]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplateInstance</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The instance of the template, if defined; empty otherwise</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>See also</dt><dd><span class="cmt"><p>#templateInstance</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.JavaTransferExecutor#getValue" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValue(inputs:java.util.Map[String,org.eso.ias.asce.transfer.IasIOJ[_]],id:String):org.eso.ias.asce.transfer.IasIOJ[_]"></a><a id="getValue(Map[String,IasIOJ[_]],String):IasIOJ[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#getValue(inputs:java.util.Map[String,org.eso.ias.asce.transfer.IasIOJ[_]],id:String):org.eso.ias.asce.transfer.IasIOJ[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValue</span><span class="params">(<span name="inputs">inputs: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="../IasIOJ.html" class="extype" name="org.eso.ias.asce.transfer.IasIOJ">IasIOJ</a>[_]]</span>, <span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <a href="../IasIOJ.html" class="extype" name="org.eso.ias.asce.transfer.IasIOJ">IasIOJ</a>[_]</span>
+      </span>
+      
+      <p class="shortcomment cmt">This method transparently return a value from the passed ID,
+being the ASCE templated or not.</p><div class="fullcomment"><div class="comment cmt"><p>This method transparently return a value from the passed ID,
+being the ASCE templated or not.</p><p>If the ASCE is not templated, this method delegates to
+<code><span class="extype" name="Map#get(Object)">Map#get(Object)</span></code>.</p><p>If the ASCE is generated out of a template,
+its inputs can or cannot be generated out of the same template. In the latter,
+their identifiers must be enriched with the number of the instance.
+</p></div><dl class="paramcmts block"><dt class="param">inputs</dt><dd class="cmt"><p>the map of the inputs</p></dd><dt class="param">id</dt><dd class="cmt"><p>The (non templated) identifier of the value</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue of the given ID or <code>null</code>
+        if a IASValue with the passed id is not in the map</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../index.html" class="extype" name="org.eso.ias.asce.transfer">org.eso.ias.asce.transfer</a>] </dd><dt>Definition Classes</dt><dd><a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -515,6 +554,26 @@ lazy, they will be initialized here.</p><div class="fullcomment"><div class="com
 lazy, they will be initialized here.</p><p>This method merely checks if the values of the properties are coherent
 with the definitions given above.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava">MinMaxThresholdTFJava</a> → <a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>See also</dt><dd><span class="cmt"><p>TransferExecutor#initialize()</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#internalInitialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="internalInitialize(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="internalInitialize(Optional[Integer]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#internalInitialize(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">internalInitialize</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Internal initialization, sets the instance of the template, if any,
+before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
+</p><div class="fullcomment"><div class="comment cmt"><p>Internal initialization, sets the instance of the template, if any,
+before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
+</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>The not <code>null</code> instance of the template</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -531,6 +590,23 @@ with the definitions given above.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#isTemplated" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTemplated():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#isTemplated():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTemplated</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the ASCE where the TF runs has been
+        generated by a template; <code>false</code> otherwise</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -712,7 +788,7 @@ with the definitions given above.
 
         <div id="inheritedMembers">
         <div class="parent" name="org.eso.ias.asce.transfer.JavaTransferExecutor">
-              <h3>Inherited from <a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a></h3>
+              <h3>Inherited from <a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</h3>
             </div><div class="parent" name="org.eso.ias.asce.transfer.TransferExecutor">
               <h3>Inherited from <a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></h3>
             </div><div class="parent" name="scala.AnyRef">

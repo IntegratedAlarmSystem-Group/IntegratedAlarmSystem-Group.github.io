@@ -151,6 +151,14 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="AverageBySamples.html" title="AverageBySamples produces a new Double value by applying the arithmetic average of the samples."></a>
+                        <a href="AverageBySamples.html" title="AverageBySamples produces a new Double value by applying the arithmetic average of the samples.">AverageBySamples</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AverageByTime.html" title="AverageByTime produces a new Double value by applying the arithmetic average of the samples received in the specified time frame."></a>
+                        <a href="AverageByTime.html" title="AverageByTime produces a new Double value by applying the arithmetic average of the samples received in the specified time frame.">AverageByTime</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="Filter.html" title="The interface defining filter to apply to a monitored value before sending to the IAS core."></a>
                         <a href="Filter.html" title="The interface defining filter to apply to a monitored value before sending to the IAS core.">Filter</a>
                       </li><li class="current-entities indented5">
@@ -161,6 +169,10 @@
                         <span class="separator"></span>
                         <a class="class" href="FilterException.html" title="The exception returned by filtering"></a>
                         <a href="FilterException.html" title="The exception returned by filtering">FilterException</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="FilterFactory.html" title="The factory of filters."></a>
+                        <a href="FilterFactory.html" title="The factory of filters.">FilterFactory</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="FilteredValue.html" title="The value returned after applying the filter."></a>
@@ -203,7 +215,7 @@ FilterBase keeps a time ordered <code><span class="extype" name="#history">#hist
 newest items are in the head of the list.
 &lt;P&gt;
 Implementation of filters must take care of removing elements from the history when
-a new element is added (<code><span class="extype" name="#sampleAdded(org.eso.ias.plugin.filter.Filter.ValidatedSample)">#sampleAdded(org.eso.ias.plugin.filter.Filter.ValidatedSample)</span></code>) and/or when the filtered value
+a new element is added (<code><span class="extype" name="#sampleAdded(org.eso.ias.plugin.filter.Filter.EnrichedSample)">#sampleAdded(org.eso.ias.plugin.filter.Filter.EnrichedSample)</span></code>) and/or when the filtered value
 is retrieved <code><span class="extype" name="Filter#apply()">Filter#apply()</span></code>.
 &lt;P&gt;
 Objects of this class stores also:
@@ -223,7 +235,7 @@ the calculation only on the samples in the history.
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="NoneFilter.html" class="extype" name="org.eso.ias.plugin.filter.NoneFilter">NoneFilter</a>, <a href="../test/filter/NoneFilterTest$TestFilter.html" class="extype" name="org.eso.ias.plugin.test.filter.NoneFilterTest.TestFilter">TestFilter</a>, <a href="../test/filter/TestFilterBase$TestFilter.html" class="extype" name="org.eso.ias.plugin.test.filter.TestFilterBase.TestFilter">TestFilter</a></div>
+            <div class="subClasses hiddenContent"><a href="AverageBySamples.html" class="extype" name="org.eso.ias.plugin.filter.AverageBySamples">AverageBySamples</a>, <a href="AverageByTime.html" class="extype" name="org.eso.ias.plugin.filter.AverageByTime">AverageByTime</a>, <a href="NoneFilter.html" class="extype" name="org.eso.ias.plugin.filter.NoneFilter">NoneFilter</a>, <a href="../test/filter/AvgBySamplesFilterTest$TestFilter.html" class="extype" name="org.eso.ias.plugin.test.filter.AvgBySamplesFilterTest.TestFilter">TestFilter</a>, <a href="../test/filter/AvgByTimeFilterTest$TestFilter.html" class="extype" name="org.eso.ias.plugin.test.filter.AvgByTimeFilterTest.TestFilter">TestFilter</a>, <a href="../test/filter/NoneFilterTest$TestFilter.html" class="extype" name="org.eso.ias.plugin.test.filter.NoneFilterTest.TestFilter">TestFilter</a>, <a href="../test/filter/TestFilterBase$TestFilter.html" class="extype" name="org.eso.ias.plugin.test.filter.TestFilterBase.TestFilter">TestFilter</a></div>
           </div></div>
         
 
@@ -535,6 +547,22 @@ The calculation of the filter is delegated to <code><span class="extype" name="#
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.plugin.filter.FilterBase#getHistorySize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getHistorySize():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/filter/FilterBase.html#getHistorySize():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getHistorySize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the size of the history</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.eso.ias.plugin.filter">org.eso.ias.plugin.filter</a>] </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">

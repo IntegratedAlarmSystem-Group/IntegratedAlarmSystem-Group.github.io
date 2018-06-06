@@ -167,6 +167,14 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="AverageBySamples.html" title="AverageBySamples produces a new Double value by applying the arithmetic average of the samples."></a>
+                        <a href="AverageBySamples.html" title="AverageBySamples produces a new Double value by applying the arithmetic average of the samples.">AverageBySamples</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="AverageByTime.html" title="AverageByTime produces a new Double value by applying the arithmetic average of the samples received in the specified time frame."></a>
+                        <a href="AverageByTime.html" title="AverageByTime produces a new Double value by applying the arithmetic average of the samples received in the specified time frame.">AverageByTime</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="Filter.html" title="The interface defining filter to apply to a monitored value before sending to the IAS core."></a>
                         <a href="Filter.html" title="The interface defining filter to apply to a monitored value before sending to the IAS core.">Filter</a>
                       </li><li class="current-entities indented5">
@@ -179,13 +187,33 @@
                         <a href="FilterException.html" title="The exception returned by filtering">FilterException</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="FilterFactory.html" title="The factory of filters."></a>
+                        <a href="FilterFactory.html" title="The factory of filters.">FilterFactory</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="FilteredValue.html" title="The value returned after applying the filter."></a>
                         <a href="FilteredValue.html" title="The value returned after applying the filter.">FilteredValue</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="NoneFilter.html" title="Default implementation of a filter: it does nothing but returning the value of the last acquired sample"></a>
                         <a href="NoneFilter.html" title="Default implementation of a filter: it does nothing but returning the value of the last acquired sample">NoneFilter</a>
-                      </li><li name="org.eso.ias.plugin.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                      </li><li name="org.eso.ias.plugin.network" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="network"></a><a id="network:network"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/plugin/index.html#network" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../network/index.html"><span class="name">network</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="publisher"></a><a id="publisher:publisher"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/plugin/index.html#publisher" title="Permalink">
@@ -272,7 +300,49 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.plugin.filter.Filter" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="org.eso.ias.plugin.filter.AverageBySamples" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AverageBySamplesextendsFilterBase"></a><a id="AverageBySamples:AverageBySamples"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/filter/index.html#AverageBySamplesextendsFilterBase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="AverageBySamples produces a new Double value by applying the arithmetic average of the samples." href="AverageBySamples.html"><span class="name">AverageBySamples</span></a><span class="result"> extends <a href="FilterBase.html" class="extype" name="org.eso.ias.plugin.filter.FilterBase">FilterBase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">AverageBySamples produces a new Double value by applying the
+arithmetic average of the samples.</p><div class="fullcomment"><div class="comment cmt"><p>AverageBySamples produces a new Double value by applying the
+arithmetic average of the samples.
+&lt;P&gt;
+The filter does not produce any value until it receives
+<code><span class="extype" name="#numberOfSamplesToAverage">#numberOfSamplesToAverage</span></code>;
+after that moment the value is produced by applying the arithmetic
+average of the values of the sample.
+</p></div></div>
+    </li><li name="org.eso.ias.plugin.filter.AverageByTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AverageByTimeextendsFilterBase"></a><a id="AverageByTime:AverageByTime"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/filter/index.html#AverageByTimeextendsFilterBase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="AverageByTime produces a new Double value by applying the arithmetic average of the samples received in the specified time frame." href="AverageByTime.html"><span class="name">AverageByTime</span></a><span class="result"> extends <a href="FilterBase.html" class="extype" name="org.eso.ias.plugin.filter.FilterBase">FilterBase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">AverageByTime produces a new Double value by applying the
+arithmetic average of the samples received in the specified time
+frame.</p>
+    </li><li name="org.eso.ias.plugin.filter.Filter" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="FilterextendsObject"></a><a id="Filter:Filter"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/plugin/filter/index.html#FilterextendsObject" title="Permalink">
@@ -310,7 +380,7 @@ FilterBase keeps a time ordered <code><span class="extype" name="#history">#hist
 newest items are in the head of the list.
 &lt;P&gt;
 Implementation of filters must take care of removing elements from the history when
-a new element is added (<code><span class="extype" name="#sampleAdded(org.eso.ias.plugin.filter.Filter.ValidatedSample)">#sampleAdded(org.eso.ias.plugin.filter.Filter.ValidatedSample)</span></code>) and/or when the filtered value
+a new element is added (<code><span class="extype" name="#sampleAdded(org.eso.ias.plugin.filter.Filter.EnrichedSample)">#sampleAdded(org.eso.ias.plugin.filter.Filter.EnrichedSample)</span></code>) and/or when the filtered value
 is retrieved <code><span class="extype" name="Filter#apply()">Filter#apply()</span></code>.
 &lt;P&gt;
 Objects of this class stores also:
@@ -340,6 +410,25 @@ the calculation only on the samples in the history.
       <p class="shortcomment cmt">The exception returned by filtering
 </p><div class="fullcomment"><div class="comment cmt"><p>The exception returned by filtering
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>Exception</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.filter.FilterFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FilterFactoryextendsObject"></a><a id="FilterFactory:FilterFactory"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/filter/index.html#FilterFactoryextendsObject" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The factory of filters." href="FilterFactory.html"><span class="name">FilterFactory</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The factory of filters.</p><div class="fullcomment"><div class="comment cmt"><p>The factory of filters.
+&lt;P&gt;
+FilterFactory instantiates a filter by its class name and options.
+</p></div></div>
     </li><li name="org.eso.ias.plugin.filter.FilteredValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FilteredValueextendsObject"></a><a id="FilteredValue:FilteredValue"></a>
       <span class="permalink">

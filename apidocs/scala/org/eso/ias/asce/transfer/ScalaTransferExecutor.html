@@ -167,6 +167,14 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.asce.transfer">transfer</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="IasIO.html" title="The view of an InOut for the TF"></a>
+                        <a href="IasIO.html" title="The view of an InOut for the TF">IasIO</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF"></a>
+                        <a href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF">IasIOJ</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user."></a>
                         <a href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user.">JavaTransfer</a>
                       </li><li class="current-entities indented5">
@@ -179,8 +187,8 @@
                         <a href="ScalaTransfer.html" title="ScalaTransfer calls the scala transfer function provided by the user.">ScalaTransfer</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="" title="The ScalaTransferExecutor provides the interface for scala implementators of the transfer function."></a>
-                        <a href="" title="The ScalaTransferExecutor provides the interface for scala implementators of the transfer function.">ScalaTransferExecutor</a>
+                        <a class="class" href="" title="The ScalaTransferExecutor provides the interface for scala implementations of the transfer function."></a>
+                        <a href="" title="The ScalaTransferExecutor provides the interface for scala implementations of the transfer function.">ScalaTransferExecutor</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TransferExecutor.html" title="TransferExecutor is the abstract for the implementators of the transfer function in java."></a>
@@ -222,7 +230,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <code>ScalaTransferExecutor<code> provides the interface
-for scala implementators of the transfer function.
+for scala implementations of the transfer function.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -232,7 +240,7 @@ for scala implementators of the transfer function.
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="impls/MinMaxThresholdTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a>, <a href="impls/MultiplicityTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MultiplicityTF">MultiplicityTF</a>, <a href="../../component/test/transfer/CopyTF.html" class="extype" name="org.eso.ias.component.test.transfer.CopyTF">CopyTF</a>, <a href="../../component/test/transfer/ThrowExceptionTF.html" class="extype" name="org.eso.ias.component.test.transfer.ThrowExceptionTF">ThrowExceptionTF</a>, <a href="../../component/test/transfer/TransferExample.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExample">TransferExample</a>, <a href="../../dasu/test/transferfunction/AverageTempsTF.html" class="extype" name="org.eso.ias.dasu.test.transferfunction.AverageTempsTF">AverageTempsTF</a></div>
+            <div class="subClasses hiddenContent"><a href="impls/MinMaxThresholdTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a>, <a href="impls/MultiplicityTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MultiplicityTF">MultiplicityTF</a>, <a href="../../component/test/transfer/ConstraintValidityTF.html" class="extype" name="org.eso.ias.component.test.transfer.ConstraintValidityTF">ConstraintValidityTF</a>, <a href="../../component/test/transfer/CopyTF.html" class="extype" name="org.eso.ias.component.test.transfer.CopyTF">CopyTF</a>, <a href="../../component/test/transfer/ThrowExceptionTF.html" class="extype" name="org.eso.ias.component.test.transfer.ThrowExceptionTF">ThrowExceptionTF</a>, <a href="../../component/test/transfer/TransferExample.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExample">TransferExample</a>, <a href="../../dasu/test/transferfunction/AverageTempsTF.html" class="extype" name="org.eso.ias.dasu.test.transferfunction.AverageTempsTF">AverageTempsTF</a>, <a href="../../supervisor/test/tf/TemplatedTF.html" class="extype" name="org.eso.ias.supervisor.test.tf.TemplatedTF">TemplatedTF</a>, <a href="../../tranfer/DelayedAlarm.html" class="extype" name="org.eso.ias.tranfer.DelayedAlarm">DelayedAlarm</a></div>
           </div></div>
         
 
@@ -279,9 +287,9 @@ for scala implementators of the transfer function.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.asce.transfer.ScalaTransferExecutor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(cEleId:String,cEleRunningId:String,props:java.util.Properties):org.eso.ias.asce.transfer.ScalaTransferExecutor[T]"></a><a id="&lt;init&gt;:ScalaTransferExecutor[T]"></a>
+      <a id="&lt;init&gt;(cEleId:String,cEleRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.asce.transfer.ScalaTransferExecutor[T]"></a><a id="&lt;init&gt;:ScalaTransferExecutor[T]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#&lt;init&gt;(cEleId:String,cEleRunningId:String,props:java.util.Properties):org.eso.ias.asce.transfer.ScalaTransferExecutor[T]" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#&lt;init&gt;(cEleId:String,cEleRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.asce.transfer.ScalaTransferExecutor[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -290,10 +298,10 @@ for scala implementators of the transfer function.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ScalaTransferExecutor</span><span class="params">(<span name="cEleId">cEleId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cEleRunningId">cEleRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
+        <span class="name">ScalaTransferExecutor</span><span class="params">(<span name="cEleId">cEleId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cEleRunningId">cEleRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="validityTimeFrame">validityTimeFrame: <span class="extype" name="scala.Long">Long</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
       </span>
       
-      
+      <p class="shortcomment cmt"></p>
     </li></ol>
             </div>
 
@@ -302,9 +310,9 @@ for scala implementators of the transfer function.
         <div class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="org.eso.ias.asce.transfer.ScalaTransferExecutor#eval" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="eval(compInputs:Map[String,org.eso.ias.types.InOut[_]],actualOutput:org.eso.ias.types.InOut[T]):org.eso.ias.types.InOut[T]"></a><a id="eval(Map[String,InOut[_]],InOut[T]):InOut[T]"></a>
+      <a id="eval(compInputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],actualOutput:org.eso.ias.asce.transfer.IasIO[T]):org.eso.ias.asce.transfer.IasIO[T]"></a><a id="eval(Map[String,IasIO[_]],IasIO[T]):IasIO[T]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#eval(compInputs:Map[String,org.eso.ias.types.InOut[_]],actualOutput:org.eso.ias.types.InOut[T]):org.eso.ias.types.InOut[T]" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#eval(compInputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],actualOutput:org.eso.ias.asce.transfer.IasIO[T]):org.eso.ias.asce.transfer.IasIO[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -313,7 +321,7 @@ for scala implementators of the transfer function.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eval</span><span class="params">(<span name="compInputs">compInputs: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[_]]</span>, <span name="actualOutput">actualOutput: <a href="../../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor.T">T</span>]</span>)</span><span class="result">: <a href="../../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor.T">T</span>]</span>
+        <span class="name">eval</span><span class="params">(<span name="compInputs">compInputs: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[_]]</span>, <span name="actualOutput">actualOutput: <a href="IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[<span class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor.T">T</span>]</span>)</span><span class="result">: <a href="IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[<span class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Produces the output of the component by evaluating the inputs.</p><div class="fullcomment"><div class="comment cmt"><p>Produces the output of the component by evaluating the inputs.</p><p>&lt;EM&gt;IMPLEMENTATION NOTE&lt;/EM&gt;
@@ -336,7 +344,7 @@ that returns a new InOut.
         <span class="name">initialize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Initialize the BehaviorRunner.</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the BehaviorRunner.</p><p>The life cycle method is called once by the IAS and always before running eval.
+      <p class="shortcomment cmt">Initialize the transfer function.</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the transfer function.</p><p>The life cycle method is called once by the IAS and always before running eval.
 User initialization code goes here. In particular long lasting operations
 like reading from a database should go here while eval is supposed
 to return as soon as possible.
@@ -525,6 +533,44 @@ to return as soon as possible.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#getTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTemplateInstance():java.util.Optional[Integer]"></a><a id="getTemplateInstance():Optional[Integer]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#getTemplateInstance():java.util.Optional[Integer]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplateInstance</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The instance of the template, if defined; empty otherwise</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>See also</dt><dd><span class="cmt"><p>#templateInstance</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.ScalaTransferExecutor#getValue" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValue(inputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],id:String):Option[org.eso.ias.asce.transfer.IasIO[_]]"></a><a id="getValue(Map[String,IasIO[_]],String):Option[IasIO[_]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#getValue(inputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],id:String):Option[org.eso.ias.asce.transfer.IasIO[_]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValue</span><span class="params">(<span name="inputs">inputs: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[_]]</span>, <span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[_]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">This method transparently return a value from the passed ID,
+being the ASCE templated or not.</p><div class="fullcomment"><div class="comment cmt"><p>This method transparently return a value from the passed ID,
+being the ASCE templated or not.</p><p>If the ASCE is not templated, this method delegates to
+<code><span class="extype" name="Map#get(Object)">Map#get(Object)</span></code>.</p><p>If the ASCE is generated out of a template,
+its inputs can or cannot be generated out of the same template. In the latter,
+their identifiers must be enriched with the number of the instance.
+</p></div><dl class="paramcmts block"><dt class="param">inputs</dt><dd class="cmt"><p>the map of the inputs</p></dd><dt class="param">id</dt><dd class="cmt"><p>The (non templated) identifier of the value</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue of the given ID, or None if not found in the Map</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -544,6 +590,26 @@ to return as soon as possible.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#internalInitialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="internalInitialize(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="internalInitialize(Optional[Integer]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#internalInitialize(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">internalInitialize</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Internal initialization, sets the instance of the template, if any,
+before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
+</p><div class="fullcomment"><div class="comment cmt"><p>Internal initialization, sets the instance of the template, if any,
+before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
+</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>The not <code>null</code> instance of the template</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -560,6 +626,23 @@ to return as soon as possible.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#isTemplated" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTemplated():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransferExecutor.html#isTemplated():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTemplated</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the ASCE where the TF runs has been
+        generated by a template; <code>false</code> otherwise</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">

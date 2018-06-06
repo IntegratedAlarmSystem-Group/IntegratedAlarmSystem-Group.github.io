@@ -507,10 +507,10 @@ DAO pojos to the caller.</p><p>&lt;P&gt;JSON writing and parsing is done with Ja
       
       <p class="shortcomment cmt">Read the DASU configuration from the file.</p><div class="fullcomment"><div class="comment cmt"><p>Read the DASU configuration from the file.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty DASU identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The DASU red from the file</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.json.JsonReader">JsonReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the DASU</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.cdb.json.JsonReader#getDasusForSupervisor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getDasusForSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuDao]"></a><a id="getDasusForSupervisor(String):Set[DasuDao]"></a>
+    </li><li name="org.eso.ias.cdb.json.JsonReader#getDasusToDeployInSupervisor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDasusToDeployInSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]"></a><a id="getDasusToDeployInSupervisor(String):Set[DasuToDeployDao]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/cdb/json/JsonReader.html#getDasusForSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuDao]" title="Permalink">
+      <a href="../../../../../org/eso/ias/cdb/json/JsonReader.html#getDasusToDeployInSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -519,7 +519,7 @@ DAO pojos to the caller.</p><p>&lt;P&gt;JSON writing and parsing is done with Ja
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDasusForSupervisor</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="../pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>]</span>
+        <span class="name">getDasusToDeployInSupervisor</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="../pojos/DasuToDeployDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuToDeployDao">DasuToDeployDao</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Return the DASUs belonging to the given Supervisor.</p><div class="fullcomment"><div class="comment cmt"><p>Return the DASUs belonging to the given Supervisor.
@@ -577,7 +577,7 @@ the production CDB.</p></div><dl class="paramcmts block"><dt class="param">id</d
         <span class="name">getIasios</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<a href="../pojos/IasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Get the IASIOs from the passed file.</p><div class="fullcomment"><div class="comment cmt"><p>Get the IASIOs from the passed file.
+      <p class="shortcomment cmt">Get the IASIOs from the file.</p><div class="fullcomment"><div class="comment cmt"><p>Get the IASIOs from the file.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IASIOs read from the configuration file</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.json.JsonReader">JsonReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IASIOs</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>CdbReader#getIasios()</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.json.JsonReader#getIasiosForAsce" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getIasiosForAsce(id:String):java.util.Collection[org.eso.ias.cdb.pojos.IasioDao]"></a><a id="getIasiosForAsce(String):Collection[IasioDao]"></a>
@@ -612,8 +612,30 @@ the production CDB.</p></div><dl class="paramcmts block"><dt class="param">id</d
         <span class="name">getSupervisor</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../pojos/SupervisorDao.html" class="extype" name="org.eso.ias.cdb.pojos.SupervisorDao">SupervisorDao</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Read the supervisor configuration from the JSON file.</p><div class="fullcomment"><div class="comment cmt"><p>Read the supervisor configuration from the JSON file.
+      <p class="shortcomment cmt">Read the supervisor configuration from the JSON file.</p><div class="fullcomment"><div class="comment cmt"><p>Read the supervisor configuration from the JSON file.</p><p>This methods reads the JsonSupervisorDao and convert it to SupervisorDao.
+The tricky part is the conversion of the JsonDasuToDeployDao of the JsonSupervisorDao
+to a DasuToDeployDao that needs to replace the ID of the DASU to deploy with a DasuDao.
+The DasuDao can be easily retrieved by calling <code><span class="extype" name="#getDasu(String)">#getDasu(String)</span></code>.
+In the same way, the instance of TemplateDao can be easily retrieved
+by calling <code><span class="extype" name="#getTemplate(String)">#getTemplate(String)</span></code>
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty supervisor identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The Supervisor red from the CDB</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.json.JsonReader">JsonReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> if the supervisor file does not exist or is unreadable</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.json.JsonReader#getTemplate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTemplate(template_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TemplateDao]"></a><a id="getTemplate(String):Optional[TemplateDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/json/JsonReader.html#getTemplate(template_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TemplateDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplate</span><span class="params">(<span name="template_id">template_id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Read the template configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the template configuration from the CDB.
+</p></div><dl class="paramcmts block"><dt class="param">template_id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the template</p></dd><dt>returns</dt><dd class="cmt"><p>The template read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.json.JsonReader">JsonReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading from the CDB</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.json.JsonReader#getTransferFunction" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getTransferFunction(tf_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TransferFunctionDao]"></a><a id="getTransferFunction(String):Optional[TransferFunctionDao]"></a>
       <span class="permalink">

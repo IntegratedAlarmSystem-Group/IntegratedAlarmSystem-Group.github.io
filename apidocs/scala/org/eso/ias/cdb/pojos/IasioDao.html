@@ -159,6 +159,10 @@
                         <a href="DasuDao.html" title="The pojo for a DASU">DasuDao</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="DasuToDeployDao.html" title="The DAO with the DASU to be deployed in a Supervisor."></a>
+                        <a href="DasuToDeployDao.html" title="The DAO with the DASU to be deployed in a Supervisor.">DasuToDeployDao</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="IasDao.html" title="Global configuration for the IAS"></a>
                         <a href="IasDao.html" title="Global configuration for the IAS">IasDao</a>
                       </li><li class="current-entities indented5">
@@ -185,6 +189,10 @@
                         <span class="separator"></span>
                         <a class="class" href="TFLanguageDao.html" title="The programming language supported by the TF."></a>
                         <a href="TFLanguageDao.html" title="The programming language supported by the TF.">TFLanguageDao</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TemplateDao.html" title="The DAO for the template needed to support replication of identical devices."></a>
+                        <a href="TemplateDao.html" title="The DAO for the template needed to support replication of identical devices.">TemplateDao</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TransferFunctionDao.html" title="The DAO to handle the definition of the transfer function."></a>
@@ -269,9 +277,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.cdb.pojos.IasioDao#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao):org.eso.ias.cdb.pojos.IasioDao"></a><a id="&lt;init&gt;:IasioDao"></a>
+      <a id="&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String,canShelve:Boolean,templateId:String):org.eso.ias.cdb.pojos.IasioDao"></a><a id="&lt;init&gt;:IasioDao"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao):org.eso.ias.cdb.pojos.IasioDao" title="Permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String,canShelve:Boolean,templateId:String):org.eso.ias.cdb.pojos.IasioDao" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -280,12 +288,31 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IasioDao</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="descr">descr: <span class="extype" name="java.lang.String">String</span></span>, <span name="type">type: <a href="IasTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasTypeDao">IasTypeDao</a></span>)</span>
+        <span class="name">IasioDao</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="descr">descr: <span class="extype" name="java.lang.String">String</span></span>, <span name="type">type: <a href="IasTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasTypeDao">IasTypeDao</a></span>, <span name="docUrl">docUrl: <span class="extype" name="java.lang.String">String</span></span>, <span name="canShelve">canShelve: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="templateId">templateId: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt">Constructor
 </p><div class="fullcomment"><div class="comment cmt"><p>Constructor
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The identifier</p></dd><dt class="param">descr</dt><dd class="cmt"><p>The description</p></dd><dt class="param">type</dt><dd class="cmt"><p>The IAS type</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The identifier</p></dd><dt class="param">descr</dt><dd class="cmt"><p>The description</p></dd><dt class="param">type</dt><dd class="cmt"><p>The IAS type</p></dd><dt class="param">docUrl</dt><dd class="cmt"><p>the URL of the documentation</p></dd><dt class="param">canShelve</dt><dd class="cmt"><p><code>true</code> if this IASIO can be shelved,
+                 <code>false</code> otherwise</p></dd><dt class="param">templateId</dt><dd class="cmt"><p>the Id of the template for replication</p></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String):org.eso.ias.cdb.pojos.IasioDao"></a><a id="&lt;init&gt;:IasioDao"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String):org.eso.ias.cdb.pojos.IasioDao" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IasioDao</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="descr">descr: <span class="extype" name="java.lang.String">String</span></span>, <span name="type">type: <a href="IasTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasTypeDao">IasTypeDao</a></span>, <span name="docUrl">docUrl: <span class="extype" name="java.lang.String">String</span></span>)</span>
+      </span>
+      
+      <p class="shortcomment cmt">Constructor with default canShelve
+</p><div class="fullcomment"><div class="comment cmt"><p>Constructor with default canShelve
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The identifier</p></dd><dt class="param">descr</dt><dd class="cmt"><p>The description</p></dd><dt class="param">type</dt><dd class="cmt"><p>The IAS type</p></dd><dt class="param">docUrl</dt><dd class="cmt"><p>the URL of the documentation</p></dd></dl></div>
     </li><li name="org.eso.ias.cdb.pojos.IasioDao#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="&lt;init&gt;():org.eso.ias.cdb.pojos.IasioDao"></a><a id="&lt;init&gt;:IasioDao"></a>
       <span class="permalink">
@@ -473,6 +500,22 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#getDocUrl" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getDocUrl():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#getDocUrl():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDocUrl</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.cdb.pojos.IasioDao#getIasType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getIasType():org.eso.ias.cdb.pojos.IasTypeDao"></a><a id="getIasType():IasTypeDao"></a>
       <span class="permalink">
@@ -521,6 +564,22 @@
       </span>
       
       
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#getTemplateId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getTemplateId():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#getTemplateId():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplateId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.cdb.pojos.IasioDao#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -537,6 +596,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#isCanShelve" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isCanShelve():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#isCanShelve():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isCanShelve</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -607,6 +682,38 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#setCanShelve" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setCanShelve(canShelve:Boolean):Unit"></a><a id="setCanShelve(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#setCanShelve(canShelve:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setCanShelve</span><span class="params">(<span name="canShelve">canShelve: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#setDocUrl" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setDocUrl(docUrl:String):Unit"></a><a id="setDocUrl(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#setDocUrl(docUrl:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setDocUrl</span><span class="params">(<span name="docUrl">docUrl: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.cdb.pojos.IasioDao#setIasType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setIasType(iasType:org.eso.ias.cdb.pojos.IasTypeDao):Unit"></a><a id="setIasType(IasTypeDao):Unit"></a>
       <span class="permalink">
@@ -652,6 +759,22 @@
       </span>
       <span class="symbol">
         <span class="name">setShortDesc</span><span class="params">(<span name="shortDesc">shortDesc: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#setTemplateId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setTemplateId(templateId:String):Unit"></a><a id="setTemplateId(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#setTemplateId(templateId:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTemplateId</span><span class="params">(<span name="templateId">templateId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       

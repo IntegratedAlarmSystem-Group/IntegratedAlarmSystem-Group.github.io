@@ -167,12 +167,16 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.cdb.json">json</a></dd></dl></div>
     </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="class" href="JsonAcseDao.html" title="Pojos for JSON that replaces objects inclusion in the ASCE with their IDS."></a>
-                        <a href="JsonAcseDao.html" title="Pojos for JSON that replaces objects inclusion in the ASCE with their IDS.">JsonAcseDao</a>
+                        <a class="class" href="JsonAsceDao.html" title="Pojos for JSON that replaces objects inclusion in the ASCE with their IDS."></a>
+                        <a href="JsonAsceDao.html" title="Pojos for JSON that replaces objects inclusion in the ASCE with their IDS.">JsonAsceDao</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="class" href="" title="Pojo for JSON that replaces object inclusion with their IDS."></a>
                         <a href="" title="Pojo for JSON that replaces object inclusion with their IDS.">JsonDasuDao</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="JsonDasuToDeployDao.html" title="The DASU to deploy to replace the reference to the DASU ant the template with their IDs"></a>
+                        <a href="JsonDasuToDeployDao.html" title="The DASU to deploy to replace the reference to the DASU ant the template with their IDs">JsonDasuToDeployDao</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="class" href="JsonSupervisorDao.html" title="JsonSupervisorDao encapsulate a SupervisorDao to replaces its set of DASUs with a set of IDs."></a>
@@ -403,10 +407,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+    </li><li name="org.eso.ias.cdb.json.pojos.JsonDasuDao#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(obj:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/cdb/json/pojos/JsonDasuDao.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../org/eso/ias/cdb/json/pojos/JsonDasuDao.html#equals(obj:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -415,10 +419,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="obj">obj: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.json.pojos.JsonDasuDao">JsonDasuDao</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -528,10 +532,10 @@
       </span>
       
       
-    </li><li name="org.eso.ias.cdb.json.pojos.JsonDasuDao#getSupervisorID" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSupervisorID():String"></a>
+    </li><li name="org.eso.ias.cdb.json.pojos.JsonDasuDao#getTemplateId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getTemplateId():String"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/cdb/json/pojos/JsonDasuDao.html#getSupervisorID():String" title="Permalink">
+      <a href="../../../../../../org/eso/ias/cdb/json/pojos/JsonDasuDao.html#getTemplateId():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -540,13 +544,11 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSupervisorID</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">getTemplateId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">Get the Id of the supervisor where this DASU is deployed
-</p><div class="fullcomment"><div class="comment cmt"><p>Get the Id of the supervisor where this DASU is deployed
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Id of the supervisor</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>DasuDao#getSupervisor()</p></span></dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="org.eso.ias.cdb.json.pojos.JsonDasuDao#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
       <a href="../../../../../../org/eso/ias/cdb/json/pojos/JsonDasuDao.html#hashCode():Int" title="Permalink">
@@ -561,10 +563,7 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.json.pojos.JsonDasuDao">JsonDasuDao</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -705,10 +704,10 @@
       </span>
       
       
-    </li><li name="org.eso.ias.cdb.json.pojos.JsonDasuDao#setSupervisorID" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setSupervisorID(supervID:String):Unit"></a><a id="setSupervisorID(String):Unit"></a>
+    </li><li name="org.eso.ias.cdb.json.pojos.JsonDasuDao#setTemplateId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setTemplateId(templateId:String):Unit"></a><a id="setTemplateId(String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/cdb/json/pojos/JsonDasuDao.html#setSupervisorID(supervID:String):Unit" title="Permalink">
+      <a href="../../../../../../org/eso/ias/cdb/json/pojos/JsonDasuDao.html#setTemplateId(templateId:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -717,10 +716,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setSupervisorID</span><span class="params">(<span name="supervID">supervID: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setTemplateId</span><span class="params">(<span name="templateId">templateId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Set the ID of the Supervisor</p><div class="fullcomment"><div class="comment cmt"><p>Set the ID of the Supervisor</p></div><dl class="paramcmts block"><dt class="param">supervID</dt><dd class="cmt"><p>the ID of the Supervisor</p></dd></dl></div>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

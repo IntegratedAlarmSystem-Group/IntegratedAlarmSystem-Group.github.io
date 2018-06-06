@@ -183,6 +183,14 @@
       
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="IasIO.html" title="The view of an InOut for the TF"></a>
+                        <a href="IasIO.html" title="The view of an InOut for the TF">IasIO</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF"></a>
+                        <a href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF">IasIOJ</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user."></a>
                         <a href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user.">JavaTransfer</a>
                       </li><li class="current-entities indented5">
@@ -195,8 +203,8 @@
                         <a href="ScalaTransfer.html" title="ScalaTransfer calls the scala transfer function provided by the user.">ScalaTransfer</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementators of the transfer function."></a>
-                        <a href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementators of the transfer function.">ScalaTransferExecutor</a>
+                        <a class="class" href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementations of the transfer function."></a>
+                        <a href="ScalaTransferExecutor.html" title="The ScalaTransferExecutor provides the interface for scala implementations of the transfer function.">ScalaTransferExecutor</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="TransferExecutor.html" title="TransferExecutor is the abstract for the implementators of the transfer function in java."></a>
@@ -272,7 +280,49 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.asce.transfer.JavaTransfer" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="org.eso.ias.asce.transfer.IasIO" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IasIO[T]extendsAnyRef"></a><a id="IasIO[T]:IasIO[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/index.html#IasIO[T]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The view of an InOut for the TF" href="IasIO.html"><span class="name">IasIO</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The view of an InOut for the TF</p><div class="fullcomment"><div class="comment cmt"><p>The view of an InOut for the TF</p><p>IasIO exposes only the InOut's methods that can be
+invoked by the TF hiding the methods meant for the
+internals of the IAS.</p><p>The IasIo reduces the risk of errors from misuse from the
+TF and simplify the API</p><p>IasIo is immutable.
+</p></div></div>
+    </li><li name="org.eso.ias.asce.transfer.IasIOJ" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IasIOJ[T]extendsObject"></a><a id="IasIOJ[T]:IasIOJ[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/index.html#IasIOJ[T]extendsObject" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The java countr part of the scala IasIO, that is the view of an InOut for the TF" href="IasIOJ.html"><span class="name">IasIOJ</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The java countr part of the scala IasIO, that is
+the view of an InOut for the TF</p><div class="fullcomment"><div class="comment cmt"><p>The java countr part of the scala IasIO, that is
+the view of an InOut for the TF</p><p>IasIOJ exposes only the InOut's methods that can be
+invoked by the TF hiding the methods meant for the
+internals of the IAS.</p><p>The IasIo reduces the risk of errors from misuse from the
+TF and simplify the API hiding scala details.</p><p>IasIo is immutable.
+</p></div></div>
+    </li><li name="org.eso.ias.asce.transfer.JavaTransfer" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="JavaTransfer[T]extendsComputingElement[T]"></a><a id="JavaTransfer[T]:JavaTransfer[T]"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/asce/transfer/index.html#JavaTransfer[T]extendsComputingElement[T]" title="Permalink">
@@ -293,9 +343,9 @@ transfer function provided by the user.</p><p>Note that the Validity of the outp
 but automatically implemented by the ASCE
 </p></div></div>
     </li><li name="org.eso.ias.asce.transfer.JavaTransferExecutor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="JavaTransferExecutorextendsTransferExecutor"></a><a id="JavaTransferExecutor:JavaTransferExecutor"></a>
+      <a id="JavaTransferExecutor[T]extendsTransferExecutor"></a><a id="JavaTransferExecutor[T]:JavaTransferExecutor[T]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/index.html#JavaTransferExecutorextendsTransferExecutor" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/index.html#JavaTransferExecutor[T]extendsTransferExecutor" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -304,7 +354,7 @@ but automatically implemented by the ASCE
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="The JavaTransferExecutor provides the interface for java implementators of the transfer function as java data structs differ from scala ones." href="JavaTransferExecutor.html"><span class="name">JavaTransferExecutor</span></a><span class="result"> extends <a href="TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></span>
+        <a title="The JavaTransferExecutor provides the interface for java implementators of the transfer function as java data structs differ from scala ones." href="JavaTransferExecutor.html"><span class="name">JavaTransferExecutor</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></span>
       </span>
       
       <p class="shortcomment cmt">The JavaTransferExecutor provides the interface
@@ -343,13 +393,13 @@ but automatically implemented by the ASCE
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="The ScalaTransferExecutor provides the interface for scala implementators of the transfer function." href="ScalaTransferExecutor.html"><span class="name">ScalaTransferExecutor</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></span>
+        <a title="The ScalaTransferExecutor provides the interface for scala implementations of the transfer function." href="ScalaTransferExecutor.html"><span class="name">ScalaTransferExecutor</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></span>
       </span>
       
       <p class="shortcomment cmt">The <code>ScalaTransferExecutor<code> provides the interface
-for scala implementators of the transfer function.
+for scala implementations of the transfer function.
 </code></p><div class="fullcomment"><div class="comment cmt"><p>The <code>ScalaTransferExecutor<code> provides the interface
-for scala implementators of the transfer function.
+for scala implementations of the transfer function.
 </p></div></div>
     </li><li name="org.eso.ias.asce.transfer.TransferExecutor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TransferExecutorextendsObject"></a><a id="TransferExecutor:TransferExecutor"></a>

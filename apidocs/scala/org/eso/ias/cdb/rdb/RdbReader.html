@@ -151,10 +151,6 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.cdb">cdb</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="IasCdbRdb.html" title=""></a>
-                        <a href="IasCdbRdb.html" title="">IasCdbRdb</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="" title="Read CDB configuration from RDB."></a>
                         <a href="" title="Read CDB configuration from RDB.">RdbReader</a>
                       </li><li class="current-entities indented5">
@@ -487,10 +483,10 @@
       
       <p class="shortcomment cmt">Read the DASU configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the DASU configuration from the CDB.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty DASU identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The DASU red from the file</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>See also</dt><dd><span class="cmt"><p>org.eso.ias.cdb.CdbReader#getDasu(java.lang.String)</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.cdb.rdb.RdbReader#getDasusForSupervisor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getDasusForSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuDao]"></a><a id="getDasusForSupervisor(String):Set[DasuDao]"></a>
+    </li><li name="org.eso.ias.cdb.rdb.RdbReader#getDasusToDeployInSupervisor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDasusToDeployInSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]"></a><a id="getDasusToDeployInSupervisor(String):Set[DasuToDeployDao]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/cdb/rdb/RdbReader.html#getDasusForSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuDao]" title="Permalink">
+      <a href="../../../../../org/eso/ias/cdb/rdb/RdbReader.html#getDasusToDeployInSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -499,7 +495,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDasusForSupervisor</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="../pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>]</span>
+        <span class="name">getDasusToDeployInSupervisor</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="../pojos/DasuToDeployDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuToDeployDao">DasuToDeployDao</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Return the DASUs belonging to the given Supervisor.</p><div class="fullcomment"><div class="comment cmt"><p>Return the DASUs belonging to the given Supervisor.
@@ -598,6 +594,23 @@ the configuration in order to have more then one IAS with its own unique ID.
       
       <p class="shortcomment cmt">Read the supervisor configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the supervisor configuration from the CDB.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty supervisor identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The Supervisor red from the CDB</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>See also</dt><dd><span class="cmt"><p>org.eso.ias.cdb.CdbReader#getSupervisor(java.lang.String)</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.rdb.RdbReader#getTemplate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTemplate(template_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TemplateDao]"></a><a id="getTemplate(String):Optional[TemplateDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/rdb/RdbReader.html#getTemplate(template_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TemplateDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplate</span><span class="params">(<span name="template_id">template_id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Read the template configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the template configuration from the CDB.
+</p></div><dl class="paramcmts block"><dt class="param">template_id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the template</p></dd><dt>returns</dt><dd class="cmt"><p>The template read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading from the CDB</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.rdb.RdbReader#getTransferFunction" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getTransferFunction(tf_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TransferFunctionDao]"></a><a id="getTransferFunction(String):Optional[TransferFunctionDao]"></a>
       <span class="permalink">
