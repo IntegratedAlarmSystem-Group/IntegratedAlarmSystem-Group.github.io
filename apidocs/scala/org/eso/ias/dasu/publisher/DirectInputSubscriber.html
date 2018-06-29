@@ -151,8 +151,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.dasu">dasu</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="" title="The input subscriber to send event to the DASU"></a>
-                        <a href="" title="The input subscriber to send event to the DASU">DirectInputSubscriber</a>
+                        <a class="class" href="" title="The input subscriber to send event to the listener"></a>
+                        <a href="" title="The input subscriber to send event to the listener">DirectInputSubscriber</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="class" href="JsonWriterPublisher.html" title="The publisher of IASValues produced by the DASU in a JSON-like format."></a>
@@ -201,7 +201,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p> The input subscriber to send event to the DASU</p><p> This subscriber, especially useful for testing, allows to programamtically
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p> The input subscriber to send event to the listener</p><p> This subscriber, especially useful for testing, allows to programamtically
  submit inputs that will be immediately sent to the listener.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
@@ -491,6 +491,38 @@
       </span>
       
       <p class="shortcomment cmt">Initialize</p><div class="fullcomment"><div class="comment cmt"><p>Initialize</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.publisher.DirectInputSubscriber">DirectInputSubscriber</a> → <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.publisher.DirectInputSubscriber#isClosed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isClosed:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/publisher/DirectInputSubscriber.html#isClosed:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isClosed</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if it has been closed; false otherwise</p></dd></dl></div>
+    </li><li name="org.eso.ias.dasu.publisher.DirectInputSubscriber#isInitialized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInitialized:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/dasu/publisher/DirectInputSubscriber.html#isInitialized:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInitialized</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if it has been initialized; false otherwise</p></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -609,7 +641,8 @@
       </span>
       
       <p class="shortcomment cmt">Start to get events and forward them to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>Start to get events and forward them to the listener.</p><p>IASIOs whose ID is not in the acceptedInputs set are discarded.
-</p></div><dl class="paramcmts block"><dt class="param">listener</dt><dd class="cmt"><p>the listener of events</p></dd><dt class="param">acceptedInputs</dt><dd class="cmt"><p>the IDs of the inputs accepted by the listener</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.publisher.DirectInputSubscriber">DirectInputSubscriber</a> → <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">listener</dt><dd class="cmt"><p>the listener of events</p></dd><dt class="param">acceptedInputs</dt><dd class="cmt"><p>the IDs of the inputs accepted by the listener
+											(if empty accepts all the inputs)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.publisher.DirectInputSubscriber">DirectInputSubscriber</a> → <a href="../subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

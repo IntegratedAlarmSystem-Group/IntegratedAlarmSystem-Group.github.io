@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module IasPlugin3.JsonMsg</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasPlugin3.html"><font color="#ffffff">IasPlugin3</font></a>.JsonMsg</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/acaproni/ias/PythonPluginFeeder/src/python/IasPlugin3/JsonMsg.py">/home/acaproni/ias/PythonPluginFeeder/src/python/IasPlugin3/JsonMsg.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;May&nbsp;9,&nbsp;2018<br>
+&nbsp;<br>
+@author:&nbsp;acaproni</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="dateutil.html">dateutil</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasPlugin3.JsonMsg.html#JsonMsg">JsonMsg</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="JsonMsg">class <strong>JsonMsg</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;encapsulate&nbsp;the&nbsp;field&nbsp;of&nbsp;the&nbsp;message&nbsp;to&nbsp;send<br>
+to&nbsp;the&nbsp;java&nbsp;plugin&nbsp;as&nbsp;JSON&nbsp;string<br>
+&nbsp;<br>
+It&nbsp;is&nbsp;the&nbsp;&nbsp;counter&nbsp;part&nbsp;of&nbsp;the&nbsp;java&nbsp;org.eso.ias.plugin.network.MessageDao<br>
+&nbsp;<br>
+The&nbsp;type&nbsp;must&nbsp;be&nbsp;one&nbsp;of&nbsp;types&nbsp;supported&nbsp;by&nbsp;the&nbsp;IAS&nbsp;as&nbsp;defined&nbsp;in<br>
+org.eso.ias.types.IASTypes<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="JsonMsg-__init__"><strong>__init__</strong></a>(self, mpointId, value, valueType, timestamp=datetime.datetime(2018, 6, 29, 17, 9, 32, 273433), operationalMode=None)</dt><dd><tt>Constructor<br>
+&nbsp;<br>
+@param&nbsp;mpointId:&nbsp;the&nbsp;mpointId&nbsp;of&nbsp;the&nbsp;monitor&nbsp;point<br>
+@param&nbsp;value:&nbsp;the&nbsp;value&nbsp;to&nbsp;send&nbsp;to&nbsp;the&nbsp;BSDB<br>
+@param&nbsp;valueType:&nbsp;(IASType)&nbsp;the&nbsp;type&nbsp;of&nbsp;the&nbsp;value<br>
+@param&nbsp;timestamp:&nbsp;(datetime)&nbsp;the&nbsp;point&nbsp;in&nbsp;time&nbsp;when&nbsp;the&nbsp;value&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;has&nbsp;been&nbsp;read&nbsp;from&nbsp;the&nbsp;monitored&nbsp;system;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;not&nbsp;provided,&nbsp;it&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;actual&nbsp;time<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It&nbsp;can&nbsp;be&nbsp;either&nbsp;datetime&nbsp;or&nbsp;a&nbsp;ISO-8601&nbsp;string<br>
+@param&nbsp;operationalMode:&nbsp;(OperationalMode)&nbsp;optionally&nbsp;sets&nbsp;a&nbsp;operational&nbsp;mode&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;the&nbsp;passed&nbsp;monitor&nbsp;point</tt></dd></dl>
+
+<dl><dt><a name="JsonMsg-checkStringIsoTimestamp"><strong>checkStringIsoTimestamp</strong></a>(self, tStamp)</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;passed&nbsp;string&nbsp;represent&nbsp;a&nbsp;ISO&nbsp;timestamp<br>
+&nbsp;<br>
+@param&nbsp;tStamp&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;ISO&nbsp;timestamp<br>
+@return&nbsp;True&nbsp;if&nbsp;tStamp&nbsp;is&nbsp;a&nbsp;ISO&nbsp;8601&nbsp;timestamp,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="JsonMsg-dumps"><strong>dumps</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;JSON&nbsp;string&nbsp;to&nbsp;send&nbsp;to&nbsp;the&nbsp;java&nbsp;plugin</tt></dd></dl>
+
+<dl><dt><a name="JsonMsg-isoTimestamp"><strong>isoTimestamp</strong></a>(self, tStamp)</dt><dd><tt>Format&nbsp;the&nbsp;passed&nbsp;timestamp&nbsp;as&nbsp;ISO.<br>
+&nbsp;<br>
+The&nbsp;formatting&nbsp;is&nbsp;needed&nbsp;because&nbsp;datetime&nbsp;is&nbsp;formatted&nbsp;<br>
+contains&nbsp;microseconds&nbsp;but&nbsp;we&nbsp;use&nbsp;milliseconds&nbsp;precision<br>
+&nbsp;<br>
+@param&nbsp;the&nbsp;datetime&nbsp;to&nbsp;transfor&nbsp;as&nbsp;ISO&nbsp;8601</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="JsonMsg-parse"><strong>parse</strong></a>(jsonStr)</dt><dd><tt>Parse&nbsp;the&nbsp;passed&nbsp;string&nbsp;and&nbsp;return&nbsp;a&nbsp;<a href="#JsonMsg">JsonMsg</a><br>
+&nbsp;<br>
+@param&nbsp;jsonStr&nbsp;the&nbsp;json&nbsp;string&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;send&nbsp;to&nbsp;the&nbsp;java&nbsp;plugin</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>idJsonParamName</strong> = 'monitorPointId'</dl>
+
+<dl><dt><strong>operationaModeParamName</strong> = 'operMode'</dl>
+
+<dl><dt><strong>tStampJsonParamName</strong> = 'timestamp'</dl>
+
+<dl><dt><strong>valueJsonParamName</strong> = 'value'</dl>
+
+<dl><dt><strong>valueTypeJsonParamName</strong> = 'valueType'</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

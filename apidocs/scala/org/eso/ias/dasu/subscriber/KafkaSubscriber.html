@@ -159,8 +159,8 @@
                         <a href="InputsListener.html" title="A listener of inputs like the DASU">InputsListener</a>
                       </li><li class="current-entities indented5">
                         <a class="object" href="KafkaSubscriber$.html" title=""></a>
-                        <a class="class" href="" title="Read IASValues from the kafka queue and forward them to the DASU for processing."></a>
-                        <a href="" title="Read IASValues from the kafka queue and forward them to the DASU for processing.">KafkaSubscriber</a>
+                        <a class="class" href="" title="Read IASValues from the kafka queue and forward them to the listener for processing."></a>
+                        <a href="" title="Read IASValues from the kafka queue and forward them to the listener for processing.">KafkaSubscriber</a>
                       </li>
               </ul>
             </div>
@@ -192,7 +192,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p> Read IASValues from the kafka queue
- and forward them to the DASU for processing.</p><p> KafkaSubscriber delegates to KafkaIasiosConsumer.
+ and forward them to the listener for processing.</p><p> KafkaSubscriber delegates to KafkaIasiosConsumer.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -258,7 +258,7 @@
         <span class="name">KafkaSubscriber</span><span class="params">(<span name="dasuId">dasuId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="kafkaConsumer">kafkaConsumer: <a href="../../kafkautils/KafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer">KafkaIasiosConsumer</a></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier of the owner</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -617,7 +617,8 @@
       </span>
       
       <p class="shortcomment cmt">Start to get events and forward them to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>Start to get events and forward them to the listener.</p><p>IASIOs whose ID is not in the acceptedInputs set are discarded.
-</p></div><dl class="paramcmts block"><dt class="param">listener</dt><dd class="cmt"><p>the listener of events</p></dd><dt class="param">acceptedInputs</dt><dd class="cmt"><p>the IDs of the inputs accepted by the listener</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.subscriber.KafkaSubscriber">KafkaSubscriber</a> → <a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">listener</dt><dd class="cmt"><p>the listener of events</p></dd><dt class="param">acceptedInputs</dt><dd class="cmt"><p>the IDs of the inputs accepted by the listener
+                      (if empty accepts all the IasValues)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.subscriber.KafkaSubscriber">KafkaSubscriber</a> → <a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

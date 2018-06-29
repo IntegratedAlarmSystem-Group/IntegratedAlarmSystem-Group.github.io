@@ -159,8 +159,8 @@
                         <a href="InputsListener.html" title="A listener of inputs like the DASU">InputsListener</a>
                       </li><li class="current-entities indented5">
                         <a class="object" href="" title=""></a>
-                        <a class="class" href="KafkaSubscriber.html" title="Read IASValues from the kafka queue and forward them to the DASU for processing."></a>
-                        <a href="KafkaSubscriber.html" title="Read IASValues from the kafka queue and forward them to the DASU for processing.">KafkaSubscriber</a>
+                        <a class="class" href="KafkaSubscriber.html" title="Read IASValues from the kafka queue and forward them to the listener for processing."></a>
+                        <a href="KafkaSubscriber.html" title="Read IASValues from the kafka queue and forward them to the listener for processing.">KafkaSubscriber</a>
                       </li>
               </ul>
             </div>
@@ -313,7 +313,7 @@
       
       <p class="shortcomment cmt"> Factory method
 </p><div class="fullcomment"><div class="comment cmt"><p> Factory method
-</p></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">kafkaTopic</dt><dd class="cmt"><p>the kafka topic to send the output to;
+</p></div><dl class="paramcmts block"><dt class="param">dasuId</dt><dd class="cmt"><p>the identifier</p></dd><dt class="param">kafkaTopic</dt><dd class="cmt"><p>the kafka topic to send the output to;
                   if empty uses defaults from KafkaHelper</p></dd><dt class="param">kafkaServers</dt><dd class="cmt"><p>kafka servers;
                     overridden by KafkaHelper.BROKERS_PROPNAME java property, if present</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional set of properties</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">

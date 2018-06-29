@@ -183,6 +183,10 @@
                         <a href="PropertyDao.html" title="The property in the form of &amp;lt;name, value&amp;gt;">PropertyDao</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="SoundTypeDao.html" title="The type of the sound to play when a alarm becomes set"></a>
+                        <a href="SoundTypeDao.html" title="The type of the sound to play when a alarm becomes set">SoundTypeDao</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="SupervisorDao.html" title="The Supervisor is the container of DASUs needed to run more then one DASU in the same java process."></a>
                         <a href="SupervisorDao.html" title="The Supervisor is the container of DASUs needed to run more then one DASU in the same java process.">SupervisorDao</a>
                       </li><li class="current-entities indented5">
@@ -277,9 +281,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.cdb.pojos.IasioDao#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String,canShelve:Boolean,templateId:String):org.eso.ias.cdb.pojos.IasioDao"></a><a id="&lt;init&gt;:IasioDao"></a>
+      <a id="&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String,canShelve:Boolean,templateId:String,sound:org.eso.ias.cdb.pojos.SoundTypeDao,emails:String):org.eso.ias.cdb.pojos.IasioDao"></a><a id="&lt;init&gt;:IasioDao"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String,canShelve:Boolean,templateId:String):org.eso.ias.cdb.pojos.IasioDao" title="Permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String,canShelve:Boolean,templateId:String,sound:org.eso.ias.cdb.pojos.SoundTypeDao,emails:String):org.eso.ias.cdb.pojos.IasioDao" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -288,13 +292,13 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IasioDao</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="descr">descr: <span class="extype" name="java.lang.String">String</span></span>, <span name="type">type: <a href="IasTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasTypeDao">IasTypeDao</a></span>, <span name="docUrl">docUrl: <span class="extype" name="java.lang.String">String</span></span>, <span name="canShelve">canShelve: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="templateId">templateId: <span class="extype" name="java.lang.String">String</span></span>)</span>
+        <span class="name">IasioDao</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="descr">descr: <span class="extype" name="java.lang.String">String</span></span>, <span name="type">type: <a href="IasTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasTypeDao">IasTypeDao</a></span>, <span name="docUrl">docUrl: <span class="extype" name="java.lang.String">String</span></span>, <span name="canShelve">canShelve: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="templateId">templateId: <span class="extype" name="java.lang.String">String</span></span>, <span name="sound">sound: <a href="SoundTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.SoundTypeDao">SoundTypeDao</a></span>, <span name="emails">emails: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt">Constructor
 </p><div class="fullcomment"><div class="comment cmt"><p>Constructor
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The identifier</p></dd><dt class="param">descr</dt><dd class="cmt"><p>The description</p></dd><dt class="param">type</dt><dd class="cmt"><p>The IAS type</p></dd><dt class="param">docUrl</dt><dd class="cmt"><p>the URL of the documentation</p></dd><dt class="param">canShelve</dt><dd class="cmt"><p><code>true</code> if this IASIO can be shelved,
-                 <code>false</code> otherwise</p></dd><dt class="param">templateId</dt><dd class="cmt"><p>the Id of the template for replication</p></dd></dl></div>
+                 <code>false</code> otherwise</p></dd><dt class="param">templateId</dt><dd class="cmt"><p>the Id of the template for replication</p></dd><dt class="param">sound</dt><dd class="cmt"><p>the sound to play when an alarm is set</p></dd></dl></div>
     </li><li name="org.eso.ias.cdb.pojos.IasioDao#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(id:String,descr:String,type:org.eso.ias.cdb.pojos.IasTypeDao,docUrl:String):org.eso.ias.cdb.pojos.IasioDao"></a><a id="&lt;init&gt;:IasioDao"></a>
       <span class="permalink">
@@ -516,6 +520,22 @@
       </span>
       
       
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#getEmails" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getEmails():String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#getEmails():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEmails</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.cdb.pojos.IasioDao#getIasType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getIasType():org.eso.ias.cdb.pojos.IasTypeDao"></a><a id="getIasType():IasTypeDao"></a>
       <span class="permalink">
@@ -561,6 +581,22 @@
       </span>
       <span class="symbol">
         <span class="name">getShortDesc</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#getSound" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getSound():org.eso.ias.cdb.pojos.SoundTypeDao"></a><a id="getSound():SoundTypeDao"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#getSound():org.eso.ias.cdb.pojos.SoundTypeDao" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSound</span><span class="params">()</span><span class="result">: <a href="SoundTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.SoundTypeDao">SoundTypeDao</a></span>
       </span>
       
       
@@ -714,6 +750,22 @@
       </span>
       
       
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#setEmails" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setEmails(emails:String):Unit"></a><a id="setEmails(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#setEmails(emails:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setEmails</span><span class="params">(<span name="emails">emails: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.cdb.pojos.IasioDao#setIasType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setIasType(iasType:org.eso.ias.cdb.pojos.IasTypeDao):Unit"></a><a id="setIasType(IasTypeDao):Unit"></a>
       <span class="permalink">
@@ -759,6 +811,22 @@
       </span>
       <span class="symbol">
         <span class="name">setShortDesc</span><span class="params">(<span name="shortDesc">shortDesc: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.cdb.pojos.IasioDao#setSound" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setSound(sound:org.eso.ias.cdb.pojos.SoundTypeDao):Unit"></a><a id="setSound(SoundTypeDao):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/IasioDao.html#setSound(sound:org.eso.ias.cdb.pojos.SoundTypeDao):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setSound</span><span class="params">(<span name="sound">sound: <a href="SoundTypeDao.html" class="extype" name="org.eso.ias.cdb.pojos.SoundTypeDao">SoundTypeDao</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       

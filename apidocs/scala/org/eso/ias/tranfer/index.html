@@ -277,6 +277,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.sink" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sink"></a><a id="sink:sink"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#sink" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../sink/index.html"><span class="name">sink</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li name="org.eso.ias.supervisor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="supervisor"></a><a id="supervisor:supervisor"></a>
       <span class="permalink">
@@ -326,6 +342,14 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li class="current-entities indented4">
+                        <a class="object" href="BackupSelector$.html" title=""></a>
+                        <a class="class" href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation."></a>
+                        <a href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation.">BackupSelector</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="BackupSelectorException.html" title="The exception thrown by this TF in case of malfunctions"></a>
+                        <a href="BackupSelectorException.html" title="The exception thrown by this TF in case of malfunctions">BackupSelectorException</a>
+                      </li><li class="current-entities indented4">
                         <a class="object" href="DelayedAlarm$.html" title=""></a>
                         <a class="class" href="DelayedAlarm.html" title="DelayedAlarm processes the alarm input and produces another alarm if the alarm in input remains steady active for a given amount of time."></a>
                         <a href="DelayedAlarm.html" title="DelayedAlarm processes the alarm input and produces another alarm if the alarm in input remains steady active for a given amount of time.">DelayedAlarm</a>
@@ -460,7 +484,56 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.tranfer.DelayedAlarm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="org.eso.ias.tranfer.BackupSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BackupSelector[T]extendsScalaTransferExecutor[T]"></a><a id="BackupSelector[T]:BackupSelector[T]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#BackupSelector[T]extendsScalaTransferExecutor[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation." href="BackupSelector.html"><span class="name">BackupSelector</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<span class="extype" name="org.eso.ias.tranfer.BackupSelector.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Sometimes a monitor point has a backup to be used in case of failure
+getting the value of the main implementation.</p><div class="fullcomment"><div class="comment cmt"><p>Sometimes a monitor point has a backup to be used in case of failure
+getting the value of the main implementation. The backup can
+be retrieved from a different device (for example a backup pressure sensor)
+or from a different way to get the value from the hardware (for example
+on that involves the network and another one by reading a database where the
+value is also stored)</p><p>BackupSelector picks up the best option among the inputs i.e.
+if the main value is operational and reliable then return this value otherwise
+check if the first backup is operational and valid and return this one otherwise
+checks the second backup and so on.</p><p>BackupSelector does not do any computation on the value but returns
+the first operational and valid input among the main and the backups.</p><p>If none of the inputs is operational and valid, BackupSelector returns the
+first option.</p><p>The order of preference must be passed as a java property of comma
+separated list of ids of monitor points like
+&quot;T1Main, T1Backup1, T1Backup2&quot;</p><p>The list of IDs passed with the SelectionPriorityPropName property
+must match with the IDs of the inputs processed by the eval method.
+</p></div></div>
+    </li><li name="org.eso.ias.tranfer.BackupSelectorException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BackupSelectorExceptionextendsException"></a><a id="BackupSelectorException:BackupSelectorException"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#BackupSelectorExceptionextendsException" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The exception thrown by this TF in case of malfunctions" href="BackupSelectorException.html"><span class="name">BackupSelectorException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The exception thrown by this TF in case of
+malfunctions
+</p>
+    </li><li name="org.eso.ias.tranfer.DelayedAlarm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="DelayedAlarmextendsScalaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="DelayedAlarm:DelayedAlarm"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/tranfer/index.html#DelayedAlarmextendsScalaTransferExecutor[org.eso.ias.types.Alarm]" title="Permalink">
@@ -513,7 +586,23 @@ malfunctions
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="org.eso.ias.tranfer.DelayedAlarm" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+                <li name="org.eso.ias.tranfer.BackupSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BackupSelector"></a><a id="BackupSelector:BackupSelector"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#BackupSelector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BackupSelector$.html"><span class="name">BackupSelector</span></a>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.tranfer.DelayedAlarm" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DelayedAlarm"></a><a id="DelayedAlarm:DelayedAlarm"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/tranfer/index.html#DelayedAlarm" title="Permalink">
