@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.tranfer.utlitymodule" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="utlitymodule"></a><a id="utlitymodule:utlitymodule"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#utlitymodule" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="utlitymodule/index.html"><span class="name">utlitymodule</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.tranfer">tranfer</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <a class="object" href="BackupSelector$.html" title=""></a>
                         <a class="class" href="" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation."></a>
@@ -149,6 +165,10 @@
                         <span class="separator"></span>
                         <a class="class" href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions"></a>
                         <a href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions">DelayedAlarmException</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ThresholdWithBackupsAndDelay$.html" title=""></a>
+                        <a class="class" href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm."></a>
+                        <a href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm.">ThresholdWithBackupsAndDelay</a>
                       </li>
               </ul>
             </div>
@@ -183,7 +203,7 @@
 getting the value of the main implementation. The backup can
 be retrieved from a different device (for example a backup pressure sensor)
 or from a different way to get the value from the hardware (for example
-on that involves the network and another one by reading a database where the
+one that involves the network and another one by reading a database where the
 value is also stored)</p><p>BackupSelector picks up the best option among the inputs i.e.
 if the main value is operational and reliable then return this value otherwise
 check if the first backup is operational and valid and return this one otherwise
@@ -244,9 +264,9 @@ must match with the IDs of the inputs processed by the eval method.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.tranfer.BackupSelector#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(cEleId:String,cEleRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.tranfer.BackupSelector[T]"></a><a id="&lt;init&gt;:BackupSelector[T]"></a>
+      <a id="&lt;init&gt;(asceId:String,asceRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.tranfer.BackupSelector[T]"></a><a id="&lt;init&gt;:BackupSelector[T]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/tranfer/BackupSelector.html#&lt;init&gt;(cEleId:String,cEleRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.tranfer.BackupSelector[T]" title="Permalink">
+      <a href="../../../../org/eso/ias/tranfer/BackupSelector.html#&lt;init&gt;(asceId:String,asceRunningId:String,validityTimeFrame:Long,props:java.util.Properties):org.eso.ias.tranfer.BackupSelector[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -255,7 +275,7 @@ must match with the IDs of the inputs processed by the eval method.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BackupSelector</span><span class="params">(<span name="cEleId">cEleId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cEleRunningId">cEleRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="validityTimeFrame">validityTimeFrame: <span class="extype" name="scala.Long">Long</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
+        <span class="name">BackupSelector</span><span class="params">(<span name="asceId">asceId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="asceRunningId">asceRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="validityTimeFrame">validityTimeFrame: <span class="extype" name="scala.Long">Long</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p>
@@ -446,6 +466,22 @@ must match with the IDs of the inputs processed by the eval method.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.ScalaTransferExecutor#getIdentifier" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getIdentifier(id:String):String"></a><a id="getIdentifier(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/BackupSelector.html#getIdentifier(id:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getIdentifier</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the id to translate, templated or not</p></dd><dt>returns</dt><dd class="cmt"><p>teh identifer translated if the ASCE is templated</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.TransferExecutor#getTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getTemplateInstance():java.util.Optional[Integer]"></a><a id="getTemplateInstance():Optional[Integer]"></a>
       <span class="permalink">
@@ -504,9 +540,9 @@ their identifiers must be enriched with the number of the instance.
               
         </dd></dl></div>
     </li><li name="org.eso.ias.tranfer.BackupSelector#initialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="initialize():Unit"></a>
+      <a id="initialize(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo):Unit"></a><a id="initialize(Set[IasioInfo],IasioInfo):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/tranfer/BackupSelector.html#initialize():Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/tranfer/BackupSelector.html#initialize(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -515,34 +551,12 @@ their identifiers must be enriched with the number of the instance.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">initialize</span><span class="params">(<span name="inputsInfo">inputsInfo: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../asce/transfer/IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a>]</span>, <span name="outputInfo">outputInfo: <a href="../asce/transfer/IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Initialization: it basically checks if the
-provided delays are valid
-</p><div class="fullcomment"><div class="comment cmt"><p>Initialization: it basically checks if the
-provided delays are valid
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a> → <a href="../asce/transfer/TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>See also</dt><dd><span class="cmt"><p>TransferExecutor#initialize()</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#internalInitialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="internalInitialize(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="internalInitialize(Optional[Integer]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/tranfer/BackupSelector.html#internalInitialize(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">internalInitialize</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Internal initialization, sets the instance of the template, if any,
-before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
-</p><div class="fullcomment"><div class="comment cmt"><p>Internal initialization, sets the instance of the template, if any,
-before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
-</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>The not <code>null</code> instance of the template</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../asce/transfer/TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
+      <p class="shortcomment cmt">Initialize the TF
+</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the TF
+</p></div><dl class="paramcmts block"><dt class="param">inputsInfo</dt><dd class="cmt"><p>The IDs and types of the inputs</p></dd><dt class="param">outputInfo</dt><dd class="cmt"><p>The Id and type of thr output</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a> → <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -646,6 +660,24 @@ before delegating to the user defined initialization to <code><span class="extyp
       </span>
       
       
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#setTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setTemplateInstance(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="setTemplateInstance(Optional[Integer]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/BackupSelector.html#setTemplateInstance(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTemplateInstance</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Set the instance of the template, if any
+</p><div class="fullcomment"><div class="comment cmt"><p>Set the instance of the template, if any
+</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>the instance of the template</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../asce/transfer/TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd></dl></div>
     </li><li name="org.eso.ias.tranfer.BackupSelector#shutdown" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="shutdown():Unit"></a>
       <span class="permalink">

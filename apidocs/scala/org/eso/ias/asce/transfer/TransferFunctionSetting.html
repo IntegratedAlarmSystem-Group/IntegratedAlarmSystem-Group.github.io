@@ -175,6 +175,10 @@
                         <a href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF">IasIOJ</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="IasioInfo.html" title="The association of ID and type to be passed to the initialize method of the transfer function"></a>
+                        <a href="IasioInfo.html" title="The association of ID and type to be passed to the initialize method of the transfer function">IasioInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user."></a>
                         <a href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user.">JavaTransfer</a>
                       </li><li class="current-entities indented5">
@@ -529,9 +533,7 @@ java. Scala implementations of the TF are therefore more performant (in principl
         <span class="name">initialize</span><span class="params">(<span name="asceId">asceId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="asceRunningId">asceRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="validityTimeFrame">validityTimeFrame: <span class="extype" name="scala.Long">Long</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <p class="shortcomment cmt">Load, build and initialize the object to run
-the transfer function.</p><div class="fullcomment"><div class="comment cmt"><p>Load, build and initialize the object to run
-the transfer function.</p><p>This can be slow and access remote resources
+      <p class="shortcomment cmt">Load and build the executor of the  transfer function.</p><div class="fullcomment"><div class="comment cmt"><p>Load and build the executor of the  transfer function.</p><p>This can be slow and access remote resources
  so it must be run in a worker thread
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if the initialization went fine
         false otherwise</p></dd></dl></div>

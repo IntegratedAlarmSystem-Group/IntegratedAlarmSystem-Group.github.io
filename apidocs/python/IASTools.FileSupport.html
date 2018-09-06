@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASTools.html"><font color="#ffffff">IASTools</font></a>.FileSupport</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/acaproni/ias/Utils/src/python/IASTools/FileSupport.py">/home/acaproni/ias/Utils/src/python/IASTools/FileSupport.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/acaproni/ias/Utils/src/main/python/IASTools/FileSupport.py">/home/acaproni/ias/Utils/src/main/python/IASTools/FileSupport.py</a></font></td></tr></table>
     <p><tt>Created&nbsp;on&nbsp;Sep&nbsp;23,&nbsp;2016<br>
 &nbsp;<br>
 @author:&nbsp;acaproni</tt></p>
@@ -57,19 +57,12 @@
 *&nbsp;parent&nbsp;module&nbsp;folders&nbsp;(../lib&nbsp;for&nbsp;example)<br>
 *&nbsp;$IAS_ROOT&nbsp;folders<br>
 &nbsp;<br>
-The&nbsp;fileType&nbsp;tells&nbsp;where&nbsp;the&nbsp;file&nbsp;must&nbsp;be&nbsp;looked&nbsp;for&nbsp;and&nbsp;improves<br>
-the&nbsp;response&nbsp;time&nbsp;of&nbsp;the&nbsp;script.<br>
-&nbsp;<br>
-&nbsp;<br>
-@param&nbsp;fileName:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;file&nbsp;to&nbsp;look&nbsp;for<br>
-@param&nbsp;fileType:&nbsp;the&nbsp;type&nbsp;(iasFileType)&nbsp;of&nbsp;file&nbsp;to&nbsp;look&nbsp;for&nbsp;(example&nbsp;BINARY,LIB...)<br>
 @return:&nbsp;if&nbsp;the&nbsp;file&nbsp;is&nbsp;found&nbsp;The&nbsp;full&nbsp;path&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;throws&nbsp;a&nbsp;OSError&nbsp;exception</tt></dd></dl>
 
 <dl><dt><a name="FileSupport-recursivelyLookForFile"><strong>recursivelyLookForFile</strong></a>(self, folder)</dt><dd><tt>Search&nbsp;recursively&nbsp;for&nbsp;a&nbsp;file&nbsp;in&nbsp;the&nbsp;given&nbsp;folder<br>
 &nbsp;<br>
 @param&nbsp;folder:&nbsp;The&nbsp;folder&nbsp;to&nbsp;search&nbsp;for&nbsp;the&nbsp;file<br>
-@param&nbsp;name:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
 @return:&nbsp;the&nbsp;full&nbsp;name&nbsp;of&nbsp;the&nbsp;file&nbsp;if&nbsp;it&nbsp;exists,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;None&nbsp;otherwise</tt></dd></dl>
 
@@ -88,7 +81,7 @@ An&nbsp;exception&nbsp;is&nbsp;thrown&nbsp;in&nbsp;case&nbsp;of&nbsp;error</tt><
 <dl><dt><a name="FileSupport-getIASFolders"><strong>getIASFolders</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders.<br>
 At&nbsp;the&nbsp;present&nbsp;it&nbsp;only&nbsp;contains&nbsp;the&nbsp;current&nbsp;module<br>
 (the&nbsp;parent&nbsp;of&nbsp;the&nbsp;current&nbsp;folder&nbsp;i.e.&nbsp;assumes&nbsp;that<br>
-the&nbsp;tscript&nbsp;runs&nbsp;in&nbsp;src&nbsp;that&nbsp;is&nbsp;the&nbsp;typical&nbsp;case<br>
+the&nbsp;script&nbsp;runs&nbsp;in&nbsp;src&nbsp;that&nbsp;is&nbsp;the&nbsp;typical&nbsp;case<br>
 for&nbsp;development)&nbsp;and&nbsp;IAS&nbsp;root;&nbsp;<br>
 in&nbsp;future&nbsp;can&nbsp;be&nbsp;expanded&nbsp;with&nbsp;one&nbsp;or&nbsp;more&nbsp;integration<br>
 folders.<br>
@@ -160,5 +153,5 @@ Note&nbsp;that&nbsp;most&nbsp;operations&nbsp;will&nbsp;use&nbsp;the&nbsp;effect
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>W_OK</strong> = 2<br>
 <strong>X_OK</strong> = 1<br>
-<strong>environ</strong> = environ({'SHELL': '/bin/bash', 'JAVA_HOME': '/et... '/usr/lib64/qt-3.3/lib', 'LOGNAME': 'acaproni'})</td></tr></table>
+<strong>environ</strong> = environ({'LANG': 'en_US.UTF-8', 'ZOOKEEPER_HOME'...kde4/plugins', 'QT_GRAPHICSSYSTEM_CHECKED': '1'})</td></tr></table>
 </body></html>

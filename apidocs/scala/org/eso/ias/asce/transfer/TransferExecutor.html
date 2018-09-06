@@ -175,6 +175,10 @@
                         <a href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF">IasIOJ</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="IasioInfo.html" title="The association of ID and type to be passed to the initialize method of the transfer function"></a>
+                        <a href="IasioInfo.html" title="The association of ID and type to be passed to the initialize method of the transfer function">IasioInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user."></a>
                         <a href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user.">JavaTransfer</a>
                       </li><li class="current-entities indented5">
@@ -240,7 +244,7 @@ implementators of the transfer function in java.
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a>, <a href="ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>, <a href="impls/MinMaxThresholdTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a>, <a href="impls/MinMaxThresholdTFJava.html" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava">MinMaxThresholdTFJava</a>, <a href="impls/MultiplicityTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MultiplicityTF">MultiplicityTF</a>, <a href="../../component/test/transfer/ConstraintValidityTF.html" class="extype" name="org.eso.ias.component.test.transfer.ConstraintValidityTF">ConstraintValidityTF</a>, <a href="../../component/test/transfer/CopyTF.html" class="extype" name="org.eso.ias.component.test.transfer.CopyTF">CopyTF</a>, <a href="../../component/test/transfer/ThrowExceptionTF.html" class="extype" name="org.eso.ias.component.test.transfer.ThrowExceptionTF">ThrowExceptionTF</a>, <a href="../../component/test/transfer/TransferExample.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExample">TransferExample</a>, <a href="../../component/test/transfer/TransferExecutorImpl.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExecutorImpl">TransferExecutorImpl</a>, <a href="../../dasu/test/transferfunction/AverageTempsTF.html" class="extype" name="org.eso.ias.dasu.test.transferfunction.AverageTempsTF">AverageTempsTF</a>, <a href="../../supervisor/test/tf/TemplatedTF.html" class="extype" name="org.eso.ias.supervisor.test.tf.TemplatedTF">TemplatedTF</a>, <a href="../../tranfer/BackupSelector.html" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a>, <a href="../../tranfer/DelayedAlarm.html" class="extype" name="org.eso.ias.tranfer.DelayedAlarm">DelayedAlarm</a></div>
+            <div class="subClasses hiddenContent"><a href="JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a>, <a href="ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>, <a href="impls/MinMaxThresholdTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a>, <a href="impls/MinMaxThresholdTFJava.html" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTFJava">MinMaxThresholdTFJava</a>, <a href="impls/MultiplicityTF.html" class="extype" name="org.eso.ias.asce.transfer.impls.MultiplicityTF">MultiplicityTF</a>, <a href="../../component/test/transfer/ConstraintValidityTF.html" class="extype" name="org.eso.ias.component.test.transfer.ConstraintValidityTF">ConstraintValidityTF</a>, <a href="../../component/test/transfer/CopyTF.html" class="extype" name="org.eso.ias.component.test.transfer.CopyTF">CopyTF</a>, <a href="../../component/test/transfer/ThrowExceptionTF.html" class="extype" name="org.eso.ias.component.test.transfer.ThrowExceptionTF">ThrowExceptionTF</a>, <a href="../../component/test/transfer/TransferExample.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExample">TransferExample</a>, <a href="../../component/test/transfer/TransferExecutorImpl.html" class="extype" name="org.eso.ias.component.test.transfer.TransferExecutorImpl">TransferExecutorImpl</a>, <a href="../../dasu/test/transferfunction/AverageTempsTF.html" class="extype" name="org.eso.ias.dasu.test.transferfunction.AverageTempsTF">AverageTempsTF</a>, <a href="../../supervisor/test/tf/TemplatedTF.html" class="extype" name="org.eso.ias.supervisor.test.tf.TemplatedTF">TemplatedTF</a>, <a href="../../tranfer/BackupSelector.html" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a>, <a href="../../tranfer/DelayedAlarm.html" class="extype" name="org.eso.ias.tranfer.DelayedAlarm">DelayedAlarm</a>, <a href="../../tranfer/ThresholdWithBackupsAndDelay.html" class="extype" name="org.eso.ias.tranfer.ThresholdWithBackupsAndDelay">ThresholdWithBackupsAndDelay</a></div>
           </div></div>
         
 
@@ -309,27 +313,7 @@ implementators of the transfer function in java.
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="org.eso.ias.asce.transfer.TransferExecutor#initialize" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="initialize():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/TransferExecutor.html#initialize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">initialize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Initialize the transfer function.</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the transfer function.</p><p>The life cycle method is called once by the IAS and always before running eval.
-User initialization code goes here. In particular long lasting operations
-like reading from a database should go here while eval is supposed
-to return as soon as possible.
-</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><span class="extype" name="Exception"><code>Exception</code></span> In case of error initializing</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#shutdown" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="org.eso.ias.asce.transfer.TransferExecutor#shutdown" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="shutdown():Unit"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/asce/transfer/TransferExecutor.html#shutdown():Unit" title="Permalink">
@@ -548,26 +532,6 @@ to return as soon as possible.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#internalInitialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="internalInitialize(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="internalInitialize(Optional[Integer]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/TransferExecutor.html#internalInitialize(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">internalInitialize</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Internal initialization, sets the instance of the template, if any,
-before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
-</p><div class="fullcomment"><div class="comment cmt"><p>Internal initialization, sets the instance of the template, if any,
-before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
-</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>The not <code>null</code> instance of the template</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -655,6 +619,24 @@ before delegating to the user defined initialization to <code><span class="extyp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#setTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setTemplateInstance(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="setTemplateInstance(Optional[Integer]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/TransferExecutor.html#setTemplateInstance(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTemplateInstance</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Set the instance of the template, if any
+</p><div class="fullcomment"><div class="comment cmt"><p>Set the instance of the template, if any
+</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>the instance of the template</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

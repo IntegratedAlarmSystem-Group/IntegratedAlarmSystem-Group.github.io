@@ -495,6 +495,22 @@ otherwise use the default
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.ScalaTransferExecutor#getIdentifier" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getIdentifier(id:String):String"></a><a id="getIdentifier(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTF.html#getIdentifier(id:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getIdentifier</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the id to translate, templated or not</p></dd><dt>returns</dt><dd class="cmt"><p>teh identifer translated if the ASCE is templated</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.TransferExecutor#getTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getTemplateInstance():java.util.Optional[Integer]"></a><a id="getTemplateInstance():Optional[Integer]"></a>
       <span class="permalink">
@@ -605,9 +621,9 @@ goes below HighOFF, then the alarm is deactivated
 is greater then HighON
 </p>
     </li><li name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF#initialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="initialize():Unit"></a>
+      <a id="initialize(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo):Unit"></a><a id="initialize(Set[IasioInfo],IasioInfo):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTF.html#initialize():Unit" title="Permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTF.html#initialize(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -616,34 +632,14 @@ is greater then HighON
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">initialize</span><span class="params">(<span name="inputsInfo">inputsInfo: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a>]</span>, <span name="outputInfo">outputInfo: <a href="../IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Initialize the TF by getting the four properties
 (being the properties lazy, they will be initialized here.</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the TF by getting the four properties
 (being the properties lazy, they will be initialized here.</p><p>This method merely checks if the values of the properties are coherent
 with the definitions given above.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a> → <a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>See also</dt><dd><span class="cmt"><p>TransferExecutor#initialize()</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#internalInitialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="internalInitialize(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="internalInitialize(Optional[Integer]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTF.html#internalInitialize(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">internalInitialize</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Internal initialization, sets the instance of the template, if any,
-before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
-</p><div class="fullcomment"><div class="comment cmt"><p>Internal initialization, sets the instance of the template, if any,
-before delegating to the user defined initialization to <code><span class="extype" name="#initialize()">#initialize()</span></code>
-</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>The not <code>null</code> instance of the template</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">inputsInfo</dt><dd class="cmt"><p>The IDs and types of the inputs</p></dd><dt class="param">outputInfo</dt><dd class="cmt"><p>The Id and type of thr output</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF">MinMaxThresholdTF</a> → <a href="../ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -767,6 +763,24 @@ lower then LowON
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.TransferExecutor#setTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setTemplateInstance(templateInstance:java.util.Optional[Integer]):Unit"></a><a id="setTemplateInstance(Optional[Integer]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTF.html#setTemplateInstance(templateInstance:java.util.Optional[Integer]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTemplateInstance</span><span class="params">(<span name="templateInstance">templateInstance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Set the instance of the template, if any
+</p><div class="fullcomment"><div class="comment cmt"><p>Set the instance of the template, if any
+</p></div><dl class="paramcmts block"><dt class="param">templateInstance</dt><dd class="cmt"><p>the instance of the template</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../TransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.TransferExecutor">TransferExecutor</a></dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.impls.MinMaxThresholdTF#shutdown" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="shutdown():Unit"></a>
       <span class="permalink">

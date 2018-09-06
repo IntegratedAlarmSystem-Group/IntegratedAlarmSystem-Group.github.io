@@ -175,6 +175,10 @@
                         <a href="IasIOJ.html" title="The java countr part of the scala IasIO, that is the view of an InOut for the TF">IasIOJ</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="IasioInfo.html" title="The association of ID and type to be passed to the initialize method of the transfer function"></a>
+                        <a href="IasioInfo.html" title="The association of ID and type to be passed to the initialize method of the transfer function">IasioInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="trait" href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user."></a>
                         <a href="JavaTransfer.html" title="JavaTransfer calls the java transfer function provided by the user.">JavaTransfer</a>
                       </li><li class="current-entities indented5">
@@ -573,6 +577,24 @@ but automatically implemented by the ASCE
       </span>
       
       <p class="shortcomment cmt">The ID of the ASCE</p><div class="fullcomment"><div class="comment cmt"><p>The ID of the ASCE</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ComputingElement.html" class="extype" name="org.eso.ias.asce.ComputingElement">ComputingElement</a></dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.ScalaTransfer#initTransferFunction" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initTransferFunction(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo,instance:Option[Int]):scala.util.Try[Unit]"></a><a id="initTransferFunction(Set[IasioInfo],IasioInfo,Option[Int]):Try[Unit]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/ScalaTransfer.html#initTransferFunction(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo,instance:Option[Int]):scala.util.Try[Unit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initTransferFunction</span><span class="params">(<span name="inputsInfo">inputsInfo: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a>]</span>, <span name="outputInfo">outputInfo: <a href="IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a></span>, <span name="instance">instance: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Initialize the scala transfer function
+</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the scala transfer function
+</p></div><dl class="paramcmts block"><dt class="param">inputsInfo</dt><dd class="cmt"><p>The IDs and types of the inputs</p></dd><dt class="param">outputInfo</dt><dd class="cmt"><p>The Id and type of thr output</p></dd><dt class="param">instance</dt><dd class="cmt"><p>the instance</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.transfer.ScalaTransfer">ScalaTransfer</a> → <a href="../ComputingElement.html" class="extype" name="org.eso.ias.asce.ComputingElement">ComputingElement</a></dd></dl></div>
     </li><li name="org.eso.ias.asce.ComputingElement#initialize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="initialize():org.eso.ias.asce.AsceStates.State"></a><a id="initialize():State"></a>
       <span class="permalink">
@@ -917,12 +939,9 @@ from a template; empty otherwise
         <span class="name">transfer</span><span class="params">(<span name="inputs">inputs: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[_]]</span>, <span name="id">id: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="actualOutput">actualOutput: <a href="../../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.asce.transfer.ScalaTransfer.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<a href="../../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.asce.transfer.ScalaTransfer.T">T</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Update the output by running the user provided script/class against the inputs
-by stackable modifications (@see the classes mixed in the <code><span class="extype" name="AlarmSystemComponent">AlarmSystemComponent</span></code>
-class)</p><div class="fullcomment"><div class="comment cmt"><p>Update the output by running the user provided script/class against the inputs
-by stackable modifications (@see the classes mixed in the <code><span class="extype" name="AlarmSystemComponent">AlarmSystemComponent</span></code>
-class)</p><p>This method sets the validity of the output from the validity of its inputs.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The new output</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.transfer.ScalaTransfer">ScalaTransfer</a> → <a href="../ComputingElement.html" class="extype" name="org.eso.ias.asce.ComputingElement">ComputingElement</a></dd></dl></div>
+      <p class="shortcomment cmt">Runs the scala transfer function
+</p><div class="fullcomment"><div class="comment cmt"><p>Runs the scala transfer function
+</p></div><dl class="paramcmts block"><dt class="param">inputs</dt><dd class="cmt"><p>The actual inputs</p></dd><dt class="param">id</dt><dd class="cmt"><p>The identifier</p></dd><dt class="param">actualOutput</dt><dd class="cmt"><p>the actual output</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.transfer.ScalaTransfer">ScalaTransfer</a> → <a href="../ComputingElement.html" class="extype" name="org.eso.ias.asce.ComputingElement">ComputingElement</a></dd></dl></div>
     </li><li name="org.eso.ias.asce.ComputingElement#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="update(iasValues:Set[org.eso.ias.types.IASValue[_]]):(Option[org.eso.ias.types.InOut[T]],org.eso.ias.asce.AsceStates.State)"></a><a id="update(Set[IASValue[_]]):(Option[InOut[T]],State)"></a>
       <span class="permalink">

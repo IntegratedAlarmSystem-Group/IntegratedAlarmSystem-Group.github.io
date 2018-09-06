@@ -356,7 +356,8 @@ respecting its refresh rate.
         <span class="name">ComputingElement</span><span class="params">(<span name="asceIdentifier">asceIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="_output">_output: <a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.asce.ComputingElement.T">T</span>]</span>, <span name="initialInputs">initialInputs: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[_]]</span>, <span name="tfSetting">tfSetting: <a href="transfer/TransferFunctionSetting.html" class="extype" name="org.eso.ias.asce.transfer.TransferFunctionSetting">TransferFunctionSetting</a></span>, <span name="validityThresholdSecs">validityThresholdSecs: <span class="extype" name="scala.Int">Int</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">validityThresholdSecs</dt><dd class="cmt"><p>the threshold (seconds) to set the validity of the output
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">validityThresholdSecs</dt><dd class="cmt"><p>the threshold (seconds), including toelerance,
+                             to set the validity of the output
                              taking into account when the timestamps of the inputs
                              and the constraint possibly set in the TF</p></dd></dl></div>
     </li></ol>
@@ -366,7 +367,25 @@ respecting its refresh rate.
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="org.eso.ias.asce.ComputingElement#tfLanguage" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="org.eso.ias.asce.ComputingElement#initTransferFunction" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="initTransferFunction(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo,instance:Option[Int]):scala.util.Try[Unit]"></a><a id="initTransferFunction(Set[IasioInfo],IasioInfo,Option[Int]):Try[Unit]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/asce/ComputingElement.html#initTransferFunction(inputsInfo:Set[org.eso.ias.asce.transfer.IasioInfo],outputInfo:org.eso.ias.asce.transfer.IasioInfo,instance:Option[Int]):scala.util.Try[Unit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initTransferFunction</span><span class="params">(<span name="inputsInfo">inputsInfo: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="transfer/IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a>]</span>, <span name="outputInfo">outputInfo: <a href="transfer/IasioInfo.html" class="extype" name="org.eso.ias.asce.transfer.IasioInfo">IasioInfo</a></span>, <span name="instance">instance: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Initialize the scala transfer function
+</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the scala transfer function
+</p></div><dl class="paramcmts block"><dt class="param">inputsInfo</dt><dd class="cmt"><p>The IDs and types of the inputs</p></dd><dt class="param">outputInfo</dt><dd class="cmt"><p>The Id and type of thr output</p></dd><dt class="param">instance</dt><dd class="cmt"><p>the instance</p></dd></dl></div>
+    </li><li name="org.eso.ias.asce.ComputingElement#tfLanguage" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="tfLanguage:org.eso.ias.asce.transfer.TransferFunctionLanguage.Value"></a><a id="tfLanguage:transfer.TransferFunctionLanguage.Value"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/asce/ComputingElement.html#tfLanguage:org.eso.ias.asce.transfer.TransferFunctionLanguage.Value" title="Permalink">
@@ -400,11 +419,7 @@ when building objects of this class
         <span class="name">transfer</span><span class="params">(<span name="inputs">inputs: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[_]]</span>, <span name="id">id: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="actualOutput">actualOutput: <a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.asce.ComputingElement.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<a href="../types/InOut.html" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.asce.ComputingElement.T">T</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Update the output by running the user provided script/class against the inputs
-by stackable modifications (@see the classes mixed in the <code><span class="extype" name="AlarmSystemComponent">AlarmSystemComponent</span></code>
-class)</p><div class="fullcomment"><div class="comment cmt"><p>Update the output by running the user provided script/class against the inputs
-by stackable modifications (@see the classes mixed in the <code><span class="extype" name="AlarmSystemComponent">AlarmSystemComponent</span></code>
-class)</p><p>This method sets the validity of the output from the validity of its inputs.
+      <p class="shortcomment cmt">Update the output by running the user provided script/class (TF) against the inputs</p><div class="fullcomment"><div class="comment cmt"><p>Update the output by running the user provided script/class (TF) against the inputs</p><p>This method sets the validity of the output from the validity of its inputs.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The new output</p></dd></dl></div>
     </li></ol>
             </div>

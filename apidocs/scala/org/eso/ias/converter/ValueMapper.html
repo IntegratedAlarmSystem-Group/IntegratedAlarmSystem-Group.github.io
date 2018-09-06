@@ -513,6 +513,24 @@ to send to the core of the IAS
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.converter.ValueMapper#getId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getId(identifier:org.eso.ias.types.Identifier):String"></a><a id="getId(Identifier):String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/converter/ValueMapper.html#getId(identifier:org.eso.ias.types.Identifier):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getId</span><span class="params">(<span name="identifier">identifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the id taking template into account
+</p><div class="fullcomment"><div class="comment cmt"><p>Get the id taking template into account
+</p></div><dl class="paramcmts block"><dt class="param">identifier</dt><dd class="cmt"><p>The identifier</p></dd><dt>returns</dt><dd class="cmt"><p>the ID cleaned of the template index</p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -635,9 +653,9 @@ to send to the core of the IAS
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.eso.ias.converter.ValueMapper#translate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="translate(remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.types.IASTypes,receptionTStamp:Long):org.eso.ias.types.IASValue[_]"></a><a id="translate(MonitorPointData,IASTypes,Long):IASValue[_]"></a>
+      <a id="translate(identifier:org.eso.ias.types.Identifier,remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.types.IASTypes,receptionTStamp:Long,minTemplateIndex:java.util.Optional[Integer],maxTemplateIndex:java.util.Optional[Integer]):org.eso.ias.types.IASValue[_]"></a><a id="translate(Identifier,MonitorPointData,IASTypes,Long,Optional[Integer],Optional[Integer]):IASValue[_]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/ValueMapper.html#translate(remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.types.IASTypes,receptionTStamp:Long):org.eso.ias.types.IASValue[_]" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/ValueMapper.html#translate(identifier:org.eso.ias.types.Identifier,remoteSystemData:org.eso.ias.plugin.publisher.MonitorPointData,type:org.eso.ias.types.IASTypes,receptionTStamp:Long,minTemplateIndex:java.util.Optional[Integer],maxTemplateIndex:java.util.Optional[Integer]):org.eso.ias.types.IASValue[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -646,7 +664,7 @@ to send to the core of the IAS
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">translate</span><span class="params">(<span name="remoteSystemData">remoteSystemData: <a href="../plugin/publisher/MonitorPointData.html" class="extype" name="org.eso.ias.plugin.publisher.MonitorPointData">MonitorPointData</a></span>, <span name="type">type: <a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a></span>, <span name="receptionTStamp">receptionTStamp: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>
+        <span class="name">translate</span><span class="params">(<span name="identifier">identifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="remoteSystemData">remoteSystemData: <a href="../plugin/publisher/MonitorPointData.html" class="extype" name="org.eso.ias.plugin.publisher.MonitorPointData">MonitorPointData</a></span>, <span name="type">type: <a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a></span>, <span name="receptionTStamp">receptionTStamp: <span class="extype" name="scala.Long">Long</span></span>, <span name="minTemplateIndex">minTemplateIndex: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>, <span name="maxTemplateIndex">maxTemplateIndex: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>
       </span>
       
       <p class="shortcomment cmt">Convert the <code><span class="extype" name="MonitorPointData">MonitorPointData</span></code> received by a plugin
