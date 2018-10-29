@@ -190,7 +190,7 @@
                         <a class="trait" href="InputsListener.html" title="A listener of inputs like the DASU"></a>
                         <a href="InputsListener.html" title="A listener of inputs like the DASU">InputsListener</a>
                       </li><li class="current-entities indented5">
-                        <a class="object" href="KafkaSubscriber$.html" title=""></a>
+                        <a class="object" href="KafkaSubscriber$.html" title="KafkaSubscriber companion object"></a>
                         <a class="class" href="KafkaSubscriber.html" title="Read IASValues from the kafka queue and forward them to the listener for processing."></a>
                         <a href="KafkaSubscriber.html" title="Read IASValues from the kafka queue and forward them to the listener for processing.">KafkaSubscriber</a>
                       </li><li name="org.eso.ias.dasu.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -206,22 +206,6 @@
       </span>
       <span class="symbol">
         <a title="" href="../test/index.html"><span class="name">test</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.dasu">dasu</a></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.topology" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="topology"></a><a id="topology:topology"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#topology" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../topology/index.html"><span class="name">topology</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.dasu">dasu</a></dd></dl></div>
@@ -323,9 +307,9 @@
       
       <p class="shortcomment cmt">A listener of inputs like the DASU</p>
     </li><li name="org.eso.ias.dasu.subscriber.KafkaSubscriber" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="KafkaSubscriberextendsKafkaIasiosConsumer.IasioListenerwithInputSubscriber"></a><a id="KafkaSubscriber:KafkaSubscriber"></a>
+      <a id="KafkaSubscriberextendsSimpleKafkaIasiosConsumer.IasioListenerwithInputSubscriber"></a><a id="KafkaSubscriber:KafkaSubscriber"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/index.html#KafkaSubscriberextendsKafkaIasiosConsumer.IasioListenerwithInputSubscriber" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/subscriber/index.html#KafkaSubscriberextendsSimpleKafkaIasiosConsumer.IasioListenerwithInputSubscriber" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -334,12 +318,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Read IASValues from the kafka queue and forward them to the listener for processing." href="KafkaSubscriber.html"><span class="name">KafkaSubscriber</span></a><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span> with <a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>
+        <a title="Read IASValues from the kafka queue and forward them to the listener for processing." href="KafkaSubscriber.html"><span class="name">KafkaSubscriber</span></a><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span> with <a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>
       </span>
       
       <p class="shortcomment cmt"> Read IASValues from the kafka queue
  and forward them to the listener for processing.</p><div class="fullcomment"><div class="comment cmt"><p> Read IASValues from the kafka queue
- and forward them to the listener for processing.</p><p> KafkaSubscriber delegates to KafkaIasiosConsumer.
+ and forward them to the listener for processing.</p><p> KafkaSubscriber delegates to KafkaIasiosConsumer and it is mostly
+ a covenience class to use the java KafkaIasiosConsumer class from scala</p><p> Filtering by ID, passed in startSuscriber, is supported by delegating
+ to the KafkaIasiosConsumer.
 </p></div></div>
     </li></ol>
             </div>
@@ -361,10 +347,10 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="KafkaSubscriber$.html"><span class="name">KafkaSubscriber</span></a>
+        <a title="KafkaSubscriber companion object" href="KafkaSubscriber$.html"><span class="name">KafkaSubscriber</span></a>
       </span>
       
-      
+      <p class="shortcomment cmt"> KafkaSubscriber companion object</p>
     </li>
               </ol>
             </div>

@@ -362,9 +362,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.eso.ias.supervisor.test.DasuMock#asceDaos" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="asceDaos:List[org.eso.ias.cdb.pojos.AsceDao]"></a><a id="asceDaos:List[AsceDao]"></a>
+      <a id="asceDaos:Seq[org.eso.ias.cdb.pojos.AsceDao]"></a><a id="asceDaos:Seq[AsceDao]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#asceDaos:List[org.eso.ias.cdb.pojos.AsceDao]" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#asceDaos:Seq[org.eso.ias.cdb.pojos.AsceDao]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -373,7 +373,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">asceDaos</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="../../cdb/pojos/AsceDao.html" class="extype" name="org.eso.ias.cdb.pojos.AsceDao">AsceDao</a>]</span>
+        <span class="name">asceDaos</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../cdb/pojos/AsceDao.html" class="extype" name="org.eso.ias.cdb.pojos.AsceDao">AsceDao</a>]</span>
       </span>
       
       <p class="shortcomment cmt">The configuration of the ASCEs that run in the DASU
@@ -667,9 +667,9 @@ while the validity could change.
       
       <p class="shortcomment cmt">The inputs of the DASU</p>
     </li><li name="org.eso.ias.supervisor.test.DasuMock#inputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
+      <a id="inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Iterable[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/supervisor/test/DasuMock.html#inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -678,7 +678,7 @@ while the validity could change.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Updates the output with the inputs received
@@ -925,8 +925,7 @@ from a template; empty otherwise
       </span>
       
       <p class="shortcomment cmt">The minimum allowed refresh rate when a flow of inputs arrive (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>The minimum allowed refresh rate when a flow of inputs arrive (i.e. the throttiling)
-is given by <span class="extype" name="TimeScheduler.DefaultMinAllowedRefreshRate">TimeScheduler.DefaultMinAllowedRefreshRate</span>
-if not overridden by a java property
+is given by <a href="../../dasu/Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr" name="org.eso.ias.dasu.Dasu#DefaultMinAllowedRefreshRate">Dasu.DefaultMinAllowedRefreshRate</a>, if not overridden by a java property
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>

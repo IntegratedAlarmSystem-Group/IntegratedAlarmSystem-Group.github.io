@@ -165,22 +165,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
-    </li><li name="org.eso.ias.component" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="component"></a><a id="component:component"></a>
-      <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#component" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../component/index.html"><span class="name">component</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li name="org.eso.ias.converter" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="converter"></a><a id="converter:converter"></a>
       <span class="permalink">
@@ -277,22 +261,6 @@
       </span>
       
       
-    </li><li name="org.eso.ias.dasu.topology" visbl="pub" class="indented5 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="topology"></a><a id="topology:topology"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#topology" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="topology/index.html"><span class="name">topology</span></a>
-      </span>
-      
-      
     </li><li class="current-entities indented4">
                         <a class="object" href="Dasu$.html" title="Companion object"></a>
                         <a class="class" href="Dasu.html" title="The Distributed Alarm System Unit (DASU)."></a>
@@ -302,14 +270,30 @@
                         <a class="class" href="DasuImpl.html" title="The implementation of the DASU."></a>
                         <a href="DasuImpl.html" title="The implementation of the DASU.">DasuImpl</a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="IasiosReceiver$.html" title="Companion object"></a>
-                        <a class="class" href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB."></a>
-                        <a href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB.">IasiosReceiver</a>
+                        <a class="object" href="DasuStatistics$.html" title="Companion object with definitions of constants"></a>
+                        <a class="class" href="DasuStatistics.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU."></a>
+                        <a href="DasuStatistics.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU.">DasuStatistics</a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="StatsCollector$.html" title="Companion object with definitions of constants"></a>
-                        <a class="class" href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU."></a>
-                        <a href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU.">StatsCollector</a>
-                      </li><li name="org.eso.ias.heartbeat" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                        <a class="object" href="StatsCollectorBase$.html" title=""></a>
+                        <a class="class" href="StatsCollectorBase.html" title="Base class for generating statistics at definite time intervals"></a>
+                        <a href="StatsCollectorBase.html" title="Base class for generating statistics at definite time intervals">StatsCollectorBase</a>
+                      </li><li name="org.eso.ias.extras" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="extras"></a><a id="extras:extras"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#extras" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../extras/index.html"><span class="name">extras</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="heartbeat"></a><a id="heartbeat:heartbeat"></a>
       <span class="permalink">
       <a href="../../../org/eso/ias/index.html#heartbeat" title="Permalink">
@@ -612,10 +596,10 @@ of the output collecting the inputs intil the throttling time interval elapses.
 - a thread for the throttling to avoid that processing too many
   inputs takes 100% CPU
 </p></div></div>
-    </li><li name="org.eso.ias.dasu.IasiosReceiver" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="IasiosReceiverextendsSimpleStringConsumer.KafkaConsumerListener"></a><a id="IasiosReceiver:IasiosReceiver"></a>
+    </li><li name="org.eso.ias.dasu.DasuStatistics" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DasuStatisticsextendsStatsCollectorBase"></a><a id="DasuStatistics:DasuStatistics"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#IasiosReceiverextendsSimpleStringConsumer.KafkaConsumerListener" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#DasuStatisticsextendsStatsCollectorBase" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -624,37 +608,30 @@ of the output collecting the inputs intil the throttling time interval elapses.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Objects of this class gets IASIOs from the BSDB." href="IasiosReceiver.html"><span class="name">IasiosReceiver</span></a><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Objects of this class gets IASIOs from the BSDB.</p><div class="fullcomment"><div class="comment cmt"><p>Objects of this class gets IASIOs from the BSDB.</p><p>The receiver gets all the IASIOs published in the BSDB queues
-and discards those not required by the DASU.
-The filtering is based on the IDs of the IASValues:
-the JSON string is converted in a IASValue then its identifier
-is checked against the possible inputs and finally accepted or discarded.
-This is not the most efficient way as it requires to parse JSON strings
-to decide if a value must be accepted or rejected.</p><p>IasiosReceiver objects store the IASValue received in the last time interval
-in a map so that the last received values, override the oldest ones.
-</p></div></div>
-    </li><li name="org.eso.ias.dasu.StatsCollector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="StatsCollectorextendsAnyRef"></a><a id="StatsCollector:StatsCollector"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#StatsCollectorextendsAnyRef" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a title="StasCollector generates and publish statistics of the generation of the output by the DASU." href="StatsCollector.html"><span class="name">StatsCollector</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="StasCollector generates and publish statistics of the generation of the output by the DASU." href="DasuStatistics.html"><span class="name">DasuStatistics</span></a><span class="result"> extends <a href="StatsCollectorBase.html" class="extype" name="org.eso.ias.dasu.StatsCollectorBase">StatsCollectorBase</a></span>
       </span>
       
       <p class="shortcomment cmt">StasCollector generates and publish statistics of the generation of the output
 by the DASU.</p><div class="fullcomment"><div class="comment cmt"><p>StasCollector generates and publish statistics of the generation of the output
 by the DASU.</p><p>The method updateStats is expected to be calles after each generation of the output by the DASU.
 </p></div></div>
+    </li><li name="org.eso.ias.dasu.StatsCollectorBase" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StatsCollectorBaseextendsAnyRef"></a><a id="StatsCollectorBase:StatsCollectorBase"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#StatsCollectorBaseextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Base class for generating statistics at definite time intervals" href="StatsCollectorBase.html"><span class="name">StatsCollectorBase</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Base class for generating statistics at definite time intervals
+</p>
     </li></ol>
             </div>
 
@@ -695,10 +672,10 @@ by the DASU.</p><p>The method updateStats is expected to be calles after each ge
       </span>
       
       
-    </li><li name="org.eso.ias.dasu.IasiosReceiver" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IasiosReceiver"></a><a id="IasiosReceiver:IasiosReceiver"></a>
+    </li><li name="org.eso.ias.dasu.DasuStatistics" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DasuStatistics"></a><a id="DasuStatistics:DasuStatistics"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#IasiosReceiver" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#DasuStatistics" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -707,26 +684,26 @@ by the DASU.</p><p>The method updateStats is expected to be calles after each ge
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Companion object" href="IasiosReceiver$.html"><span class="name">IasiosReceiver</span></a>
-      </span>
-      
-      <p class="shortcomment cmt">Companion object</p>
-    </li><li name="org.eso.ias.dasu.StatsCollector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StatsCollector"></a><a id="StatsCollector:StatsCollector"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#StatsCollector" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="Companion object with definitions of constants" href="StatsCollector$.html"><span class="name">StatsCollector</span></a>
+        <a title="Companion object with definitions of constants" href="DasuStatistics$.html"><span class="name">DasuStatistics</span></a>
       </span>
       
       <p class="shortcomment cmt">Companion object with definitions of constants</p>
+    </li><li name="org.eso.ias.dasu.StatsCollectorBase" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StatsCollectorBase"></a><a id="StatsCollectorBase:StatsCollectorBase"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/dasu/index.html#StatsCollectorBase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="StatsCollectorBase$.html"><span class="name">StatsCollectorBase</span></a>
+      </span>
+      
+      
     </li>
               </ol>
             </div>

@@ -165,22 +165,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
-    </li><li name="org.eso.ias.component" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="component"></a><a id="component:component"></a>
-      <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#component" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../component/index.html"><span class="name">component</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li name="org.eso.ias.converter" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="converter"></a><a id="converter:converter"></a>
       <span class="permalink">
@@ -210,6 +194,22 @@
       </span>
       <span class="symbol">
         <a title="" href="../dasu/index.html"><span class="name">dasu</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.extras" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="extras"></a><a id="extras:extras"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#extras" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../extras/index.html"><span class="name">extras</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
@@ -358,6 +358,10 @@
       
       
     </li><li class="current-entities indented4">
+                        <a class="object" href="AntPadInhibitor$.html" title=""></a>
+                        <a class="class" href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern."></a>
+                        <a href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern.">AntPadInhibitor</a>
+                      </li><li class="current-entities indented4">
                         <a class="object" href="BackupSelector$.html" title=""></a>
                         <a class="class" href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation."></a>
                         <a href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation.">BackupSelector</a>
@@ -504,7 +508,44 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.tranfer.BackupSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="org.eso.ias.tranfer.AntPadInhibitor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AntPadInhibitorextendsScalaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="AntPadInhibitor:AntPadInhibitor"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#AntPadInhibitorextendsScalaTransferExecutor[org.eso.ias.types.Alarm]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern." href="AntPadInhibitor.html"><span class="name">AntPadInhibitor</span></a><span class="result"> extends <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The AntPadInhibitor transfer functions gets 2 inputs:
+- the association of antennas to pads
+- an ALARM
+It inhibits the alarm if there are no antennas in the pads
+whose name matches with the given pattern.</p><div class="fullcomment"><div class="comment cmt"><p>The AntPadInhibitor transfer functions gets 2 inputs:
+- the association of antennas to pads
+- an ALARM
+It inhibits the alarm if there are no antennas in the pads
+whose name matches with the given pattern.
+It is also possible to add a filter by antenna type by setting
+antTypePropName to one of the possible antenna types: the
+alarm is propagated if there is antennas in the pads AND at least
+one antenna of the passed type.</p><p>No check is done on the ID of the input but it must be an ALARM.
+The TF produces an alarm that is always CLEAR if there
+are no antennas in the pads or the input is CLEAR.
+If the input is SET and there are antennas in the PAD, the output
+is set and with same priority of the input.</p><p>The association of antennas to pad is a monitor point that contains
+all the antennas and the names of the relative pads where they seat.
+The matching is done by a regular expression provided as a java property.</p><p>This is an example of the value (string) of the Array-AntennasToPads,
+the monitor points that contains the pads of all the antennas:
+  DV01:A045,DV02:A025,...
+</p></div></div>
+    </li><li name="org.eso.ias.tranfer.BackupSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="BackupSelector[T]extendsScalaTransferExecutor[T]"></a><a id="BackupSelector[T]:BackupSelector[T]"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/tranfer/index.html#BackupSelector[T]extendsScalaTransferExecutor[T]" title="Permalink">
@@ -632,7 +673,23 @@ the timeout elaspes.
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="org.eso.ias.tranfer.BackupSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+                <li name="org.eso.ias.tranfer.AntPadInhibitor" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AntPadInhibitor"></a><a id="AntPadInhibitor:AntPadInhibitor"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#AntPadInhibitor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AntPadInhibitor$.html"><span class="name">AntPadInhibitor</span></a>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.tranfer.BackupSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="BackupSelector"></a><a id="BackupSelector:BackupSelector"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/tranfer/index.html#BackupSelector" title="Permalink">

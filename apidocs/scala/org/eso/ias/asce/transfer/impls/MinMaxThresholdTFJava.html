@@ -515,6 +515,25 @@ its inputs can or cannot be generated out of the same template. In the latter,
 their identifiers must be enriched with the number of the instance.
 </p></div><dl class="paramcmts block"><dt class="param">inputs</dt><dd class="cmt"><p>the map of the inputs</p></dd><dt class="param">id</dt><dd class="cmt"><p>The (non templated) identifier of the value</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue of the given ID or <code>null</code>
         if a IASValue with the passed id is not in the map</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../index.html" class="extype" name="org.eso.ias.asce.transfer">org.eso.ias.asce.transfer</a>] </dd><dt>Definition Classes</dt><dd><a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a></dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.JavaTransferExecutor#getValue" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValue(inputs:java.util.Map[String,org.eso.ias.asce.transfer.IasIOJ[_]],id:String,instance:java.util.Optional[Integer]):org.eso.ias.asce.transfer.IasIOJ[_]"></a><a id="getValue(Map[String,IasIOJ[_]],String,Optional[Integer]):IasIOJ[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MinMaxThresholdTFJava.html#getValue(inputs:java.util.Map[String,org.eso.ias.asce.transfer.IasIOJ[_]],id:String,instance:java.util.Optional[Integer]):org.eso.ias.asce.transfer.IasIOJ[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValue</span><span class="params">(<span name="inputs">inputs: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="../IasIOJ.html" class="extype" name="org.eso.ias.asce.transfer.IasIOJ">IasIOJ</a>[_]]</span>, <span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="instance">instance: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Integer">Integer</span>]</span>)</span><span class="result">: <a href="../IasIOJ.html" class="extype" name="org.eso.ias.asce.transfer.IasIOJ">IasIOJ</a>[_]</span>
+      </span>
+      
+      <p class="shortcomment cmt">This method is mostly to get templated input instances for which the
+instance, not known to the ACSE, must be passed.</p><div class="fullcomment"><div class="comment cmt"><p>This method is mostly to get templated input instances for which the
+instance, not known to the ACSE, must be passed.</p><p>If the instance is empty, it delegates to <code><span class="extype" name="JavaTransferExecutor#getValue(Map,">String)</span></code>.</p></div><dl class="paramcmts block"><dt class="param">inputs</dt><dd class="cmt"><p>the map of the inputs</p></dd><dt class="param">id</dt><dd class="cmt"><p>The (non templated) identifier of the value</p></dd><dt class="param">instance</dt><dd class="cmt"><p>The instance defined for templated input instances</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue of the given ID or <code>null</code>
+        if a IASValue with the passed id is not in the map</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../index.html" class="extype" name="org.eso.ias.asce.transfer">org.eso.ias.asce.transfer</a>] </dd><dt>Definition Classes</dt><dd><a href="../JavaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.JavaTransferExecutor">JavaTransferExecutor</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">

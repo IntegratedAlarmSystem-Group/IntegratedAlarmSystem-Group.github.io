@@ -172,7 +172,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">WebServerSender</span><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span></span>
+        <span class="name">WebServerSender</span><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span></span>
       </span>
       </h4>
 
@@ -181,7 +181,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -207,7 +207,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.webserversender.WebServerSender"><span>WebServerSender</span></li><li class="in" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener"><span>IasioListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.webserversender.WebServerSender"><span>WebServerSender</span></li><li class="in" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener"><span>IasioListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -228,9 +228,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.webserversender.WebServerSender#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,hbProducer:org.eso.ias.heartbeat.HbProducer):org.eso.ias.webserversender.WebServerSender"></a><a id="&lt;init&gt;:WebServerSender"></a>
+      <a id="&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,hbProducer:org.eso.ias.heartbeat.HbProducer,acceptedIds:java.util.Set[String],acceptedTypes:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.webserversender.WebServerSender"></a><a id="&lt;init&gt;:WebServerSender"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,hbProducer:org.eso.ias.heartbeat.HbProducer):org.eso.ias.webserversender.WebServerSender" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,hbProducer:org.eso.ias.heartbeat.HbProducer,acceptedIds:java.util.Set[String],acceptedTypes:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.webserversender.WebServerSender" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -239,12 +239,12 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">WebServerSender</span><span class="params">(<span name="senderID">senderID: <span class="extype" name="java.lang.String">String</span></span>, <span name="kafkaServers">kafkaServers: <span class="extype" name="java.lang.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.webserversender.WebServerSender.WebServerSenderListener">WebServerSenderListener</span></span>, <span name="hbFrequency">hbFrequency: <span class="extype" name="scala.Int">Int</span></span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>)</span>
+        <span class="name">WebServerSender</span><span class="params">(<span name="senderID">senderID: <span class="extype" name="java.lang.String">String</span></span>, <span name="kafkaServers">kafkaServers: <span class="extype" name="java.lang.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.webserversender.WebServerSender.WebServerSenderListener">WebServerSenderListener</span></span>, <span name="hbFrequency">hbFrequency: <span class="extype" name="scala.Int">Int</span></span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="acceptedIds">acceptedIds: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="acceptedTypes">acceptedTypes: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>)</span>
       </span>
       
       <p class="shortcomment cmt">Constructor
 </p><div class="fullcomment"><div class="comment cmt"><p>Constructor
-</p></div><dl class="paramcmts block"><dt class="param">senderID</dt><dd class="cmt"><p>Identifier of the WebServerSender</p></dd><dt class="param">kafkaServers</dt><dd class="cmt"><p>Kafka servers URL</p></dd><dt class="param">props</dt><dd class="cmt"><p>the properties to get kafka servers, topic names and webserver uri</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listenr of the messages sent to the websocket server</p></dd><dt class="param">hbFrequency</dt><dd class="cmt"><p>the frequency of the heartbeat (seconds)</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>the sender of HBs</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">senderID</dt><dd class="cmt"><p>Identifier of the WebServerSender</p></dd><dt class="param">kafkaServers</dt><dd class="cmt"><p>Kafka servers URL</p></dd><dt class="param">props</dt><dd class="cmt"><p>the properties to get kafka servers, topic names and webserver uri</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listenr of the messages sent to the websocket server</p></dd><dt class="param">hbFrequency</dt><dd class="cmt"><p>the frequency of the heartbeat (seconds)</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>the sender of HBs</p></dd><dt class="param">acceptedIds</dt><dd class="cmt"><p>The IDs of the IASIOs to consume</p></dd><dt class="param">acceptedTypes</dt><dd class="cmt"><p>The IASTypes to consume</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
     </li></ol>
             </div>
 
@@ -452,10 +452,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.webserversender.WebServerSender#iasioReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="iasioReceived(event:org.eso.ias.types.IASValue[_]):Unit"></a><a id="iasioReceived(IASValue[_]):Unit"></a>
+    </li><li name="org.eso.ias.webserversender.WebServerSender#iasiosReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="iasiosReceived(events:java.util.Collection[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="iasiosReceived(Collection[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#iasioReceived(event:org.eso.ias.types.IASValue[_]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#iasiosReceived(events:java.util.Collection[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -464,11 +464,11 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">iasioReceived</span><span class="params">(<span name="event">event: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">iasiosReceived</span><span class="params">(<span name="events">events: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">This method receives IASValues published in the BSDB.</p><div class="fullcomment"><div class="comment cmt"><p>This method receives IASValues published in the BSDB.
-</p></div><dl class="paramcmts block"><dt class="param">event</dt><dd class="cmt"><p>The IASIO received in the topic</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.webserversender.WebServerSender">WebServerSender</a> → IasioListener</dd><dt>See also</dt><dd><span class="cmt"><p><code><span class="extype" name="IasioListener#iasioReceived(IASValue)">IasioListener#iasioReceived(IASValue)</span></code></p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">events</dt><dd class="cmt"><p>The IASIOs received in the topic</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.webserversender.WebServerSender">WebServerSender</a> → IasioListener</dd><dt>See also</dt><dd><span class="cmt"><p><code><span class="extype" name="IasioListener#iasiosReceived(Collection)">IasioListener#iasiosReceived(Collection)</span></code></p></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -767,8 +767,8 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">
-              <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span></h3>
+        <div class="parent" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">
+              <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

@@ -158,7 +158,7 @@
                         <a class="trait" href="InputsListener.html" title="A listener of inputs like the DASU"></a>
                         <a href="InputsListener.html" title="A listener of inputs like the DASU">InputsListener</a>
                       </li><li class="current-entities indented5">
-                        <a class="object" href="KafkaSubscriber$.html" title=""></a>
+                        <a class="object" href="KafkaSubscriber$.html" title="KafkaSubscriber companion object"></a>
                         <a class="class" href="" title="Read IASValues from the kafka queue and forward them to the listener for processing."></a>
                         <a href="" title="Read IASValues from the kafka queue and forward them to the listener for processing.">KafkaSubscriber</a>
                       </li>
@@ -186,18 +186,20 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">KafkaSubscriber</span><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span> with <a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>
+        <span class="name">KafkaSubscriber</span><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span> with <a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p> Read IASValues from the kafka queue
- and forward them to the listener for processing.</p><p> KafkaSubscriber delegates to KafkaIasiosConsumer.
+ and forward them to the listener for processing.</p><p> KafkaSubscriber delegates to KafkaIasiosConsumer and it is mostly
+ a covenience class to use the java KafkaIasiosConsumer class from scala</p><p> Filtering by ID, passed in startSuscriber, is supported by delegating
+ to the KafkaIasiosConsumer.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>, <span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>, <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -223,7 +225,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.dasu.subscriber.KafkaSubscriber"><span>KafkaSubscriber</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputSubscriber"><span>InputSubscriber</span></li><li class="in" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener"><span>IasioListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.dasu.subscriber.KafkaSubscriber"><span>KafkaSubscriber</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputSubscriber"><span>InputSubscriber</span></li><li class="in" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener"><span>IasioListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -481,10 +483,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.dasu.subscriber.KafkaSubscriber#iasioReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="iasioReceived(iasValue:org.eso.ias.types.IASValue[_]):Unit"></a><a id="iasioReceived(IASValue[_]):Unit"></a>
+    </li><li name="org.eso.ias.dasu.subscriber.KafkaSubscriber#iasiosReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="iasiosReceived(iasValues:java.util.Collection[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="iasiosReceived(Collection[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/dasu/subscriber/KafkaSubscriber.html#iasioReceived(iasValue:org.eso.ias.types.IASValue[_]):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/dasu/subscriber/KafkaSubscriber.html#iasiosReceived(iasValues:java.util.Collection[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -493,12 +495,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">iasioReceived</span><span class="params">(<span name="iasValue">iasValue: <a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">iasiosReceived</span><span class="params">(<span name="iasValues">iasValues: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Process an event (a String) received from the kafka topic
-</p><div class="fullcomment"><div class="comment cmt"><p>Process an event (a String) received from the kafka topic
-</p></div><dl class="paramcmts block"><dt class="param">iasValue</dt><dd class="cmt"><p>The value received in the topic</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.subscriber.KafkaSubscriber">KafkaSubscriber</a> → IasioListener</dd><dt>See also</dt><dd><span class="cmt"><p>KafkaConsumerListener</p></span></dd></dl></div>
+      <p class="shortcomment cmt">Forward the IASValue received from the kafka topic
+to the listener
+</p><div class="fullcomment"><div class="comment cmt"><p>Forward the IASValue received from the kafka topic
+to the listener
+</p></div><dl class="paramcmts block"><dt class="param">iasValues</dt><dd class="cmt"><p>The values read from the BSDB</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.dasu.subscriber.KafkaSubscriber">KafkaSubscriber</a> → IasioListener</dd><dt>See also</dt><dd><span class="cmt"><p>IasiosListener</p></span></dd></dl></div>
     </li><li name="org.eso.ias.dasu.subscriber.KafkaSubscriber#initializeSubscriber" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="initializeSubscriber():scala.util.Try[Unit]"></a><a id="initializeSubscriber():Try[Unit]"></a>
       <span class="permalink">
@@ -731,8 +735,8 @@
         <div id="inheritedMembers">
         <div class="parent" name="org.eso.ias.dasu.subscriber.InputSubscriber">
               <h3>Inherited from <a href="InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></h3>
-            </div><div class="parent" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">
-              <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span></h3>
+            </div><div class="parent" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">
+              <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

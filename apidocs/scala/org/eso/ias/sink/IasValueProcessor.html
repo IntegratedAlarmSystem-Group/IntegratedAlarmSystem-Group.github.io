@@ -286,7 +286,7 @@ from the active listener.
         <span class="name">IasValueProcessor</span><span class="params">(<span name="processorIdentifier">processorIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="listeners">listeners: <span class="extype" name="scala.List">List</span>[<a href="ValueListener.html" class="extype" name="org.eso.ias.sink.ValueListener">ValueListener</a>]</span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="inputsSubscriber">inputsSubscriber: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="iasDao">iasDao: <a href="../cdb/pojos/IasDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasDao">IasDao</a></span>, <span name="iasioDaos">iasioDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/IasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a>]</span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">processorIdentifier</dt><dd class="cmt"><p>the idenmtifier of the value processor</p></dd><dt class="param">listeners</dt><dd class="cmt"><p>the processors of the IasValues read from the BSDB</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>The HB generator</p></dd><dt class="param">inputsSubscriber</dt><dd class="cmt"><p>The subscriber to get events from the BDSB</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">processorIdentifier</dt><dd class="cmt"><p>the idenmtifier of the value processor</p></dd><dt class="param">listeners</dt><dd class="cmt"><p>the processors of the IasValues read from the BSDB</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>The HB generator</p></dd><dt class="param">inputsSubscriber</dt><dd class="cmt"><p>The subscriber to get events from the BDSB</p></dd><dt class="param">iasDao</dt><dd class="cmt"><p>The configuration of the IAS read from the CDB</p></dd><dt class="param">iasioDaos</dt><dd class="cmt"><p>The configuration of the IASIOs read from the CDB</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -677,9 +677,9 @@ processing vales read from the BSDB
       
       <p class="shortcomment cmt">Signal if the processor has been initialized</p>
     </li><li name="org.eso.ias.sink.IasValueProcessor#inputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
+      <a id="inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Iterable[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -688,7 +688,7 @@ processing vales read from the BSDB
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">An IASIO has been read from the BSDB</p><div class="fullcomment"><div class="comment cmt"><p>An IASIO has been read from the BSDB</p><p>IASVales are initially grouped in the received IasValues

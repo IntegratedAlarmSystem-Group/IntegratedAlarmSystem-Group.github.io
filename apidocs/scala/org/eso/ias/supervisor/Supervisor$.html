@@ -154,7 +154,11 @@
                         <a class="class" href="Supervisor.html" title="A Supervisor is the container to run several DASUs into the same JVM."></a>
                         <a href="Supervisor.html" title="A Supervisor is the container to run several DASUs into the same JVM.">Supervisor</a>
                       </li><li class="current-entities indented4">
-                        <span class="separator"></span>
+                        <a class="object" href="SupervisorStatistics$.html" title=""></a>
+                        <a class="class" href="SupervisorStatistics.html" title="Stats logger produces statistics for the Supervisor"></a>
+                        <a href="SupervisorStatistics.html" title="Stats logger produces statistics for the Supervisor">SupervisorStatistics</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="TemplateHelper$.html" title="Companion object"></a>
                         <a class="class" href="TemplateHelper.html" title="TemplateHelper helps transforming DASUs, ASCEs and IASIOs defined by templates into concrete instances."></a>
                         <a href="TemplateHelper.html" title="TemplateHelper helps transforming DASUs, ASCEs and IASIOs defined by templates into concrete instances.">TemplateHelper</a>
                       </li>
@@ -404,6 +408,22 @@ read from the CDB
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.supervisor.Supervisor#cmdLineSyntax" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cmdLineSyntax:String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor$.html#cmdLineSyntax:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cmdLineSyntax</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Build the usage message</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -601,10 +621,10 @@ read from the CDB
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.supervisor.Supervisor#printUsage" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="printUsage():String"></a>
+    </li><li name="org.eso.ias.supervisor.Supervisor#parseCommandLine" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parseCommandLine(args:Array[String]):(Option[String],Option[String],Option[org.eso.ias.cdb.pojos.LogLevelDao])"></a><a id="parseCommandLine(Array[String]):(Option[String],Option[String],Option[LogLevelDao])"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/supervisor/Supervisor$.html#printUsage():String" title="Permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor$.html#parseCommandLine(args:Array[String]):(Option[String],Option[String],Option[org.eso.ias.cdb.pojos.LogLevelDao])" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -613,10 +633,11 @@ read from the CDB
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">printUsage</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">parseCommandLine</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.Option">Option</span>[<a href="../cdb/pojos/LogLevelDao.html" class="extype" name="org.eso.ias.cdb.pojos.LogLevelDao">LogLevelDao</a>])</span>
       </span>
       
-      <p class="shortcomment cmt">Build the usage message</p>
+      <p class="shortcomment cmt">Parse the command line.</p><div class="fullcomment"><div class="comment cmt"><p>Parse the command line.</p><p>If help is requested, prints the message and exits.
+</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The params read from the command line</p></dd><dt>returns</dt><dd class="cmt"><p>a tuple with the Id of the supervisor, the path of the cdb and the log level dao</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

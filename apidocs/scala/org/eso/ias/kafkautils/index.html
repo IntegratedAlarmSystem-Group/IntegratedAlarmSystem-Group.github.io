@@ -165,22 +165,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
-    </li><li name="org.eso.ias.component" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="component"></a><a id="component:component"></a>
-      <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#component" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../component/index.html"><span class="name">component</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li name="org.eso.ias.converter" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="converter"></a><a id="converter:converter"></a>
       <span class="permalink">
@@ -210,6 +194,22 @@
       </span>
       <span class="symbol">
         <a title="" href="../dasu/index.html"><span class="name">dasu</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.extras" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="extras"></a><a id="extras:extras"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#extras" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../extras/index.html"><span class="name">extras</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
@@ -263,20 +263,32 @@
       
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="FilteredKafkaIasiosConsumer.html" title="FilteredKafkaIasiosConsumer allows to set a custom filter on top of the Kafka consumer."></a>
+                        <a href="FilteredKafkaIasiosConsumer.html" title="FilteredKafkaIasiosConsumer allows to set a custom filter on top of the Kafka consumer.">FilteredKafkaIasiosConsumer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="KafkaHelper.html" title="A helper class providing useful methods and constants for Kafka"></a>
                         <a href="KafkaHelper.html" title="A helper class providing useful methods and constants for Kafka">KafkaHelper</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="KafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener."></a>
-                        <a href="KafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener.">KafkaIasiosConsumer</a>
+                        <a class="class" href="KafkaIasiosConsumer.html" title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types."></a>
+                        <a href="KafkaIasiosConsumer.html" title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types.">KafkaIasiosConsumer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic."></a>
                         <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic.">KafkaIasiosProducer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="KafkaStringsConsumer.html" title="A generic kafka consumer that forwards all the strings received in each message to the listener."></a>
+                        <a href="KafkaStringsConsumer.html" title="A generic kafka consumer that forwards all the strings received in each message to the listener.">KafkaStringsConsumer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module"></a>
                         <a href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module">KafkaUtilsException</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleKafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the KafkaStringsConsumer and forwards the IASIOs to the listener."></a>
+                        <a href="SimpleKafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the KafkaStringsConsumer and forwards the IASIOs to the listener.">SimpleKafkaIasiosConsumer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="SimpleStringConsumer.html" title="/** Generic Kafka consumer to get strings from a kafka topic."></a>
@@ -484,7 +496,23 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.kafkautils.KafkaHelper" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="org.eso.ias.kafkautils.FilteredKafkaIasiosConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FilteredKafkaIasiosConsumerextendsSimpleKafkaIasiosConsumer"></a><a id="FilteredKafkaIasiosConsumer:FilteredKafkaIasiosConsumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html#FilteredKafkaIasiosConsumerextendsSimpleKafkaIasiosConsumer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="FilteredKafkaIasiosConsumer allows to set a custom filter on top of the Kafka consumer." href="FilteredKafkaIasiosConsumer.html"><span class="name">FilteredKafkaIasiosConsumer</span></a><span class="result"> extends <a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">FilteredKafkaIasiosConsumer allows to set a custom filter on top of the Kafka consumer.</p><div class="fullcomment"><div class="comment cmt"><p>FilteredKafkaIasiosConsumer allows to set a custom filter on top of the Kafka consumer.</p><p>The filter implements the FilterIaValue interface.</p></div></div>
+    </li><li name="org.eso.ias.kafkautils.KafkaHelper" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="KafkaHelperextendsObject"></a><a id="KafkaHelper:KafkaHelper"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/kafkautils/index.html#KafkaHelperextendsObject" title="Permalink">
@@ -502,9 +530,9 @@
       <p class="shortcomment cmt">A helper class providing useful methods and constants for Kafka
 </p>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="KafkaIasiosConsumerextendsSimpleStringConsumer.KafkaConsumerListener"></a><a id="KafkaIasiosConsumer:KafkaIasiosConsumer"></a>
+      <a id="KafkaIasiosConsumerextendsSimpleKafkaIasiosConsumer"></a><a id="KafkaIasiosConsumer:KafkaIasiosConsumer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/index.html#KafkaIasiosConsumerextendsSimpleStringConsumer.KafkaConsumerListener" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html#KafkaIasiosConsumerextendsSimpleKafkaIasiosConsumer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -513,20 +541,17 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener." href="KafkaIasiosConsumer.html"><span class="name">KafkaIasiosConsumer</span></a><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></span>
+        <a title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types." href="KafkaIasiosConsumer.html"><span class="name">KafkaIasiosConsumer</span></a><span class="result"> extends <a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></span>
       </span>
       
-      <p class="shortcomment cmt">KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic
-from the SimpleStringConsumer and forwards IASIOs to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic
-from the SimpleStringConsumer and forwards IASIOs to the listener.
+      <p class="shortcomment cmt">Extends <code><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></code> providing filtering by IDs and types.</p><div class="fullcomment"><div class="comment cmt"><p>Extends <code><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></code> providing filtering by IDs and types.
 &lt;P&gt;
-Filtering is based on the ID of the IASIOs _and_ IASValue type:
+Filtering is based on the ID of the IASIOs _and_ the IASValue type:
 - if the ID of the received String is contained in <code><span class="extype" name="#acceptedIds">#acceptedIds</span></code>
-  then the IASIO is forwarded to the listener otherwise is rejected.
+  then the IASIO is forwarded to the listener otherwise it is rejected.
 - if the type of the <code><span class="extype" name="IASValue">IASValue</span></code> is contained in <code><span class="extype" name="#acceptedTypes">#acceptedTypes</span></code>
-  then the IASIO is forwarded to the listener otherwise is rejected.</p><p>&lt;BR&gt;If the caller does not set any filter, then all the received IASIOs
-will be forwarded to the listener.
-IDs and type are evaluated in AND.
+  then the IASIO is forwarded to the listener otherwise is rejected.</p><p>&lt;P&gt;If the caller does not set any filter, then all the received IASIOs
+will be forwarded to the listener.</p><p>IDs and type are evaluated in AND.
 </p></div></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosProducer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="KafkaIasiosProducerextendsObject"></a><a id="KafkaIasiosProducer:KafkaIasiosProducer"></a>
@@ -551,6 +576,39 @@ KafkaIasioProducer delegates the publishing to <code><a href="SimpleStringProduc
 For methods that do not specify partition and key, the partition is
 set to the ID of the IASValue and no partition is used.
 </p></div></div>
+    </li><li name="org.eso.ias.kafkautils.KafkaStringsConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KafkaStringsConsumerextendsRunnable"></a><a id="KafkaStringsConsumer:KafkaStringsConsumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html#KafkaStringsConsumerextendsRunnable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A generic kafka consumer that forwards all the strings received in each message to the listener." href="KafkaStringsConsumer.html"><span class="name">KafkaStringsConsumer</span></a><span class="result"> extends <span class="extype" name="java.lang.Runnable">Runnable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A generic kafka consumer that forwards all the strings received in
+each message to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>A generic kafka consumer that forwards all the strings received in
+each message to the listener.</p><p>Kafka optimize the polling by returning a bounch of messages to each poll:
+objects of this class returns all the records received in a poll to the listener.
+If the listener wants to process one message at a time, should use <code><a href="SimpleStringConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer">SimpleStringConsumer</a></code>
+instead.</p><p><code><a href="KafkaStringsConsumer.html" class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer">KafkaStringsConsumer</a></code> runs the next poll after the listener terminates processing the
+records.</p><p>&lt;P&gt;
+Kafka properties are fully customizable by calling <code><span class="extype" name="#setUp(Properties)">#setUp(Properties)</span></code>:
+defaults values are used for the missing ones.
+&lt;P&gt;
+&lt;EM&gt;Life cycle</em>: <code><span class="extype" name="#setUp()">#setUp()</span></code> or <code><span class="extype" name="#setUp(Properties)">#setUp(Properties)</span></code>
+                        must be called to initialize the object;
+                        <code><span class="extype" name="#tearDown()">#tearDown()</span></code> must be called when finished using the object;
+                        <code><span class="extype" name="#startGettingEvents(StringsConsumer,">StartPosition)</span></code> must be called to start
+                        polling events from the kafka topic</p><p><code><span class="extype" name="#startGettingEvents(StringsConsumer,">StartPosition)</span></code> returns when the consumer has been assigned to
+at least one partition. There are situations when the partitions assigned to the consumer
+can be revoked and reassigned like for example when another consumer subscribe or disconnect
+as the assignment of consumers to partitions is left to kafka in this version.</p></div></div>
     </li><li name="org.eso.ias.kafkautils.KafkaUtilsException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="KafkaUtilsExceptionextendsException"></a><a id="KafkaUtilsException:KafkaUtilsException"></a>
       <span class="permalink">
@@ -567,10 +625,10 @@ set to the ID of the IASValue and no partition is used.
       </span>
       
       <p class="shortcomment cmt">Exception retunrd by classes in KafkaUtils module</p>
-    </li><li name="org.eso.ias.kafkautils.SimpleStringConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="SimpleStringConsumerextendsRunnable"></a><a id="SimpleStringConsumer:SimpleStringConsumer"></a>
+    </li><li name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleKafkaIasiosConsumerextendsKafkaStringsConsumer.StringsConsumer"></a><a id="SimpleKafkaIasiosConsumer:SimpleKafkaIasiosConsumer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/index.html#SimpleStringConsumerextendsRunnable" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html#SimpleKafkaIasiosConsumerextendsKafkaStringsConsumer.StringsConsumer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -579,25 +637,32 @@ set to the ID of the IASValue and no partition is used.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="/** Generic Kafka consumer to get strings from a kafka topic." href="SimpleStringConsumer.html"><span class="name">SimpleStringConsumer</span></a><span class="result"> extends <span class="extype" name="java.lang.Runnable">Runnable</span></span>
+        <a title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the KafkaStringsConsumer and forwards the IASIOs to the listener." href="SimpleKafkaIasiosConsumer.html"><span class="name">SimpleKafkaIasiosConsumer</span></a><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer">StringsConsumer</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic
+from the <code><a href="KafkaStringsConsumer.html" class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer">KafkaStringsConsumer</a></code> and forwards the IASIOs to the listener.</p>
+    </li><li name="org.eso.ias.kafkautils.SimpleStringConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SimpleStringConsumerextendsKafkaStringsConsumerwithKafkaStringsConsumer.StringsConsumer"></a><a id="SimpleStringConsumer:SimpleStringConsumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html#SimpleStringConsumerextendsKafkaStringsConsumerwithKafkaStringsConsumer.StringsConsumer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="/** Generic Kafka consumer to get strings from a kafka topic." href="SimpleStringConsumer.html"><span class="name">SimpleStringConsumer</span></a><span class="result"> extends <a href="KafkaStringsConsumer.html" class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer">KafkaStringsConsumer</a> with <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer">StringsConsumer</span></span>
       </span>
       
       <p class="shortcomment cmt">/**
 Generic Kafka consumer to get strings from a kafka topic.</p><div class="fullcomment"><div class="comment cmt"><p>/**
 Generic Kafka consumer to get strings from a kafka topic.
 &lt;P&gt;
-The string are passed to the listener for further processing.
-&lt;P&gt;
-Kafka properties are fully customizable by calling <code><span class="extype" name="#setUp(Properties)">#setUp(Properties)</span></code>:
-defaults values are used for the missing properties.
-&lt;P&gt;&lt;EM&gt;Life cycle</em>: <code><span class="extype" name="#setUp()">#setUp()</span></code> or <code><span class="extype" name="#setUp(Properties)">#setUp(Properties)</span></code>
-                        must be called to initialize the object;
-                        <code><span class="extype" name="#tearDown()">#tearDown()</span></code> must be called when finished using the object;
-                        <code><span class="extype" name="#startGettingEvents(StartPosition,">KafkaConsumerListener)</span></code> must be called to start
-                        polling events from the kafka topic</p><p><code><span class="extype" name="#startGettingEvents(StartPosition,">KafkaConsumerListener)</span></code> returns when the consumer has been assigned to
-at least one partition. There are situations when the partitions assigned to the consumer
-can be revoked and reassigned like for example when another consumer subscribe or disconnect
-as the assignment of consumers to partitions is left to kafka in this version.
+The strings are passed one at a time to the listener for further processing.</p><p>This class is inefficient compared to <code><a href="KafkaStringsConsumer.html" class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer">KafkaStringsConsumer</a></code> that allows to process
+bounce of events in one single call.
 </p></div></div>
     </li><li name="org.eso.ias.kafkautils.SimpleStringProducer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="SimpleStringProducerextendsObject"></a><a id="SimpleStringProducer:SimpleStringProducer"></a>

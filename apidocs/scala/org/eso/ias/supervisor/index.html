@@ -165,22 +165,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
-    </li><li name="org.eso.ias.component" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="component"></a><a id="component:component"></a>
-      <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#component" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../component/index.html"><span class="name">component</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li name="org.eso.ias.converter" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="converter"></a><a id="converter:converter"></a>
       <span class="permalink">
@@ -210,6 +194,22 @@
       </span>
       <span class="symbol">
         <a title="" href="../dasu/index.html"><span class="name">dasu</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.extras" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="extras"></a><a id="extras:extras"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#extras" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../extras/index.html"><span class="name">extras</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
@@ -330,7 +330,11 @@
                         <a class="class" href="Supervisor.html" title="A Supervisor is the container to run several DASUs into the same JVM."></a>
                         <a href="Supervisor.html" title="A Supervisor is the container to run several DASUs into the same JVM.">Supervisor</a>
                       </li><li class="current-entities indented4">
-                        <span class="separator"></span>
+                        <a class="object" href="SupervisorStatistics$.html" title=""></a>
+                        <a class="class" href="SupervisorStatistics.html" title="Stats logger produces statistics for the Supervisor"></a>
+                        <a href="SupervisorStatistics.html" title="Stats logger produces statistics for the Supervisor">SupervisorStatistics</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="TemplateHelper$.html" title="Companion object"></a>
                         <a class="class" href="TemplateHelper.html" title="TemplateHelper helps transforming DASUs, ASCEs and IASIOs defined by templates into concrete instances."></a>
                         <a href="TemplateHelper.html" title="TemplateHelper helps transforming DASUs, ASCEs and IASIOs defined by templates into concrete instances.">TemplateHelper</a>
                       </li><li name="org.eso.ias.test" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -507,8 +511,8 @@
         <a title="A Supervisor is the container to run several DASUs into the same JVM." href="Supervisor.html"><span class="name">Supervisor</span></a><span class="result"> extends <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a> with <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a> with <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>
       </span>
       
-      <p class="shortcomment cmt">A Supervisor is the container to run several DASUs into the same JVM.</p><div class="fullcomment"><div class="comment cmt"><p>A Supervisor is the container to run several DASUs into the same JVM.</p><p>The Supervisor blindly forward inputs to each DASU and sent the oupts to the BSDB
-without adding any other heuristic: things like for updating validities when an input
+      <p class="shortcomment cmt">A Supervisor is the container to run several DASUs into the same JVM.</p><div class="fullcomment"><div class="comment cmt"><p>A Supervisor is the container to run several DASUs into the same JVM.</p><p>The Supervisor blindly forward inputs to each DASU and sends the outpts to the BSDB
+without adding any other heuristic: things like updating validities when an input
 is not refreshed are not part of the Supervisor.</p><p>The Supervisor gets IASIOs from a InputSubscriber and publishes
 IASValues to the BSDB by means of a OutputPublisher.
 The Supervisor itself is the publisher and subscriber for the DASUs i.e.
@@ -523,6 +527,23 @@ directly connected to Kafka (for example) without the need to have
 it running into a Supervisor.</p><p>DASUs are built by invoking the dasufactory passed in the constructor:
 test can let the Supervisor run with their mockup implementation of a DASU.
 </p></div></div>
+    </li><li name="org.eso.ias.supervisor.SupervisorStatistics" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SupervisorStatisticsextendsStatsCollectorBase"></a><a id="SupervisorStatistics:SupervisorStatistics"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/index.html#SupervisorStatisticsextendsStatsCollectorBase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Stats logger produces statistics for the Supervisor" href="SupervisorStatistics.html"><span class="name">SupervisorStatistics</span></a><span class="result"> extends <a href="../dasu/StatsCollectorBase.html" class="extype" name="org.eso.ias.dasu.StatsCollectorBase">StatsCollectorBase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Stats logger produces statistics for the Supervisor
+</p>
     </li><li name="org.eso.ias.supervisor.TemplateHelper" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TemplateHelperextendsAnyRef"></a><a id="TemplateHelper:TemplateHelper"></a>
       <span class="permalink">
@@ -564,6 +585,38 @@ defined by templates into concrete instances.</p>
       </span>
       
       
+    </li><li name="org.eso.ias.supervisor.SupervisorStatistics" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SupervisorStatistics"></a><a id="SupervisorStatistics:SupervisorStatistics"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/index.html#SupervisorStatistics" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SupervisorStatistics$.html"><span class="name">SupervisorStatistics</span></a>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.supervisor.TemplateHelper" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TemplateHelper"></a><a id="TemplateHelper:TemplateHelper"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/index.html#TemplateHelper" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Companion object" href="TemplateHelper$.html"><span class="name">TemplateHelper</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Companion object</p>
     </li>
               </ol>
             </div>

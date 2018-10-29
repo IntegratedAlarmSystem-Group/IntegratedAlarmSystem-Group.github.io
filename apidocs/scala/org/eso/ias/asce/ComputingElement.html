@@ -149,6 +149,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.asce">asce</a></dd></dl></div>
+    </li><li name="org.eso.ias.asce.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="test"></a><a id="test:test"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/asce/index.html#test" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="test/index.html"><span class="name">test</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.asce">asce</a></dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transfer"></a><a id="transfer:transfer"></a>
       <span class="permalink">
@@ -266,11 +282,11 @@ they are needed for updating when the new input arrives.
 Note that inputs not provided in the constructor are rejected as unknown
 so it is mandatory to pass in the constructor all the possible inputs.</p><p>The user provides a JVM class in one of the supported languages
 to digest the inputs and produce the output.
-The transfer function of the object is invoked at regular time intervals
+The transfer function of the object is invoked
 when the state of the inputs change.
 Which programming language the user wrote the object with
 is stored in the configuration database; programmatically it is
-visible in the <code><span class="extype" name="TransferFunctionSetting">TransferFunctionSetting</span></code> object.
+visible in the TransferFunctionSetting object.
 Depending on the programming language, there might be some
 preparatory step before running the TF.</p><p>The class is abstract because the implementation of the transfer function
 depends on the programming language and must be mixed when instantiating the
@@ -282,10 +298,11 @@ In such case a new ASCE must be built to correctly initialize
 the classes implementing the transfer function. For the same reason,
 if the transfer function, implemented by the user changes,
 then a new ASCE must be built.</p><p>The update of the output is triggered by the DASU: when it sends the inputs,
-the ASCE runs the TF and produces the new output.
-The refresh rate associate to the IASIO in output of the ASCE is ignored by the
-ASCE: it is the DASU that is in charge or producing its output
-respecting its refresh rate.
+the ASCE runs the TF and produces the new output.</p><p>The ASCE monitors when the execution time of the TF is too slow for a given amount of time.
+The slowness and the duration are specified in the TransferFunctionSetting class.
+The ASCE logs a messasge if the execution of the TF is slower than the max allowed time;
+if the slowness persists over the duration then the TF is marked as broken and will
+not be executed anymore.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -797,6 +814,22 @@ a synthetic parameter instead of an alarm
       
       <p class="shortcomment cmt"><code>true</code> if this component generates an alarm
 </p>
+    </li><li name="org.eso.ias.asce.ComputingElement#isTooSlow" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isTooSlow:java.util.concurrent.atomic.AtomicBoolean"></a><a id="isTooSlow:AtomicBoolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/asce/ComputingElement.html#isTooSlow:java.util.concurrent.atomic.AtomicBoolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTooSlow</span><span class="result">: <span class="extype" name="java.util.concurrent.atomic.AtomicBoolean">AtomicBoolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">It is true when the execution tie of the TF is too slow</p>
     </li><li name="org.eso.ias.asce.ComputingElement#lastOutputUpdateTStamp" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lastOutputUpdateTStamp:Long"></a>
       <span class="permalink">
@@ -1014,6 +1047,22 @@ from a template; empty otherwise
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.asce.ComputingElement">ComputingElement</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.asce.ComputingElement#tooSlowStartTime" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tooSlowStartTime:java.util.concurrent.atomic.AtomicLong"></a><a id="tooSlowStartTime:AtomicLong"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/asce/ComputingElement.html#tooSlowStartTime:java.util.concurrent.atomic.AtomicLong" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tooSlowStartTime</span><span class="result">: <span class="extype" name="java.util.concurrent.atomic.AtomicLong">AtomicLong</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The point in time when the TF begins to be slow calculating the output.</p>
     </li><li name="org.eso.ias.asce.ComputingElement#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="update(iasValues:Set[org.eso.ias.types.IASValue[_]]):(Option[org.eso.ias.types.InOut[T]],org.eso.ias.asce.AsceStates.State)"></a><a id="update(Set[IASValue[_]]):(Option[InOut[T]],State)"></a>
       <span class="permalink">

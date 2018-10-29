@@ -197,6 +197,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.cdb">cdb</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.topology" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="topology"></a><a id="topology:topology"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/index.html#topology" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="topology/index.html"><span class="name">topology</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.cdb">cdb</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="trait" href="" title="Interface to build CDB pojos from the configuration database."></a>
@@ -313,7 +329,24 @@
       </span>
       
       <p class="shortcomment cmt">Read the ASCE configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the ASCE configuration from the CDB.
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty ASCE identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The ASCE red from the file</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the ASCE</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty ASCE identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The ASCE read from the file</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the ASCE</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getAsceIds" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getAsceIds():java.util.Optional[java.util.Set[String]]"></a><a id="getAsceIds():Optional[Set[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getAsceIds():java.util.Optional[java.util.Set[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAsceIds</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the IDs of the ASCEs.</p><div class="fullcomment"><div class="comment cmt"><p>Get the IDs of the ASCEs.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IDs of the ASCEs read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IDs of the ASCEs</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getAscesForDasu" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getAscesForDasu(id:String):java.util.Set[org.eso.ias.cdb.pojos.AsceDao]"></a><a id="getAscesForDasu(String):Set[AsceDao]"></a>
       <span class="permalink">
@@ -348,7 +381,24 @@
       </span>
       
       <p class="shortcomment cmt">Read the DASU configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the DASU configuration from the CDB.
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty DASU identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The DASU red from the file</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the DASU</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty DASU identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The DASU read from the file</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the DASU</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getDasuIds" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getDasuIds():java.util.Optional[java.util.Set[String]]"></a><a id="getDasuIds():Optional[Set[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getDasuIds():java.util.Optional[java.util.Set[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDasuIds</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the IDs of the DASUs.</p><div class="fullcomment"><div class="comment cmt"><p>Get the IDs of the DASUs.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IDs of the DASUs read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IDs of the DASUs</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getDasusToDeployInSupervisor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getDasusToDeployInSupervisor(id:String):java.util.Set[org.eso.ias.cdb.pojos.DasuToDeployDao]"></a><a id="getDasusToDeployInSupervisor(String):Set[DasuToDeployDao]"></a>
       <span class="permalink">
@@ -402,7 +452,7 @@
       
       <p class="shortcomment cmt">Get the IASIO with the given ID
 </p><div class="fullcomment"><div class="comment cmt"><p>Get the IASIO with the given ID
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The ID of the IASIO to read the configuration</p></dd><dt>returns</dt><dd class="cmt"><p>The IASIO red from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IASIO</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The ID of the IASIO to read the configuration</p></dd><dt>returns</dt><dd class="cmt"><p>The IASIO read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IASIO</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getIasios" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getIasios():java.util.Optional[java.util.Set[org.eso.ias.cdb.pojos.IasioDao]]"></a><a id="getIasios():Optional[Set[IasioDao]]"></a>
       <span class="permalink">
@@ -419,7 +469,7 @@
       </span>
       
       <p class="shortcomment cmt">Get the IASIOs.</p><div class="fullcomment"><div class="comment cmt"><p>Get the IASIOs.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IASIOs red from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IASIOs</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IASIOs read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IASIOs</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getIasiosForAsce" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getIasiosForAsce(id:String):java.util.Collection[org.eso.ias.cdb.pojos.IasioDao]"></a><a id="getIasiosForAsce(String):Collection[IasioDao]"></a>
       <span class="permalink">
@@ -436,7 +486,7 @@
       </span>
       
       <p class="shortcomment cmt">Return the IASIOs in input to the given ASCE.</p><div class="fullcomment"><div class="comment cmt"><p>Return the IASIOs in input to the given ASCE.
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the ASCE</p></dd><dt>returns</dt><dd class="cmt"><p>A set of IASIOs running in the ASCE with the passed id</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading CDB or if the
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the ASCE</p></dd><dt>returns</dt><dd class="cmt"><p>A set of IASIOs in input to the ASCE</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading CDB or if the
                         ASCE with the give identifier does not exist</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getSupervisor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getSupervisor(id:String):java.util.Optional[org.eso.ias.cdb.pojos.SupervisorDao]"></a><a id="getSupervisor(String):Optional[SupervisorDao]"></a>
@@ -454,7 +504,24 @@
       </span>
       
       <p class="shortcomment cmt">Read the supervisor configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the supervisor configuration from the CDB.
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty supervisor identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The Supervisor red from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the Supervisor</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty supervisor identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The Supervisor read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the Supervisor</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getSupervisorIds" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getSupervisorIds():java.util.Optional[java.util.Set[String]]"></a><a id="getSupervisorIds():Optional[Set[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getSupervisorIds():java.util.Optional[java.util.Set[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSupervisorIds</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the IDs of the Supervisors.</p><div class="fullcomment"><div class="comment cmt"><p>Get the IDs of the Supervisors.</p><p>This method is useful to deploy the supervisors
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The the IDs of the supervisors read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IDs of the supervisors</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getTemplate" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getTemplate(template_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TemplateDao]"></a><a id="getTemplate(String):Optional[TemplateDao]"></a>
       <span class="permalink">
@@ -472,6 +539,43 @@
       
       <p class="shortcomment cmt">Read the ttemplate configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the ttemplate configuration from the CDB.
 </p></div><dl class="paramcmts block"><dt class="param">template_id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the template</p></dd><dt>returns</dt><dd class="cmt"><p>The template read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading from the CDB</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getTemplateInstancesIasiosForAsce" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getTemplateInstancesIasiosForAsce(id:String):java.util.Collection[org.eso.ias.cdb.pojos.TemplateInstanceIasioDao]"></a><a id="getTemplateInstancesIasiosForAsce(String):Collection[TemplateInstanceIasioDao]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getTemplateInstancesIasiosForAsce(id:String):java.util.Collection[org.eso.ias.cdb.pojos.TemplateInstanceIasioDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplateInstancesIasiosForAsce</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Collection">Collection</span>[<a href="pojos/TemplateInstanceIasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateInstanceIasioDao">TemplateInstanceIasioDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Return the templated IASIOs in input to the given ASCE.</p><div class="fullcomment"><div class="comment cmt"><p>Return the templated IASIOs in input to the given ASCE.</p><p>These inputs are the one generated by a different template than
+that of the ASCE
+(@see &lt;A href=&quot;https://github.com/IntegratedAlarmSystem-Group/ias/issues/124&quot;&gt;#124&lt;/A&gt;)
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the ASCE</p></dd><dt>returns</dt><dd class="cmt"><p>A set of template instance of IASIOs in input to the ASCE</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading CDB or if the
+                        ASCE with the give identifier does not exist</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getTemplates" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getTemplates():java.util.Optional[java.util.Set[org.eso.ias.cdb.pojos.TemplateDao]]"></a><a id="getTemplates():Optional[Set[TemplateDao]]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getTemplates():java.util.Optional[java.util.Set[org.eso.ias.cdb.pojos.TemplateDao]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplates</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<a href="pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the templates.</p><div class="fullcomment"><div class="comment cmt"><p>Get the templates.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The templates read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the templates</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getTransferFunction" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getTransferFunction(tf_id:String):java.util.Optional[org.eso.ias.cdb.pojos.TransferFunctionDao]"></a><a id="getTransferFunction(String):Optional[TransferFunctionDao]"></a>
       <span class="permalink">
@@ -489,6 +593,23 @@
       
       <p class="shortcomment cmt">Read the transfer function configuration from the CDB.</p><div class="fullcomment"><div class="comment cmt"><p>Read the transfer function configuration from the CDB.
 </p></div><dl class="paramcmts block"><dt class="param">tf_id</dt><dd class="cmt"><p>The not <code>null</code> nor empty transfer function identifier</p></dd><dt>returns</dt><dd class="cmt"><p>The transfer function read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading from the CDB</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getTransferFunctions" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getTransferFunctions():java.util.Optional[java.util.Set[org.eso.ias.cdb.pojos.TransferFunctionDao]]"></a><a id="getTransferFunctions():Optional[Set[TransferFunctionDao]]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getTransferFunctions():java.util.Optional[java.util.Set[org.eso.ias.cdb.pojos.TransferFunctionDao]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTransferFunctions</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<a href="pojos/TransferFunctionDao.html" class="extype" name="org.eso.ias.cdb.pojos.TransferFunctionDao">TransferFunctionDao</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the transfer functions.</p><div class="fullcomment"><div class="comment cmt"><p>Get the transfer functions.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The transfer functions read from the CDB</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the transfer functions</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#init" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="init():Unit"></a>
       <span class="permalink">

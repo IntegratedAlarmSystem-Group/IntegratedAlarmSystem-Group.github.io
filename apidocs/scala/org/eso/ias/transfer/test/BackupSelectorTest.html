@@ -167,6 +167,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.transfer.test">test</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="AntPadInhibitorTest.html" title="Test the AntPadInhibitor"></a>
+                        <a href="AntPadInhibitorTest.html" title="Test the AntPadInhibitor">AntPadInhibitorTest</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="" title="Test the BackupSelector with 4 DOUBLE inputs"></a>
                         <a href="" title="Test the BackupSelector with 4 DOUBLE inputs">BackupSelectorTest</a>
                       </li><li class="current-entities indented5">
@@ -200,7 +204,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">BackupSelectorTest</span><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></span>
+        <span class="name">BackupSelectorTest</span><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <span class="extype" name="org.scalatest.BeforeAndAfterEach">BeforeAndAfterEach</span></span>
       </span>
       </h4>
 
@@ -210,7 +214,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span>, <span class="extype" name="org.scalatest.FlatSpecLike">FlatSpecLike</span>, <span class="extype" name="org.scalatest.Documenting">Documenting</span>, <span class="extype" name="org.scalatest.Alerting">Alerting</span>, <span class="extype" name="org.scalatest.Notifying">Notifying</span>, <span class="extype" name="org.scalatest.Informing">Informing</span>, <span class="extype" name="org.scalatest.words.CanVerb">CanVerb</span>, <span class="extype" name="org.scalatest.words.MustVerb">MustVerb</span>, <span class="extype" name="org.scalatest.words.ShouldVerb">ShouldVerb</span>, <span class="extype" name="org.scalatest.TestRegistration">TestRegistration</span>, <span class="extype" name="org.scalatest.TestSuite">TestSuite</span>, <span class="extype" name="org.scalatest.Suite">Suite</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="org.scalatest.Assertions">Assertions</span>, <span class="extype" name="org.scalactic.TripleEquals">TripleEquals</span>, <span class="extype" name="org.scalactic.TripleEqualsSupport">TripleEqualsSupport</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.scalatest.BeforeAndAfterEach">BeforeAndAfterEach</span>, <span class="extype" name="org.scalatest.SuiteMixin">SuiteMixin</span>, <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span>, <span class="extype" name="org.scalatest.FlatSpecLike">FlatSpecLike</span>, <span class="extype" name="org.scalatest.Documenting">Documenting</span>, <span class="extype" name="org.scalatest.Alerting">Alerting</span>, <span class="extype" name="org.scalatest.Notifying">Notifying</span>, <span class="extype" name="org.scalatest.Informing">Informing</span>, <span class="extype" name="org.scalatest.words.CanVerb">CanVerb</span>, <span class="extype" name="org.scalatest.words.MustVerb">MustVerb</span>, <span class="extype" name="org.scalatest.words.ShouldVerb">ShouldVerb</span>, <span class="extype" name="org.scalatest.TestRegistration">TestRegistration</span>, <span class="extype" name="org.scalatest.TestSuite">TestSuite</span>, <span class="extype" name="org.scalatest.Suite">Suite</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="org.scalatest.Assertions">Assertions</span>, <span class="extype" name="org.scalactic.TripleEquals">TripleEquals</span>, <span class="extype" name="org.scalactic.TripleEqualsSupport">TripleEqualsSupport</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -236,7 +240,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.transfer.test.BackupSelectorTest"><span>BackupSelectorTest</span></li><li class="in" name="org.scalatest.FlatSpec"><span>FlatSpec</span></li><li class="in" name="org.scalatest.FlatSpecLike"><span>FlatSpecLike</span></li><li class="in" name="org.scalatest.Documenting"><span>Documenting</span></li><li class="in" name="org.scalatest.Alerting"><span>Alerting</span></li><li class="in" name="org.scalatest.Notifying"><span>Notifying</span></li><li class="in" name="org.scalatest.Informing"><span>Informing</span></li><li class="in" name="org.scalatest.words.CanVerb"><span>CanVerb</span></li><li class="in" name="org.scalatest.words.MustVerb"><span>MustVerb</span></li><li class="in" name="org.scalatest.words.ShouldVerb"><span>ShouldVerb</span></li><li class="in" name="org.scalatest.TestRegistration"><span>TestRegistration</span></li><li class="in" name="org.scalatest.TestSuite"><span>TestSuite</span></li><li class="in" name="org.scalatest.Suite"><span>Suite</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.scalatest.Assertions"><span>Assertions</span></li><li class="in" name="org.scalactic.TripleEquals"><span>TripleEquals</span></li><li class="in" name="org.scalactic.TripleEqualsSupport"><span>TripleEqualsSupport</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.transfer.test.BackupSelectorTest"><span>BackupSelectorTest</span></li><li class="in" name="org.scalatest.BeforeAndAfterEach"><span>BeforeAndAfterEach</span></li><li class="in" name="org.scalatest.SuiteMixin"><span>SuiteMixin</span></li><li class="in" name="org.scalatest.FlatSpec"><span>FlatSpec</span></li><li class="in" name="org.scalatest.FlatSpecLike"><span>FlatSpecLike</span></li><li class="in" name="org.scalatest.Documenting"><span>Documenting</span></li><li class="in" name="org.scalatest.Alerting"><span>Alerting</span></li><li class="in" name="org.scalatest.Notifying"><span>Notifying</span></li><li class="in" name="org.scalatest.Informing"><span>Informing</span></li><li class="in" name="org.scalatest.words.CanVerb"><span>CanVerb</span></li><li class="in" name="org.scalatest.words.MustVerb"><span>MustVerb</span></li><li class="in" name="org.scalatest.words.ShouldVerb"><span>ShouldVerb</span></li><li class="in" name="org.scalatest.TestRegistration"><span>TestRegistration</span></li><li class="in" name="org.scalatest.TestSuite"><span>TestSuite</span></li><li class="in" name="org.scalatest.Suite"><span>Suite</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.scalatest.Assertions"><span>Assertions</span></li><li class="in" name="org.scalactic.TripleEquals"><span>TripleEquals</span></li><li class="in" name="org.scalactic.TripleEqualsSupport"><span>TripleEqualsSupport</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -765,6 +769,22 @@
       </span>
       
       <p class="shortcomment cmt">The ID of the main AISIO</p>
+    </li><li name="org.scalatest.BeforeAndAfterEach#afterEach" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="afterEach():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/transfer/test/BackupSelectorTest.html#afterEach():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">afterEach</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>BeforeAndAfterEach</dd></dl></div>
     </li><li name="org.scalatest.FlatSpecLike#alert" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="alert:org.scalatest.Alerter"></a><a id="alert:Alerter"></a>
       <span class="permalink">
@@ -1005,6 +1025,22 @@
       </span>
       
       <p class="shortcomment cmt">The ID of the main AISIO</p>
+    </li><li name="org.eso.ias.transfer.test.BackupSelectorTest#beforeEach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="beforeEach():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/transfer/test/BackupSelectorTest.html#beforeEach():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">beforeEach</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.transfer.test.BackupSelectorTest">BackupSelectorTest</a> → BeforeAndAfterEach</dd></dl></div>
     </li><li name="org.scalatest.FlatSpecLike#behave" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="behave:org.scalatest.words.BehaveWord"></a><a id="behave:BehaveWord"></a>
       <span class="permalink">
@@ -2009,7 +2045,7 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Suite</dd></dl></div>
-    </li><li name="org.scalatest.FlatSpecLike#runTest" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.scalatest.BeforeAndAfterEach#runTest" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runTest(testName:String,args:org.scalatest.Args):org.scalatest.Status"></a><a id="runTest(String,Args):Status"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/transfer/test/BackupSelectorTest.html#runTest(testName:String,args:org.scalatest.Args):org.scalatest.Status" title="Permalink">
@@ -2024,7 +2060,7 @@
         <span class="name">runTest</span><span class="params">(<span name="testName">testName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="args">args: <span class="extype" name="org.scalatest.Args">Args</span></span>)</span><span class="result">: <span class="extype" name="org.scalatest.Status">Status</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike → TestSuite → Suite</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>BeforeAndAfterEach → SuiteMixin</dd></dl></div>
     </li><li name="org.scalatest.FlatSpecLike#runTests" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runTests(testName:Option[String],args:org.scalatest.Args):org.scalatest.Status"></a><a id="runTests(Option[String],Args):Status"></a>
       <span class="permalink">
@@ -2217,6 +2253,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlatSpecLike → Suite</dd></dl></div>
+    </li><li name="org.eso.ias.transfer.test.BackupSelectorTest#tf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tf:org.eso.ias.tranfer.BackupSelector[Double]"></a><a id="tf:BackupSelector[Double]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/transfer/test/BackupSelectorTest.html#tf:org.eso.ias.tranfer.BackupSelector[Double]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tf</span><span class="result">: <a href="../../tranfer/BackupSelector.html" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The TF to test</p>
     </li><li name="org.scalatest.FlatSpecLike#they" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="they:FlatSpecLike.this.TheyWord"></a><a id="they:TheyWord"></a>
       <span class="permalink">
@@ -2480,7 +2532,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.scalatest.FlatSpec">
+        <div class="parent" name="org.scalatest.BeforeAndAfterEach">
+              <h3>Inherited from <span class="extype" name="org.scalatest.BeforeAndAfterEach">BeforeAndAfterEach</span></h3>
+            </div><div class="parent" name="org.scalatest.SuiteMixin">
+              <h3>Inherited from <span class="extype" name="org.scalatest.SuiteMixin">SuiteMixin</span></h3>
+            </div><div class="parent" name="org.scalatest.FlatSpec">
               <h3>Inherited from <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></h3>
             </div><div class="parent" name="org.scalatest.FlatSpecLike">
               <h3>Inherited from <span class="extype" name="org.scalatest.FlatSpecLike">FlatSpecLike</span></h3>

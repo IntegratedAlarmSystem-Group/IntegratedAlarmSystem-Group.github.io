@@ -197,22 +197,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.dasu">dasu</a></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.topology" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="topology"></a><a id="topology:topology"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/index.html#topology" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="topology/index.html"><span class="name">topology</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.dasu">dasu</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <a class="object" href="Dasu$.html" title="Companion object"></a>
                         <a class="class" href="Dasu.html" title="The Distributed Alarm System Unit (DASU)."></a>
@@ -222,13 +206,13 @@
                         <a class="class" href="" title="The implementation of the DASU."></a>
                         <a href="" title="The implementation of the DASU.">DasuImpl</a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="IasiosReceiver$.html" title="Companion object"></a>
-                        <a class="class" href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB."></a>
-                        <a href="IasiosReceiver.html" title="Objects of this class gets IASIOs from the BSDB.">IasiosReceiver</a>
+                        <a class="object" href="DasuStatistics$.html" title="Companion object with definitions of constants"></a>
+                        <a class="class" href="DasuStatistics.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU."></a>
+                        <a href="DasuStatistics.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU.">DasuStatistics</a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="StatsCollector$.html" title="Companion object with definitions of constants"></a>
-                        <a class="class" href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU."></a>
-                        <a href="StatsCollector.html" title="StasCollector generates and publish statistics of the generation of the output by the DASU.">StatsCollector</a>
+                        <a class="object" href="StatsCollectorBase$.html" title=""></a>
+                        <a class="class" href="StatsCollectorBase.html" title="Base class for generating statistics at definite time intervals"></a>
+                        <a href="StatsCollectorBase.html" title="Base class for generating statistics at definite time intervals">StatsCollectorBase</a>
                       </li>
               </ul>
             </div>
@@ -329,8 +313,7 @@
         <span class="name">DasuImpl</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="dasuDao">dasuDao: <a href="../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a></span>, <span name="outputPublisher">outputPublisher: <a href="publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="tolerance">tolerance: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>refresh rate (sec) to automatically send the output
-                            even if it did not change</p></dd><dt class="param">tolerance</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuIdentifier</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">dasuDao</dt><dd class="cmt"><p>The CDB configuration of the DASU</p></dd><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>the time (seconds) to automatically resend the last calculated</p></dd><dt class="param">tolerance</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -526,7 +509,7 @@
  invoking enableAutoRefreshOfOutput.</p><p> If a new output is generated before this time interval elapses,
  this task is delayed of the duration of autoSendTimeInterval msecs.
 </p></div></div>
-    </li><li name="org.eso.ias.dasu.DasuImpl#calcOutputValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.dasu.DasuImpl#calcOutputValidity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="calcOutputValidity():org.eso.ias.types.Validity"></a><a id="calcOutputValidity():Validity"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/dasu/DasuImpl.html#calcOutputValidity():org.eso.ias.types.Validity" title="Permalink">
@@ -541,9 +524,10 @@
         <span class="name">calcOutputValidity</span><span class="params">()</span><span class="result">: <a href="../types/Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a></span>
       </span>
       
-      <p class="shortcomment cmt">Calculate the validity of the output depending on
-the arrival time
-</p>
+      <p class="shortcomment cmt">Calculate the validity of the output depending on its last update time.</p><div class="fullcomment"><div class="comment cmt"><p>Calculate the validity of the output depending on its last update time.
+The DASU consider that the IASIO is valid if it has been generated
+resh rate+tolerance  milliseconds before.
+</p></div></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#cleanUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cleanUp():Unit"></a>
       <span class="permalink">
@@ -630,14 +614,14 @@ the arrival time
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dasuOutputId</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">dasuOutputId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       
     </li><li name="org.eso.ias.dasu.DasuImpl#dasuTopology" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dasuTopology:org.eso.ias.dasu.topology.Topology"></a><a id="dasuTopology:Topology"></a>
+      <a id="dasuTopology:org.eso.ias.cdb.topology.DasuTopology"></a><a id="dasuTopology:DasuTopology"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#dasuTopology:org.eso.ias.dasu.topology.Topology" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#dasuTopology:org.eso.ias.cdb.topology.DasuTopology" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -646,7 +630,7 @@ the arrival time
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dasuTopology</span><span class="result">: <a href="topology/Topology.html" class="extype" name="org.eso.ias.dasu.topology.Topology">Topology</a></span>
+        <span class="name">dasuTopology</span><span class="result">: <a href="../cdb/topology/DasuTopology.html" class="extype" name="org.eso.ias.cdb.topology.DasuTopology">DasuTopology</a></span>
       </span>
       
       
@@ -761,7 +745,7 @@ while the validity could change.
 </p><div class="fullcomment"><div class="comment cmt"><p> True if the DASU has been generated from a template,
  False otherwise
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.DasuImpl#fullRunningIdsOfInputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.dasu.DasuImpl#fullRunningIdsOfInputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fullRunningIdsOfInputs:java.util.Map[String,String]"></a><a id="fullRunningIdsOfInputs:Map[String,String]"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/dasu/DasuImpl.html#fullRunningIdsOfInputs:java.util.Map[String,String]" title="Permalink">
@@ -776,8 +760,8 @@ while the validity could change.
         <span class="name">fullRunningIdsOfInputs</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">The fullRuning Ids of the received inputs
-</p>
+      <p class="shortcomment cmt">The fullRuning Ids of the received inputs</p><div class="fullcomment"><div class="comment cmt"><p>The fullRuning Ids of the received inputs</p><p>This map must be taken synchronized because it is accessed by several threads
+</p></div></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#getAsceIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getAsceIds():Set[String]"></a>
       <span class="permalink">
@@ -913,9 +897,9 @@ while the validity could change.
       
       
     </li><li name="org.eso.ias.dasu.DasuImpl#inputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Set[IASValue[_]]):Unit"></a>
+      <a id="inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Iterable[IASValue[_]]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#inputsReceived(iasios:Set[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -924,7 +908,7 @@ while the validity could change.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">inputsReceived</span><span class="params">(<span name="iasios">iasios: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">New inputs have been received from the BSDB.</p><div class="fullcomment"><div class="comment cmt"><p>New inputs have been received from the BSDB.</p><p>This method is not invoked while automatically re-sending the last computed value.
@@ -1075,7 +1059,7 @@ i.e if its mode or value or validity has changed
       
       <p class="shortcomment cmt">Values that have been received in input from plugins or other DASUs (BSDB)
 and not yet processed by the ASCEs</p><div class="fullcomment"><div class="comment cmt"><p>Values that have been received in input from plugins or other DASUs (BSDB)
-and not yet processed by the ASCEs</p><p>TODO: protect the map against access from multiple threads
+and not yet processed by the ASCEs</p><p>This map must be taken synchronized because it is accessed by several threads
 </p></div></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -1184,9 +1168,9 @@ and not yet processed by the ASCEs</p><p>TODO: protect the map against access fr
       
       <p class="shortcomment cmt">True if the DASU has been started</p>
     </li><li name="org.eso.ias.dasu.DasuImpl#statsCollector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="statsCollector:org.eso.ias.dasu.StatsCollector"></a><a id="statsCollector:StatsCollector"></a>
+      <a id="statsCollector:org.eso.ias.dasu.DasuStatistics"></a><a id="statsCollector:DasuStatistics"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#statsCollector:org.eso.ias.dasu.StatsCollector" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#statsCollector:org.eso.ias.dasu.DasuStatistics" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1195,7 +1179,7 @@ and not yet processed by the ASCEs</p><p>TODO: protect the map against access fr
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">statsCollector</span><span class="result">: <a href="StatsCollector.html" class="extype" name="org.eso.ias.dasu.StatsCollector">StatsCollector</a></span>
+        <span class="name">statsCollector</span><span class="result">: <a href="DasuStatistics.html" class="extype" name="org.eso.ias.dasu.DasuStatistics">DasuStatistics</a></span>
       </span>
       
       <p class="shortcomment cmt">The generator of statistics</p>
@@ -1251,8 +1235,7 @@ from a template; empty otherwise
       </span>
       
       <p class="shortcomment cmt">The minimum allowed refresh rate when a flow of inputs arrive (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>The minimum allowed refresh rate when a flow of inputs arrive (i.e. the throttiling)
-is given by <span class="extype" name="TimeScheduler.DefaultMinAllowedRefreshRate">TimeScheduler.DefaultMinAllowedRefreshRate</span>
-if not overridden by a java property
+is given by <a href="Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr" name="org.eso.ias.dasu.Dasu#DefaultMinAllowedRefreshRate">Dasu.DefaultMinAllowedRefreshRate</a>, if not overridden by a java property
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#throttlingTask" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="throttlingTask:java.util.concurrent.atomic.AtomicReference[Option[java.util.concurrent.ScheduledFuture[_]]]"></a><a id="throttlingTask:AtomicReference[Option[ScheduledFuture[_]]]"></a>

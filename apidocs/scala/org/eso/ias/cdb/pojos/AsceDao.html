@@ -199,6 +199,10 @@
                         <a href="TemplateDao.html" title="The DAO for the template needed to support replication of identical devices.">TemplateDao</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
+                        <a class="class" href="TemplateInstanceIasioDao.html" title="The instance of an IASIO."></a>
+                        <a href="TemplateInstanceIasioDao.html" title="The instance of an IASIO.">TemplateInstanceIasioDao</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
                         <a class="class" href="TransferFunctionDao.html" title="The DAO to handle the definition of the transfer function."></a>
                         <a href="TransferFunctionDao.html" title="The DAO to handle the definition of the transfer function.">TransferFunctionDao</a>
                       </li>
@@ -373,6 +377,26 @@
 </p><div class="fullcomment"><div class="comment cmt"><p>Add the passed input
 </p></div><dl class="paramcmts block"><dt class="param">io</dt><dd class="cmt"><p>The IASIO to put in the map</p></dd><dt class="param">replace</dt><dd class="cmt"><p>If <code>true</code> replaces the old IASIO with
                this one, if already present in the map</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the passed IASIO replace an object in the inputs list,
+        <code>false</code> otherwise</p></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.AsceDao#addTemplatedInstanceInput" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addTemplatedInstanceInput(tii:org.eso.ias.cdb.pojos.TemplateInstanceIasioDao,replace:Boolean):Boolean"></a><a id="addTemplatedInstanceInput(TemplateInstanceIasioDao,Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/AsceDao.html#addTemplatedInstanceInput(tii:org.eso.ias.cdb.pojos.TemplateInstanceIasioDao,replace:Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addTemplatedInstanceInput</span><span class="params">(<span name="tii">tii: <a href="TemplateInstanceIasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateInstanceIasioDao">TemplateInstanceIasioDao</a></span>, <span name="replace">replace: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Add the passed templated input
+</p><div class="fullcomment"><div class="comment cmt"><p>Add the passed templated input
+</p></div><dl class="paramcmts block"><dt class="param">tii</dt><dd class="cmt"><p>The not <code>null</code> templated input to add</p></dd><dt class="param">replace</dt><dd class="cmt"><p>If <code>true</code> replaces the old templated input with
+               this one, if already present in the map</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the passed templated input has been aded,
         <code>false</code> otherwise</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -604,6 +628,23 @@ DASU, and IASIOs is limited to their IDs.
       </span>
       
       
+    </li><li name="org.eso.ias.cdb.pojos.AsceDao#getTemplatedInstanceInputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getTemplatedInstanceInputs():java.util.Set[org.eso.ias.cdb.pojos.TemplateInstanceIasioDao]"></a><a id="getTemplatedInstanceInputs():Set[TemplateInstanceIasioDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/AsceDao.html#getTemplatedInstanceInputs():java.util.Set[org.eso.ias.cdb.pojos.TemplateInstanceIasioDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplatedInstanceInputs</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="TemplateInstanceIasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateInstanceIasioDao">TemplateInstanceIasioDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Getter
+</p>
     </li><li name="org.eso.ias.cdb.pojos.AsceDao#getTransferFunction" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getTransferFunction():org.eso.ias.cdb.pojos.TransferFunctionDao"></a><a id="getTransferFunction():TransferFunctionDao"></a>
       <span class="permalink">
@@ -771,6 +812,23 @@ DASU, and IASIOs is limited to their IDs.
       </span>
       
       
+    </li><li name="org.eso.ias.cdb.pojos.AsceDao#setTemplatedInstanceInputs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setTemplatedInstanceInputs(templateInstances:java.util.Set[org.eso.ias.cdb.pojos.TemplateInstanceIasioDao]):Unit"></a><a id="setTemplatedInstanceInputs(Set[TemplateInstanceIasioDao]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/pojos/AsceDao.html#setTemplatedInstanceInputs(templateInstances:java.util.Set[org.eso.ias.cdb.pojos.TemplateInstanceIasioDao]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTemplatedInstanceInputs</span><span class="params">(<span name="templateInstances">templateInstances: <span class="extype" name="java.util.Set">Set</span>[<a href="TemplateInstanceIasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateInstanceIasioDao">TemplateInstanceIasioDao</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Setter
+</p>
     </li><li name="org.eso.ias.cdb.pojos.AsceDao#setTransferFunction" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setTransferFunction(transferFunction:org.eso.ias.cdb.pojos.TransferFunctionDao):Unit"></a><a id="setTransferFunction(TransferFunctionDao):Unit"></a>
       <span class="permalink">

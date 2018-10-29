@@ -341,9 +341,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.TransferFunctionSetting#MaxAcceptableSlowDuration" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MaxAcceptableSlowDuration:Int"></a>
+      <a id="MaxAcceptableSlowDuration:Long"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting$.html#MaxAcceptableSlowDuration:Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting$.html#MaxAcceptableSlowDuration:Long" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -352,13 +352,29 @@
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">MaxAcceptableSlowDuration</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">MaxAcceptableSlowDuration</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       
       <p class="shortcomment cmt">If the TF is slow responding for more then the amount of seconds
 of  MaxAcceptableSlowDuration then the TF is marked as broken and
 will not be executed anymore
 </p>
+    </li><li name="org.eso.ias.asce.transfer.TransferFunctionSetting#MaxAcceptableSlowDurationMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxAcceptableSlowDurationMillis:Long"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting$.html#MaxAcceptableSlowDurationMillis:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MaxAcceptableSlowDurationMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The MaxAcceptableSlowDuration in milliseconds</p>
     </li><li name="org.eso.ias.asce.transfer.TransferFunctionSetting#MaxAcceptableSlowDurationPropName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MaxAcceptableSlowDurationPropName:String"></a>
       <span class="permalink">
@@ -408,11 +424,10 @@ will not be executed anymore
         <span class="name">MaxTolerableTFTime</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
-      <p class="shortcomment cmt">If the execution time of the TF is higher the this value
-the the state of the ASCE changes.</p><div class="fullcomment"><div class="comment cmt"><p>If the execution time of the TF is higher the this value
-the the state of the ASCE changes. At the present we do
-not block the execution but in future we could prefer to block
-slow TFs unless it is a transient problem.
+      <p class="shortcomment cmt">If the execution time of the TF is higher than this value (msec)
+then the state of the ASCE changes to Slow.</p><div class="fullcomment"><div class="comment cmt"><p>If the execution time of the TF is higher than this value (msec)
+then the state of the ASCE changes to Slow.</p><p>When the TF is too slow, the ASCE logs a message. It the slowness persists,
+the ASCE will eventually stop running the TF
 </p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>

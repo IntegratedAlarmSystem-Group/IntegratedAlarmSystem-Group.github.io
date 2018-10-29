@@ -151,20 +151,32 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.kafkautils">kafkautils</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="FilteredKafkaIasiosConsumer.html" title="FilteredKafkaIasiosConsumer allows to set a custom filter on top of the Kafka consumer."></a>
+                        <a href="FilteredKafkaIasiosConsumer.html" title="FilteredKafkaIasiosConsumer allows to set a custom filter on top of the Kafka consumer.">FilteredKafkaIasiosConsumer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="KafkaHelper.html" title="A helper class providing useful methods and constants for Kafka"></a>
                         <a href="KafkaHelper.html" title="A helper class providing useful methods and constants for Kafka">KafkaHelper</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener."></a>
-                        <a href="" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the SimpleStringConsumer and forwards IASIOs to the listener.">KafkaIasiosConsumer</a>
+                        <a class="class" href="" title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types."></a>
+                        <a href="" title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types.">KafkaIasiosConsumer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic."></a>
                         <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic.">KafkaIasiosProducer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
+                        <a class="class" href="KafkaStringsConsumer.html" title="A generic kafka consumer that forwards all the strings received in each message to the listener."></a>
+                        <a href="KafkaStringsConsumer.html" title="A generic kafka consumer that forwards all the strings received in each message to the listener.">KafkaStringsConsumer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
                         <a class="class" href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module"></a>
                         <a href="KafkaUtilsException.html" title="Exception retunrd by classes in KafkaUtils module">KafkaUtilsException</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleKafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the KafkaStringsConsumer and forwards the IASIOs to the listener."></a>
+                        <a href="SimpleKafkaIasiosConsumer.html" title="KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic from the KafkaStringsConsumer and forwards the IASIOs to the listener.">SimpleKafkaIasiosConsumer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="SimpleStringConsumer.html" title="/** Generic Kafka consumer to get strings from a kafka topic."></a>
@@ -196,26 +208,24 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">KafkaIasiosConsumer</span><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></span>
+        <span class="name">KafkaIasiosConsumer</span><span class="result"> extends <a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>KafkaIasiosConsumer gets the strings from the passed IASIO kafka topic
-from the SimpleStringConsumer and forwards IASIOs to the listener.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Extends <code><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></code> providing filtering by IDs and types.
 &lt;P&gt;
-Filtering is based on the ID of the IASIOs _and_ IASValue type:
+Filtering is based on the ID of the IASIOs _and_ the IASValue type:
 - if the ID of the received String is contained in <code><span class="extype" name="#acceptedIds">#acceptedIds</span></code>
-  then the IASIO is forwarded to the listener otherwise is rejected.
+  then the IASIO is forwarded to the listener otherwise it is rejected.
 - if the type of the <code><span class="extype" name="IASValue">IASValue</span></code> is contained in <code><span class="extype" name="#acceptedTypes">#acceptedTypes</span></code>
-  then the IASIO is forwarded to the listener otherwise is rejected.</p><p>&lt;BR&gt;If the caller does not set any filter, then all the received IASIOs
-will be forwarded to the listener.
-IDs and type are evaluated in AND.
+  then the IASIO is forwarded to the listener otherwise is rejected.</p><p>&lt;P&gt;If the caller does not set any filter, then all the received IASIOs
+will be forwarded to the listener.</p><p>IDs and type are evaluated in AND.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a>, <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer">StringsConsumer</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -241,7 +251,7 @@ IDs and type are evaluated in AND.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.kafkautils.KafkaIasiosConsumer"><span>KafkaIasiosConsumer</span></li><li class="in" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener"><span>KafkaConsumerListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.kafkautils.KafkaIasiosConsumer"><span>KafkaIasiosConsumer</span></li><li class="in" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer"><span>SimpleKafkaIasiosConsumer</span></li><li class="in" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer"><span>StringsConsumer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -261,7 +271,7 @@ IDs and type are evaluated in AND.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="&lt;init&gt;(servers:String,topicName:String,consumerID:String,idsOfIDsToAccept:java.util.Set[String],idsOfTypesToAccept:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.kafkautils.KafkaIasiosConsumer"></a><a id="&lt;init&gt;:KafkaIasiosConsumer"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#&lt;init&gt;(servers:String,topicName:String,consumerID:String,idsOfIDsToAccept:java.util.Set[String],idsOfTypesToAccept:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.kafkautils.KafkaIasiosConsumer" title="Permalink">
@@ -274,23 +284,6 @@ IDs and type are evaluated in AND.
       </span>
       <span class="symbol">
         <span class="name">KafkaIasiosConsumer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="java.lang.String">String</span></span>, <span name="consumerID">consumerID: <span class="extype" name="java.lang.String">String</span></span>, <span name="idsOfIDsToAccept">idsOfIDsToAccept: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="idsOfTypesToAccept">idsOfTypesToAccept: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Build a FilteredStringConsumer with the passed initial filters.</p><div class="fullcomment"><div class="comment cmt"><p>Build a FilteredStringConsumer with the passed initial filters.
-</p></div><dl class="paramcmts block"><dt class="param">servers</dt><dd class="cmt"><p>The kafka servers to connect to</p></dd><dt class="param">topicName</dt><dd class="cmt"><p>The name of the topic to get events from</p></dd><dt class="param">consumerID</dt><dd class="cmt"><p>the ID of the consumer</p></dd><dt class="param">idsOfIDsToAccept</dt><dd class="cmt"><p>The IDs of the IASIOs to forward to the listener</p></dd><dt class="param">idsOfTypesToAccept</dt><dd class="cmt"><p>The types of the IASIOs to forward to the listener</p></dd></dl></div>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(servers:String,topicName:String,consumerID:String):org.eso.ias.kafkautils.KafkaIasiosConsumer"></a><a id="&lt;init&gt;:KafkaIasiosConsumer"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#&lt;init&gt;(servers:String,topicName:String,consumerID:String):org.eso.ias.kafkautils.KafkaIasiosConsumer" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">KafkaIasiosConsumer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topicName">topicName: <span class="extype" name="java.lang.String">String</span></span>, <span name="consumerID">consumerID: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       
       
@@ -352,6 +345,24 @@ IDs and type are evaluated in AND.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#accept" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="accept(iasio:org.eso.ias.types.IASValue[_]):Boolean"></a><a id="accept(IASValue[_]):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#accept(iasio:org.eso.ias.types.IASValue[_]):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">accept</span><span class="params">(<span name="iasio">iasio: <a href="../types/IASValue.html" class="extype" name="org.eso.ias.types.IASValue">IASValue</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Accepts or rejects a IASValue against the filters, if set
+</p><div class="fullcomment"><div class="comment cmt"><p>Accepts or rejects a IASValue against the filters, if set
+</p></div><dl class="paramcmts block"><dt class="param">iasio</dt><dd class="cmt"><p>The IASValue to accept or discard</p></dd><dt>returns</dt><dd class="cmt"><p>true if teh value is accpted; false otherwise</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.eso.ias.kafkautils">org.eso.ias.kafkautils</a>] </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer">KafkaIasiosConsumer</a> → <a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#addIdsToFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addIdsToFilter(idsToAdd:java.util.Set[String]):Unit"></a><a id="addIdsToFilter(Set[String]):Unit"></a>
       <span class="permalink">
@@ -499,6 +510,42 @@ IDs and type are evaluated in AND.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#getAcceptedIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getAcceptedIds():java.util.Set[String]"></a><a id="getAcceptedIds():Set[String]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#getAcceptedIds():java.util.Set[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAcceptedIds</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Getter
+</p><div class="fullcomment"><div class="comment cmt"><p>Getter
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the unmodifiable set of accepted IDs</p></dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#getAcceptedTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getAcceptedTypes():java.util.Set[org.eso.ias.types.IASTypes]"></a><a id="getAcceptedTypes():Set[IASTypes]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#getAcceptedTypes():java.util.Set[org.eso.ias.types.IASTypes]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAcceptedTypes</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Getter
+</p><div class="fullcomment"><div class="comment cmt"><p>Getter
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the unmodifiable set of accepted IAS types</p></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -518,7 +565,7 @@ IDs and type are evaluated in AND.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#getNumOfProcessedRecords" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer#getNumOfProcessedRecords" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getNumOfProcessedRecords():Long"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#getNumOfProcessedRecords():Long" title="Permalink">
@@ -533,23 +580,7 @@ IDs and type are evaluated in AND.
         <span class="name">getNumOfProcessedRecords</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the number of records processed</p></dd></dl></div>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#getNumOfProcessedStrings" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getNumOfProcessedStrings():Long"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#getNumOfProcessedStrings():Long" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getNumOfProcessedStrings</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the number of strings processed</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the number of records processed</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -660,7 +691,7 @@ existing filters, if any.
 </p></div><dl class="paramcmts block"><dt class="param">idsToAccept</dt><dd class="cmt"><p>The new set of IDs for filtering;
                      if <code>null</code> or empty the filtering by IDs is removed</p></dd><dt class="param">typesToAccept</dt><dd class="cmt"><p>The new set of types for filtering
                      if <code>null</code> or empty the filtering by types is removed</p></dd></dl></div>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setUp():Unit"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#setUp():Unit" title="Permalink">
@@ -676,8 +707,9 @@ existing filters, if any.
       </span>
       
       <p class="shortcomment cmt">Initializes the consumer with default kafka properties
-</p>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+</p><div class="fullcomment"><div class="comment cmt"><p>Initializes the consumer with default kafka properties
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setUp(userPros:java.util.Properties):Unit"></a><a id="setUp(Properties):Unit"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#setUp(userPros:java.util.Properties):Unit" title="Permalink">
@@ -695,11 +727,11 @@ existing filters, if any.
       <p class="shortcomment cmt">Initializes the consumer with the passed kafka properties.</p><div class="fullcomment"><div class="comment cmt"><p>Initializes the consumer with the passed kafka properties.
 &lt;P&gt;
 The defaults are used if not found in the parameter
-</p></div><dl class="paramcmts block"><dt class="param">userPros</dt><dd class="cmt"><p>The user defined kafka properties</p></dd></dl></div>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#startGettingEvents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition,listener:org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener):Unit"></a><a id="startGettingEvents(StartPosition,IasioListener):Unit"></a>
+</p></div><dl class="paramcmts block"><dt class="param">userPros</dt><dd class="cmt"><p>The user defined kafka properties</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer#startGettingEvents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.KafkaStringsConsumer.StartPosition,listener:&lt;error&gt;):Unit"></a><a id="startGettingEvents(StartPosition,&lt;error&gt;):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition,listener:org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#startGettingEvents(startReadingFrom:org.eso.ias.kafkautils.KafkaStringsConsumer.StartPosition,listener:&lt;error&gt;):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -708,7 +740,7 @@ The defaults are used if not found in the parameter
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">startGettingEvents</span><span class="params">(<span name="startReadingFrom">startReadingFrom: <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.StartPosition">StartPosition</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer.IasioListener">IasioListener</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">startGettingEvents</span><span class="params">(<span name="startReadingFrom">startReadingFrom: <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StartPosition">StartPosition</span></span>, <span name="listener">listener: &lt;error&gt;</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Start processing received by the SimpleStringConsumer from the kafka channel.</p><div class="fullcomment"><div class="comment cmt"><p>Start processing received by the SimpleStringConsumer from the kafka channel.
@@ -716,11 +748,11 @@ The defaults are used if not found in the parameter
 This method starts the thread that polls the kafka topic
 and returns after the consumer has been assigned to at least
 one partition.
-</p></div><dl class="paramcmts block"><dt class="param">startReadingFrom</dt><dd class="cmt"><p>Starting position in the kafka partition</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener of events published in the topic</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of timeout subscribing to the kafkatopic</p></span></dd></dl></div>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#stringEventReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="stringEventReceived(event:String):Unit"></a><a id="stringEventReceived(String):Unit"></a>
+</p></div><dl class="paramcmts block"><dt class="param">startReadingFrom</dt><dd class="cmt"><p>Starting position in the kafka partition</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listener of events published in the topic</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of timeout subscribing to the kafkatopic</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer#stringsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stringsReceived(strings:java.util.Collection[String]):Unit"></a><a id="stringsReceived(Collection[String]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#stringEventReceived(event:String):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#stringsReceived(strings:java.util.Collection[String]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -729,14 +761,14 @@ one partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stringEventReceived</span><span class="params">(<span name="event">event: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">stringsReceived</span><span class="params">(<span name="strings">strings: <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="java.lang.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Receive string published in the kafka topic and
-forward IASIOs to the listener
-</p><div class="fullcomment"><div class="comment cmt"><p>Receive string published in the kafka topic and
-forward IASIOs to the listener
-</p></div><dl class="paramcmts block"><dt class="param">event</dt><dd class="cmt"><p>The string read from the Kafka topic</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.kafkautils.KafkaIasiosConsumer">KafkaIasiosConsumer</a> → KafkaConsumerListener</dd></dl></div>
+      <p class="shortcomment cmt">Receive the string consumed from the kafka topic and
+forward the IASIOs to the listener
+</p><div class="fullcomment"><div class="comment cmt"><p>Receive the string consumed from the kafka topic and
+forward the IASIOs to the listener
+</p></div><dl class="paramcmts block"><dt class="param">strings</dt><dd class="cmt"><p>The strings read from the Kafka topic</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a> → StringsConsumer</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -753,7 +785,7 @@ forward IASIOs to the listener
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="org.eso.ias.kafkautils.KafkaIasiosConsumer#tearDown" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer#tearDown" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="tearDown():Unit"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosConsumer.html#tearDown():Unit" title="Permalink">
@@ -769,7 +801,8 @@ forward IASIOs to the listener
       </span>
       
       <p class="shortcomment cmt">Close and cleanup the consumer
-</p>
+</p><div class="fullcomment"><div class="comment cmt"><p>Close and cleanup the consumer
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
@@ -864,8 +897,10 @@ forward IASIOs to the listener
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">
-              <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></h3>
+        <div class="parent" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">
+              <h3>Inherited from <a href="SimpleKafkaIasiosConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer">SimpleKafkaIasiosConsumer</a></h3>
+            </div><div class="parent" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer">
+              <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer">StringsConsumer</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

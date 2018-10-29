@@ -366,14 +366,15 @@ the SupervisorWithTemplates Supervisor.
       <p class="shortcomment cmt">This test checks if the the TF running in a templated ASCE
 is able to get the inputs by their IDs by calling getValue.</p><div class="fullcomment"><div class="comment cmt"><p>This test checks if the the TF running in a templated ASCE
 is able to get the inputs by their IDs by calling getValue.</p><p>It instantiates a templated DASU with one ASCE that
-sums 2 inputs of type Long.
-One input is from a non templated input while the other
-one is templated.
+has 2 inputs of type Long plus 2 inputs of type alarm.
+The TF simes the values of the longs plus 2 and 1 for the alarms.
+One input is from a non templated input, other one
+one is templated annd the alarms are templated input instances.
 The TF gets the values of the inputs by calling getEval
 and not directly accessing the map.
 getEval must recognize the templated and not templated parameters.
 For templated parameters, getValue must take into account the
-instance of the DASU/ASCE.</p><p>The test instantiates the DASU with the ASCE and send the inputs.
+instance of the DASU/ASCE and the instance of templated inputs instances.</p><p>The test instantiates the DASU with the ASCE and send the inputs.
 Finally, it checks the output.</p><p>The test, instantiates a real DASU and ASCE i.e. no mock used here.</p><p>The configuration is read from test/CDB:
 Supervisor: SupervisorToTestInputs
 Template: TemplToTestInputs

@@ -150,6 +150,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.tranfer">tranfer</a></dd></dl></div>
     </li><li class="current-entities indented4">
+                        <a class="object" href="AntPadInhibitor$.html" title=""></a>
+                        <a class="class" href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern."></a>
+                        <a href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern.">AntPadInhibitor</a>
+                      </li><li class="current-entities indented4">
                         <a class="object" href="BackupSelector$.html" title=""></a>
                         <a class="class" href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation."></a>
                         <a href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation.">BackupSelector</a>
@@ -512,9 +516,9 @@ is to tune the refresh rate of the Supervisor where this TF is executed.
       <p class="shortcomment cmt">Get the value of the passed property, if defined
 </p>
     </li><li name="org.eso.ias.asce.transfer.ScalaTransferExecutor#getValue" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getValue(inputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],id:String):Option[org.eso.ias.asce.transfer.IasIO[_]]"></a><a id="getValue(Map[String,IasIO[_]],String):Option[IasIO[_]]"></a>
+      <a id="getValue(inputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],id:String,instance:Option[Int]):Option[org.eso.ias.asce.transfer.IasIO[_]]"></a><a id="getValue(Map[String,IasIO[_]],String,Option[Int]):Option[IasIO[_]]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/tranfer/DelayedAlarm.html#getValue(inputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],id:String):Option[org.eso.ias.asce.transfer.IasIO[_]]" title="Permalink">
+      <a href="../../../../org/eso/ias/tranfer/DelayedAlarm.html#getValue(inputs:Map[String,org.eso.ias.asce.transfer.IasIO[_]],id:String,instance:Option[Int]):Option[org.eso.ias.asce.transfer.IasIO[_]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -523,16 +527,23 @@ is to tune the refresh rate of the Supervisor where this TF is executed.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getValue</span><span class="params">(<span name="inputs">inputs: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../asce/transfer/IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[_]]</span>, <span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../asce/transfer/IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[_]]</span>
+        <span class="name">getValue</span><span class="params">(<span name="inputs">inputs: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../asce/transfer/IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[_]]</span>, <span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="instance">instance: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../asce/transfer/IasIO.html" class="extype" name="org.eso.ias.asce.transfer.IasIO">IasIO</a>[_]]</span>
       </span>
       
-      <p class="shortcomment cmt">This method transparently return a value from the passed ID,
-being the ASCE templated or not.</p><div class="fullcomment"><div class="comment cmt"><p>This method transparently return a value from the passed ID,
-being the ASCE templated or not.</p><p>If the ASCE is not templated, this method delegates to
-<code><span class="extype" name="Map#get(Object)">Map#get(Object)</span></code>.</p><p>If the ASCE is generated out of a template,
+      <p class="shortcomment cmt">This method transparently returns a value from the passed ID and instance.</p><div class="fullcomment"><div class="comment cmt"><p>This method transparently returns a value from the passed ID and instance.</p><p>When an input is not templated, neither a template instance, then its value
+cabn be directly retrieved from the map of the inputs passed to [#eval].
+But if the imput is templated or a templated instance then this method must be used.</p><p>If the ASCE is generated out of a template,
 its inputs can or cannot be generated out of the same template. In the latter,
-their identifiers must be enriched with the number of the instance.
-</p></div><dl class="paramcmts block"><dt class="param">inputs</dt><dd class="cmt"><p>the map of the inputs</p></dd><dt class="param">id</dt><dd class="cmt"><p>The (non templated) identifier of the value</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue of the given ID, or None if not found in the Map</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
+their identifiers must be enriched with the number of the instance of the ASCE.
+For templated inputs the number of the instance is not needed because it is
+the same instance number of the ASCE and it is known to the transfer function.
+The case of templated input instances is different because their instance number
+is defined in the configuration of the ASCE and not known in the transfer function
+so it must be esplicity passed by the caller.</p><p>For normal and templated inputs, the instance is empty.
+For templated inputs the instance can be passed if it is teh same of the ASCE.
+For templated input instances the instance number is required.</p><p>This method must be used also to get templated input instances from non templated ASCEs.
+</p></div><dl class="paramcmts block"><dt class="param">inputs</dt><dd class="cmt"><p>the map of the inputs</p></dd><dt class="param">id</dt><dd class="cmt"><p>The (non templated) identifier of the value</p></dd><dt class="param">instance</dt><dd class="cmt"><p>the optional instance nummber for templated input instances,
+                not required for other cases</p></dd><dt>returns</dt><dd class="cmt"><p>the IASValue of the given ID, or None if not found in the Map</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
