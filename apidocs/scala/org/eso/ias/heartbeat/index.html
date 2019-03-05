@@ -229,6 +229,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.consumer" visbl="pub" class="indented5 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="consumer"></a><a id="consumer:consumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/index.html#consumer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="consumer/index.html"><span class="name">consumer</span></a>
+      </span>
+      
+      
     </li><li name="org.eso.ias.heartbeat.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="publisher"></a><a id="publisher:publisher"></a>
       <span class="permalink">
@@ -290,6 +306,14 @@
                         <a class="class" href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message"></a>
                         <a href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message">HbProducer</a>
                       </li><li class="current-entities indented4">
+                        <a class="object" href="Heartbeat$.html" title=""></a>
+                        <a class="class" href="Heartbeat.html" title="The HB published in the kafka topic,"></a>
+                        <a href="Heartbeat.html" title="The HB published in the kafka topic,">Heartbeat</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat"></a>
+                        <a href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat">HeartbeatProducerType</a>
+                      </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="HeartbeatStatus.html" title="The message sent by the heartbeat reporting the status of the tool."></a>
                         <a href="HeartbeatStatus.html" title="The message sent by the heartbeat reporting the status of the tool.">HeartbeatStatus</a>
@@ -322,6 +346,22 @@
       </span>
       <span class="symbol">
         <a title="" href="../logging/index.html"><span class="name">logging</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.monitor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="monitor"></a><a id="monitor:monitor"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#monitor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../monitor/index.html"><span class="name">monitor</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
@@ -552,7 +592,7 @@ to the publisher subscriber framework.</p><div class="fullcomment"><div class="c
 to the publisher subscriber framework.</p><p>Users of this class shall only notify of changes
 in the status message.</p><p>It is a singleton to be sure that the same
 tool does not send the HB twice.</p><p>The initial status is STARTING_UP; then it must be updated by
-calling <a href="HbEngine.html#updateHbState(newStateMsg:org.eso.ias.heartbeat.HeartbeatStatus):Unit" class="extmbr" name="org.eso.ias.heartbeat.HbEngine#updateHbState">HbEngine.updateHbState</a> to follow the
+calling <a href="HbEngine.html#updateHbState(newStateMsg:org.eso.ias.heartbeat.HeartbeatStatus):Unit" class="extmbr" name="org.eso.ias.heartbeat.HbEngine#updateHbState">updateHbState</a> to follow the
 computational phases of the tool that sends the HB.
 </p></div></div>
     </li><li name="org.eso.ias.heartbeat.HbMsgSerializer" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
@@ -590,6 +630,41 @@ a file or any other
       
       <p class="shortcomment cmt">Implementation of HbProducer pushes the HB status message
 </p>
+    </li><li name="org.eso.ias.heartbeat.Heartbeat" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="HeartbeatextendsAnyRef"></a><a id="Heartbeat:Heartbeat"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/index.html#HeartbeatextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The HB published in the kafka topic," href="Heartbeat.html"><span class="name">Heartbeat</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The HB published in the kafka topic,</p><div class="fullcomment"><div class="comment cmt"><p>The HB published in the kafka topic,</p><p>It is composed of a type and a name (that together are the unique
+identifier of the tool) plus the hostname where the tool runs</p><p>The Heartbeat is immutable.
+</p></div></div>
+    </li><li name="org.eso.ias.heartbeat.HeartbeatProducerType" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="HeartbeatProducerTypeextendsEnum[org.eso.ias.heartbeat.HeartbeatProducerType]"></a><a id="HeartbeatProducerType:HeartbeatProducerType"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/index.html#HeartbeatProducerTypeextendsEnum[org.eso.ias.heartbeat.HeartbeatProducerType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The type of the producer of a Heartbeat" href="HeartbeatProducerType.html"><span class="name">HeartbeatProducerType</span></a><span class="result"> extends <span class="extype" name="java.lang.Enum">Enum</span>[<a href="HeartbeatProducerType.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatProducerType">HeartbeatProducerType</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The type of the producer of a Heartbeat</p><div class="fullcomment"><div class="comment cmt"><p>The type of the producer of a Heartbeat</p><p>Such type includes plugins, converters, Supervisor, clients...
+</p></div></div>
     </li><li name="org.eso.ias.heartbeat.HeartbeatStatus" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="HeartbeatStatusextendsEnum[org.eso.ias.heartbeat.HeartbeatStatus]"></a><a id="HeartbeatStatus:HeartbeatStatus"></a>
       <span class="permalink">
@@ -631,6 +706,22 @@ of the tool.</p>
       </span>
       
       <p class="shortcomment cmt">Companion object</p>
+    </li><li name="org.eso.ias.heartbeat.Heartbeat" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Heartbeat"></a><a id="Heartbeat:Heartbeat"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/index.html#Heartbeat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Heartbeat$.html"><span class="name">Heartbeat</span></a>
+      </span>
+      
+      
     </li>
               </ol>
             </div>

@@ -151,10 +151,6 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.heartbeat">heartbeat</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="JsonSerialization.html" title=""></a>
-                        <a href="JsonSerialization.html" title="">JsonSerialization</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="MockProducer.html" title="A mock producer to record what the Engine sends to the framework"></a>
                         <a href="MockProducer.html" title="A mock producer to record what the Engine sends to the framework">MockProducer</a>
                       </li><li class="current-entities indented5">
@@ -163,8 +159,20 @@
                         <a href="TestEngine.html" title="">TestEngine</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="" title="Test the HB kafka publisher"></a>
-                        <a href="" title="Test the HB kafka publisher">TestKafkaPublisher</a>
+                        <a class="class" href="TestHeartbeat.html" title="Test the heartbeat"></a>
+                        <a href="TestHeartbeat.html" title="Test the heartbeat">TestHeartbeat</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TestJsonSerialization.html" title=""></a>
+                        <a href="TestJsonSerialization.html" title="">TestJsonSerialization</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TestKafkaHbConsumer.html" title="Test the HB consumer"></a>
+                        <a href="TestKafkaHbConsumer.html" title="Test the HB consumer">TestKafkaHbConsumer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="Test the HB kafka publisher and consumer"></a>
+                        <a href="" title="Test the HB kafka publisher and consumer">TestKafkaPublisher</a>
                       </li>
               </ul>
             </div>
@@ -188,17 +196,17 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TestKafkaPublisher</span><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span> with <span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span></span>
+        <span class="name">TestKafkaPublisher</span><span class="result"> extends <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span> with <a href="../consumer/HbListener.html" class="extype" name="org.eso.ias.heartbeat.consumer.HbListener">HbListener</a> with <span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Test the HB kafka publisher
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Test the HB kafka publisher and consumer
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span>, <span class="extype" name="org.scalatest.SuiteMixin">SuiteMixin</span>, <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span>, <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span>, <span class="extype" name="org.scalatest.FlatSpecLike">FlatSpecLike</span>, <span class="extype" name="org.scalatest.Documenting">Documenting</span>, <span class="extype" name="org.scalatest.Alerting">Alerting</span>, <span class="extype" name="org.scalatest.Notifying">Notifying</span>, <span class="extype" name="org.scalatest.Informing">Informing</span>, <span class="extype" name="org.scalatest.words.CanVerb">CanVerb</span>, <span class="extype" name="org.scalatest.words.MustVerb">MustVerb</span>, <span class="extype" name="org.scalatest.words.ShouldVerb">ShouldVerb</span>, <span class="extype" name="org.scalatest.TestRegistration">TestRegistration</span>, <span class="extype" name="org.scalatest.TestSuite">TestSuite</span>, <span class="extype" name="org.scalatest.Suite">Suite</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="org.scalatest.Assertions">Assertions</span>, <span class="extype" name="org.scalactic.TripleEquals">TripleEquals</span>, <span class="extype" name="org.scalactic.TripleEqualsSupport">TripleEqualsSupport</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span>, <span class="extype" name="org.scalatest.SuiteMixin">SuiteMixin</span>, <a href="../consumer/HbListener.html" class="extype" name="org.eso.ias.heartbeat.consumer.HbListener">HbListener</a>, <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span>, <span class="extype" name="org.scalatest.FlatSpecLike">FlatSpecLike</span>, <span class="extype" name="org.scalatest.Documenting">Documenting</span>, <span class="extype" name="org.scalatest.Alerting">Alerting</span>, <span class="extype" name="org.scalatest.Notifying">Notifying</span>, <span class="extype" name="org.scalatest.Informing">Informing</span>, <span class="extype" name="org.scalatest.words.CanVerb">CanVerb</span>, <span class="extype" name="org.scalatest.words.MustVerb">MustVerb</span>, <span class="extype" name="org.scalatest.words.ShouldVerb">ShouldVerb</span>, <span class="extype" name="org.scalatest.TestRegistration">TestRegistration</span>, <span class="extype" name="org.scalatest.TestSuite">TestSuite</span>, <span class="extype" name="org.scalatest.Suite">Suite</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="org.scalatest.Assertions">Assertions</span>, <span class="extype" name="org.scalactic.TripleEquals">TripleEquals</span>, <span class="extype" name="org.scalactic.TripleEqualsSupport">TripleEqualsSupport</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -224,7 +232,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.heartbeat.test.TestKafkaPublisher"><span>TestKafkaPublisher</span></li><li class="in" name="org.scalatest.BeforeAndAfter"><span>BeforeAndAfter</span></li><li class="in" name="org.scalatest.SuiteMixin"><span>SuiteMixin</span></li><li class="in" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener"><span>KafkaConsumerListener</span></li><li class="in" name="org.scalatest.FlatSpec"><span>FlatSpec</span></li><li class="in" name="org.scalatest.FlatSpecLike"><span>FlatSpecLike</span></li><li class="in" name="org.scalatest.Documenting"><span>Documenting</span></li><li class="in" name="org.scalatest.Alerting"><span>Alerting</span></li><li class="in" name="org.scalatest.Notifying"><span>Notifying</span></li><li class="in" name="org.scalatest.Informing"><span>Informing</span></li><li class="in" name="org.scalatest.words.CanVerb"><span>CanVerb</span></li><li class="in" name="org.scalatest.words.MustVerb"><span>MustVerb</span></li><li class="in" name="org.scalatest.words.ShouldVerb"><span>ShouldVerb</span></li><li class="in" name="org.scalatest.TestRegistration"><span>TestRegistration</span></li><li class="in" name="org.scalatest.TestSuite"><span>TestSuite</span></li><li class="in" name="org.scalatest.Suite"><span>Suite</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.scalatest.Assertions"><span>Assertions</span></li><li class="in" name="org.scalactic.TripleEquals"><span>TripleEquals</span></li><li class="in" name="org.scalactic.TripleEqualsSupport"><span>TripleEqualsSupport</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.heartbeat.test.TestKafkaPublisher"><span>TestKafkaPublisher</span></li><li class="in" name="org.scalatest.BeforeAndAfter"><span>BeforeAndAfter</span></li><li class="in" name="org.scalatest.SuiteMixin"><span>SuiteMixin</span></li><li class="in" name="org.eso.ias.heartbeat.consumer.HbListener"><span>HbListener</span></li><li class="in" name="org.scalatest.FlatSpec"><span>FlatSpec</span></li><li class="in" name="org.scalatest.FlatSpecLike"><span>FlatSpecLike</span></li><li class="in" name="org.scalatest.Documenting"><span>Documenting</span></li><li class="in" name="org.scalatest.Alerting"><span>Alerting</span></li><li class="in" name="org.scalatest.Notifying"><span>Notifying</span></li><li class="in" name="org.scalatest.Informing"><span>Informing</span></li><li class="in" name="org.scalatest.words.CanVerb"><span>CanVerb</span></li><li class="in" name="org.scalatest.words.MustVerb"><span>MustVerb</span></li><li class="in" name="org.scalatest.words.ShouldVerb"><span>ShouldVerb</span></li><li class="in" name="org.scalatest.TestRegistration"><span>TestRegistration</span></li><li class="in" name="org.scalatest.TestSuite"><span>TestSuite</span></li><li class="in" name="org.scalatest.Suite"><span>Suite</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="org.scalatest.Assertions"><span>Assertions</span></li><li class="in" name="org.scalactic.TripleEquals"><span>TripleEquals</span></li><li class="in" name="org.scalactic.TripleEqualsSupport"><span>TripleEqualsSupport</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -1477,6 +1485,40 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#hbKafkaConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hbKafkaConsumer:org.eso.ias.heartbeat.consumer.HbKafkaConsumer"></a><a id="hbKafkaConsumer:HbKafkaConsumer"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#hbKafkaConsumer:org.eso.ias.heartbeat.consumer.HbKafkaConsumer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbKafkaConsumer</span><span class="result">: <a href="../consumer/HbKafkaConsumer.html" class="extype" name="org.eso.ias.heartbeat.consumer.HbKafkaConsumer">HbKafkaConsumer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The consumer receiving events from the HB topic</p>
+    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#hbReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hbReceived(hbMsg:org.eso.ias.heartbeat.consumer.HbMsg):Unit"></a><a id="hbReceived(HbMsg):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#hbReceived(hbMsg:org.eso.ias.heartbeat.consumer.HbMsg):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbReceived</span><span class="params">(<span name="hbMsg">hbMsg: <a href="../consumer/HbMsg.html" class="extype" name="org.eso.ias.heartbeat.consumer.HbMsg">HbMsg</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An heartbeat has been read from the HB topic
+</p><div class="fullcomment"><div class="comment cmt"><p>An heartbeat has been read from the HB topic
+</p></div><dl class="paramcmts block"><dt class="param">hbMsg</dt><dd class="cmt"><p>The HB meassage</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.heartbeat.test.TestKafkaPublisher">TestKafkaPublisher</a> → <a href="../consumer/HbListener.html" class="extype" name="org.eso.ias.heartbeat.consumer.HbListener">HbListener</a></dd></dl></div>
     </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#id" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="id:String"></a>
       <span class="permalink">
@@ -1492,7 +1534,7 @@
         <span class="name">id</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">The ide of the HB producer</p>
+      <p class="shortcomment cmt">The id of the HB producer</p>
     </li><li name="org.scalatest.FlatSpecLike#ignore" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ignore:FlatSpecLike.this.IgnoreWord"></a><a id="ignore:IgnoreWord"></a>
       <span class="permalink">
@@ -1582,7 +1624,7 @@
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">var</span>
       </span>
       <span class="symbol">
         <span class="name">kProd</span><span class="result">: <a href="../publisher/HbKafkaProducer.html" class="extype" name="org.eso.ias.heartbeat.publisher.HbKafkaProducer">HbKafkaProducer</a></span>
@@ -1771,23 +1813,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Assertions</dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#receivedStrings" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="receivedStrings:scala.collection.mutable.ArrayBuffer[String]"></a><a id="receivedStrings:ArrayBuffer[String]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#receivedStrings:scala.collection.mutable.ArrayBuffer[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">receivedStrings</span><span class="result">: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">The strings read from the kafka topic
-</p>
     </li><li name="org.scalatest.FlatSpecLike#registerIgnoredTest" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="registerIgnoredTest(testText:String,testTags:org.scalatest.Tag*)(testFun:=&gt;Any)(implicitpos:org.scalactic.source.Position):Unit"></a><a id="registerIgnoredTest(String,Tag*)(⇒Any)(Position):Unit"></a>
       <span class="permalink">
@@ -1948,41 +1973,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>FlatSpecLike</dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#stringConsumer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="stringConsumer:org.eso.ias.kafkautils.SimpleStringConsumer"></a><a id="stringConsumer:SimpleStringConsumer"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#stringConsumer:org.eso.ias.kafkautils.SimpleStringConsumer" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stringConsumer</span><span class="result">: <a href="../../kafkautils/SimpleStringConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer">SimpleStringConsumer</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">The consumer getting events from the HB topic
-</p>
-    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#stringEventReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="stringEventReceived(event:String):Unit"></a><a id="stringEventReceived(String):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#stringEventReceived(event:String):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stringEventReceived</span><span class="params">(<span name="event">event: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Process an event (a String) received from the kafka topic
-</p><div class="fullcomment"><div class="comment cmt"><p>Process an event (a String) received from the kafka topic
-</p></div><dl class="paramcmts block"><dt class="param">event</dt><dd class="cmt"><p>The string received in the topic</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.heartbeat.test.TestKafkaPublisher">TestKafkaPublisher</a> → KafkaConsumerListener</dd></dl></div>
     </li><li name="org.scalatest.FlatSpecLike#styleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="styleName:String"></a>
       <span class="permalink">
@@ -2047,10 +2037,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Suite</dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#supervIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="supervIdentifier:org.eso.ias.types.Identifier"></a><a id="supervIdentifier:Identifier"></a>
+    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#supervHeartbeat" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="supervHeartbeat:org.eso.ias.heartbeat.Heartbeat"></a><a id="supervHeartbeat:Heartbeat"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#supervIdentifier:org.eso.ias.types.Identifier" title="Permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#supervHeartbeat:org.eso.ias.heartbeat.Heartbeat" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2059,10 +2049,26 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">supervIdentifier</span><span class="result">: <a href="../../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
+        <span class="name">supervHeartbeat</span><span class="result">: <a href="../Heartbeat.html" class="extype" name="org.eso.ias.heartbeat.Heartbeat">Heartbeat</a></span>
       </span>
       
-      <p class="shortcomment cmt">The identifier of the supervisor</p>
+      <p class="shortcomment cmt">The HB of the supervisor</p>
+    </li><li name="org.eso.ias.heartbeat.test.TestKafkaPublisher#supervId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="supervId:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/test/TestKafkaPublisher.html#supervId:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">supervId</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The ID of th esupervisor</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -2346,8 +2352,8 @@
               <h3>Inherited from <span class="extype" name="org.scalatest.BeforeAndAfter">BeforeAndAfter</span></h3>
             </div><div class="parent" name="org.scalatest.SuiteMixin">
               <h3>Inherited from <span class="extype" name="org.scalatest.SuiteMixin">SuiteMixin</span></h3>
-            </div><div class="parent" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">
-              <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer.KafkaConsumerListener">KafkaConsumerListener</span></h3>
+            </div><div class="parent" name="org.eso.ias.heartbeat.consumer.HbListener">
+              <h3>Inherited from <a href="../consumer/HbListener.html" class="extype" name="org.eso.ias.heartbeat.consumer.HbListener">HbListener</a></h3>
             </div><div class="parent" name="org.scalatest.FlatSpec">
               <h3>Inherited from <span class="extype" name="org.scalatest.FlatSpec">FlatSpec</span></h3>
             </div><div class="parent" name="org.scalatest.FlatSpecLike">

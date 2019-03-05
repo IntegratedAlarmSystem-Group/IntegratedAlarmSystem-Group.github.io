@@ -149,6 +149,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.sink">sink</a></dd></dl></div>
+    </li><li name="org.eso.ias.sink.ltdb" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ltdb"></a><a id="ltdb:ltdb"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/index.html#ltdb" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ltdb/index.html"><span class="name">ltdb</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.sink">sink</a></dd></dl></div>
     </li><li name="org.eso.ias.sink.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
@@ -174,7 +190,7 @@
                         <a class="class" href="ProcessorThreadFactory.html" title=""></a>
                         <a href="ProcessorThreadFactory.html" title="">ProcessorThreadFactory</a>
                       </li><li class="current-entities indented4">
-                        <span class="separator"></span>
+                        <a class="object" href="ValueListener$.html" title=""></a>
                         <a class="class" href="ValueListener.html" title="The listener of IasValues to be processed"></a>
                         <a href="ValueListener.html" title="The listener of IasValues to be processed">ValueListener</a>
                       </li>
@@ -209,11 +225,11 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The IasValueProcessor gets all the IasValues published in the BSDB
 and sends them to the listener for further processing.</p><p>The processing is triggered when the buffer receivedValues contains
-at least minSizeOfValsToProcessAtOnce itemes.
+at least minSizeOfValsToProcessAtOnce items.
 It is also periodically triggered every periodicProcessingTime msecs.</p><p>In this version the IasValueProcessor does not take any action if
 one of the listeners is too slow apart of logging messages.
 The slowness is detected when the queue of received and
-not yet proocessed values grows too much. In this case the
+not yet processed values grows too much. In this case the
 IasValueProcessor logs a warning. To avoid submitting
 too many logs, the message is logged with a throttling.</p><p>The buffer is bounded by maxBufferSize: if threads do not consume
 values fast enough the oldest values in the buffer are removed to avoid
@@ -272,9 +288,9 @@ from the active listener.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.sink.IasValueProcessor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(processorIdentifier:org.eso.ias.types.Identifier,listeners:List[org.eso.ias.sink.ValueListener],hbProducer:org.eso.ias.heartbeat.HbProducer,inputsSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao]):org.eso.ias.sink.IasValueProcessor"></a><a id="&lt;init&gt;:IasValueProcessor"></a>
+      <a id="&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],hbProducer:org.eso.ias.heartbeat.HbProducer,inputsSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor"></a><a id="&lt;init&gt;:IasValueProcessor"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#&lt;init&gt;(processorIdentifier:org.eso.ias.types.Identifier,listeners:List[org.eso.ias.sink.ValueListener],hbProducer:org.eso.ias.heartbeat.HbProducer,inputsSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao]):org.eso.ias.sink.IasValueProcessor" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],hbProducer:org.eso.ias.heartbeat.HbProducer,inputsSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -283,10 +299,10 @@ from the active listener.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IasValueProcessor</span><span class="params">(<span name="processorIdentifier">processorIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="listeners">listeners: <span class="extype" name="scala.List">List</span>[<a href="ValueListener.html" class="extype" name="org.eso.ias.sink.ValueListener">ValueListener</a>]</span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="inputsSubscriber">inputsSubscriber: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="iasDao">iasDao: <a href="../cdb/pojos/IasDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasDao">IasDao</a></span>, <span name="iasioDaos">iasioDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/IasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a>]</span>)</span>
+        <span class="name">IasValueProcessor</span><span class="params">(<span name="processorIdentifier">processorIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="listeners">listeners: <span class="extype" name="scala.List">List</span>[<a href="ValueListener.html" class="extype" name="org.eso.ias.sink.ValueListener">ValueListener</a>]</span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="inputsSubscriber">inputsSubscriber: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="iasDao">iasDao: <a href="../cdb/pojos/IasDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasDao">IasDao</a></span>, <span name="iasioDaos">iasioDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/IasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a>]</span>, <span name="templateDaos">templateDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">processorIdentifier</dt><dd class="cmt"><p>the idenmtifier of the value processor</p></dd><dt class="param">listeners</dt><dd class="cmt"><p>the processors of the IasValues read from the BSDB</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>The HB generator</p></dd><dt class="param">inputsSubscriber</dt><dd class="cmt"><p>The subscriber to get events from the BDSB</p></dd><dt class="param">iasDao</dt><dd class="cmt"><p>The configuration of the IAS read from the CDB</p></dd><dt class="param">iasioDaos</dt><dd class="cmt"><p>The configuration of the IASIOs read from the CDB</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">processorIdentifier</dt><dd class="cmt"><p>the identifier of the value processor</p></dd><dt class="param">listeners</dt><dd class="cmt"><p>the processors of the IasValues read from the BSDB</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>The HB generator</p></dd><dt class="param">inputsSubscriber</dt><dd class="cmt"><p>The subscriber to get events from the BDSB</p></dd><dt class="param">iasDao</dt><dd class="cmt"><p>The configuration of the IAS read from the CDB</p></dd><dt class="param">iasioDaos</dt><dd class="cmt"><p>The configuration of the IASIOs read from the CDB</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -934,9 +950,9 @@ of the buffer reached minSizeOfValsToProceesAtOnce size
       
       <p class="shortcomment cmt">The periodic executor for periodic processing of values</p>
     </li><li name="org.eso.ias.sink.IasValueProcessor#processorIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="processorIdentifier:org.eso.ias.types.Identifier"></a><a id="processorIdentifier:Identifier"></a>
+      <a id="processorIdentifier:String"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#processorIdentifier:org.eso.ias.types.Identifier" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#processorIdentifier:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -945,7 +961,7 @@ of the buffer reached minSizeOfValsToProceesAtOnce size
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">processorIdentifier</span><span class="result">: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
+        <span class="name">processorIdentifier</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       
@@ -1015,6 +1031,22 @@ until being processed by the listeners
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.eso.ias.sink.IasValueProcessor#templateDaos" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]"></a><a id="templateDaos:List[TemplateDao]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">templateDaos</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.sink.IasValueProcessor#threadFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="threadFactory:org.eso.ias.sink.ProcessorThreadFactory"></a><a id="threadFactory:ProcessorThreadFactory"></a>
       <span class="permalink">

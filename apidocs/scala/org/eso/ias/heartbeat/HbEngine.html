@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.consumer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="consumer"></a><a id="consumer:consumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/index.html#consumer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="consumer/index.html"><span class="name">consumer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.heartbeat">heartbeat</a></dd></dl></div>
     </li><li name="org.eso.ias.heartbeat.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="publisher"></a><a id="publisher:publisher"></a>
       <span class="permalink">
@@ -194,6 +210,14 @@
                         <a class="class" href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message"></a>
                         <a href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message">HbProducer</a>
                       </li><li class="current-entities indented4">
+                        <a class="object" href="Heartbeat$.html" title=""></a>
+                        <a class="class" href="Heartbeat.html" title="The HB published in the kafka topic,"></a>
+                        <a href="Heartbeat.html" title="The HB published in the kafka topic,">Heartbeat</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat"></a>
+                        <a href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat">HeartbeatProducerType</a>
+                      </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="HeartbeatStatus.html" title="The message sent by the heartbeat reporting the status of the tool."></a>
                         <a href="HeartbeatStatus.html" title="The message sent by the heartbeat reporting the status of the tool.">HeartbeatStatus</a>
@@ -231,7 +255,7 @@
 to the publisher subscriber framework.</p><p>Users of this class shall only notify of changes
 in the status message.</p><p>It is a singleton to be sure that the same
 tool does not send the HB twice.</p><p>The initial status is STARTING_UP; then it must be updated by
-calling <a href="#updateHbState(newStateMsg:org.eso.ias.heartbeat.HeartbeatStatus):Unit" class="extmbr" name="org.eso.ias.heartbeat.HbEngine#updateHbState">HbEngine.updateHbState</a> to follow the
+calling <a href="#updateHbState(newStateMsg:org.eso.ias.heartbeat.HeartbeatStatus):Unit" class="extmbr" name="org.eso.ias.heartbeat.HbEngine#updateHbState">updateHbState</a> to follow the
 computational phases of the tool that sends the HB.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
@@ -467,6 +491,22 @@ computational phases of the tool that sends the HB.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.HbEngine#frequency" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="frequency:Long"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbEngine.html#frequency:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">frequency</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.heartbeat.HbEngine#getActualStatus" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getActualStatus:org.eso.ias.heartbeat.HeartbeatStatus"></a><a id="getActualStatus:HeartbeatStatus"></a>
       <span class="permalink">
@@ -522,6 +562,22 @@ computational phases of the tool that sends the HB.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.HbEngine#hb" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hb:org.eso.ias.heartbeat.Heartbeat"></a><a id="hb:Heartbeat"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbEngine.html#hb:org.eso.ias.heartbeat.Heartbeat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hb</span><span class="result">: <a href="Heartbeat.html" class="extype" name="org.eso.ias.heartbeat.Heartbeat">Heartbeat</a></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.heartbeat.HbEngine#initialStatusDefault" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="initialStatusDefault:org.eso.ias.heartbeat.HeartbeatStatus"></a><a id="initialStatusDefault:HeartbeatStatus"></a>
       <span class="permalink">
@@ -588,22 +644,6 @@ computational phases of the tool that sends the HB.
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if the HB has been started; false otherwise</p></dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.HbEngine#logger" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="logger:com.typesafe.scalalogging.Logger"></a><a id="logger:Logger"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/heartbeat/HbEngine.html#logger:com.typesafe.scalalogging.Logger" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logger</span><span class="result">: <span class="extype" name="com.typesafe.scalalogging.Logger">Logger</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">The logger</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -658,6 +698,22 @@ computational phases of the tool that sends the HB.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.HbEngine#publisher" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="publisher:org.eso.ias.heartbeat.HbProducer"></a><a id="publisher:HbProducer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbEngine.html#publisher:org.eso.ias.heartbeat.HbProducer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">publisher</span><span class="result">: <a href="HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.heartbeat.HbEngine#removeProperty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="removeProperty(key:String):Option[String]"></a><a id="removeProperty(String):Option[String]"></a>
       <span class="permalink">

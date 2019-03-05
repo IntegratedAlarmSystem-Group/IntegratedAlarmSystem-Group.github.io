@@ -310,9 +310,9 @@ of the output collecting the inputs intil the throttling time interval elapses.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.dasu.Dasu#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.Dasu"></a><a id="&lt;init&gt;:Dasu"></a>
+      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,autoSendTimeInterval:Integer,validityThreshold:Integer):org.eso.ias.dasu.Dasu"></a><a id="&lt;init&gt;:Dasu"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.Dasu" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,autoSendTimeInterval:Integer,validityThreshold:Integer):org.eso.ias.dasu.Dasu" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -321,11 +321,11 @@ of the output collecting the inputs intil the throttling time interval elapses.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Dasu</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="tolerance">tolerance: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
+        <span class="name">Dasu</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="validityThreshold">validityThreshold: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt">create a DASU with the given identifier</p><div class="fullcomment"><div class="comment cmt"><p>create a DASU with the given identifier</p></div><dl class="paramcmts block"><dt class="param">dasuIdentifier</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>the refresh rate (seconds) to automatically re-send the last calculated
-                   output even if it did not change</p></dd><dt class="param">tolerance</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
+                   output even if it did not change</p></dd><dt class="param">validityThreshold</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -845,10 +845,10 @@ is given by <a href="Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr"
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.Dasu#tolerance" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="tolerance:Integer"></a>
+    </li><li name="org.eso.ias.dasu.Dasu#validityThreshold" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="validityThreshold:Integer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu.html#tolerance:Integer" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#validityThreshold:Integer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -857,14 +857,14 @@ is given by <a href="Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr"
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tolerance</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+        <span class="name">validityThreshold</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
       </span>
       
       
-    </li><li name="org.eso.ias.dasu.Dasu#toleranceMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toleranceMillis:Long"></a>
+    </li><li name="org.eso.ias.dasu.Dasu#validityThresholdMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="validityThresholdMillis:Long"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/Dasu.html#toleranceMillis:Long" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/Dasu.html#validityThresholdMillis:Long" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -873,10 +873,10 @@ is given by <a href="Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr"
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">toleranceMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+        <span class="name">validityThresholdMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       
-      <p class="shortcomment cmt"> The tolerance in milliseconds
+      <p class="shortcomment cmt"> The validityThreshold in milliseconds
 </p>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>

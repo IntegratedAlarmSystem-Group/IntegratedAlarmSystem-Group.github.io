@@ -151,8 +151,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.tranfer">tranfer</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <a class="object" href="AntPadInhibitor$.html" title=""></a>
-                        <a class="class" href="" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern."></a>
-                        <a href="" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern.">AntPadInhibitor</a>
+                        <a class="class" href="" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads (string) - an ALARM It inhibits the alarm if there are no antennas in the pads whose names match with the given pattern."></a>
+                        <a href="" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads (string) - an ALARM It inhibits the alarm if there are no antennas in the pads whose names match with the given pattern.">AntPadInhibitor</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="BackupSelector$.html" title=""></a>
                         <a class="class" href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation."></a>
@@ -170,9 +170,17 @@
                         <a class="class" href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions"></a>
                         <a href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions">DelayedAlarmException</a>
                       </li><li class="current-entities indented4">
+                        <a class="object" href="RelocationSelector$.html" title=""></a>
+                        <a class="class" href="RelocationSelector.html" title="A TF very similar to BackupSelector but that does not take into account the operational state of the inputs as it copes with relocation instead of duplication for which only the validity is to be considered."></a>
+                        <a href="RelocationSelector.html" title="A TF very similar to BackupSelector but that does not take into account the operational state of the inputs as it copes with relocation instead of duplication for which only the validity is to be considered.">RelocationSelector</a>
+                      </li><li class="current-entities indented4">
                         <a class="object" href="ThresholdWithBackupsAndDelay$.html" title=""></a>
                         <a class="class" href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm."></a>
                         <a href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm.">ThresholdWithBackupsAndDelay</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="VisualInspectionAlarm$.html" title="Companion object"></a>
+                        <a class="class" href="VisualInspectionAlarm.html" title="The transfer function that generates an alarm is the wind speed is over a threshold and a visual inspection is still pending."></a>
+                        <a href="VisualInspectionAlarm.html" title="The transfer function that generates an alarm is the wind speed is over a threshold and a visual inspection is still pending.">VisualInspectionAlarm</a>
                       </li>
               </ul>
             </div>
@@ -204,18 +212,19 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The AntPadInhibitor transfer functions gets 2 inputs:
-- the association of antennas to pads
+- the association of antennas to pads (string)
 - an ALARM
 It inhibits the alarm if there are no antennas in the pads
-whose name matches with the given pattern.
+whose names match with the given pattern.
 It is also possible to add a filter by antenna type by setting
 antTypePropName to one of the possible antenna types: the
-alarm is propagated if there is antennas in the pads AND at least
-one antenna of the passed type.</p><p>No check is done on the ID of the input but it must be an ALARM.
+alarm in output is set if the alarm in input is set AND
+there are antennas in the pads AND
+at least one antenna of the passed type.</p><p>No check is done on the ID of the alarm in input.
 The TF produces an alarm that is always CLEAR if there
-are no antennas in the pads or the input is CLEAR.
+are no antennas in the pads or the alarm in input is CLEAR.
 If the input is SET and there are antennas in the PAD, the output
-is set and with same priority of the input.</p><p>The association of antennas to pad is a monitor point that contains
+is set with the same priority of the alarm in input.</p><p>The association of antennas to pad is a monitor point that contains
 all the antennas and the names of the relative pads where they seat.
 The matching is done by a regular expression provided as a java property.</p><p>This is an example of the value (string) of the Array-AntennasToPads,
 the monitor points that contains the pads of all the antennas:
@@ -344,6 +353,25 @@ the monitor points that contains the pads of all the antennas:
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.tranfer.AntPadInhibitor#affectedAntennas" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="affectedAntennas(antsPadsMP:String):String"></a><a id="affectedAntennas(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/AntPadInhibitor.html#affectedAntennas(antsPadsMP:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">affectedAntennas</span><span class="params">(<span name="antsPadsMP">antsPadsMP: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Build the comma separated list of names of affected antennas, i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Build the comma separated list of names of affected antennas, i.e.
+the names of the antennas whose names match with
+the regular expression passed in the java properties
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the comma separated list of names of affected antennas</p></dd></dl></div>
     </li><li name="org.eso.ias.tranfer.AntPadInhibitor#antPadRegExp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="antPadRegExp:scala.util.matching.Regex"></a><a id="antPadRegExp:Regex"></a>
       <span class="permalink">
@@ -604,27 +632,6 @@ For templated input instances the instance number is required.</p><p>This method
       <p class="shortcomment cmt">Initialize the TF by making some consistency checks
 </p><div class="fullcomment"><div class="comment cmt"><p>Initialize the TF by making some consistency checks
 </p></div><dl class="paramcmts block"><dt class="param">inputsInfo</dt><dd class="cmt"><p>The IDs and types of the inputs</p></dd><dt class="param">outputInfo</dt><dd class="cmt"><p>The Id and type of thr output</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.tranfer.AntPadInhibitor">AntPadInhibitor</a> → <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
-    </li><li name="org.eso.ias.tranfer.AntPadInhibitor#isAntennaInPad" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isAntennaInPad(antsPadsMP:String):Boolean"></a><a id="isAntennaInPad(String):Boolean"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/tranfer/AntPadInhibitor.html#isAntennaInPad(antsPadsMP:String):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isAntennaInPad</span><span class="params">(<span name="antsPadsMP">antsPadsMP: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Check if there is at least one antenna in one of the pads whose name matches with
-the regular expression passed in the java properties</p><div class="fullcomment"><div class="comment cmt"><p>Check if there is at least one antenna in one of the pads whose name matches with
-the regular expression passed in the java properties</p><p>It takes into account also the type of teh antennas, if requested (i.e. if antType
-is defined)
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if there is at least one antennas in the pads;
-        false otherwise</p></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">

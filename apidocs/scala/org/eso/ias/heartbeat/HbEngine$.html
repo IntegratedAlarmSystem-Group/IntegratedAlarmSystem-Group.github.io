@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.consumer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="consumer"></a><a id="consumer:consumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/index.html#consumer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="consumer/index.html"><span class="name">consumer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.heartbeat">heartbeat</a></dd></dl></div>
     </li><li name="org.eso.ias.heartbeat.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="publisher"></a><a id="publisher:publisher"></a>
       <span class="permalink">
@@ -193,6 +209,14 @@
                         <span class="separator"></span>
                         <a class="class" href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message"></a>
                         <a href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message">HbProducer</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Heartbeat$.html" title=""></a>
+                        <a class="class" href="Heartbeat.html" title="The HB published in the kafka topic,"></a>
+                        <a href="Heartbeat.html" title="The HB published in the kafka topic,">Heartbeat</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat"></a>
+                        <a href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat">HeartbeatProducerType</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="HeartbeatStatus.html" title="The message sent by the heartbeat reporting the status of the tool."></a>
@@ -332,10 +356,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.HbEngine#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(fullRunningId:String,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer):org.eso.ias.heartbeat.HbEngine"></a><a id="apply(String,Long,HbProducer):HbEngine"></a>
+    </li><li name="org.eso.ias.heartbeat.HbEngine#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(name:String,toolType:org.eso.ias.heartbeat.HeartbeatProducerType,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer):org.eso.ias.heartbeat.HbEngine"></a><a id="apply(String,HeartbeatProducerType,Long,HbProducer):HbEngine"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/heartbeat/HbEngine$.html#apply(fullRunningId:String,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer):org.eso.ias.heartbeat.HbEngine" title="Permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbEngine$.html#apply(name:String,toolType:org.eso.ias.heartbeat.HeartbeatProducerType,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer):org.eso.ias.heartbeat.HbEngine" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -344,11 +368,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="fullRunningId">fullRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="frequency">frequency: <span class="extype" name="scala.Long">Long</span></span>, <span name="publisher">publisher: <a href="HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>)</span><span class="result">: <a href="HbEngine.html" class="extype" name="org.eso.ias.heartbeat.HbEngine">HbEngine</a></span>
+        <span class="name">apply</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="toolType">toolType: <a href="HeartbeatProducerType.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatProducerType">HeartbeatProducerType</a></span>, <span name="frequency">frequency: <span class="extype" name="scala.Long">Long</span></span>, <span name="publisher">publisher: <a href="HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>)</span><span class="result">: <a href="HbEngine.html" class="extype" name="org.eso.ias.heartbeat.HbEngine">HbEngine</a></span>
       </span>
       
       <p class="shortcomment cmt">Return the HbEngine singleton
-</p>
+</p><div class="fullcomment"><div class="comment cmt"><p>Return the HbEngine singleton
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name of the tool</p></dd><dt class="param">toolType</dt><dd class="cmt"><p>the type of the tool</p></dd><dt class="param">frequency</dt><dd class="cmt"><p>the frequency to publish HBs in the topic</p></dd><dt class="param">publisher</dt><dd class="cmt"><p>the publisher that sends the HBs</p></dd><dt>returns</dt><dd class="cmt"><p>the HbEngine</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -404,8 +429,7 @@
         <span class="name">engine</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="HbEngine.html" class="extype" name="org.eso.ias.heartbeat.HbEngine">HbEngine</a>]</span>
       </span>
       
-      <p class="shortcomment cmt"> The singleton
-</p>
+      <p class="shortcomment cmt">The singleton</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -479,10 +503,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.HbEngine#getInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getInstance(fullRunningId:String,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer)():org.eso.ias.heartbeat.HbEngine"></a><a id="getInstance(String,Long,HbProducer)():HbEngine"></a>
+    </li><li name="org.eso.ias.heartbeat.HbEngine#getInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getInstance(name:String,toolType:org.eso.ias.heartbeat.HeartbeatProducerType,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer)():org.eso.ias.heartbeat.HbEngine"></a><a id="getInstance(String,HeartbeatProducerType,Long,HbProducer)():HbEngine"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/heartbeat/HbEngine$.html#getInstance(fullRunningId:String,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer)():org.eso.ias.heartbeat.HbEngine" title="Permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbEngine$.html#getInstance(name:String,toolType:org.eso.ias.heartbeat.HeartbeatProducerType,frequency:Long,publisher:org.eso.ias.heartbeat.HbProducer)():org.eso.ias.heartbeat.HbEngine" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -491,10 +515,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getInstance</span><span class="params">(<span name="fullRunningId">fullRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="frequency">frequency: <span class="extype" name="scala.Long">Long</span></span>, <span name="publisher">publisher: <a href="HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>)</span><span class="params">()</span><span class="result">: <a href="HbEngine.html" class="extype" name="org.eso.ias.heartbeat.HbEngine">HbEngine</a></span>
+        <span class="name">getInstance</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="toolType">toolType: <a href="HeartbeatProducerType.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatProducerType">HeartbeatProducerType</a></span>, <span name="frequency">frequency: <span class="extype" name="scala.Long">Long</span></span>, <span name="publisher">publisher: <a href="HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>)</span><span class="params">()</span><span class="result">: <a href="HbEngine.html" class="extype" name="org.eso.ias.heartbeat.HbEngine">HbEngine</a></span>
       </span>
       
-      <p class="shortcomment cmt">Alias more familiar fto java developers</p>
+      <p class="shortcomment cmt">Alias more familiar to java developers that delegates
+to <span class="extype" name="apply()">apply()</span>
+</p><div class="fullcomment"><div class="comment cmt"><p>Alias more familiar to java developers that delegates
+to <span class="extype" name="apply()">apply()</span>
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name of the tool</p></dd><dt class="param">toolType</dt><dd class="cmt"><p>the type of the tool</p></dd><dt class="param">frequency</dt><dd class="cmt"><p>the frequency to publish HBs in the topic</p></dd><dt class="param">publisher</dt><dd class="cmt"><p>the publisher that sends the HBs</p></dd><dt>returns</dt><dd class="cmt"><p>the HbEngine</p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -530,6 +558,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.HbEngine#logger" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="logger:com.typesafe.scalalogging.Logger"></a><a id="logger:Logger"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbEngine$.html#logger:com.typesafe.scalalogging.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logger</span><span class="result">: <span class="extype" name="com.typesafe.scalalogging.Logger">Logger</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The logger</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">

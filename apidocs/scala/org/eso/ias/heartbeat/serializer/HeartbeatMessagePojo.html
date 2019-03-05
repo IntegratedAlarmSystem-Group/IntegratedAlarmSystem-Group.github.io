@@ -155,8 +155,8 @@
                         <a href="HbJsonSerializer.html" title="Serialize/deserialize HB messages into JSON strings">HbJsonSerializer</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="" title="The a java pojo with the fields  of a HbMessage plus the timestamp"></a>
-                        <a href="" title="The a java pojo with the fields  of a HbMessage plus the timestamp">HeartbeatMessagePojo</a>
+                        <a class="class" href="" title="The a java pojo with the heartbeat message."></a>
+                        <a href="" title="The a java pojo with the heartbeat message.">HeartbeatMessagePojo</a>
                       </li>
               </ul>
             </div>
@@ -185,9 +185,8 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The a java pojo with the fields  of a <code><span class="extype" name="HbMessage">HbMessage</span></code>
-plus the timestamp
-</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>HbMessage</p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The a java pojo with the heartbeat message.
+</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -238,9 +237,9 @@ plus the timestamp
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(fullRunningId:String,hbStatus:org.eso.ias.heartbeat.HeartbeatStatus,props:java.util.Map[String,String],tStamp:Long):org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo"></a><a id="&lt;init&gt;:HeartbeatMessagePojo"></a>
+      <a id="&lt;init&gt;(hbStringrepresentation:String,hbStatus:org.eso.ias.heartbeat.HeartbeatStatus,props:java.util.Map[String,String],tStamp:Long):org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo"></a><a id="&lt;init&gt;:HeartbeatMessagePojo"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/serializer/HeartbeatMessagePojo.html#&lt;init&gt;(fullRunningId:String,hbStatus:org.eso.ias.heartbeat.HeartbeatStatus,props:java.util.Map[String,String],tStamp:Long):org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo" title="Permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/serializer/HeartbeatMessagePojo.html#&lt;init&gt;(hbStringrepresentation:String,hbStatus:org.eso.ias.heartbeat.HeartbeatStatus,props:java.util.Map[String,String],tStamp:Long):org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -249,12 +248,12 @@ plus the timestamp
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">HeartbeatMessagePojo</span><span class="params">(<span name="fullRunningId">fullRunningId: <span class="extype" name="java.lang.String">String</span></span>, <span name="hbStatus">hbStatus: <a href="../HeartbeatStatus.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatStatus">HeartbeatStatus</a></span>, <span name="props">props: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="java.lang.String">String</span>]</span>, <span name="tStamp">tStamp: <span class="extype" name="scala.Long">Long</span></span>)</span>
+        <span class="name">HeartbeatMessagePojo</span><span class="params">(<span name="hbStringrepresentation">hbStringrepresentation: <span class="extype" name="java.lang.String">String</span></span>, <span name="hbStatus">hbStatus: <a href="../HeartbeatStatus.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatStatus">HeartbeatStatus</a></span>, <span name="props">props: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="java.lang.String">String</span>]</span>, <span name="tStamp">tStamp: <span class="extype" name="scala.Long">Long</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt">Constructor
 </p><div class="fullcomment"><div class="comment cmt"><p>Constructor
-</p></div><dl class="paramcmts block"><dt class="param">hbStatus</dt><dd class="cmt"><p>the status</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd><dt class="param">tStamp</dt><dd class="cmt"><p>the timestamp</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">hbStringrepresentation</dt><dd class="cmt"><p>the string representation of the HB</p></dd><dt class="param">hbStatus</dt><dd class="cmt"><p>the status</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties</p></dd><dt class="param">tStamp</dt><dd class="cmt"><p>the timestamp</p></dd></dl></div>
     </li><li name="org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="&lt;init&gt;():org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo"></a><a id="&lt;init&gt;:HeartbeatMessagePojo"></a>
       <span class="permalink">
@@ -442,10 +441,10 @@ plus the timestamp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo#getFullRunningId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getFullRunningId():String"></a>
+    </li><li name="org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo#getHbStringrepresentation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getHbStringrepresentation():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/serializer/HeartbeatMessagePojo.html#getFullRunningId():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/serializer/HeartbeatMessagePojo.html#getHbStringrepresentation():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -454,7 +453,7 @@ plus the timestamp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getFullRunningId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">getHbStringrepresentation</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
       
@@ -595,10 +594,10 @@ plus the timestamp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo#setFullRunningId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setFullRunningId(fullRunningId:String):Unit"></a><a id="setFullRunningId(String):Unit"></a>
+    </li><li name="org.eso.ias.heartbeat.serializer.HeartbeatMessagePojo#setHbStringrepresentation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setHbStringrepresentation(hbStringrepresentation:String):Unit"></a><a id="setHbStringrepresentation(String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/serializer/HeartbeatMessagePojo.html#setFullRunningId(fullRunningId:String):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/serializer/HeartbeatMessagePojo.html#setHbStringrepresentation(hbStringrepresentation:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -607,7 +606,7 @@ plus the timestamp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setFullRunningId</span><span class="params">(<span name="fullRunningId">fullRunningId: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setHbStringrepresentation</span><span class="params">(<span name="hbStringrepresentation">hbStringrepresentation: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       

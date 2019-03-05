@@ -261,6 +261,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.monitor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="monitor"></a><a id="monitor:monitor"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#monitor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../monitor/index.html"><span class="name">monitor</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li name="org.eso.ias.plugin" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="plugin"></a><a id="plugin:plugin"></a>
       <span class="permalink">
@@ -359,8 +375,8 @@
       
     </li><li class="current-entities indented4">
                         <a class="object" href="AntPadInhibitor$.html" title=""></a>
-                        <a class="class" href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern."></a>
-                        <a href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern.">AntPadInhibitor</a>
+                        <a class="class" href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads (string) - an ALARM It inhibits the alarm if there are no antennas in the pads whose names match with the given pattern."></a>
+                        <a href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads (string) - an ALARM It inhibits the alarm if there are no antennas in the pads whose names match with the given pattern.">AntPadInhibitor</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="BackupSelector$.html" title=""></a>
                         <a class="class" href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation."></a>
@@ -378,9 +394,17 @@
                         <a class="class" href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions"></a>
                         <a href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions">DelayedAlarmException</a>
                       </li><li class="current-entities indented4">
+                        <a class="object" href="RelocationSelector$.html" title=""></a>
+                        <a class="class" href="RelocationSelector.html" title="A TF very similar to BackupSelector but that does not take into account the operational state of the inputs as it copes with relocation instead of duplication for which only the validity is to be considered."></a>
+                        <a href="RelocationSelector.html" title="A TF very similar to BackupSelector but that does not take into account the operational state of the inputs as it copes with relocation instead of duplication for which only the validity is to be considered.">RelocationSelector</a>
+                      </li><li class="current-entities indented4">
                         <a class="object" href="ThresholdWithBackupsAndDelay$.html" title=""></a>
                         <a class="class" href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm."></a>
                         <a href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm.">ThresholdWithBackupsAndDelay</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="VisualInspectionAlarm$.html" title="Companion object"></a>
+                        <a class="class" href="VisualInspectionAlarm.html" title="The transfer function that generates an alarm is the wind speed is over a threshold and a visual inspection is still pending."></a>
+                        <a href="VisualInspectionAlarm.html" title="The transfer function that generates an alarm is the wind speed is over a threshold and a visual inspection is still pending.">VisualInspectionAlarm</a>
                       </li><li name="org.eso.ias.transfer" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transfer"></a><a id="transfer:transfer"></a>
       <span class="permalink">
@@ -520,26 +544,27 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern." href="AntPadInhibitor.html"><span class="name">AntPadInhibitor</span></a><span class="result"> extends <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
+        <a title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads (string) - an ALARM It inhibits the alarm if there are no antennas in the pads whose names match with the given pattern." href="AntPadInhibitor.html"><span class="name">AntPadInhibitor</span></a><span class="result"> extends <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
       </span>
       
       <p class="shortcomment cmt">The AntPadInhibitor transfer functions gets 2 inputs:
-- the association of antennas to pads
+- the association of antennas to pads (string)
 - an ALARM
 It inhibits the alarm if there are no antennas in the pads
-whose name matches with the given pattern.</p><div class="fullcomment"><div class="comment cmt"><p>The AntPadInhibitor transfer functions gets 2 inputs:
-- the association of antennas to pads
+whose names match with the given pattern.</p><div class="fullcomment"><div class="comment cmt"><p>The AntPadInhibitor transfer functions gets 2 inputs:
+- the association of antennas to pads (string)
 - an ALARM
 It inhibits the alarm if there are no antennas in the pads
-whose name matches with the given pattern.
+whose names match with the given pattern.
 It is also possible to add a filter by antenna type by setting
 antTypePropName to one of the possible antenna types: the
-alarm is propagated if there is antennas in the pads AND at least
-one antenna of the passed type.</p><p>No check is done on the ID of the input but it must be an ALARM.
+alarm in output is set if the alarm in input is set AND
+there are antennas in the pads AND
+at least one antenna of the passed type.</p><p>No check is done on the ID of the alarm in input.
 The TF produces an alarm that is always CLEAR if there
-are no antennas in the pads or the input is CLEAR.
+are no antennas in the pads or the alarm in input is CLEAR.
 If the input is SET and there are antennas in the PAD, the output
-is set and with same priority of the input.</p><p>The association of antennas to pad is a monitor point that contains
+is set with the same priority of the alarm in input.</p><p>The association of antennas to pad is a monitor point that contains
 all the antennas and the names of the relative pads where they seat.
 The matching is done by a regular expression provided as a java property.</p><p>This is an example of the value (string) of the Array-AntennasToPads,
 the monitor points that contains the pads of all the antennas:
@@ -574,8 +599,9 @@ the first operational and valid input among the main and the backups.</p><p>If n
 first option.</p><p>The order of preference must be passed as a java property of comma
 separated list of ids of monitor points like
 &quot;T1Main, T1Backup1, T1Backup2&quot;</p><p>The list of IDs passed with the SelectionPriorityPropName property
-must match with the IDs of the inputs processed by the eval method.
-</p></div></div>
+must match with the IDs of the inputs processed by the eval method.</p><p><a href="RelocationSelector.html" class="extype" name="org.eso.ias.tranfer.RelocationSelector">RelocationSelector</a> is very similar to this TF but copes with relocation instead
+of replication.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="RelocationSelector.html" class="extype" name="org.eso.ias.tranfer.RelocationSelector">RelocationSelector</a></p></span></dd></dl></div>
     </li><li name="org.eso.ias.tranfer.BackupSelectorException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="BackupSelectorExceptionextendsException"></a><a id="BackupSelectorException:BackupSelectorException"></a>
       <span class="permalink">
@@ -639,6 +665,37 @@ is to tune the refresh rate of the Supervisor where this TF is executed.
       <p class="shortcomment cmt">The exception thrown by this TF in case of
 malfunctions
 </p>
+    </li><li name="org.eso.ias.tranfer.RelocationSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RelocationSelector[T]extendsScalaTransferExecutor[T]"></a><a id="RelocationSelector[T]:RelocationSelector[T]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#RelocationSelector[T]extendsScalaTransferExecutor[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A TF very similar to BackupSelector but that does not take into account the operational state of the inputs as it copes with relocation instead of duplication for which only the validity is to be considered." href="RelocationSelector.html"><span class="name">RelocationSelector</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<span class="extype" name="org.eso.ias.tranfer.RelocationSelector.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A TF very similar to <a href="BackupSelector.html" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a> but that does not take into account
+the operational state of the inputs as it copes with relocation instead of
+duplication for which only the validity is to be considered.</p><div class="fullcomment"><div class="comment cmt"><p>A TF very similar to <a href="BackupSelector.html" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a> but that does not take into account
+the operational state of the inputs as it copes with relocation instead of
+duplication for which only the validity is to be considered.</p><p>One and only one input is expected to be valid at a given point in time.</p><p>The TF expects at least 2 inputs, each of which represent one of the possible
+place of relocation. None of the inputs is more important than the others.
+The TF does not make any assumption of the type of the inputs neither on thier values
+because they are not relevant.
+For consistency as all the inputs refer to the same monitor point, it is reasonable
+to expect that all of them have the same type regardless of what it is.</p><p><a href="BackupSelector.html" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a> aims to select one input that is produced by replicated plugins
+that monitors the same device with different meanings so that if one fails, one of the other
+provides the information.
+<span class="extype" name="RelocationSelector()">RelocationSelector()</span> instead aims to select one input that is produce by only one of the inputs for example
+as consequence of relocation. The difference with <a href="BackupSelector.html" class="extype" name="org.eso.ias.tranfer.BackupSelector">BackupSelector</a> is that one and only one
+input is expected to be valid at a given point in time.
+</p></div></div>
     </li><li name="org.eso.ias.tranfer.ThresholdWithBackupsAndDelay" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ThresholdWithBackupsAndDelayextendsScalaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="ThresholdWithBackupsAndDelay:ThresholdWithBackupsAndDelay"></a>
       <span class="permalink">
@@ -664,6 +721,29 @@ provided by the DelayedAlarm: if not set no delay is implemented</p><p>The Thres
 (or, if not available, one of the backups) is greater (lower) then the threshold.
 If a delay is given, the generation or clearing of the alarm is done only after
 the timeout elaspes.
+</p></div></div>
+    </li><li name="org.eso.ias.tranfer.VisualInspectionAlarm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VisualInspectionAlarmextendsScalaTransferExecutor[org.eso.ias.types.Alarm]"></a><a id="VisualInspectionAlarm:VisualInspectionAlarm"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#VisualInspectionAlarmextendsScalaTransferExecutor[org.eso.ias.types.Alarm]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The transfer function that generates an alarm is the wind speed is over a threshold and a visual inspection is still pending." href="VisualInspectionAlarm.html"><span class="name">VisualInspectionAlarm</span></a><span class="result"> extends <a href="../asce/transfer/ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a>[<a href="../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The transfer function that generates an alarm is the wind speed is over a threshold
+and a visual inspection is still pending.</p><div class="fullcomment"><div class="comment cmt"><p>The transfer function that generates an alarm is the wind speed is over a threshold
+and a visual inspection is still pending.</p><p>The inputs of the  VisualInspectionAlarm TF are:
+- alarm that the windspeed passed the threshold
+- date (String) when the last inspection has been done</p><p>If the last inspection date is older then the activation date of the alarm,
+the alarm reamions active even if the wind speed drops below the threshold.</p><p>To keep this TF generic, the IDs of the inputs are not hardcoded but are
+retrieved at run time from the types of the inputs.
 </p></div></div>
     </li></ol>
             </div>
@@ -721,6 +801,22 @@ the timeout elaspes.
       </span>
       
       
+    </li><li name="org.eso.ias.tranfer.RelocationSelector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RelocationSelector"></a><a id="RelocationSelector:RelocationSelector"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#RelocationSelector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RelocationSelector$.html"><span class="name">RelocationSelector</span></a>
+      </span>
+      
+      
     </li><li name="org.eso.ias.tranfer.ThresholdWithBackupsAndDelay" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ThresholdWithBackupsAndDelay"></a><a id="ThresholdWithBackupsAndDelay:ThresholdWithBackupsAndDelay"></a>
       <span class="permalink">
@@ -737,6 +833,22 @@ the timeout elaspes.
       </span>
       
       
+    </li><li name="org.eso.ias.tranfer.VisualInspectionAlarm" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VisualInspectionAlarm"></a><a id="VisualInspectionAlarm:VisualInspectionAlarm"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/index.html#VisualInspectionAlarm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Companion object" href="VisualInspectionAlarm$.html"><span class="name">VisualInspectionAlarm</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Companion object</p>
     </li>
               </ol>
             </div>

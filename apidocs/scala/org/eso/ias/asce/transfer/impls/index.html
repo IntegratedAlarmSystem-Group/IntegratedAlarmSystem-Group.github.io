@@ -327,7 +327,11 @@ are converted in double.</p><p>The value of the Min and Max thresholds are passe
       <p class="shortcomment cmt">Implements the Multiplicity transfer function.</p><div class="fullcomment"><div class="comment cmt"><p>Implements the Multiplicity transfer function.</p><p>The IASIOs in input to this TF are only alarms.
 The alarm generate by this TF activates when the number
 of alarms in input is equal or greater then the threshold retrieved
-from the properties.
+from the properties.</p><p>The priority of the alarm produced by this TF is the highest of the priorities
+of the alarms in input uneless a priority is passed by setting the alarm priority property
+in the CDB.</p><p>Since #153, the multiplicity TF propagates the properties of the inputs to the output:
+- only the properties of the inputs that are SET are propagated in the output
+- it the same property is present in more inputs, their values will be merged in the output
 </p></div></div>
     </li></ol>
             </div>

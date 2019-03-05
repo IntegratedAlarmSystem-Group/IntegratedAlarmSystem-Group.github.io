@@ -171,8 +171,8 @@
                         <a href="Identifier.html" title="The immutable Identifier is a recursive data structure composed of a unique ID plus the ID of the parent.">Identifier</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="IdentifierType.html" title="The types of an identifier."></a>
-                        <a href="IdentifierType.html" title="The types of an identifier.">IdentifierType</a>
+                        <a class="class" href="IdentifierType.html" title="The types of an identifier of an IASIO."></a>
+                        <a href="IdentifierType.html" title="The types of an identifier of an IASIO.">IdentifierType</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="InOut$.html" title="InOut companion object"></a>
                         <a class="class" href="InOut.html" title="A  InOut holds the value of an input or output of the IAS."></a>
@@ -395,6 +395,22 @@ is an instance of a template; if the instance is not
 defined then the identifier is not generated out
 of a template.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the id for the instance instance of a template</p></dd></dl></div>
+    </li><li name="org.eso.ias.types.Identifier#buildTemplatePattern" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buildTemplatePattern(instance:Int):String"></a><a id="buildTemplatePattern(Int):String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/types/Identifier$.html#buildTemplatePattern(instance:Int):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildTemplatePattern</span><span class="params">(<span name="instance">instance: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Buildf the pattern with the instance number.</p>
     </li><li name="org.eso.ias.types.Identifier#canBeTemplated" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="canBeTemplated(idType:org.eso.ias.types.IdentifierType):Boolean"></a><a id="canBeTemplated(IdentifierType):Boolean"></a>
       <span class="permalink">
@@ -582,6 +598,24 @@ together to form a couple</p><p>coupleSeparator is the separator between them in
       
       <p class="shortcomment cmt">The regular expression of the fullRunning ID
 </p>
+    </li><li name="org.eso.ias.types.Identifier#getBaseId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBaseId(id:String):String"></a><a id="getBaseId(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/types/Identifier$.html#getBaseId(id:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBaseId</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the identifier without the instance.</p><div class="fullcomment"><div class="comment cmt"><p>Get the identifier without the instance.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the identifier without the instance;
+        id if does not contain a template</p></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -601,6 +635,26 @@ together to form a couple</p><p>coupleSeparator is the separator between them in
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eso.ias.types.Identifier#getTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTemplateInstance(id:String):Option[Int]"></a><a id="getTemplateInstance(String):Option[Int]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/types/Identifier$.html#getTemplateInstance(id:String):Option[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTemplateInstance</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get and return the number of the instance of the template from
+a templated id.</p><div class="fullcomment"><div class="comment cmt"><p>Get and return the number of the instance of the template from
+a templated id.
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the identifier</p></dd><dt>returns</dt><dd class="cmt"><p>the number of the instance of the template;
+        empty if the identifier does not contain a template</p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">

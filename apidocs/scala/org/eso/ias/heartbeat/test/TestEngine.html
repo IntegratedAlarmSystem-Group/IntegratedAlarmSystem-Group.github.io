@@ -151,10 +151,6 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.heartbeat">heartbeat</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="JsonSerialization.html" title=""></a>
-                        <a href="JsonSerialization.html" title="">JsonSerialization</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="MockProducer.html" title="A mock producer to record what the Engine sends to the framework"></a>
                         <a href="MockProducer.html" title="A mock producer to record what the Engine sends to the framework">MockProducer</a>
                       </li><li class="current-entities indented5">
@@ -163,8 +159,20 @@
                         <a href="" title="">TestEngine</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="TestKafkaPublisher.html" title="Test the HB kafka publisher"></a>
-                        <a href="TestKafkaPublisher.html" title="Test the HB kafka publisher">TestKafkaPublisher</a>
+                        <a class="class" href="TestHeartbeat.html" title="Test the heartbeat"></a>
+                        <a href="TestHeartbeat.html" title="Test the heartbeat">TestHeartbeat</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TestJsonSerialization.html" title=""></a>
+                        <a href="TestJsonSerialization.html" title="">TestJsonSerialization</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TestKafkaHbConsumer.html" title="Test the HB consumer"></a>
+                        <a href="TestKafkaHbConsumer.html" title="Test the HB consumer">TestKafkaHbConsumer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TestKafkaPublisher.html" title="Test the HB kafka publisher and consumer"></a>
+                        <a href="TestKafkaPublisher.html" title="Test the HB kafka publisher and consumer">TestKafkaPublisher</a>
                       </li>
               </ul>
             </div>
@@ -1407,9 +1415,9 @@
               
         </dd></dl></div>
     </li><li name="org.eso.ias.heartbeat.test.TestEngine#fixture" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fixture:AnyRef{valsupervIdentifier:org.eso.ias.types.Identifier;valfrequency:Int;valserializer:org.eso.ias.heartbeat.serializer.HbJsonSerializer;valproducer:org.eso.ias.heartbeat.test.MockProducer;valengine:org.eso.ias.heartbeat.HbEngine}"></a><a id="fixture:AnyRef{.../*5definitionsintyperefinement*/}"></a>
+      <a id="fixture:AnyRef{valsupervId:String;valsupervHeartbeat:org.eso.ias.heartbeat.Heartbeat;valfrequency:Int;valserializer:org.eso.ias.heartbeat.serializer.HbJsonSerializer;valproducer:org.eso.ias.heartbeat.test.MockProducer;valengine:org.eso.ias.heartbeat.HbEngine}"></a><a id="fixture:AnyRef{.../*6definitionsintyperefinement*/}"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/heartbeat/test/TestEngine.html#fixture:AnyRef{valsupervIdentifier:org.eso.ias.types.Identifier;valfrequency:Int;valserializer:org.eso.ias.heartbeat.serializer.HbJsonSerializer;valproducer:org.eso.ias.heartbeat.test.MockProducer;valengine:org.eso.ias.heartbeat.HbEngine}" title="Permalink">
+      <a href="../../../../../org/eso/ias/heartbeat/test/TestEngine.html#fixture:AnyRef{valsupervId:String;valsupervHeartbeat:org.eso.ias.heartbeat.Heartbeat;valfrequency:Int;valserializer:org.eso.ias.heartbeat.serializer.HbJsonSerializer;valproducer:org.eso.ias.heartbeat.test.MockProducer;valengine:org.eso.ias.heartbeat.HbEngine}" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1418,7 +1426,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fixture</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span> { ... /* 5 definitions in type refinement */ }</span>
+        <span class="name">fixture</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span> { ... /* 6 definitions in type refinement */ }</span>
       </span>
       
       <p class="shortcomment cmt">Fixture to build the HB engine to tests</p>

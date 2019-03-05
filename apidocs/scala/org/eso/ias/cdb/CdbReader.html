@@ -365,6 +365,24 @@
       <p class="shortcomment cmt">Return the ASCEs belonging to the given DASU.</p><div class="fullcomment"><div class="comment cmt"><p>Return the ASCEs belonging to the given DASU.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the DASU</p></dd><dt>returns</dt><dd class="cmt"><p>A set of ASCEs running in the DASU with the passed id</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading CDB or if the
                         DASU with the give identifier does not exist</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbReader#getClientConfig" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getClientConfig(id:String):java.util.Optional[org.eso.ias.cdb.pojos.ClientConfigDao]"></a><a id="getClientConfig(String):Optional[ClientConfigDao]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbReader.html#getClientConfig(id:String):java.util.Optional[org.eso.ias.cdb.pojos.ClientConfigDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClientConfig</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="pojos/ClientConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.ClientConfigDao">ClientConfigDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the configuraton of the client with the passed identifier.</p><div class="fullcomment"><div class="comment cmt"><p>Get the configuraton of the client with the passed identifier.</p><p>The configuration is passed as a string whose format depends
+on the client implementation.
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty ID of the IAS client</p></dd><dt>returns</dt><dd class="cmt"><p>The configuration of the client</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the configuration of the client</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbReader#getDasu" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="getDasu(id:String):java.util.Optional[org.eso.ias.cdb.pojos.DasuDao]"></a><a id="getDasu(String):Optional[DasuDao]"></a>
       <span class="permalink">

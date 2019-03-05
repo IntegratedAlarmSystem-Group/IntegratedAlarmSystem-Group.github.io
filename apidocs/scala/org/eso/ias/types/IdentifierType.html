@@ -171,8 +171,8 @@
                         <a href="Identifier.html" title="The immutable Identifier is a recursive data structure composed of a unique ID plus the ID of the parent.">Identifier</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="" title="The types of an identifier."></a>
-                        <a href="" title="The types of an identifier.">IdentifierType</a>
+                        <a class="class" href="" title="The types of an identifier of an IASIO."></a>
+                        <a href="" title="The types of an identifier of an IASIO.">IdentifierType</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="InOut$.html" title="InOut companion object"></a>
                         <a class="class" href="InOut.html" title="A  InOut holds the value of an input or output of the IAS."></a>
@@ -213,10 +213,15 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The types of an identifier.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The types of an identifier of an IASIO.
 &lt;P&gt;
 There is a relationship between types, meaning that
-a type can have zero, one or more types of parents of a specified type.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>Identifier</p></span></dd></dl><div class="toggleContainer block">
+a type can have zero, one or more types of parents of a specified type.</p><p>Note: IAS tools sends an Heartbeat with their identifier that is another type
+      of identifier defined in the Heartbeat module.
+      The reason of the separation of the 2 types of identifiers is documented in
+      <a href="https://github.com/IntegratedAlarmSystem-Group/ias/issues/145" target="_blank">#145</a> and
+      <a href="https://github.com/IntegratedAlarmSystem-Group/ias/issues/149" target="_blank">#149</a>
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>Identifier</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

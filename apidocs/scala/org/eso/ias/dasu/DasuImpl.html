@@ -299,9 +299,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.dasu.DasuImpl#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,dasuDao:org.eso.ias.cdb.pojos.DasuDao,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.DasuImpl"></a><a id="&lt;init&gt;:DasuImpl"></a>
+      <a id="&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,dasuDao:org.eso.ias.cdb.pojos.DasuDao,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,autoSendTimeInterval:Integer,validityThreshold:Integer):org.eso.ias.dasu.DasuImpl"></a><a id="&lt;init&gt;:DasuImpl"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,dasuDao:org.eso.ias.cdb.pojos.DasuDao,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,autoSendTimeInterval:Integer,tolerance:Integer):org.eso.ias.dasu.DasuImpl" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#&lt;init&gt;(dasuIdentifier:org.eso.ias.types.Identifier,dasuDao:org.eso.ias.cdb.pojos.DasuDao,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,autoSendTimeInterval:Integer,validityThreshold:Integer):org.eso.ias.dasu.DasuImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -310,10 +310,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DasuImpl</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="dasuDao">dasuDao: <a href="../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a></span>, <span name="outputPublisher">outputPublisher: <a href="publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="tolerance">tolerance: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
+        <span class="name">DasuImpl</span><span class="params">(<span name="dasuIdentifier">dasuIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="dasuDao">dasuDao: <a href="../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a></span>, <span name="outputPublisher">outputPublisher: <a href="publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="autoSendTimeInterval">autoSendTimeInterval: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="validityThreshold">validityThreshold: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuIdentifier</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">dasuDao</dt><dd class="cmt"><p>The CDB configuration of the DASU</p></dd><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>the time (seconds) to automatically resend the last calculated</p></dd><dt class="param">tolerance</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dasuIdentifier</dt><dd class="cmt"><p>the identifier of the DASU</p></dd><dt class="param">dasuDao</dt><dd class="cmt"><p>The CDB configuration of the DASU</p></dd><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">autoSendTimeInterval</dt><dd class="cmt"><p>the time (seconds) to automatically resend the last calculated</p></dd><dt class="param">validityThreshold</dt><dd class="cmt"><p>the max delay (secs) before declaring an input unreliable</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -526,7 +526,7 @@
       
       <p class="shortcomment cmt">Calculate the validity of the output depending on its last update time.</p><div class="fullcomment"><div class="comment cmt"><p>Calculate the validity of the output depending on its last update time.
 The DASU consider that the IASIO is valid if it has been generated
-resh rate+tolerance  milliseconds before.
+resh validityThreshold milliseconds before.
 </p></div></div>
     </li><li name="org.eso.ias.dasu.DasuImpl#cleanUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cleanUp():Unit"></a>
@@ -1287,10 +1287,10 @@ is given by <a href="Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr"
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.dasu.Dasu#tolerance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tolerance:Integer"></a>
+    </li><li name="org.eso.ias.dasu.Dasu#validityThreshold" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="validityThreshold:Integer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#tolerance:Integer" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#validityThreshold:Integer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1299,14 +1299,14 @@ is given by <a href="Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr"
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tolerance</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
+        <span class="name">validityThreshold</span><span class="result">: <span class="extype" name="java.lang.Integer">Integer</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
-    </li><li name="org.eso.ias.dasu.Dasu#toleranceMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toleranceMillis:Long"></a>
+    </li><li name="org.eso.ias.dasu.Dasu#validityThresholdMillis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="validityThresholdMillis:Long"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#toleranceMillis:Long" title="Permalink">
+      <a href="../../../../org/eso/ias/dasu/DasuImpl.html#validityThresholdMillis:Long" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1315,11 +1315,11 @@ is given by <a href="Dasu$.html#DefaultMinAllowedRefreshRate:Int" class="extmbr"
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">toleranceMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+        <span class="name">validityThresholdMillis</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       
-      <p class="shortcomment cmt"> The tolerance in milliseconds
-</p><div class="fullcomment"><div class="comment cmt"><p> The tolerance in milliseconds
+      <p class="shortcomment cmt"> The validityThreshold in milliseconds
+</p><div class="fullcomment"><div class="comment cmt"><p> The validityThreshold in milliseconds
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>

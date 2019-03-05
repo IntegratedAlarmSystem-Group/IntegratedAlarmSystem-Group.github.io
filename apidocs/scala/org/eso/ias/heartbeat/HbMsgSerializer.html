@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.heartbeat.consumer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="consumer"></a><a id="consumer:consumer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/heartbeat/index.html#consumer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="consumer/index.html"><span class="name">consumer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.heartbeat">heartbeat</a></dd></dl></div>
     </li><li name="org.eso.ias.heartbeat.publisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="publisher"></a><a id="publisher:publisher"></a>
       <span class="permalink">
@@ -193,6 +209,14 @@
                         <span class="separator"></span>
                         <a class="class" href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message"></a>
                         <a href="HbProducer.html" title="Implementation of HbProducer pushes the HB status message">HbProducer</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Heartbeat$.html" title=""></a>
+                        <a class="class" href="Heartbeat.html" title="The HB published in the kafka topic,"></a>
+                        <a href="Heartbeat.html" title="The HB published in the kafka topic,">Heartbeat</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat"></a>
+                        <a href="HeartbeatProducerType.html" title="The type of the producer of a Heartbeat">HeartbeatProducerType</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="HeartbeatStatus.html" title="The message sent by the heartbeat reporting the status of the tool."></a>
@@ -287,9 +311,9 @@ a file or any other
         <div class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="org.eso.ias.heartbeat.HbMsgSerializer#deserializeFromString" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="deserializeFromString(hbMessage:String):(String,org.eso.ias.heartbeat.HeartbeatStatus,Map[String,String],Long)"></a><a id="deserializeFromString(String):(String,HeartbeatStatus,Map[String,String],Long)"></a>
+      <a id="deserializeFromString(hbMessage:String):(org.eso.ias.heartbeat.Heartbeat,org.eso.ias.heartbeat.HeartbeatStatus,Map[String,String],Long)"></a><a id="deserializeFromString(String):(Heartbeat,HeartbeatStatus,Map[String,String],Long)"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/heartbeat/HbMsgSerializer.html#deserializeFromString(hbMessage:String):(String,org.eso.ias.heartbeat.HeartbeatStatus,Map[String,String],Long)" title="Permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbMsgSerializer.html#deserializeFromString(hbMessage:String):(org.eso.ias.heartbeat.Heartbeat,org.eso.ias.heartbeat.HeartbeatStatus,Map[String,String],Long)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -298,18 +322,18 @@ a file or any other
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">deserializeFromString</span><span class="params">(<span name="hbMessage">hbMessage: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: (<span class="extype" name="scala.Predef.String">String</span>, <a href="HeartbeatStatus.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatStatus">HeartbeatStatus</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.Long">Long</span>)</span>
+        <span class="name">deserializeFromString</span><span class="params">(<span name="hbMessage">hbMessage: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: (<a href="Heartbeat.html" class="extype" name="org.eso.ias.heartbeat.Heartbeat">Heartbeat</a>, <a href="HeartbeatStatus.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatStatus">HeartbeatStatus</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.Long">Long</span>)</span>
       </span>
       
       <p class="shortcomment cmt"> Parse the passed string to return a tuple with the
- field of the HB mesage
+ fields of the HB mesage
 </p><div class="fullcomment"><div class="comment cmt"><p> Parse the passed string to return a tuple with the
- field of the HB mesage
+ fields of the HB mesage
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a tuple with the full running id, the status, properties and the timestamp</p></dd></dl></div>
     </li><li name="org.eso.ias.heartbeat.HbMsgSerializer#serializeToString" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="serializeToString(fullRunningId:String,status:org.eso.ias.heartbeat.HeartbeatStatus,additionalProeprties:Map[String,String],timestamp:Long):String"></a><a id="serializeToString(String,HeartbeatStatus,Map[String,String],Long):String"></a>
+      <a id="serializeToString(hb:org.eso.ias.heartbeat.Heartbeat,status:org.eso.ias.heartbeat.HeartbeatStatus,additionalProeprties:Map[String,String],timestamp:Long):String"></a><a id="serializeToString(Heartbeat,HeartbeatStatus,Map[String,String],Long):String"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/heartbeat/HbMsgSerializer.html#serializeToString(fullRunningId:String,status:org.eso.ias.heartbeat.HeartbeatStatus,additionalProeprties:Map[String,String],timestamp:Long):String" title="Permalink">
+      <a href="../../../../org/eso/ias/heartbeat/HbMsgSerializer.html#serializeToString(hb:org.eso.ias.heartbeat.Heartbeat,status:org.eso.ias.heartbeat.HeartbeatStatus,additionalProeprties:Map[String,String],timestamp:Long):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -318,12 +342,12 @@ a file or any other
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">serializeToString</span><span class="params">(<span name="fullRunningId">fullRunningId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="status">status: <a href="HeartbeatStatus.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatStatus">HeartbeatStatus</a></span>, <span name="additionalProeprties">additionalProeprties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">serializeToString</span><span class="params">(<span name="hb">hb: <a href="Heartbeat.html" class="extype" name="org.eso.ias.heartbeat.Heartbeat">Heartbeat</a></span>, <span name="status">status: <a href="HeartbeatStatus.html" class="extype" name="org.eso.ias.heartbeat.HeartbeatStatus">HeartbeatStatus</a></span>, <span name="additionalProeprties">additionalProeprties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       <p class="shortcomment cmt">Serialize the HB message to publish in a string
 </p><div class="fullcomment"><div class="comment cmt"><p>Serialize the HB message to publish in a string
-</p></div><dl class="paramcmts block"><dt class="param">fullRunningId</dt><dd class="cmt"><p>full running id</p></dd><dt class="param">status</dt><dd class="cmt"><p>the status of the tool</p></dd><dt class="param">timestamp</dt><dd class="cmt"><p>the timestamp to associate to the message</p></dd><dt>returns</dt><dd class="cmt"><p>A string representation of the message and the timestamp</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">hb</dt><dd class="cmt"><p>the heartbeat to publish</p></dd><dt class="param">status</dt><dd class="cmt"><p>the status of the tool</p></dd><dt class="param">timestamp</dt><dd class="cmt"><p>the timestamp to associate to the message</p></dd><dt>returns</dt><dd class="cmt"><p>A string representation of the message and the timestamp</p></dd></dl></div>
     </li></ol>
             </div>
 

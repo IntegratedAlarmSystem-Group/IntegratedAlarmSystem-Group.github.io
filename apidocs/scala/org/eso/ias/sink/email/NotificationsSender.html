@@ -346,7 +346,7 @@ alarm.</p><p>The sending of notification is delegated to the sender that allows 
 one user can be registered to be notified of several alarms
 The key is the address to send notifications to, the value is the list of alarms to notify to the recipient
 </p>
-    </li><li name="org.eso.ias.sink.email.NotificationsSender#alarmsToTrack" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.sink.email.NotificationsSender#alarmsToTrack" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="alarmsToTrack:scala.collection.mutable.Map[String,org.eso.ias.sink.email.AlarmStateTracker]"></a><a id="alarmsToTrack:Map[String,AlarmStateTracker]"></a>
       <span class="permalink">
       <a href="../../../../../org/eso/ias/sink/email/NotificationsSender.html#alarmsToTrack:scala.collection.mutable.Map[String,org.eso.ias.sink.email.AlarmStateTracker]" title="Permalink">
@@ -361,7 +361,9 @@ The key is the address to send notifications to, the value is the list of alarms
         <span class="name">alarmsToTrack</span><span class="result">: <span class="extype" name="scala.collection.mutable.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="AlarmStateTracker.html" class="extype" name="org.eso.ias.sink.email.AlarmStateTracker">AlarmStateTracker</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">The alarms that have a registered recipients to send notification</p>
+      <p class="shortcomment cmt">The alarms that have a registered recipients to send notification.</p><div class="fullcomment"><div class="comment cmt"><p>The alarms that have a registered recipients to send notification.</p><p>Templated alarms are added as they arrive so this map contains an entry
+for the baseId of the identifier and one entry for each templated alarm
+</p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">

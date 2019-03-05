@@ -210,7 +210,11 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Implements the Multiplicity transfer function.</p><p>The IASIOs in input to this TF are only alarms.
 The alarm generate by this TF activates when the number
 of alarms in input is equal or greater then the threshold retrieved
-from the properties.
+from the properties.</p><p>The priority of the alarm produced by this TF is the highest of the priorities
+of the alarms in input uneless a priority is passed by setting the alarm priority property
+in the CDB.</p><p>Since #153, the multiplicity TF propagates the properties of the inputs to the output:
+- only the properties of the inputs that are SET are propagated in the output
+- it the same property is present in more inputs, their values will be merged in the output
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -335,10 +339,10 @@ from the properties.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.impls.MultiplicityTF#alarmSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="alarmSet:org.eso.ias.types.Alarm"></a><a id="alarmSet:Alarm"></a>
+    </li><li name="org.eso.ias.asce.transfer.impls.MultiplicityTF#alarmFromCDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="alarmFromCDB:Option[org.eso.ias.types.Alarm]"></a><a id="alarmFromCDB:Option[Alarm]"></a>
       <span class="permalink">
-      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MultiplicityTF.html#alarmSet:org.eso.ias.types.Alarm" title="Permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MultiplicityTF.html#alarmFromCDB:Option[org.eso.ias.types.Alarm]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -347,11 +351,10 @@ from the properties.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">alarmSet</span><span class="result">: <a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a></span>
+        <span class="name">alarmFromCDB</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../../types/Alarm.html" class="extype" name="org.eso.ias.types.Alarm">Alarm</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">The priority of the alarm can be set defining a property;
-otherwise use the default
+      <p class="shortcomment cmt">The priority of the alarm from the java prorty or None if not defined
 </p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -498,7 +501,7 @@ otherwise use the default
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the id to translate, templated or not</p></dd><dt>returns</dt><dd class="cmt"><p>teh identifer translated if the ASCE is templated</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../ScalaTransferExecutor.html" class="extype" name="org.eso.ias.asce.transfer.ScalaTransferExecutor">ScalaTransferExecutor</a></dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.impls.MultiplicityTF#getOutputMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.asce.transfer.impls.MultiplicityTF#getOutputMode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getOutputMode(modes:Iterable[org.eso.ias.types.OperationalMode]):org.eso.ias.types.OperationalMode"></a><a id="getOutputMode(Iterable[OperationalMode]):OperationalMode"></a>
       <span class="permalink">
       <a href="../../../../../../org/eso/ias/asce/transfer/impls/MultiplicityTF.html#getOutputMode(modes:Iterable[org.eso.ias.types.OperationalMode]):org.eso.ias.types.OperationalMode" title="Permalink">
@@ -513,7 +516,30 @@ otherwise use the default
         <span class="name">getOutputMode</span><span class="params">(<span name="modes">modes: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../../../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a>]</span>)</span><span class="result">: <a href="../../../types/OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>
       </span>
       
+      <p class="shortcomment cmt">The mode of the ouptut depends on the modes of the inputs:
+it is UNKNOW if the modes of the inputs differ, otherwise it is
+the common operational mode of the inputs.</p><div class="fullcomment"><div class="comment cmt"><p>The mode of the ouptut depends on the modes of the inputs:
+it is UNKNOW if the modes of the inputs differ, otherwise it is
+the common operational mode of the inputs.
+</p></div><dl class="paramcmts block"><dt class="param">modes</dt><dd class="cmt"><p>the operational modes of the inputs</p></dd><dt>returns</dt><dd class="cmt"><p>the mode to assign to the output</p></dd></dl></div>
+    </li><li name="org.eso.ias.asce.transfer.impls.MultiplicityTF#getPropsOfOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPropsOfOutput(props:Iterable[Map[String,String]]):Map[String,String]"></a><a id="getPropsOfOutput(Iterable[Map[String,String]]):Map[String,String]"></a>
+      <span class="permalink">
+      <a href="../../../../../../org/eso/ias/asce/transfer/impls/MultiplicityTF.html#getPropsOfOutput(props:Iterable[Map[String,String]]):Map[String,String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPropsOfOutput</span><span class="params">(<span name="props">props: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
       
+      <p class="shortcomment cmt">Get and return the properties of the output by the properties of the  inputs
+</p><div class="fullcomment"><div class="comment cmt"><p>Get and return the properties of the output by the properties of the  inputs
+</p></div><dl class="paramcmts block"><dt class="param">props</dt><dd class="cmt"><p>the properties of the inputs that are set</p></dd><dt>returns</dt><dd class="cmt"><p>th eproperties to assign to the ouput</p></dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.TransferExecutor#getTemplateInstance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getTemplateInstance():java.util.Optional[Integer]"></a><a id="getTemplateInstance():Optional[Integer]"></a>
       <span class="permalink">

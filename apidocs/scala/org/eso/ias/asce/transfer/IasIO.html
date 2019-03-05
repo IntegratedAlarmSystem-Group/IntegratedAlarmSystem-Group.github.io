@@ -401,25 +401,6 @@ TF and simplify the API</p><p>IasIo is immutable.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.IasIO#dasuProductionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dasuProductionTStamp:Option[Long]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/IasIO.html#dasuProductionTStamp:Option[Long]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dasuProductionTStamp</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">The point in time when this monitor point has been produced by the DASU</p><div class="fullcomment"><div class="comment cmt"><p>The point in time when this monitor point has been produced by the DASU</p><p>Note that a monitor point can be produced by a DASU or by a plugin:
-one and only one between the plugin production timestamp and the
-DASU production timestamp is defined.
-</p></div></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -646,10 +627,10 @@ DASU production timestamp is defined.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.IasIO#pluginProductionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pluginProductionTStamp:Option[Long]"></a>
+    </li><li name="org.eso.ias.asce.transfer.IasIO#productionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="productionTStamp:Option[Long]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/IasIO.html#pluginProductionTStamp:Option[Long]" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/IasIO.html#productionTStamp:Option[Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -658,13 +639,11 @@ DASU production timestamp is defined.
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">pluginProductionTStamp</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">productionTStamp</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">The point in time when this monitor point has been produced by the plugin</p><div class="fullcomment"><div class="comment cmt"><p>The point in time when this monitor point has been produced by the plugin</p><p>Note that a monitor point can be produced by a DASU or by a plugin:
-one and only one between the plugin production timestamp and the
-DASU production timestamp is defined.
-</p></div></div>
+      <p class="shortcomment cmt">The point in time when this monitor point has been produced by a DASU,
+a plugin or a IAS core tool</p>
     </li><li name="org.eso.ias.asce.transfer.IasIO#props" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="props:Map[String,String]"></a>
       <span class="permalink">

@@ -151,8 +151,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.tranfer">tranfer</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <a class="object" href="AntPadInhibitor$.html" title=""></a>
-                        <a class="class" href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern."></a>
-                        <a href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads - an ALARM It inhibits the alarm if there are no antennas in the pads whose name matches with the given pattern.">AntPadInhibitor</a>
+                        <a class="class" href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads (string) - an ALARM It inhibits the alarm if there are no antennas in the pads whose names match with the given pattern."></a>
+                        <a href="AntPadInhibitor.html" title="The AntPadInhibitor transfer functions gets 2 inputs: - the association of antennas to pads (string) - an ALARM It inhibits the alarm if there are no antennas in the pads whose names match with the given pattern.">AntPadInhibitor</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="" title=""></a>
                         <a class="class" href="BackupSelector.html" title="Sometimes a monitor point has a backup to be used in case of failure getting the value of the main implementation."></a>
@@ -170,9 +170,17 @@
                         <a class="class" href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions"></a>
                         <a href="DelayedAlarmException.html" title="The exception thrown by this TF in case of malfunctions">DelayedAlarmException</a>
                       </li><li class="current-entities indented4">
+                        <a class="object" href="RelocationSelector$.html" title=""></a>
+                        <a class="class" href="RelocationSelector.html" title="A TF very similar to BackupSelector but that does not take into account the operational state of the inputs as it copes with relocation instead of duplication for which only the validity is to be considered."></a>
+                        <a href="RelocationSelector.html" title="A TF very similar to BackupSelector but that does not take into account the operational state of the inputs as it copes with relocation instead of duplication for which only the validity is to be considered.">RelocationSelector</a>
+                      </li><li class="current-entities indented4">
                         <a class="object" href="ThresholdWithBackupsAndDelay$.html" title=""></a>
                         <a class="class" href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm."></a>
                         <a href="ThresholdWithBackupsAndDelay.html" title="This class is very similar to the BackupSelector but in case of a failure instead of the main monitor points checks if any of the others is over (or below) the thresholds to generate an alarm.">ThresholdWithBackupsAndDelay</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="VisualInspectionAlarm$.html" title="Companion object"></a>
+                        <a class="class" href="VisualInspectionAlarm.html" title="The transfer function that generates an alarm is the wind speed is over a threshold and a visual inspection is still pending."></a>
+                        <a href="VisualInspectionAlarm.html" title="The transfer function that generates an alarm is the wind speed is over a threshold and a visual inspection is still pending.">VisualInspectionAlarm</a>
                       </li>
               </ul>
             </div>
@@ -320,10 +328,28 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">PrioritizedIdsPropName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">PrioritizedIdsPropName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       <p class="shortcomment cmt">The property to get the prioritized list of IDs</p>
+    </li><li name="org.eso.ias.tranfer.BackupSelector#SeletedInputPropName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SeletedInputPropName:String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/tranfer/BackupSelector$.html#SeletedInputPropName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SeletedInputPropName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The key of the property to be added to the properties of the output and reporting which
+of the inputs has been selected to generate the output
+</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">

@@ -171,8 +171,8 @@
                         <a href="Identifier.html" title="The immutable Identifier is a recursive data structure composed of a unique ID plus the ID of the parent.">Identifier</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="IdentifierType.html" title="The types of an identifier."></a>
-                        <a href="IdentifierType.html" title="The types of an identifier.">IdentifierType</a>
+                        <a class="class" href="IdentifierType.html" title="The types of an identifier of an IASIO."></a>
+                        <a href="IdentifierType.html" title="The types of an identifier of an IASIO.">IdentifierType</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="InOut$.html" title="InOut companion object"></a>
                         <a class="class" href="" title="A  InOut holds the value of an input or output of the IAS."></a>
@@ -210,7 +210,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">InOut</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.types.InOut.A">A</span>]</span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="mode">mode: <a href="OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>, <span name="fromIasValueValidity">fromIasValueValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="fromInputsValidity">fromInputsValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="validityConstraint">validityConstraint: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="iasType">iasType: <a href="IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a></span>, <span name="readFromMonSysTStamp">readFromMonSysTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="pluginProductionTStamp">pluginProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToConverterTStamp">sentToConverterTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="receivedFromPluginTStamp">receivedFromPluginTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="convertedProductionTStamp">convertedProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToBsdbTStamp">sentToBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="readFromBsdbTStamp">readFromBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="dasuProductionTStamp">dasuProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="idsOfDependants">idsOfDependants: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>]]</span>, <span name="props">props: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">InOut</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.types.InOut.A">A</span>]</span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="mode">mode: <a href="OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>, <span name="fromIasValueValidity">fromIasValueValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="fromInputsValidity">fromInputsValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="validityConstraint">validityConstraint: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="iasType">iasType: <a href="IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a></span>, <span name="readFromMonSysTStamp">readFromMonSysTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="productionTStamp">productionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToConverterTStamp">sentToConverterTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="receivedFromPluginTStamp">receivedFromPluginTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="convertedProductionTStamp">convertedProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToBsdbTStamp">sentToBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="readFromBsdbTStamp">readFromBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="idsOfDependants">idsOfDependants: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>]]</span>, <span name="props">props: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -236,13 +236,14 @@ of the ACSE.
                           of the validity to a subset of inputs
                           As the IASValue read from the BSDB have no inputs,
                           validityConstraint is defined only when fromInputsValidity
-                          is defined but not the other way around</p></dd><dt class="param">pluginProductionTStamp</dt><dd class="cmt"><p>The point in time when the plugin produced this value</p></dd><dt class="param">sentToConverterTStamp</dt><dd class="cmt"><p>The point in time when the plugin sent the value to the converter</p></dd><dt class="param">receivedFromPluginTStamp</dt><dd class="cmt"><p>The point in time when the converter received the value from the plugin</p></dd><dt class="param">convertedProductionTStamp</dt><dd class="cmt"><p>The point in time when the converter generated
-                                 the value from the data structure rceived by the plugin</p></dd><dt class="param">sentToBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been sent to the BSDB</p></dd><dt class="param">readFromBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been read from the BSDB</p></dd><dt class="param">dasuProductionTStamp</dt><dd class="cmt"><p>The point in time when the value has been generated by the DASU</p></dd><dt class="param">idsOfDependants</dt><dd class="cmt"><p>the identifiers of the dependent monitor points i.e.
+                          is defined but not the other way around</p></dd><dt class="param">productionTStamp</dt><dd class="cmt"><p>The point in time when the value of the InOut has been produced
+                       by a plugin, a DASU or a core tool</p></dd><dt class="param">sentToConverterTStamp</dt><dd class="cmt"><p>The point in time when the plugin sent the value to the converter</p></dd><dt class="param">receivedFromPluginTStamp</dt><dd class="cmt"><p>The point in time when the converter received the value from the plugin</p></dd><dt class="param">convertedProductionTStamp</dt><dd class="cmt"><p>The point in time when the converter generated
+                                 the value from the data structure rceived by the plugin</p></dd><dt class="param">sentToBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been sent to the BSDB</p></dd><dt class="param">readFromBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been read from the BSDB</p></dd><dt class="param">idsOfDependants</dt><dd class="cmt"><p>the identifiers of the dependent monitor points i.e.
                                           the identifier of the inputs if this InOut represents a output
                                           empty otherwise</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties if any, otherwise empty</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>isOutput()
-A IASIO can only be produced by a plugin or by a DASU i.e.
-only one between pluginProductionTStamp and dasuProductionTStamp
-can be defined (another invariant)
+A IASIO can be produced by a plugin, by a DASU or a core tool;
+independently of the toll that generated the value, the timestamp is saved in the <a href="#productionTStamp:Option[Long]" class="extmbr" name="org.eso.ias.types.InOut#productionTStamp">productionTStamp</a>.
+The tool that generated the value can be identified by the recursive <a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a> of the inOut.
 A property of the InOut contains the list of the dependent monitor points.
 Only an output can have dependent monitor points i.e. the InOut in input to the
 DASu that are needed to produce the ouput.
@@ -298,9 +299,9 @@ The InOut in input have an empty set of dependant monitor points.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.types.InOut#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(value:Option[_&gt;:A],id:org.eso.ias.types.Identifier,mode:org.eso.ias.types.OperationalMode,fromIasValueValidity:Option[org.eso.ias.types.Validity],fromInputsValidity:Option[org.eso.ias.types.Validity],validityConstraint:Option[Set[String]],iasType:org.eso.ias.types.IASTypes,readFromMonSysTStamp:Option[Long],pluginProductionTStamp:Option[Long],sentToConverterTStamp:Option[Long],receivedFromPluginTStamp:Option[Long],convertedProductionTStamp:Option[Long],sentToBsdbTStamp:Option[Long],readFromBsdbTStamp:Option[Long],dasuProductionTStamp:Option[Long],idsOfDependants:Option[Set[org.eso.ias.types.Identifier]],props:Option[Map[String,String]]):org.eso.ias.types.InOut[A]"></a><a id="&lt;init&gt;:InOut[A]"></a>
+      <a id="&lt;init&gt;(value:Option[_&gt;:A],id:org.eso.ias.types.Identifier,mode:org.eso.ias.types.OperationalMode,fromIasValueValidity:Option[org.eso.ias.types.Validity],fromInputsValidity:Option[org.eso.ias.types.Validity],validityConstraint:Option[Set[String]],iasType:org.eso.ias.types.IASTypes,readFromMonSysTStamp:Option[Long],productionTStamp:Option[Long],sentToConverterTStamp:Option[Long],receivedFromPluginTStamp:Option[Long],convertedProductionTStamp:Option[Long],sentToBsdbTStamp:Option[Long],readFromBsdbTStamp:Option[Long],idsOfDependants:Option[Set[org.eso.ias.types.Identifier]],props:Option[Map[String,String]]):org.eso.ias.types.InOut[A]"></a><a id="&lt;init&gt;:InOut[A]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/types/InOut.html#&lt;init&gt;(value:Option[_&gt;:A],id:org.eso.ias.types.Identifier,mode:org.eso.ias.types.OperationalMode,fromIasValueValidity:Option[org.eso.ias.types.Validity],fromInputsValidity:Option[org.eso.ias.types.Validity],validityConstraint:Option[Set[String]],iasType:org.eso.ias.types.IASTypes,readFromMonSysTStamp:Option[Long],pluginProductionTStamp:Option[Long],sentToConverterTStamp:Option[Long],receivedFromPluginTStamp:Option[Long],convertedProductionTStamp:Option[Long],sentToBsdbTStamp:Option[Long],readFromBsdbTStamp:Option[Long],dasuProductionTStamp:Option[Long],idsOfDependants:Option[Set[org.eso.ias.types.Identifier]],props:Option[Map[String,String]]):org.eso.ias.types.InOut[A]" title="Permalink">
+      <a href="../../../../org/eso/ias/types/InOut.html#&lt;init&gt;(value:Option[_&gt;:A],id:org.eso.ias.types.Identifier,mode:org.eso.ias.types.OperationalMode,fromIasValueValidity:Option[org.eso.ias.types.Validity],fromInputsValidity:Option[org.eso.ias.types.Validity],validityConstraint:Option[Set[String]],iasType:org.eso.ias.types.IASTypes,readFromMonSysTStamp:Option[Long],productionTStamp:Option[Long],sentToConverterTStamp:Option[Long],receivedFromPluginTStamp:Option[Long],convertedProductionTStamp:Option[Long],sentToBsdbTStamp:Option[Long],readFromBsdbTStamp:Option[Long],idsOfDependants:Option[Set[org.eso.ias.types.Identifier]],props:Option[Map[String,String]]):org.eso.ias.types.InOut[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -309,7 +310,7 @@ The InOut in input have an empty set of dependant monitor points.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">InOut</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.types.InOut.A">A</span>]</span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="mode">mode: <a href="OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>, <span name="fromIasValueValidity">fromIasValueValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="fromInputsValidity">fromInputsValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="validityConstraint">validityConstraint: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="iasType">iasType: <a href="IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a></span>, <span name="readFromMonSysTStamp">readFromMonSysTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="pluginProductionTStamp">pluginProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToConverterTStamp">sentToConverterTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="receivedFromPluginTStamp">receivedFromPluginTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="convertedProductionTStamp">convertedProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToBsdbTStamp">sentToBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="readFromBsdbTStamp">readFromBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="dasuProductionTStamp">dasuProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="idsOfDependants">idsOfDependants: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>]]</span>, <span name="props">props: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span>
+        <span class="name">InOut</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Option">Option</span>[_ &gt;: <span class="extype" name="org.eso.ias.types.InOut.A">A</span>]</span>, <span name="id">id: <a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="mode">mode: <a href="OperationalMode.html" class="extype" name="org.eso.ias.types.OperationalMode">OperationalMode</a></span>, <span name="fromIasValueValidity">fromIasValueValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="fromInputsValidity">fromInputsValidity: <span class="extype" name="scala.Option">Option</span>[<a href="Validity.html" class="extype" name="org.eso.ias.types.Validity">Validity</a>]</span>, <span name="validityConstraint">validityConstraint: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="iasType">iasType: <a href="IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a></span>, <span name="readFromMonSysTStamp">readFromMonSysTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="productionTStamp">productionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToConverterTStamp">sentToConverterTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="receivedFromPluginTStamp">receivedFromPluginTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="convertedProductionTStamp">convertedProductionTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="sentToBsdbTStamp">sentToBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="readFromBsdbTStamp">readFromBsdbTStamp: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="idsOfDependants">idsOfDependants: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Set">Set</span>[<a href="Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>]]</span>, <span name="props">props: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]]</span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>: the value of this InOut (can be empty)</p></dd><dt class="param">id</dt><dd class="cmt"><p>: The unique ID of the monitor point</p></dd><dt class="param">mode</dt><dd class="cmt"><p>: The operational mode</p></dd><dt class="param">fromIasValueValidity</dt><dd class="cmt"><p>: The validity received from the BSDB (i.e. from a IASValue)
@@ -320,8 +321,9 @@ The InOut in input have an empty set of dependant monitor points.
                           of the validity to a subset of inputs
                           As the IASValue read from the BSDB have no inputs,
                           validityConstraint is defined only when fromInputsValidity
-                          is defined but not the other way around</p></dd><dt class="param">pluginProductionTStamp</dt><dd class="cmt"><p>The point in time when the plugin produced this value</p></dd><dt class="param">sentToConverterTStamp</dt><dd class="cmt"><p>The point in time when the plugin sent the value to the converter</p></dd><dt class="param">receivedFromPluginTStamp</dt><dd class="cmt"><p>The point in time when the converter received the value from the plugin</p></dd><dt class="param">convertedProductionTStamp</dt><dd class="cmt"><p>The point in time when the converter generated
-                                 the value from the data structure rceived by the plugin</p></dd><dt class="param">sentToBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been sent to the BSDB</p></dd><dt class="param">readFromBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been read from the BSDB</p></dd><dt class="param">dasuProductionTStamp</dt><dd class="cmt"><p>The point in time when the value has been generated by the DASU</p></dd><dt class="param">idsOfDependants</dt><dd class="cmt"><p>the identifiers of the dependent monitor points i.e.
+                          is defined but not the other way around</p></dd><dt class="param">productionTStamp</dt><dd class="cmt"><p>The point in time when the value of the InOut has been produced
+                       by a plugin, a DASU or a core tool</p></dd><dt class="param">sentToConverterTStamp</dt><dd class="cmt"><p>The point in time when the plugin sent the value to the converter</p></dd><dt class="param">receivedFromPluginTStamp</dt><dd class="cmt"><p>The point in time when the converter received the value from the plugin</p></dd><dt class="param">convertedProductionTStamp</dt><dd class="cmt"><p>The point in time when the converter generated
+                                 the value from the data structure rceived by the plugin</p></dd><dt class="param">sentToBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been sent to the BSDB</p></dd><dt class="param">readFromBsdbTStamp</dt><dd class="cmt"><p>The point in time when the value has been read from the BSDB</p></dd><dt class="param">idsOfDependants</dt><dd class="cmt"><p>the identifiers of the dependent monitor points i.e.
                                           the identifier of the inputs if this InOut represents a output
                                           empty otherwise</p></dd><dt class="param">props</dt><dd class="cmt"><p>additional properties if any, otherwise empty</p></dd></dl></div>
     </li></ol>
@@ -435,22 +437,6 @@ The InOut in input have an empty set of dependant monitor points.
       </span>
       <span class="symbol">
         <span class="name">convertedProductionTStamp</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.eso.ias.types.InOut#dasuProductionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dasuProductionTStamp:Option[Long]"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/types/InOut.html#dasuProductionTStamp:Option[Long]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dasuProductionTStamp</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
@@ -582,8 +568,7 @@ the actual time against the timestamps of the IASIO
 this monitor point. The validity of the output of a monitor
 point generated by the TF of an ASCE, depends also on the refresh
 time of its inputs that for this reason cannot be evaluated at this level.</p><p>The monitor point is valid if it has been updated before
-the validityTimeFrame elapses.</p></div><dl class="paramcmts block"><dt class="param">validityTimeFrame</dt><dd class="cmt"><p>the time (msecs) to consider the value valid
-                         it is composed of the autoSendTimeInterval+tolerance</p></dd><dt>returns</dt><dd class="cmt"><p>the validity taking times into account</p></dd></dl></div>
+the validityTimeFrame elapses.</p></div><dl class="paramcmts block"><dt class="param">validityTimeFrame</dt><dd class="cmt"><p>the time (msecs) to consider the value valid i.e. the validityThrshold</p></dd><dt>returns</dt><dd class="cmt"><p>the validity taking times into account</p></dd></dl></div>
     </li><li name="org.eso.ias.types.InOut#iasType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="iasType:org.eso.ias.types.IASTypes"></a><a id="iasType:IASTypes"></a>
       <span class="permalink">
@@ -735,10 +720,10 @@ the validityTimeFrame elapses.</p></div><dl class="paramcmts block"><dt class="p
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.types.InOut#pluginProductionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="pluginProductionTStamp:Option[Long]"></a>
+    </li><li name="org.eso.ias.types.InOut#productionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="productionTStamp:Option[Long]"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/types/InOut.html#pluginProductionTStamp:Option[Long]" title="Permalink">
+      <a href="../../../../org/eso/ias/types/InOut.html#productionTStamp:Option[Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -747,7 +732,7 @@ the validityTimeFrame elapses.</p></div><dl class="paramcmts block"><dt class="p
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">pluginProductionTStamp</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">productionTStamp</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
@@ -934,22 +919,6 @@ the validityTimeFrame elapses.</p></div><dl class="paramcmts block"><dt class="p
 if this INOut is an input of a ASCE or in fromInputsValidity if it the the output
 of a ASCE.
 </p></div></div>
-    </li><li name="org.eso.ias.types.InOut#updateDasuProdTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="updateDasuProdTStamp(timestamp:Long):org.eso.ias.types.InOut[A]"></a><a id="updateDasuProdTStamp(Long):InOut[A]"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/types/InOut.html#updateDasuProdTStamp(timestamp:Long):org.eso.ias.types.InOut[A]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">updateDasuProdTStamp</span><span class="params">(<span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.types.InOut.A">A</span>]</span>
-      </span>
-      
-      
     </li><li name="org.eso.ias.types.InOut#updateDependentsIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="updateDependentsIds(idsOfDeps:Set[org.eso.ias.types.Identifier]):org.eso.ias.types.InOut[A]"></a><a id="updateDependentsIds(Set[Identifier]):InOut[A]"></a>
       <span class="permalink">
@@ -1019,6 +988,22 @@ of a ASCE.
       
       <p class="shortcomment cmt">Update the mode of the monitor point
 </p>
+    </li><li name="org.eso.ias.types.InOut#updateProdTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updateProdTStamp(timestamp:Long):org.eso.ias.types.InOut[A]"></a><a id="updateProdTStamp(Long):InOut[A]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/types/InOut.html#updateProdTStamp(timestamp:Long):org.eso.ias.types.InOut[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateProdTStamp</span><span class="params">(<span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="" class="extype" name="org.eso.ias.types.InOut">InOut</a>[<span class="extype" name="org.eso.ias.types.InOut.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates the production timestamp</p>
     </li><li name="org.eso.ias.types.InOut#updateProps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="updateProps(additionalProps:Map[String,String]):org.eso.ias.types.InOut[A]"></a><a id="updateProps(Map[String,String]):InOut[A]"></a>
       <span class="permalink">
@@ -1036,7 +1021,7 @@ of a ASCE.
       
       <p class="shortcomment cmt">Return a new inOut with the passed additional properties
 </p><div class="fullcomment"><div class="comment cmt"><p>Return a new inOut with the passed additional properties
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a new inOut with the passed additional properties</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">additionalProps</dt><dd class="cmt"><p>The additional properties</p></dd><dt>returns</dt><dd class="cmt"><p>a new inOut with the passed additional properties</p></dd></dl></div>
     </li><li name="org.eso.ias.types.InOut#updateSentToBsdbTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="updateSentToBsdbTStamp(timestamp:Long):org.eso.ias.types.InOut[A]"></a><a id="updateSentToBsdbTStamp(Long):InOut[A]"></a>
       <span class="permalink">

@@ -402,27 +402,6 @@ TF and simplify the API hiding scala details.</p><p>IasIo is immutable.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.IasIOJ#dasuProductionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dasuProductionTStamp():java.util.Optional[Long]"></a><a id="dasuProductionTStamp():Optional[Long]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/IasIOJ.html#dasuProductionTStamp():java.util.Optional[Long]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dasuProductionTStamp</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Long">Long</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Note that a monitor point can be produced by a DASU or by a plugin
-so only one between the plugin production timestamp and the
-DASU production timestamp is defined.</p><div class="fullcomment"><div class="comment cmt"><p>Note that a monitor point can be produced by a DASU or by a plugin
-so only one between the plugin production timestamp and the
-DASU production timestamp is defined.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The point in time when this monitor point has been produced by the DASU</p></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -716,10 +695,10 @@ DASU production timestamp is defined.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.asce.transfer.IasIOJ#pluginProductionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pluginProductionTStamp():java.util.Optional[Long]"></a><a id="pluginProductionTStamp():Optional[Long]"></a>
+    </li><li name="org.eso.ias.asce.transfer.IasIOJ#productionTStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productionTStamp():java.util.Optional[Long]"></a><a id="productionTStamp():Optional[Long]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/IasIOJ.html#pluginProductionTStamp():java.util.Optional[Long]" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/IasIOJ.html#productionTStamp():java.util.Optional[Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -728,15 +707,14 @@ DASU production timestamp is defined.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">pluginProductionTStamp</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Long">Long</span>]</span>
+        <span class="name">productionTStamp</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.lang.Long">Long</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Note that a monitor point can be produced by a DASU or by a plugin
-so only one between the plugin production timestamp and the
-DASU production timestamp is defined.</p><div class="fullcomment"><div class="comment cmt"><p>Note that a monitor point can be produced by a DASU or by a plugin
-so only one between the plugin production timestamp and the
-DASU production timestamp is defined.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The point in time when this monitor point has been produced by the plugin</p></dd></dl></div>
+      <p class="shortcomment cmt">Th eproduction timestamp of the IASIO independently if it has been produced by a plugin,
+a DASU or a CORE tool
+</p><div class="fullcomment"><div class="comment cmt"><p>Th eproduction timestamp of the IASIO independently if it has been produced by a plugin,
+a DASU or a CORE tool
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The point in time when this monitor point has been produced by the DASU</p></dd></dl></div>
     </li><li name="org.eso.ias.asce.transfer.IasIOJ#setValidityConstraint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setValidityConstraint(constraint:java.util.Set[String]):org.eso.ias.asce.transfer.IasIOJ[T]"></a><a id="setValidityConstraint(Set[String]):IasIOJ[T]"></a>
       <span class="permalink">

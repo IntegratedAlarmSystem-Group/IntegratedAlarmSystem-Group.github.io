@@ -261,6 +261,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
+    </li><li name="org.eso.ias.monitor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="monitor"></a><a id="monitor:monitor"></a>
+      <span class="permalink">
+      <a href="../../../org/eso/ias/index.html#monitor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../monitor/index.html"><span class="name">monitor</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias">ias</a></dd></dl></div>
     </li><li name="org.eso.ias.plugin" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="plugin"></a><a id="plugin:plugin"></a>
       <span class="permalink">
@@ -309,6 +325,22 @@
       </span>
       
       
+    </li><li name="org.eso.ias.sink.ltdb" visbl="pub" class="indented5 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ltdb"></a><a id="ltdb:ltdb"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/index.html#ltdb" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ltdb/index.html"><span class="name">ltdb</span></a>
+      </span>
+      
+      
     </li><li name="org.eso.ias.sink.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
@@ -334,7 +366,7 @@
                         <a class="class" href="ProcessorThreadFactory.html" title=""></a>
                         <a href="ProcessorThreadFactory.html" title="">ProcessorThreadFactory</a>
                       </li><li class="current-entities indented4">
-                        <span class="separator"></span>
+                        <a class="object" href="ValueListener$.html" title=""></a>
                         <a class="class" href="ValueListener.html" title="The listener of IasValues to be processed"></a>
                         <a href="ValueListener.html" title="The listener of IasValues to be processed">ValueListener</a>
                       </li><li name="org.eso.ias.supervisor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -530,11 +562,11 @@
       <p class="shortcomment cmt">The IasValueProcessor gets all the IasValues published in the BSDB
 and sends them to the listener for further processing.</p><div class="fullcomment"><div class="comment cmt"><p>The IasValueProcessor gets all the IasValues published in the BSDB
 and sends them to the listener for further processing.</p><p>The processing is triggered when the buffer receivedValues contains
-at least minSizeOfValsToProcessAtOnce itemes.
+at least minSizeOfValsToProcessAtOnce items.
 It is also periodically triggered every periodicProcessingTime msecs.</p><p>In this version the IasValueProcessor does not take any action if
 one of the listeners is too slow apart of logging messages.
 The slowness is detected when the queue of received and
-not yet proocessed values grows too much. In this case the
+not yet processed values grows too much. In this case the
 IasValueProcessor logs a warning. To avoid submitting
 too many logs, the message is logged with a throttling.</p><p>The buffer is bounded by maxBufferSize: if threads do not consume
 values fast enough the oldest values in the buffer are removed to avoid
@@ -597,6 +629,22 @@ from the active listener.
       </span>
       <span class="symbol">
         <a title="" href="IasValueProcessor$.html"><span class="name">IasValueProcessor</span></a>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.sink.ValueListener" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ValueListener"></a><a id="ValueListener:ValueListener"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/index.html#ValueListener" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ValueListener$.html"><span class="name">ValueListener</span></a>
       </span>
       
       
