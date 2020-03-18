@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.supervisor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="supervisor"></a><a id="supervisor:supervisor"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#supervisor" title="Permalink">
+      <a href="../../../../org/eso/ias/supervisor/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.supervisor.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/supervisor/index.html#test" title="Permalink">
+      <a href="../../../../org/eso/ias/supervisor/test/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -153,6 +153,10 @@
                         <a class="object" href="Supervisor$.html" title=""></a>
                         <a class="class" href="" title="A Supervisor is the container to run several DASUs into the same JVM."></a>
                         <a href="" title="A Supervisor is the container to run several DASUs into the same JVM.">Supervisor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="SupervisorCmdExecutor.html" title="The executor of commands for the Supervisor."></a>
+                        <a href="SupervisorCmdExecutor.html" title="The executor of commands for the Supervisor.">SupervisorCmdExecutor</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="SupervisorStatistics$.html" title=""></a>
                         <a class="class" href="SupervisorStatistics.html" title="Stats logger produces statistics for the Supervisor"></a>
@@ -182,7 +186,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Supervisor</span><span class="result"> extends <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a> with <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a> with <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>
+        <span class="name">Supervisor</span><span class="result"> extends <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a> with <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a> with <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a> with <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
       </span>
       </h4>
 
@@ -201,12 +205,15 @@ the Supervisor acts as a bridge:
 are used by DASUs and Supervisors in this way a DASU can be easily tested
 directly connected to Kafka (for example) without the need to have
 it running into a Supervisor.</p><p>DASUs are built by invoking the dasufactory passed in the constructor:
-test can let the Supervisor run with their mockup implementation of a DASU.
+test can let the Supervisor run with their mockup implementation of a DASU.</p><p>If not defined, the constructor builds the HB producer, the output publisher and the command manager
+using the passed SimpleStringProducer. All those producers are those used in operatons i.e. sending data
+to the kafka servers.
+The constructor allows to override this implementation passing special producers, a feature useful for testing
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a>, <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>, <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span>, <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a>, <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>, <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -232,7 +239,7 @@ test can let the Supervisor run with their mockup implementation of a DASU.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.supervisor.Supervisor"><span>Supervisor</span></li><li class="in" name="org.eso.ias.dasu.publisher.OutputPublisher"><span>OutputPublisher</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputSubscriber"><span>InputSubscriber</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputsListener"><span>InputsListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.supervisor.Supervisor"><span>Supervisor</span></li><li class="in" name="java.lang.AutoCloseable"><span>AutoCloseable</span></li><li class="in" name="org.eso.ias.dasu.publisher.OutputPublisher"><span>OutputPublisher</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputSubscriber"><span>InputSubscriber</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputsListener"><span>InputsListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -253,9 +260,9 @@ test can let the Supervisor run with their mockup implementation of a DASU.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.supervisor.Supervisor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(supervisorIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,hbProducer:org.eso.ias.heartbeat.HbProducer,cdbReader:org.eso.ias.cdb.CdbReader,dasuFactory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber)=&gt;org.eso.ias.dasu.Dasu,logLevelFromCommandLine:Option[org.eso.ias.cdb.pojos.LogLevelDao]):org.eso.ias.supervisor.Supervisor"></a><a id="&lt;init&gt;:Supervisor"></a>
+      <a id="&lt;init&gt;(supervisorIdentifier:org.eso.ias.types.Identifier,kafkaBrokers:String,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,dasuFactory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber)=&gt;org.eso.ias.dasu.Dasu,logLevelFromCommandLine:Option[org.eso.ias.cdb.pojos.LogLevelDao]):org.eso.ias.supervisor.Supervisor"></a><a id="&lt;init&gt;:Supervisor"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#&lt;init&gt;(supervisorIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,hbProducer:org.eso.ias.heartbeat.HbProducer,cdbReader:org.eso.ias.cdb.CdbReader,dasuFactory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber)=&gt;org.eso.ias.dasu.Dasu,logLevelFromCommandLine:Option[org.eso.ias.cdb.pojos.LogLevelDao]):org.eso.ias.supervisor.Supervisor" title="Permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#&lt;init&gt;(supervisorIdentifier:org.eso.ias.types.Identifier,kafkaBrokers:String,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,cdbReader:org.eso.ias.cdb.CdbReader,dasuFactory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber)=&gt;org.eso.ias.dasu.Dasu,logLevelFromCommandLine:Option[org.eso.ias.cdb.pojos.LogLevelDao]):org.eso.ias.supervisor.Supervisor" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -264,11 +271,32 @@ test can let the Supervisor run with their mockup implementation of a DASU.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Supervisor</span><span class="params">(<span name="supervisorIdentifier">supervisorIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="outputPublisher">outputPublisher: <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="cdbReader">cdbReader: <a href="../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="dasuFactory">dasuFactory: (<a href="../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>, <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>, <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a>, <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>) ⇒ <a href="../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></span>, <span name="logLevelFromCommandLine">logLevelFromCommandLine: <span class="extype" name="scala.Option">Option</span>[<a href="../cdb/pojos/LogLevelDao.html" class="extype" name="org.eso.ias.cdb.pojos.LogLevelDao">LogLevelDao</a>]</span>)</span>
+        <span class="name">Supervisor</span><span class="params">(<span name="supervisorIdentifier">supervisorIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="kafkaBrokers">kafkaBrokers: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="inputSubscriber">inputSubscriber: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="cdbReader">cdbReader: <a href="../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="dasuFactory">dasuFactory: (<a href="../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>, <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>, <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a>, <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>) ⇒ <a href="../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></span>, <span name="logLevelFromCommandLine">logLevelFromCommandLine: <span class="extype" name="scala.Option">Option</span>[<a href="../cdb/pojos/LogLevelDao.html" class="extype" name="org.eso.ias.cdb.pojos.LogLevelDao">LogLevelDao</a>]</span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">supervisorIdentifier</dt><dd class="cmt"><p>the identifier of the Supervisor</p></dd><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>the subscriber to send heartbeats</p></dd><dt class="param">cdbReader</dt><dd class="cmt"><p>the CDB reader to get the configuration of the DASU from the CDB</p></dd><dt class="param">logLevelFromCommandLine</dt><dd class="cmt"><p>The log level from the command line;
-                               None if the parameter was not set in the command line</p></dd></dl></div>
+      <p class="shortcomment cmt">Factory method to build a Supervisor with kafka producers and consumers</p><div class="fullcomment"><div class="comment cmt"><p>Factory method to build a Supervisor with kafka producers and consumers</p><p>This methods builds the Supervisor used in operation and connected with Kafka server.
+</p></div><dl class="paramcmts block"><dt class="param">supervisorIdentifier</dt><dd class="cmt"><p>the identifier of the Supervisor</p></dd><dt class="param">kafkaBrokers</dt><dd class="cmt"><p>the string with kafka brokers</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber to get events to be processed</p></dd><dt class="param">cdbReader</dt><dd class="cmt"><p>the CDB reader to get the configuration of the DASU from the CDB</p></dd><dt class="param">logLevelFromCommandLine</dt><dd class="cmt"><p>The log level from the command line;
+                               None if the parameter was not set in the command line</p></dd><dt>returns</dt><dd class="cmt"><p>a new Supervisor</p></dd></dl></div>
+    </li><li name="org.eso.ias.supervisor.Supervisor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(supervisorIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,hbProducer:org.eso.ias.heartbeat.HbProducer,commandManager:org.eso.ias.command.CommandManager,cdbReader:org.eso.ias.cdb.CdbReader,dasuFactory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber)=&gt;org.eso.ias.dasu.Dasu,logLevelFromCommandLine:Option[org.eso.ias.cdb.pojos.LogLevelDao]):org.eso.ias.supervisor.Supervisor"></a><a id="&lt;init&gt;:Supervisor"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#&lt;init&gt;(supervisorIdentifier:org.eso.ias.types.Identifier,outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher,inputSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,hbProducer:org.eso.ias.heartbeat.HbProducer,commandManager:org.eso.ias.command.CommandManager,cdbReader:org.eso.ias.cdb.CdbReader,dasuFactory:(org.eso.ias.cdb.pojos.DasuDao,org.eso.ias.types.Identifier,org.eso.ias.dasu.publisher.OutputPublisher,org.eso.ias.dasu.subscriber.InputSubscriber)=&gt;org.eso.ias.dasu.Dasu,logLevelFromCommandLine:Option[org.eso.ias.cdb.pojos.LogLevelDao]):org.eso.ias.supervisor.Supervisor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Supervisor</span><span class="params">(<span name="supervisorIdentifier">supervisorIdentifier: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>, <span name="outputPublisher">outputPublisher: <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>, <span name="inputSubscriber">inputSubscriber: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="commandManager">commandManager: <a href="../command/CommandManager.html" class="extype" name="org.eso.ias.command.CommandManager">CommandManager</a></span>, <span name="cdbReader">cdbReader: <a href="../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="dasuFactory">dasuFactory: (<a href="../cdb/pojos/DasuDao.html" class="extype" name="org.eso.ias.cdb.pojos.DasuDao">DasuDao</a>, <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a>, <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a>, <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>) ⇒ <a href="../dasu/Dasu.html" class="extype" name="org.eso.ias.dasu.Dasu">Dasu</a></span>, <span name="logLevelFromCommandLine">logLevelFromCommandLine: <span class="extype" name="scala.Option">Option</span>[<a href="../cdb/pojos/LogLevelDao.html" class="extype" name="org.eso.ias.cdb.pojos.LogLevelDao">LogLevelDao</a>]</span>)</span>
+      </span>
+      
+      <p class="shortcomment cmt">Constructor that allows to override standard kafka producer with the
+passed in the parameters.</p><div class="fullcomment"><div class="comment cmt"><p>Constructor that allows to override standard kafka producer with the
+passed in the parameters.</p><p>This constructor is intended for testing purposes.
+</p></div><dl class="paramcmts block"><dt class="param">supervisorIdentifier</dt><dd class="cmt"><p>the identifier of the Supervisor</p></dd><dt class="param">outputPublisher</dt><dd class="cmt"><p>the publisher to send the output</p></dd><dt class="param">inputSubscriber</dt><dd class="cmt"><p>the subscriber getting events to be processed</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>the subscriber to send heartbeats</p></dd><dt class="param">cdbReader</dt><dd class="cmt"><p>the CDB reader to get the configuration of the DASU from the CDB</p></dd><dt class="param">logLevelFromCommandLine</dt><dd class="cmt"><p>The log level from the command line;
+                               None if the parameter was not set in the command line</p></dd><dt>returns</dt><dd class="cmt"><p>a new Supervisor</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -343,23 +371,6 @@ test can let the Supervisor run with their mockup implementation of a DASU.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.eso.ias.supervisor.Supervisor#cleanUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cleanUp():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#cleanUp():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cleanUp</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Release all the resources
-</p>
     </li><li name="org.eso.ias.supervisor.Supervisor#cleanUpPublisher" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cleanUpPublisher():scala.util.Try[Unit]"></a><a id="cleanUpPublisher():Try[Unit]"></a>
       <span class="permalink">
@@ -433,15 +444,65 @@ does nothing and always return success.
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="org.eso.ias.supervisor.Supervisor#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="close():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#close():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Release all the resources
+</p><div class="fullcomment"><div class="comment cmt"><p>Release all the resources
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.supervisor.Supervisor">Supervisor</a> → AutoCloseable</dd></dl></div>
+    </li><li name="org.eso.ias.supervisor.Supervisor#cmdExecutor" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cmdExecutor:org.eso.ias.supervisor.SupervisorCmdExecutor"></a><a id="cmdExecutor:SupervisorCmdExecutor"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#cmdExecutor:org.eso.ias.supervisor.SupervisorCmdExecutor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cmdExecutor</span><span class="result">: <a href="SupervisorCmdExecutor.html" class="extype" name="org.eso.ias.supervisor.SupervisorCmdExecutor">SupervisorCmdExecutor</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The command executor that executes the commands received from the cmd topic</p>
+    </li><li name="org.eso.ias.supervisor.Supervisor#commandManager" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="commandManager:org.eso.ias.command.CommandManager"></a><a id="commandManager:CommandManager"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#commandManager:org.eso.ias.command.CommandManager" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">commandManager</span><span class="result">: <a href="../command/CommandManager.html" class="extype" name="org.eso.ias.command.CommandManager">CommandManager</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The command manager to get and execute commands</p>
     </li><li name="org.eso.ias.supervisor.Supervisor#dasuDaos" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="dasuDaos:Set[org.eso.ias.cdb.pojos.DasuDao]"></a><a id="dasuDaos:Set[DasuDao]"></a>
       <span class="permalink">
@@ -573,7 +634,7 @@ does nothing and always return success.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -631,6 +692,22 @@ does nothing and always return success.
       </span>
       <span class="symbol">
         <span class="name">hbEngine</span><span class="result">: <a href="../heartbeat/HbEngine.html" class="extype" name="org.eso.ias.heartbeat.HbEngine">HbEngine</a></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.supervisor.Supervisor#hbProducer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hbProducer:org.eso.ias.heartbeat.HbProducer"></a><a id="hbProducer:HbProducer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#hbProducer:org.eso.ias.heartbeat.HbProducer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbProducer</span><span class="result">: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>
       </span>
       
       <p class="shortcomment cmt">The heartbeat Engine</p>
@@ -726,22 +803,6 @@ the set of inputs to send to the DASU
  invoked by each DASU, does nothing but returning Success.</p><div class="fullcomment"><div class="comment cmt"><p> The Supervisor has its own subscriber so this initialization,
  invoked by each DASU, does nothing but returning Success.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.supervisor.Supervisor">Supervisor</a> → <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></dd></dl></div>
-    </li><li name="org.eso.ias.supervisor.Supervisor#inputSubscriberInitialized" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="inputSubscriberInitialized:scala.util.Try[Unit]"></a><a id="inputSubscriberInitialized:Try[Unit]"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#inputSubscriberInitialized:scala.util.Try[Unit]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">inputSubscriberInitialized</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
-      </span>
-      
-      
     </li><li name="org.eso.ias.supervisor.Supervisor#inputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Iterable[IASValue[_]]):Unit"></a>
       <span class="permalink">
@@ -830,10 +891,10 @@ the set of inputs to send to the DASU
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.supervisor.Supervisor#outputProducerInitialized" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="outputProducerInitialized:scala.util.Try[Unit]"></a><a id="outputProducerInitialized:Try[Unit]"></a>
+    </li><li name="org.eso.ias.supervisor.Supervisor#outputPublisher" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher"></a><a id="outputPublisher:OutputPublisher"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#outputProducerInitialized:scala.util.Try[Unit]" title="Permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#outputPublisher:org.eso.ias.dasu.publisher.OutputPublisher" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -842,7 +903,7 @@ the set of inputs to send to the DASU
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">outputProducerInitialized</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+        <span class="name">outputPublisher</span><span class="result">: <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></span>
       </span>
       
       
@@ -991,22 +1052,6 @@ IDs to be accepted is composed of the IDs accepted by each DASUs.</p><p>Each DAS
       </span>
       
       
-    </li><li name="org.eso.ias.supervisor.Supervisor#supervisorIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="supervisorIdentifier:org.eso.ias.types.Identifier"></a><a id="supervisorIdentifier:Identifier"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#supervisorIdentifier:org.eso.ias.types.Identifier" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">supervisorIdentifier</span><span class="result">: <a href="../types/Identifier.html" class="extype" name="org.eso.ias.types.Identifier">Identifier</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -1023,6 +1068,22 @@ IDs to be accepted is composed of the IDs accepted by each DASUs.</p><p>Each DAS
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.eso.ias.supervisor.Supervisor#tfIDs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tfIDs:List[String]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/supervisor/Supervisor.html#tfIDs:List[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tfIDs</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
@@ -1099,12 +1160,12 @@ IDs to be accepted is composed of the IDs accepted by each DASUs.</p><p>Each DAS
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -1117,7 +1178,9 @@ IDs to be accepted is composed of the IDs accepted by each DASUs.</p><p>Each DAS
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.dasu.publisher.OutputPublisher">
+        <div class="parent" name="java.lang.AutoCloseable">
+              <h3>Inherited from <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></h3>
+            </div><div class="parent" name="org.eso.ias.dasu.publisher.OutputPublisher">
               <h3>Inherited from <a href="../dasu/publisher/OutputPublisher.html" class="extype" name="org.eso.ias.dasu.publisher.OutputPublisher">OutputPublisher</a></h3>
             </div><div class="parent" name="org.eso.ias.dasu.subscriber.InputSubscriber">
               <h3>Inherited from <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></h3>
