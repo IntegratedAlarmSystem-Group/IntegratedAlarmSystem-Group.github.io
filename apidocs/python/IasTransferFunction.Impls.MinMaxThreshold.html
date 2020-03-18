@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module IasTransferFunction.Impls.MinMaxThreshold</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasTransferFunction.html"><font color="#ffffff">IasTransferFunction</font></a>.<a href="IasTransferFunction.Impls.html"><font color="#ffffff">Impls</font></a>.MinMaxThreshold</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/ias/CompElement/src/main/python/IasTransferFunction/Impls/MinMaxThreshold.py">/home/ias/ias/CompElement/src/main/python/IasTransferFunction/Impls/MinMaxThreshold.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="IasTransferFunction.TransferFunction.html#TransferFunction">IasTransferFunction.TransferFunction.TransferFunction</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasTransferFunction.Impls.MinMaxThreshold.html#MinMaxThreshold">MinMaxThreshold</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MinMaxThreshold">class <strong>MinMaxThreshold</strong></a>(<a href="IasTransferFunction.TransferFunction.html#TransferFunction">IasTransferFunction.TransferFunction.TransferFunction</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;python&nbsp;TF&nbsp;implementation&nbsp;of&nbsp;the&nbsp;min&nbsp;max&nbsp;threshold<br>
+&nbsp;<br>
+This&nbsp;TF&nbsp;is&nbsp;used&nbsp;mostly&nbsp;for&nbsp;testing&nbsp;python&nbsp;TF&nbsp;and&nbsp;to&nbsp;provide&nbsp;an&nbsp;example.<br>
+In&nbsp;operation&nbsp;the&nbsp;scala&nbsp;version&nbsp;should&nbsp;be&nbsp;preferred&nbsp;because&nbsp;is&nbsp;more&nbsp;performant<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="IasTransferFunction.Impls.MinMaxThreshold.html#MinMaxThreshold">MinMaxThreshold</a></dd>
+<dd><a href="IasTransferFunction.TransferFunction.html#TransferFunction">IasTransferFunction.TransferFunction.TransferFunction</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MinMaxThreshold-__init__"><strong>__init__</strong></a>(self, asceId, asceRunningId, validityTimeFrame, props, instance)</dt><dd><tt>Constructor<br>
+&nbsp;<br>
+:param&nbsp;asceId:<br>
+:param&nbsp;asceRunningId:<br>
+:param&nbsp;validityTimeFrame:<br>
+:param&nbsp;props:</tt></dd></dl>
+
+<dl><dt><a name="MinMaxThreshold-eval"><strong>eval</strong></a>(self, compInputs, actualOutput)</dt><dd><tt>Run&nbsp;the&nbsp;TF<br>
+&nbsp;<br>
+:param&nbsp;compInputs:&nbsp;The&nbsp;inputs&nbsp;(Map&nbsp;of&nbsp;IASIOs&nbsp;with&nbsp;their&nbsp;IDs&nbsp;as&nbsp;keys)<br>
+:param&nbsp;actualOutput:&nbsp;the&nbsp;actual&nbsp;output&nbsp;(IASIO)<br>
+:return:&nbsp;the&nbsp;new&nbsp;output&nbsp;of&nbsp;the&nbsp;ASCE&nbsp;(IASIO)</tt></dd></dl>
+
+<dl><dt><a name="MinMaxThreshold-initialize"><strong>initialize</strong></a>(self, inputsInfo, outputInfo)</dt><dd><tt>Initializiation<br>
+&nbsp;<br>
+:param&nbsp;inputsInfo:&nbsp;The&nbsp;list&nbsp;of&nbsp;IDs&nbsp;and&nbsp;types&nbsp;of&nbsp;the&nbsp;inputs<br>
+:param&nbsp;outputInfo:&nbsp;The&nbsp;ID&nbsp;and&nbsp;type&nbsp;of&nbsp;the&nbsp;output<br>
+:return:</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="IasTransferFunction.TransferFunction.html#TransferFunction">IasTransferFunction.TransferFunction.TransferFunction</a>:<br>
+<dl><dt><a name="MinMaxThreshold-getValue"><strong>getValue</strong></a>(self, inputs, id, instance)</dt><dd><tt>Get&nbsp;a&nbsp;value&nbsp;from&nbsp;its&nbsp;ID&nbsp;taking&nbsp;into&nbsp;account&nbsp;templates<br>
+&nbsp;<br>
+It&nbsp;is&nbsp;the&nbsp;same&nbsp;method&nbsp;present&nbsp;in&nbsp;the&nbsp;JavaTransferExecutor&nbsp;and&nbsp;in&nbsp;ScalaTransferExecutor<br>
+&nbsp;<br>
+:param&nbsp;inputs:&nbsp;the&nbsp;map&nbsp;of&nbsp;inputs&nbsp;as&nbsp;received&nbsp;in&nbsp;the&nbsp;eval&nbsp;method<br>
+:param&nbsp;id:&nbsp;the&nbsp;id&nbsp;(string)&nbsp;of&nbsp;the&nbsp;input&nbsp;(without&nbsp;template)<br>
+:param&nbsp;instance:&nbsp;the&nbsp;instance&nbsp;(int)&nbsp;or&nbsp;None&nbsp;if&nbsp;not&nbsp;templated<br>
+:return:&nbsp;the&nbsp;value&nbsp;or&nbsp;None&nbsp;if&nbsp;not&nbsp;found</tt></dd></dl>
+
+<dl><dt><a name="MinMaxThreshold-isTemplated"><strong>isTemplated</strong></a>(self)</dt><dd><tt>:return:&nbsp;the&nbsp;number&nbsp;of&nbsp;the&nbsp;instance&nbsp;or&nbsp;NOne&nbsp;if&nbsp;not&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="MinMaxThreshold-setTemplateInstance"><strong>setTemplateInstance</strong></a>(self, instance)</dt><dd><tt>Set&nbsp;the&nbsp;instance&nbsp;of&nbsp;the&nbsp;template,&nbsp;if&nbsp;any.<br>
+&nbsp;<br>
+:param&nbsp;instance:&nbsp;the&nbsp;instance&nbsp;number&nbsp;or&nbsp;None&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;template<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="MinMaxThreshold-shutdown"><strong>shutdown</strong></a>(self)</dt><dd><tt>Last&nbsp;method&nbsp;called&nbsp;when&nbsp;the&nbsp;object&nbsp;life&nbsp;terminates.<br>
+It&nbsp;is&nbsp;usually&nbsp;called&nbsp;to&nbsp;free&nbsp;acquired&nbsp;resources.<br>
+&nbsp;<br>
+:return:</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="IasTransferFunction.TransferFunction.html#TransferFunction">IasTransferFunction.TransferFunction.TransferFunction</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
