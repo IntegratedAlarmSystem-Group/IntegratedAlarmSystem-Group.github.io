@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.kafkautils" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="kafkautils"></a><a id="kafkautils:kafkautils"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#kafkautils" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.kafkautils.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/index.html#test" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/test/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -163,8 +163,8 @@
                         <a href="KafkaIasiosConsumer.html" title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types.">KafkaIasiosConsumer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic."></a>
-                        <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic.">KafkaIasiosProducer</a>
+                        <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic by delegating to SimpleStringProducer &lt;P&gt; The producer converts the IASValues to string with the serializer."></a>
+                        <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic by delegating to SimpleStringProducer &lt;P&gt; The producer converts the IASValues to string with the serializer.">KafkaIasiosProducer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="KafkaStringsConsumer.html" title="A generic kafka consumer that forwards all the strings received in each message to the listener."></a>
@@ -213,11 +213,15 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>SimpleStringProducer pushes strings on a Kafka topic.
-&lt;P&gt;
-Kafka properties are fully customizable by calling <code><span class="extype" name="#setUp(Properties)">#setUp(Properties)</span></code>:
-defaults values are used for the missing properties.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>SimpleStringProducer pushes strings on a Kafka topic.</p><p>    The producer delegates to a <code><span class="extype" name="org.apache.kafka.clients.producer.KafkaProducer">org.apache.kafka.clients.producer.KafkaProducer</span></code> and allows
+    to push data to different topics so that only one instance of this publisher can be used
+    instead of many <code><a href="" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a></code> or equivalent.
+    According to the documentation, the <code><span class="extype" name="org.apache.kafka.clients.producer.KafkaProducer">org.apache.kafka.clients.producer.KafkaProducer</span></code> is,
+    in fact thought to be used for this purpose: it is thread safe and generally more efficient than having
+    multiple producers in the same process.</p><p>    From a performance point of view, there is a saturation point for th eproducer after which the preformances degrade.
+    When the saturation point has been reached, the only way to increase performances is to add new producers.</p><p>    USAGE: normally only one SimpleStringProducer is used for pushing strings in all the topics.
+    If there are performance problems then instantiate more SimpleStringProducers.</p><p>	Kafka properties are fully customizable by calling <code><span class="extype" name="#setUp(Properties)">#setUp(Properties)</span></code>:
+	defaults values are used for the missing properties.</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -268,9 +272,9 @@ defaults values are used for the missing properties.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.kafkautils.SimpleStringProducer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(servers:String,topic:String,clientID:String):org.eso.ias.kafkautils.SimpleStringProducer"></a><a id="&lt;init&gt;:SimpleStringProducer"></a>
+      <a id="&lt;init&gt;(servers:String,clientID:String):org.eso.ias.kafkautils.SimpleStringProducer"></a><a id="&lt;init&gt;:SimpleStringProducer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#&lt;init&gt;(servers:String,topic:String,clientID:String):org.eso.ias.kafkautils.SimpleStringProducer" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#&lt;init&gt;(servers:String,clientID:String):org.eso.ias.kafkautils.SimpleStringProducer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -279,7 +283,7 @@ defaults values are used for the missing properties.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SimpleStringProducer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="clientID">clientID: <span class="extype" name="java.lang.String">String</span></span>)</span>
+        <span class="name">SimpleStringProducer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="clientID">clientID: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       
       
@@ -372,13 +376,13 @@ defaults values are used for the missing properties.
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -428,7 +432,7 @@ defaults values are used for the missing properties.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -578,9 +582,9 @@ want be sure they have all beel sent.</p>
               
         </dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.SimpleStringProducer#push" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(value:String,partition:Integer,key:String,sync:Boolean,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(String,Integer,String,Boolean,Int,TimeUnit):Unit"></a>
+      <a id="push(value:String,topic:String,partition:Integer,key:String,sync:Boolean,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(String,String,Integer,String,Boolean,Int,TimeUnit):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#push(value:String,partition:Integer,key:String,sync:Boolean,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#push(value:String,topic:String,partition:Integer,key:String,sync:Boolean,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -589,7 +593,7 @@ want be sure they have all beel sent.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="value">value: <span class="extype" name="java.lang.String">String</span></span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="sync">sync: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="value">value: <span class="extype" name="java.lang.String">String</span></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="sync">sync: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Pushes the passed string in the given partition and key.</p><div class="fullcomment"><div class="comment cmt"><p>Pushes the passed string in the given partition and key.
@@ -598,11 +602,11 @@ Kafka sending is asynch. i.e. this methods returns
 before the actual value is effectively published in the topic unless
 the sync parameter is set to <code>true</code> in which case
 send waits for the effective sending
-</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> nor empty string to publish in the topic</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd><dt class="param">sync</dt><dd class="cmt"><p>If true the methods return</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.eso.ias.kafkautils">org.eso.ias.kafkautils</a>] </dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> nor empty string to publish in the topic</p></dd><dt class="param">topic</dt><dd class="cmt"><p>The not <code>null</code> nor empty topic to push the string into</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd><dt class="param">sync</dt><dd class="cmt"><p>If true the methods return</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.eso.ias.kafkautils">kafkautils</a>] </dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.SimpleStringProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(value:String,partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(String,Integer,String,Int,TimeUnit):Unit"></a>
+      <a id="push(value:String,topic:String,partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit"></a><a id="push(String,String,Integer,String,Int,TimeUnit):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#push(value:String,partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#push(value:String,topic:String,partition:Integer,key:String,timeout:Int,unit:java.util.concurrent.TimeUnit):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -611,16 +615,16 @@ send waits for the effective sending
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="value">value: <span class="extype" name="java.lang.String">String</span></span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="value">value: <span class="extype" name="java.lang.String">String</span></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="unit">unit: <span class="extype" name="java.util.concurrent.TimeUnit">TimeUnit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Synchronously pushes the passed string in the topic
 </p><div class="fullcomment"><div class="comment cmt"><p>Synchronously pushes the passed string in the topic
-</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> nor empty string to publish in the topic</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> nor empty string to publish in the topic</p></dd><dt class="param">topic</dt><dd class="cmt"><p>The not <code>null</code> nor empty topic to push the string into</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd><dt class="param">timeout</dt><dd class="cmt"><p>the time to wait if sync is set</p></dd><dt class="param">unit</dt><dd class="cmt"><p>the unit of the timeout</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error or timeout sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.SimpleStringProducer#push" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="push(value:String,partition:Integer,key:String):Unit"></a><a id="push(String,Integer,String):Unit"></a>
+      <a id="push(value:String,topic:String,partition:Integer,key:String):Unit"></a><a id="push(String,String,Integer,String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#push(value:String,partition:Integer,key:String):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/SimpleStringProducer.html#push(value:String,topic:String,partition:Integer,key:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -629,11 +633,11 @@ send waits for the effective sending
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">push</span><span class="params">(<span name="value">value: <span class="extype" name="java.lang.String">String</span></span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">push</span><span class="params">(<span name="value">value: <span class="extype" name="java.lang.String">String</span></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="partition">partition: <span class="extype" name="java.lang.Integer">Integer</span></span>, <span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Asynchronously pushes a string in a kafka topic.</p><div class="fullcomment"><div class="comment cmt"><p>Asynchronously pushes a string in a kafka topic.
-</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> nor empty string to publish in the topic</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error sending the value</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The not <code>null</code> nor empty string to publish in the topic</p></dd><dt class="param">topic</dt><dd class="cmt"><p>The not <code>null</code> nor empty topic to push the string into</p></dd><dt class="param">partition</dt><dd class="cmt"><p>The partition</p></dd><dt class="param">key</dt><dd class="cmt"><p>The key</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="KafkaUtilsException.html" class="extype" name="org.eso.ias.kafkautils.KafkaUtilsException"><code>KafkaUtilsException</code></a> in case of error sending the value</p></span></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.SimpleStringProducer#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setUp(props:java.util.Properties):Unit"></a><a id="setUp(Properties):Unit"></a>
       <span class="permalink">
@@ -782,12 +786,12 @@ Servers and ID passed in the constructor override those in the passed properties
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>

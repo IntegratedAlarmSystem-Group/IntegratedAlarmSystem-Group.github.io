@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.kafkautils" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="kafkautils"></a><a id="kafkautils:kafkautils"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#kafkautils" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.kafkautils.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/index.html#test" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/test/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -163,8 +163,8 @@
                         <a href="KafkaIasiosConsumer.html" title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types.">KafkaIasiosConsumer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="" title="KafkaIasioProducer writes IASValue in the kafka topic."></a>
-                        <a href="" title="KafkaIasioProducer writes IASValue in the kafka topic.">KafkaIasiosProducer</a>
+                        <a class="class" href="" title="KafkaIasioProducer writes IASValue in the kafka topic by delegating to SimpleStringProducer &lt;P&gt; The producer converts the IASValues to string with the serializer."></a>
+                        <a href="" title="KafkaIasioProducer writes IASValue in the kafka topic by delegating to SimpleStringProducer &lt;P&gt; The producer converts the IASValues to string with the serializer.">KafkaIasiosProducer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="KafkaStringsConsumer.html" title="A generic kafka consumer that forwards all the strings received in each message to the listener."></a>
@@ -213,14 +213,15 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>KafkaIasioProducer writes <code><span class="extype" name="IASValue">IASValue</span></code> in the kafka topic.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>KafkaIasioProducer writes <code><span class="extype" name="IASValue">IASValue</span></code> in the kafka topic by delegating to <code><a href="SimpleStringProducer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a></code>
 &lt;P&gt;
 The producer converts the IASValues to string with the serializer.
 &lt;P&gt;
 KafkaIasioProducer delegates the publishing to <code><a href="SimpleStringProducer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a></code>.
-For methods that do not specify partition and key, the partition is
+Normally the <code><a href="SimpleStringProducer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a></code> is only one in a process unless there are performance issues:
+in that case it might help to instantiate a new SimpleStringProducer.</p><p>For methods that do not specify partition and key, the partition is
 set to the ID of the IASValue and no partition is used.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>SimpleStringProducer</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -271,9 +272,9 @@ set to the ID of the IASValue and no partition is used.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.kafkautils.KafkaIasiosProducer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(servers:String,topic:String,clientID:String,serializer:org.eso.ias.types.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer"></a><a id="&lt;init&gt;:KafkaIasiosProducer"></a>
+      <a id="&lt;init&gt;(stringProducer:org.eso.ias.kafkautils.SimpleStringProducer,topic:String,serializer:org.eso.ias.types.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer"></a><a id="&lt;init&gt;:KafkaIasiosProducer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#&lt;init&gt;(servers:String,topic:String,clientID:String,serializer:org.eso.ias.types.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaIasiosProducer.html#&lt;init&gt;(stringProducer:org.eso.ias.kafkautils.SimpleStringProducer,topic:String,serializer:org.eso.ias.types.IasValueStringSerializer):org.eso.ias.kafkautils.KafkaIasiosProducer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -282,7 +283,7 @@ set to the ID of the IASValue and no partition is used.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">KafkaIasiosProducer</span><span class="params">(<span name="servers">servers: <span class="extype" name="java.lang.String">String</span></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="clientID">clientID: <span class="extype" name="java.lang.String">String</span></span>, <span name="serializer">serializer: <a href="../types/IasValueStringSerializer.html" class="extype" name="org.eso.ias.types.IasValueStringSerializer">IasValueStringSerializer</a></span>)</span>
+        <span class="name">KafkaIasiosProducer</span><span class="params">(<span name="stringProducer">stringProducer: <a href="SimpleStringProducer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a></span>, <span name="topic">topic: <span class="extype" name="java.lang.String">String</span></span>, <span name="serializer">serializer: <a href="../types/IasValueStringSerializer.html" class="extype" name="org.eso.ias.types.IasValueStringSerializer">IasValueStringSerializer</a></span>)</span>
       </span>
       
       
@@ -375,13 +376,13 @@ set to the ID of the IASValue and no partition is used.
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -431,7 +432,7 @@ set to the ID of the IASValue and no partition is used.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -878,12 +879,12 @@ Servers and ID passed in the constructor override those in the passed properties
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>

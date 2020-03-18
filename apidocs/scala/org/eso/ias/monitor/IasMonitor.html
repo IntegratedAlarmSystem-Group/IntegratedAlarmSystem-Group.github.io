@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.monitor" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="monitor"></a><a id="monitor:monitor"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#monitor" title="Permalink">
+      <a href="../../../../org/eso/ias/monitor/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.monitor.alarmpublisher" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="alarmpublisher"></a><a id="alarmpublisher:alarmpublisher"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/monitor/index.html#alarmpublisher" title="Permalink">
+      <a href="../../../../org/eso/ias/monitor/alarmpublisher/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -152,7 +152,7 @@
     </li><li name="org.eso.ias.monitor.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/monitor/index.html#test" title="Permalink">
+      <a href="../../../../org/eso/ias/monitor/test/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -171,8 +171,8 @@
                         <a href="HbMonitor.html" title="Monitors the HBs of - plugins - converters - clients - sink connectors (Kafka connectors does not publish HBs) - supervisor">HbMonitor</a>
                       </li><li class="current-entities indented4">
                         <a class="object" href="IasMonitor$.html" title=""></a>
-                        <a class="class" href="" title="Monitor the stat of the IAS and sends alarms"></a>
-                        <a href="" title="Monitor the stat of the IAS and sends alarms">IasMonitor</a>
+                        <a class="class" href="" title="Monitor the state of the IAS and sends alarms"></a>
+                        <a href="" title="Monitor the state of the IAS and sends alarms">IasMonitor</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="IasMonitorConfig.html" title="Java pojo with the configuration of the IASMonitor tool"></a>
@@ -214,19 +214,19 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IasMonitor</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">IasMonitor</span><span class="result"> extends <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Monitor the stat of the IAS and sends alarms</p><p>In this version, alarms are pushed in the core topic and will  be read
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Monitor the state of the IAS and sends alarms</p><p>In this version, alarms are pushed in the core topic and will  be read
 from there by the web server.</p><p>TODO: send alarms (al least some of them) to the web server even when
       kafka is down
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -252,7 +252,7 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.monitor.IasMonitor"><span>IasMonitor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.monitor.IasMonitor"><span>IasMonitor</span></li><li class="in" name="java.lang.AutoCloseable"><span>AutoCloseable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -273,9 +273,9 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.monitor.IasMonitor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(kafkaBrokers:String,identifier:String,pluginIds:Set[String],converterIds:Set[String],clientIds:Set[String],sinkIds:Set[String],supervisorIds:Set[String],kafkaConenctorConfigs:Set[org.eso.ias.monitor.KafkaSinkConnectorConfig],coreToolsIds:Set[String],threshold:Long,refreshRate:Long):org.eso.ias.monitor.IasMonitor"></a><a id="&lt;init&gt;:IasMonitor"></a>
+      <a id="&lt;init&gt;(kafkaBrokers:String,identifier:String,pluginIds:Set[String],converterIds:Set[String],clientIds:Set[String],sinkIds:Set[String],supervisorIds:Set[String],kafkaConenctorConfigs:Set[org.eso.ias.monitor.KafkaSinkConnectorConfig],coreToolsIds:Set[String],threshold:Long,refreshRate:Long,hbFrequency:Long):org.eso.ias.monitor.IasMonitor"></a><a id="&lt;init&gt;:IasMonitor"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#&lt;init&gt;(kafkaBrokers:String,identifier:String,pluginIds:Set[String],converterIds:Set[String],clientIds:Set[String],sinkIds:Set[String],supervisorIds:Set[String],kafkaConenctorConfigs:Set[org.eso.ias.monitor.KafkaSinkConnectorConfig],coreToolsIds:Set[String],threshold:Long,refreshRate:Long):org.eso.ias.monitor.IasMonitor" title="Permalink">
+      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#&lt;init&gt;(kafkaBrokers:String,identifier:String,pluginIds:Set[String],converterIds:Set[String],clientIds:Set[String],sinkIds:Set[String],supervisorIds:Set[String],kafkaConenctorConfigs:Set[org.eso.ias.monitor.KafkaSinkConnectorConfig],coreToolsIds:Set[String],threshold:Long,refreshRate:Long,hbFrequency:Long):org.eso.ias.monitor.IasMonitor" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -284,10 +284,10 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IasMonitor</span><span class="params">(<span name="kafkaBrokers">kafkaBrokers: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="pluginIds">pluginIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="converterIds">converterIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="clientIds">clientIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="sinkIds">sinkIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="supervisorIds">supervisorIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="kafkaConenctorConfigs">kafkaConenctorConfigs: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="KafkaSinkConnectorConfig.html" class="extype" name="org.eso.ias.monitor.KafkaSinkConnectorConfig">KafkaSinkConnectorConfig</a>]</span>, <span name="coreToolsIds">coreToolsIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="threshold">threshold: <span class="extype" name="scala.Long">Long</span></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Long">Long</span></span>)</span>
+        <span class="name">IasMonitor</span><span class="params">(<span name="kafkaBrokers">kafkaBrokers: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="pluginIds">pluginIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="converterIds">converterIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="clientIds">clientIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="sinkIds">sinkIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="supervisorIds">supervisorIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="kafkaConenctorConfigs">kafkaConenctorConfigs: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="KafkaSinkConnectorConfig.html" class="extype" name="org.eso.ias.monitor.KafkaSinkConnectorConfig">KafkaSinkConnectorConfig</a>]</span>, <span name="coreToolsIds">coreToolsIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="threshold">threshold: <span class="extype" name="scala.Long">Long</span></span>, <span name="refreshRate">refreshRate: <span class="extype" name="scala.Long">Long</span></span>, <span name="hbFrequency">hbFrequency: <span class="extype" name="scala.Long">Long</span></span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">identifier</dt><dd class="cmt"><p>The identifier of the monitor tool</p></dd><dt class="param">pluginIds</dt><dd class="cmt"><p>The IDs of the plugins to monitor</p></dd><dt class="param">converterIds</dt><dd class="cmt"><p>The IDs of the converters to monitor</p></dd><dt class="param">clientIds</dt><dd class="cmt"><p>The IDs of the clients to monitor</p></dd><dt class="param">sinkIds</dt><dd class="cmt"><p>The IDs of the sink clients to monitor</p></dd><dt class="param">supervisorIds</dt><dd class="cmt"><p>The IDs of the supervisors to monitor</p></dd><dt class="param">kafkaConenctorConfigs</dt><dd class="cmt"><p>The IDs of the kafka sink connectors to monitor</p></dd><dt class="param">coreToolsIds</dt><dd class="cmt"><p>The IDs of the core tools to monitor</p></dd><dt class="param">threshold</dt><dd class="cmt"><p>The threshold to decide when a HB is too late</p></dd><dt class="param">refreshRate</dt><dd class="cmt"><p>the refresh rate (seconds) to send alarms produced by the monitor</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">kafkaBrokers</dt><dd class="cmt"><p>Kafka brokers</p></dd><dt class="param">identifier</dt><dd class="cmt"><p>The identifier of the monitor tool</p></dd><dt class="param">pluginIds</dt><dd class="cmt"><p>The IDs of the plugins to monitor</p></dd><dt class="param">converterIds</dt><dd class="cmt"><p>The IDs of the converters to monitor</p></dd><dt class="param">clientIds</dt><dd class="cmt"><p>The IDs of the clients to monitor</p></dd><dt class="param">sinkIds</dt><dd class="cmt"><p>The IDs of the sink clients to monitor</p></dd><dt class="param">supervisorIds</dt><dd class="cmt"><p>The IDs of the supervisors to monitor</p></dd><dt class="param">kafkaConenctorConfigs</dt><dd class="cmt"><p>The IDs of the kafka sink connectors to monitor</p></dd><dt class="param">coreToolsIds</dt><dd class="cmt"><p>The IDs of the core tools to monitor</p></dd><dt class="param">threshold</dt><dd class="cmt"><p>The threshold to decide when a HB is too late</p></dd><dt class="param">refreshRate</dt><dd class="cmt"><p>the refresh rate (seconds) to send alarms produced by the monitor</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -409,15 +409,63 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="org.eso.ias.monitor.IasMonitor#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="close():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#close():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Stop monitoring and free resources</p><div class="fullcomment"><div class="comment cmt"><p>Stop monitoring and free resources</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.monitor.IasMonitor">IasMonitor</a> → AutoCloseable</dd></dl></div>
+    </li><li name="org.eso.ias.monitor.IasMonitor#closed" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="closed:java.util.concurrent.atomic.AtomicBoolean"></a><a id="closed:AtomicBoolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#closed:java.util.concurrent.atomic.AtomicBoolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">closed</span><span class="result">: <span class="extype" name="java.util.concurrent.atomic.AtomicBoolean">AtomicBoolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">True if the monitor has been closed</p>
+    </li><li name="org.eso.ias.monitor.IasMonitor#commandManager" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="commandManager:org.eso.ias.command.CommandManager"></a><a id="commandManager:CommandManager"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#commandManager:org.eso.ias.command.CommandManager" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">commandManager</span><span class="result">: <a href="../command/CommandManager.html" class="extype" name="org.eso.ias.command.CommandManager">CommandManager</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The object that gets and executes commands</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -465,7 +513,7 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -523,6 +571,38 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
       </span>
       <span class="symbol">
         <span class="name">hbConsumer</span><span class="result">: <a href="../heartbeat/consumer/HbKafkaConsumer.html" class="extype" name="org.eso.ias.heartbeat.consumer.HbKafkaConsumer">HbKafkaConsumer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The consumer of HBs</p>
+    </li><li name="org.eso.ias.monitor.IasMonitor#hbEngine" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hbEngine:org.eso.ias.heartbeat.HbEngine"></a><a id="hbEngine:HbEngine"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#hbEngine:org.eso.ias.heartbeat.HbEngine" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbEngine</span><span class="result">: <a href="../heartbeat/HbEngine.html" class="extype" name="org.eso.ias.heartbeat.HbEngine">HbEngine</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The sender of the HBs</p>
+    </li><li name="org.eso.ias.monitor.IasMonitor#hbFrequency" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hbFrequency:Long"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#hbFrequency:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbFrequency</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       
       
@@ -660,22 +740,6 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
       </span>
       
       
-    </li><li name="org.eso.ias.monitor.IasMonitor#shutdown" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="shutdown():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#shutdown():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">shutdown</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Stop monitoring and free resources</p>
     </li><li name="org.eso.ias.monitor.IasMonitor#start" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="start():Unit"></a>
       <span class="permalink">
@@ -692,6 +756,22 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
       </span>
       
       <p class="shortcomment cmt">Start the monitoring</p>
+    </li><li name="org.eso.ias.monitor.IasMonitor#stringProducer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stringProducer:org.eso.ias.kafkautils.SimpleStringProducer"></a><a id="stringProducer:SimpleStringProducer"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/monitor/IasMonitor.html#stringProducer:org.eso.ias.kafkautils.SimpleStringProducer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stringProducer</span><span class="result">: <a href="../kafkautils/SimpleStringProducer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Kafka producer</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -784,12 +864,12 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -802,7 +882,9 @@ from there by the web server.</p><p>TODO: send alarms (al least some of them) to
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="java.lang.AutoCloseable">
+              <h3>Inherited from <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

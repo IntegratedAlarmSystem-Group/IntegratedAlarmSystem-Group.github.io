@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.kafkautils" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="kafkautils"></a><a id="kafkautils:kafkautils"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#kafkautils" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.kafkautils.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/index.html#test" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/test/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -163,8 +163,8 @@
                         <a href="KafkaIasiosConsumer.html" title="Extends SimpleKafkaIasiosConsumer providing filtering by IDs and types.">KafkaIasiosConsumer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic."></a>
-                        <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic.">KafkaIasiosProducer</a>
+                        <a class="class" href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic by delegating to SimpleStringProducer &lt;P&gt; The producer converts the IASValues to string with the serializer."></a>
+                        <a href="KafkaIasiosProducer.html" title="KafkaIasioProducer writes IASValue in the kafka topic by delegating to SimpleStringProducer &lt;P&gt; The producer converts the IASValues to string with the serializer.">KafkaIasiosProducer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="" title="A generic kafka consumer that forwards all the strings received in each message to the listener."></a>
@@ -225,8 +225,8 @@ defaults values are used for the missing ones.
 &lt;EM&gt;Life cycle</em>: <code><span class="extype" name="#setUp()">#setUp()</span></code> or <code><span class="extype" name="#setUp(Properties)">#setUp(Properties)</span></code>
                         must be called to initialize the object;
                         <code><span class="extype" name="#tearDown()">#tearDown()</span></code> must be called when finished using the object;
-                        <code><span class="extype" name="#startGettingEvents(StringsConsumer,">StartPosition)</span></code> must be called to start
-                        polling events from the kafka topic</p><p><code><span class="extype" name="#startGettingEvents(StringsConsumer,">StartPosition)</span></code> returns when the consumer has been assigned to
+                        <code><span class="extype" name="#startGettingEvents(StringsConsumer,">StreamPosition)</span></code> must be called to start
+                        polling events from the kafka topic</p><p><code><span class="extype" name="#startGettingEvents(StringsConsumer,">StreamPosition)</span></code> returns when the consumer has been assigned to
 at least one partition. There are situations when the partitions assigned to the consumer
 can be revoked and reassigned like for example when another consumer subscribe or disconnect
 as the assignment of consumers to partitions is left to kafka in this version.</p></div><div class="toggleContainer block">
@@ -238,7 +238,7 @@ as the assignment of consumers to partitions is left to kafka in this version.</
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="SimpleStringConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer">SimpleStringConsumer</a></div>
+            <div class="subClasses hiddenContent"><a href="../command/kafka/ReplyKafkaConsumer.html" class="extype" name="org.eso.ias.command.kafka.ReplyKafkaConsumer">ReplyKafkaConsumer</a>, <a href="SimpleStringConsumer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringConsumer">SimpleStringConsumer</a></div>
           </div></div>
         
 
@@ -389,13 +389,13 @@ as the assignment of consumers to partitions is left to kafka in this version.</
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -445,7 +445,7 @@ as the assignment of consumers to partitions is left to kafka in this version.</
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -594,6 +594,26 @@ as the assignment of consumers to partitions is left to kafka in this version.</
       <p class="shortcomment cmt">The thread to get data out of the topic
 </p><div class="fullcomment"><div class="comment cmt"><p>The thread to get data out of the topic
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer">KafkaStringsConsumer</a> → Runnable</dd><dt>See also</dt><dd><span class="cmt"><p>java.lang.Runnable#run()</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.kafkautils.KafkaStringsConsumer#seekTo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="seekTo(pos:org.eso.ias.kafkautils.KafkaStringsConsumer.StreamPosition):Boolean"></a><a id="seekTo(StreamPosition):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaStringsConsumer.html#seekTo(pos:org.eso.ias.kafkautils.KafkaStringsConsumer.StreamPosition):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">seekTo</span><span class="params">(<span name="pos">pos: <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StreamPosition">StreamPosition</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Seek the consumer to the passed postion.</p><div class="fullcomment"><div class="comment cmt"><p>Seek the consumer to the passed postion.
+Kafka allows to seek only if a partition is assigned
+otherwise the seek is ignored.
+</p></div><dl class="paramcmts block"><dt class="param">pos</dt><dd class="cmt"><p>The position to seek the consumer</p></dd><dt>returns</dt><dd class="cmt"><p>true is the seek has been done with an asigned partiton;
+        false otherwise</p></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaStringsConsumer#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setUp():Unit"></a>
       <span class="permalink">
@@ -631,9 +651,9 @@ as the assignment of consumers to partitions is left to kafka in this version.</
 The defaults are used if not found in the parameter
 </p></div><dl class="paramcmts block"><dt class="param">userPros</dt><dd class="cmt"><p>The user defined kafka properties</p></dd></dl></div>
     </li><li name="org.eso.ias.kafkautils.KafkaStringsConsumer#startGettingEvents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="startGettingEvents(listener:org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer,startReadingFrom:org.eso.ias.kafkautils.KafkaStringsConsumer.StartPosition):Unit"></a><a id="startGettingEvents(StringsConsumer,StartPosition):Unit"></a>
+      <a id="startGettingEvents(listener:org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer,startReadingFrom:org.eso.ias.kafkautils.KafkaStringsConsumer.StreamPosition):Unit"></a><a id="startGettingEvents(StringsConsumer,StreamPosition):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/kafkautils/KafkaStringsConsumer.html#startGettingEvents(listener:org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer,startReadingFrom:org.eso.ias.kafkautils.KafkaStringsConsumer.StartPosition):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/kafkautils/KafkaStringsConsumer.html#startGettingEvents(listener:org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer,startReadingFrom:org.eso.ias.kafkautils.KafkaStringsConsumer.StreamPosition):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -642,7 +662,7 @@ The defaults are used if not found in the parameter
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">startGettingEvents</span><span class="params">(<span name="listener">listener: <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer">StringsConsumer</span></span>, <span name="startReadingFrom">startReadingFrom: <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StartPosition">StartPosition</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">startGettingEvents</span><span class="params">(<span name="listener">listener: <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StringsConsumer">StringsConsumer</span></span>, <span name="startReadingFrom">startReadingFrom: <span class="extype" name="org.eso.ias.kafkautils.KafkaStringsConsumer.StreamPosition">StreamPosition</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Start polling events from the kafka channel.</p><div class="fullcomment"><div class="comment cmt"><p>Start polling events from the kafka channel.
@@ -760,12 +780,12 @@ one partition.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
