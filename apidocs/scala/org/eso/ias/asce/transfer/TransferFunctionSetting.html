@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../../index.js"></script>
       <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.asce" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asce"></a><a id="asce:asce"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#asce" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.asce.transfer" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transfer"></a><a id="transfer:transfer"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/asce/index.html#transfer" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -152,7 +152,7 @@
     </li><li name="org.eso.ias.asce.transfer.impls" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="impls"></a><a id="impls:impls"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/asce/transfer/index.html#impls" title="Permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/impls/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -185,6 +185,10 @@
                         <span class="separator"></span>
                         <a class="class" href="JavaTransferExecutor.html" title="The JavaTransferExecutor provides the interface for java implementators of the transfer function as java data structs differ from scala ones."></a>
                         <a href="JavaTransferExecutor.html" title="The JavaTransferExecutor provides the interface for java implementators of the transfer function as java data structs differ from scala ones.">JavaTransferExecutor</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="PythonExecutorTF.html" title="Execution of TF in python is orchestrated by objects of this class: when there is a python TF, this transfer function implementation is executed: PythonExecutorTF delegates method execution to the python code through jep."></a>
+                        <a href="PythonExecutorTF.html" title="Execution of TF in python is orchestrated by objects of this class: when there is a python TF, this transfer function implementation is executed: PythonExecutorTF delegates method execution to the python code through jep.">PythonExecutorTF</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
                         <a class="trait" href="ScalaTransfer.html" title="ScalaTransfer calls the scala transfer function provided by the user."></a>
@@ -239,13 +243,13 @@
 from the configuration (DB, XML, text file) and passed
 to the ComputingElement.</p><p>Objects of this class contain all the information
 to run the transfer function independently from the
-supported programming language (@see TransferFunctionLanguage).</p><p>At the present there 2 possible implementations
-of the transfer function in scala or java.
-Other possibilities is to write the TF in python with jithon
-that ultimately compiles the script into a java class, or use a DSL
-for which scala offers some advantages compared to java.</p><p>Java implementation requires to provide a java-style interface to
+supported programming language (@see TransferFunctionLanguage).</p><p>At the present there 3 possible implementations
+of the transfer function in scala, java or python.</p><p>Java implementation requires to provide a java-style interface to
 developers for which we need to convert scala data structure to/from
-java. Scala implementations of the TF are therefore more performant (in principle).
+java. Scala implementations of the TF are therefore more performant (in principle).</p><p>For python TFs, we use jep (https://github.com/ninia/jep) that provides
+interoperability between java and python.
+For the python TFs, a java class is always loaded, PythonExecutorTF, that delegates
+to the python class whose name is in the className property
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>ComputingElement</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -417,13 +421,13 @@ java. Scala implementations of the TF are therefore more performant (in principl
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -473,7 +477,7 @@ java. Scala implementations of the TF are therefore more performant (in principl
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -604,6 +608,24 @@ loaded and initialized
       </span>
       
       
+    </li><li name="org.eso.ias.asce.transfer.TransferFunctionSetting#nameOfClassToLoad" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nameOfClassToLoad:String"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/asce/transfer/TransferFunctionSetting.html#nameOfClassToLoad:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nameOfClassToLoad</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The name of the java/scala class to load</p><div class="fullcomment"><div class="comment cmt"><p>The name of the java/scala class to load</p><p>This is needed because the name of the java class for running python TF is not passed in the constructor
+but is needed at least for meaningful log messages
+</p></div></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -784,12 +806,12 @@ object that implements the transfer function
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
