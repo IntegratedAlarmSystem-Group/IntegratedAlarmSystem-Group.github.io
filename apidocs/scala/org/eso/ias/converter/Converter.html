@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.converter" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="converter"></a><a id="converter:converter"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#converter" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.converter.config" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="config"></a><a id="config:config"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/index.html#config" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/config/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -152,7 +152,7 @@
     </li><li name="org.eso.ias.converter.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/index.html#test" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/test/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -169,10 +169,6 @@
                         <span class="separator"></span>
                         <a class="class" href="" title="The tool to convert raw monitor point values and alarms coming from plugins into IAS data type to be processed by the core."></a>
                         <a href="" title="The tool to convert raw monitor point values and alarms coming from plugins into IAS data type to be processed by the core.">Converter</a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="class" href="ConverterConfig.html" title="Converter configuration with spring annotations."></a>
-                        <a href="ConverterConfig.html" title="Converter configuration with spring annotations.">ConverterConfig</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="ConverterKafkaStream.html" title="The kafka stream used by the converter to get JSON strings from the plugins and sends JSON strings to the core of the IAS."></a>
@@ -212,7 +208,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Converter</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Converter</span><span class="result"> extends <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
       </span>
       </h4>
 
@@ -233,7 +229,7 @@ Spring constructor-dependency injection is used mainly for testing purposes.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -259,7 +255,7 @@ Spring constructor-dependency injection is used mainly for testing purposes.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.converter.Converter"><span>Converter</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.converter.Converter"><span>Converter</span></li><li class="in" name="java.lang.AutoCloseable"><span>AutoCloseable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -280,9 +276,9 @@ Spring constructor-dependency injection is used mainly for testing purposes.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.converter.Converter#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:String,cdbReader:org.eso.ias.cdb.CdbReader,converterStream:org.eso.ias.converter.ConverterStream,hbProducer:org.eso.ias.heartbeat.HbProducer):org.eso.ias.converter.Converter"></a><a id="&lt;init&gt;:Converter"></a>
+      <a id="&lt;init&gt;(id:String,cdbReader:org.eso.ias.cdb.CdbReader):org.eso.ias.converter.Converter"></a><a id="&lt;init&gt;:Converter"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/Converter.html#&lt;init&gt;(id:String,cdbReader:org.eso.ias.cdb.CdbReader,converterStream:org.eso.ias.converter.ConverterStream,hbProducer:org.eso.ias.heartbeat.HbProducer):org.eso.ias.converter.Converter" title="Permalink">
+      <a href="../../../../org/eso/ias/converter/Converter.html#&lt;init&gt;(id:String,cdbReader:org.eso.ias.cdb.CdbReader):org.eso.ias.converter.Converter" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -291,7 +287,7 @@ Spring constructor-dependency injection is used mainly for testing purposes.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Converter</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="cdbReader">cdbReader: <a href="../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>, <span name="converterStream">converterStream: <a href="ConverterStream.html" class="extype" name="org.eso.ias.converter.ConverterStream">ConverterStream</a></span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>)</span>
+        <span class="name">Converter</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>, <span name="cdbReader">cdbReader: <a href="../cdb/CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></span>)</span>
       </span>
       
       
@@ -384,15 +380,32 @@ Spring constructor-dependency injection is used mainly for testing purposes.
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="org.eso.ias.converter.Converter#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="close():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/converter/Converter.html#close():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Shut down the loop and free the resources.</p><div class="fullcomment"><div class="comment cmt"><p>Shut down the loop and free the resources.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.converter.Converter">Converter</a> → AutoCloseable</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -440,7 +453,7 @@ Spring constructor-dependency injection is used mainly for testing purposes.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -589,22 +602,6 @@ Spring constructor-dependency injection is used mainly for testing purposes.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="org.eso.ias.converter.Converter#tearDown" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="tearDown():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/converter/Converter.html#tearDown():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tearDown</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Shut down the loop and free the resources.</p>
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
@@ -681,12 +678,12 @@ Spring constructor-dependency injection is used mainly for testing purposes.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -699,7 +696,9 @@ Spring constructor-dependency injection is used mainly for testing purposes.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="java.lang.AutoCloseable">
+              <h3>Inherited from <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
