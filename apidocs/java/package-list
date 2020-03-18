@@ -5,6 +5,8 @@ org.eso.ias.cdb.json
 org.eso.ias.cdb.json.pojos
 org.eso.ias.cdb.pojos
 org.eso.ias.cdb.rdb
+org.eso.ias.command
+org.eso.ias.command.kafka
 org.eso.ias.converter
 org.eso.ias.converter.config
 org.eso.ias.heartbeat
