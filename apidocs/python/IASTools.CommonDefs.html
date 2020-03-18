@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASTools.html"><font color="#ffffff">IASTools</font></a>.CommonDefs</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/acaproni/ias/Utils/src/main/python/IASTools/CommonDefs.py">/home/acaproni/ias/Utils/src/main/python/IASTools/CommonDefs.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/ias/Utils/src/main/python/IASTools/CommonDefs.py">/home/ias/ias/Utils/src/main/python/IASTools/CommonDefs.py</a></font></td></tr></table>
     <p><tt>Created&nbsp;on&nbsp;Sep&nbsp;22,&nbsp;2016<br>
 &nbsp;<br>
 @author:&nbsp;acaproni</tt></p>
@@ -55,7 +55,8 @@ scala&nbsp;jars&nbsp;are&nbsp;needed&nbsp;by&nbsp;java&nbsp;programs&nbsp;that&n
 @param&nbsp;classpath:&nbsp;the&nbsp;classpath&nbsp;to&nbsp;add&nbsp;scala&nbsp;jars&nbsp;to</tt></dd></dl>
 
 <dl><dt><a name="CommonDefs-buildClasspath"><strong>buildClasspath</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Build&nbsp;the&nbsp;class&nbsp;path&nbsp;by&nbsp;reading&nbsp;the&nbsp;jars&nbsp;from&nbsp;the<br>
-IAS&nbsp;hierarchy&nbsp;of&nbsp;folders<br>
+IAS&nbsp;hierarchy&nbsp;of&nbsp;folders&nbsp;and&nbsp;external&nbsp;jar&nbsp;from&nbsp;the<br>
+folder&nbsp;pointed&nbsp;by&nbsp;the&nbsp;IAS-EXTERNAL-JARS&nbsp;environment&nbsp;variable<br>
 &nbsp;<br>
 @return:&nbsp;A&nbsp;string&nbsp;with&nbsp;the&nbsp;jars&nbsp;in&nbsp;the&nbsp;classpath</tt></dd></dl>
 
@@ -72,20 +73,16 @@ Data descriptors defined here:<br>
 <dl><dt><strong>__weakref__</strong></dt>
 <dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
 </dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>logger</strong> = &lt;logging.Logger object&gt;</dl>
+
 </td></tr></table></td></tr></table><p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#eeaa77">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
-    
-<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-getcwd"><strong>getcwd</strong></a>()</dt><dd><tt>Return&nbsp;a&nbsp;unicode&nbsp;string&nbsp;representing&nbsp;the&nbsp;current&nbsp;working&nbsp;directory.</tt></dd></dl>
-</td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#55aa55">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
     
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><strong>environ</strong> = environ({'HISTCONTROL': 'ignoredups', 'CVS_RSH':..., 'SELINUX_ROLE_REQUESTED': '', 'TERM': 'xterm'})</td></tr></table>
+<td width="100%"><strong>environ</strong> = environ({'IAS_ROOT': '/home/ias/IasRoot', 'LANG'...tpak/exports/share:/usr/local/share:/usr/share'})</td></tr></table>
 </body></html>
