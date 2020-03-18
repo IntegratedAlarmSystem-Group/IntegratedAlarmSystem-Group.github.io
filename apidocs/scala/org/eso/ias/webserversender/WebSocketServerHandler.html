@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.webserversender" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="webserversender"></a><a id="webserversender:webserversender"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#webserversender" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -139,8 +139,8 @@
                         <a href="MockCoreKafkaProducer.html" title="">MockCoreKafkaProducer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="WebServerSender.html" title=""></a>
-                        <a href="WebServerSender.html" title="">WebServerSender</a>
+                        <a class="class" href="WebServerSender.html" title="The WebServerSender gets IASValues from the copre kafka topic and forwards them to the web server through websockets."></a>
+                        <a href="WebServerSender.html" title="The WebServerSender gets IASValues from the copre kafka topic and forwards them to the web server through websockets.">WebServerSender</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="WebServerSenderTest.html" title="Test that, when messages are published to the Kafka queue, the WebServerSender can read them and send them to the WebServer through a Websocket connection"></a>
@@ -172,7 +172,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">WebSocketServerHandler</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">WebSocketServerHandler</span><span class="result"> extends <span class="extype" name="org.eclipse.jetty.websocket.server.WebSocketHandler">WebSocketHandler</span></span>
       </span>
       </h4>
 
@@ -181,7 +181,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.eclipse.jetty.websocket.server.WebSocketHandler">WebSocketHandler</span>, <span class="extype" name="org.eclipse.jetty.server.handler.HandlerWrapper">HandlerWrapper</span>, <span class="extype" name="org.eclipse.jetty.server.handler.AbstractHandlerContainer">AbstractHandlerContainer</span>, <span class="extype" name="org.eclipse.jetty.server.HandlerContainer">HandlerContainer</span>, <span class="extype" name="org.eclipse.jetty.server.handler.AbstractHandler">AbstractHandler</span>, <span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span>, <span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle">ContainerLifeCycle</span>, <span class="extype" name="org.eclipse.jetty.util.component.Dumpable">Dumpable</span>, <span class="extype" name="org.eclipse.jetty.util.component.Destroyable">Destroyable</span>, <span class="extype" name="org.eclipse.jetty.util.component.Container">Container</span>, <span class="extype" name="org.eclipse.jetty.util.component.AbstractLifeCycle">AbstractLifeCycle</span>, <span class="extype" name="org.eclipse.jetty.util.component.LifeCycle">LifeCycle</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -207,7 +207,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.webserversender.WebSocketServerHandler"><span>WebSocketServerHandler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.webserversender.WebSocketServerHandler"><span>WebSocketServerHandler</span></li><li class="in" name="org.eclipse.jetty.websocket.server.WebSocketHandler"><span>WebSocketHandler</span></li><li class="in" name="org.eclipse.jetty.server.handler.HandlerWrapper"><span>HandlerWrapper</span></li><li class="in" name="org.eclipse.jetty.server.handler.AbstractHandlerContainer"><span>AbstractHandlerContainer</span></li><li class="in" name="org.eclipse.jetty.server.HandlerContainer"><span>HandlerContainer</span></li><li class="in" name="org.eclipse.jetty.server.handler.AbstractHandler"><span>AbstractHandler</span></li><li class="in" name="org.eclipse.jetty.server.Handler"><span>Handler</span></li><li class="in" name="org.eclipse.jetty.util.component.ContainerLifeCycle"><span>ContainerLifeCycle</span></li><li class="in" name="org.eclipse.jetty.util.component.Dumpable"><span>Dumpable</span></li><li class="in" name="org.eclipse.jetty.util.component.Destroyable"><span>Destroyable</span></li><li class="in" name="org.eclipse.jetty.util.component.Container"><span>Container</span></li><li class="in" name="org.eclipse.jetty.util.component.AbstractLifeCycle"><span>AbstractLifeCycle</span></li><li class="in" name="org.eclipse.jetty.util.component.LifeCycle"><span>LifeCycle</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -301,6 +301,102 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#addBean" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addBean(x$1:Any,x$2:org.eclipse.jetty.util.component.ContainerLifeCycle.Managed):Boolean"></a><a id="addBean(Any,Managed):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#addBean(x$1:Any,x$2:org.eclipse.jetty.util.component.ContainerLifeCycle.Managed):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addBean</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>, <span name="arg1">arg1: <span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.Managed">Managed</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#addBean" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addBean(x$1:Any,x$2:Boolean):Boolean"></a><a id="addBean(Any,Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#addBean(x$1:Any,x$2:Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addBean</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#addBean" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addBean(x$1:Any):Boolean"></a><a id="addBean(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#addBean(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addBean</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#addEventListener" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addEventListener(x$1:org.eclipse.jetty.util.component.Container.Listener):Unit"></a><a id="addEventListener(Listener):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#addEventListener(x$1:org.eclipse.jetty.util.component.Container.Listener):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addEventListener</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.util.component.Container.Listener">Listener</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#addLifeCycleListener" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addLifeCycleListener(x$1:org.eclipse.jetty.util.component.LifeCycle.Listener):Unit"></a><a id="addLifeCycleListener(Listener):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#addLifeCycleListener(x$1:org.eclipse.jetty.util.component.LifeCycle.Listener):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addLifeCycleListener</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.util.component.LifeCycle.Listener">Listener</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#addManaged" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addManaged(x$1:org.eclipse.jetty.util.component.LifeCycle):Unit"></a><a id="addManaged(LifeCycle):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#addManaged(x$1:org.eclipse.jetty.util.component.LifeCycle):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addManaged</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.util.component.LifeCycle">LifeCycle</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -332,19 +428,19 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
-    </li><li name="org.eso.ias.webserversender.WebSocketServerHandler#configure" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="configure(factory:&lt;error&gt;):Unit"></a><a id="configure(&lt;error&gt;):Unit"></a>
+    </li><li name="org.eso.ias.webserversender.WebSocketServerHandler#configure" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="configure(factory:org.eclipse.jetty.websocket.servlet.WebSocketServletFactory):Unit"></a><a id="configure(WebSocketServletFactory):Unit"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#configure(factory:&lt;error&gt;):Unit" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#configure(factory:org.eclipse.jetty.websocket.servlet.WebSocketServletFactory):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -353,10 +449,273 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">configure</span><span class="params">(<span name="factory">factory: &lt;error&gt;</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">configure</span><span class="params">(<span name="factory">factory: <span class="extype" name="org.eclipse.jetty.websocket.servlet.WebSocketServletFactory">WebSocketServletFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.webserversender.WebSocketServerHandler">WebSocketServerHandler</a> → WebSocketHandler</dd></dl></div>
+    </li><li name="org.eclipse.jetty.websocket.server.WebSocketHandler#configurePolicy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="configurePolicy(x$1:org.eclipse.jetty.websocket.api.WebSocketPolicy):Unit"></a><a id="configurePolicy(WebSocketPolicy):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#configurePolicy(x$1:org.eclipse.jetty.websocket.api.WebSocketPolicy):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">configurePolicy</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.websocket.api.WebSocketPolicy">WebSocketPolicy</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
       
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WebSocketHandler</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#contains" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="contains(x$1:Any):Boolean"></a><a id="contains(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#contains(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contains</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.HandlerWrapper#destroy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="destroy():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#destroy():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">destroy</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HandlerWrapper → AbstractHandler → Handler → ContainerLifeCycle → Destroyable</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandler#doError" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doError(x$1:String,x$2:org.eclipse.jetty.server.Request,x$3:javax.servlet.http.HttpServletRequest,x$4:javax.servlet.http.HttpServletResponse):Unit"></a><a id="doError(String,Request,HttpServletRequest,HttpServletResponse):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#doError(x$1:String,x$2:org.eclipse.jetty.server.Request,x$3:javax.servlet.http.HttpServletRequest,x$4:javax.servlet.http.HttpServletResponse):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doError</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg1">arg1: <span class="extype" name="org.eclipse.jetty.server.Request">Request</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.servlet.http.HttpServletRequest">HttpServletRequest</span></span>, <span name="arg3">arg3: <span class="extype" name="javax.servlet.http.HttpServletResponse">HttpServletResponse</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.server.handler">handler</span>] </dd><dt>Definition Classes</dt><dd>AbstractHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[javax.servlet.ServletException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandlerContainer#doShutdown" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doShutdown(x$1:java.util.List[java.util.concurrent.Future[Void]]):Unit"></a><a id="doShutdown(List[Future[Void]]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#doShutdown(x$1:java.util.List[java.util.concurrent.Future[Void]]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doShutdown</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="java.util.concurrent.Future">Future</span>[<span class="extype" name="java.lang.Void">Void</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.server.handler">handler</span>] </dd><dt>Definition Classes</dt><dd>AbstractHandlerContainer</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[org.eclipse.jetty.util.MultiException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.websocket.server.WebSocketHandler#doStart" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doStart():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#doStart():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.websocket.server">server</span>] </dd><dt>Definition Classes</dt><dd>WebSocketHandler → AbstractHandler → ContainerLifeCycle → AbstractLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandler#doStop" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doStop():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#doStop():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doStop</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.server.handler">handler</span>] </dd><dt>Definition Classes</dt><dd>AbstractHandler → ContainerLifeCycle → AbstractLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#dump" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dump(x$1:Appendable):Unit"></a><a id="dump(Appendable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dump(x$1:Appendable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dump</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Appendable">Appendable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#dump" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dump(x$1:Appendable,x$2:String):Unit"></a><a id="dump(Appendable,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dump(x$1:Appendable,x$2:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dump</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Appendable">Appendable</span></span>, <span name="arg1">arg1: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Dumpable</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#dump" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dump():String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dump():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dump</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Dumpable</dd><dt>Annotations</dt><dd>
+                <span class="name">@ManagedOperation</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#dumpObjects" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpObjects(x$1:Appendable,x$2:String,x$3:Object*):Unit"></a><a id="dumpObjects(Appendable,String,&lt;repeated...&gt;[AnyRef]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dumpObjects(x$1:Appendable,x$2:String,x$3:Object*):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dumpObjects</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Appendable">Appendable</span></span>, <span name="arg1">arg1: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.util.component">component</span>] </dd><dt>Definition Classes</dt><dd>ContainerLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+                <span class="name">@transient</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.Dumpable#dumpSelf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpSelf():String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dumpSelf():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dumpSelf</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Dumpable</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#dumpStdErr" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpStdErr():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dumpStdErr():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dumpStdErr</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@ManagedOperation</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -389,6 +748,38 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.HandlerWrapper#expandChildren" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expandChildren(x$1:java.util.List[org.eclipse.jetty.server.Handler],x$2:Class[_]):Unit"></a><a id="expandChildren(List[Handler],Class[_]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#expandChildren(x$1:java.util.List[org.eclipse.jetty.server.Handler],x$2:Class[_]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expandChildren</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span>]</span>, <span name="arg1">arg1: <span class="extype" name="java.lang.Class">Class</span>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.server.handler">handler</span>] </dd><dt>Definition Classes</dt><dd>HandlerWrapper → AbstractHandlerContainer</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandlerContainer#expandHandler" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expandHandler(x$1:org.eclipse.jetty.server.Handler,x$2:java.util.List[org.eclipse.jetty.server.Handler],x$3:Class[_]):Unit"></a><a id="expandHandler(Handler,List[Handler],Class[_]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#expandHandler(x$1:org.eclipse.jetty.server.Handler,x$2:java.util.List[org.eclipse.jetty.server.Handler],x$3:Class[_]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expandHandler</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span></span>, <span name="arg1">arg1: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span>]</span>, <span name="arg2">arg2: <span class="extype" name="java.lang.Class">Class</span>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.server.handler">handler</span>] </dd><dt>Definition Classes</dt><dd>AbstractHandlerContainer</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -404,13 +795,109 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#getBean" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBean[T](x$1:Class[T]):T"></a><a id="getBean[T](Class[T]):T"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getBean[T](x$1:Class[T]):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBean</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Class">Class</span>[<span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getBean.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getBean.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#getBeans" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBeans[T](x$1:Class[T]):java.util.Collection[T]"></a><a id="getBeans[T](Class[T]):Collection[T]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getBeans[T](x$1:Class[T]):java.util.Collection[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBeans</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Class">Class</span>[<span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getBeans.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getBeans.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#getBeans" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBeans():java.util.Collection[Object]"></a><a id="getBeans():Collection[AnyRef]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getBeans():java.util.Collection[Object]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBeans</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandlerContainer#getChildHandlerByClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getChildHandlerByClass[T&lt;:org.eclipse.jetty.server.Handler](x$1:Class[T]):T"></a><a id="getChildHandlerByClass[T&lt;:Handler](Class[T]):T"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getChildHandlerByClass[T&lt;:org.eclipse.jetty.server.Handler](x$1:Class[T]):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getChildHandlerByClass</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span></span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Class">Class</span>[<span class="extype" name="org.eclipse.jetty.server.handler.AbstractHandlerContainer.getChildHandlerByClass.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.eclipse.jetty.server.handler.AbstractHandlerContainer.getChildHandlerByClass.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractHandlerContainer → HandlerContainer</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandlerContainer#getChildHandlers" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getChildHandlers():Array[org.eclipse.jetty.server.Handler]"></a><a id="getChildHandlers():Array[Handler]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getChildHandlers():Array[org.eclipse.jetty.server.Handler]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getChildHandlers</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractHandlerContainer → HandlerContainer</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandlerContainer#getChildHandlersByClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getChildHandlersByClass(x$1:Class[_]):Array[org.eclipse.jetty.server.Handler]"></a><a id="getChildHandlersByClass(Class[_]):Array[Handler]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getChildHandlersByClass(x$1:Class[_]):Array[org.eclipse.jetty.server.Handler]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getChildHandlersByClass</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Class">Class</span>[_]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractHandlerContainer → HandlerContainer</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -428,6 +915,170 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#getContainedBeans" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getContainedBeans[T](x$1:Class[T],x$2:java.util.Collection[T]):Unit"></a><a id="getContainedBeans[T](Class[T],Collection[T]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getContainedBeans[T](x$1:Class[T],x$2:java.util.Collection[T]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getContainedBeans</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Class">Class</span>[<span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getContainedBeans.T">T</span>]</span>, <span name="arg1">arg1: <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getContainedBeans.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.util.component">component</span>] </dd><dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#getContainedBeans" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getContainedBeans[T](x$1:Class[T]):java.util.Collection[T]"></a><a id="getContainedBeans[T](Class[T]):Collection[T]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getContainedBeans[T](x$1:Class[T]):java.util.Collection[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getContainedBeans</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Class">Class</span>[<span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getContainedBeans.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle.getContainedBeans.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.HandlerWrapper#getHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getHandler():org.eclipse.jetty.server.Handler"></a><a id="getHandler():Handler"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getHandler():org.eclipse.jetty.server.Handler" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getHandler</span><span class="params">()</span><span class="result">: <span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HandlerWrapper</dd><dt>Annotations</dt><dd>
+                <span class="name">@ManagedAttribute</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.HandlerWrapper#getHandlers" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getHandlers():Array[org.eclipse.jetty.server.Handler]"></a><a id="getHandlers():Array[Handler]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getHandlers():Array[org.eclipse.jetty.server.Handler]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getHandlers</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HandlerWrapper → HandlerContainer</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandler#getServer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getServer():org.eclipse.jetty.server.Server"></a><a id="getServer():Server"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getServer():org.eclipse.jetty.server.Server" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getServer</span><span class="params">()</span><span class="result">: <span class="extype" name="org.eclipse.jetty.server.Server">Server</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractHandler → Handler</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#getState" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getState():String"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getState():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getState</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@ManagedAttribute</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#getStopTimeout" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getStopTimeout():Long"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getStopTimeout():Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getStopTimeout</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@ManagedAttribute</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.websocket.server.WebSocketHandler#getWebSocketFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getWebSocketFactory():org.eclipse.jetty.websocket.servlet.WebSocketServletFactory"></a><a id="getWebSocketFactory():WebSocketServletFactory"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#getWebSocketFactory():org.eclipse.jetty.websocket.servlet.WebSocketServletFactory" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getWebSocketFactory</span><span class="params">()</span><span class="result">: <span class="extype" name="org.eclipse.jetty.websocket.servlet.WebSocketServletFactory">WebSocketServletFactory</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WebSocketHandler</dd></dl></div>
+    </li><li name="org.eclipse.jetty.websocket.server.WebSocketHandler#handle" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handle(x$1:String,x$2:org.eclipse.jetty.server.Request,x$3:javax.servlet.http.HttpServletRequest,x$4:javax.servlet.http.HttpServletResponse):Unit"></a><a id="handle(String,Request,HttpServletRequest,HttpServletResponse):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#handle(x$1:String,x$2:org.eclipse.jetty.server.Request,x$3:javax.servlet.http.HttpServletRequest,x$4:javax.servlet.http.HttpServletResponse):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handle</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg1">arg1: <span class="extype" name="org.eclipse.jetty.server.Request">Request</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.servlet.http.HttpServletRequest">HttpServletRequest</span></span>, <span name="arg3">arg3: <span class="extype" name="javax.servlet.http.HttpServletResponse">HttpServletResponse</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WebSocketHandler → HandlerWrapper → AbstractHandler → Handler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[javax.servlet.ServletException]">...</span>
+    </span>)</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -449,6 +1100,54 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.HandlerWrapper#insertHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insertHandler(x$1:org.eclipse.jetty.server.handler.HandlerWrapper):Unit"></a><a id="insertHandler(HandlerWrapper):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#insertHandler(x$1:org.eclipse.jetty.server.handler.HandlerWrapper):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">insertHandler</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.server.handler.HandlerWrapper">HandlerWrapper</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HandlerWrapper</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#isAuto" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isAuto(x$1:Any):Boolean"></a><a id="isAuto(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isAuto(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isAuto</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#isFailed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isFailed():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isFailed():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isFailed</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -465,6 +1164,134 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#isManaged" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isManaged(x$1:Any):Boolean"></a><a id="isManaged(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isManaged(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isManaged</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#isRunning" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isRunning():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isRunning():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isRunning</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#isStarted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isStarted():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isStarted():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isStarted</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#isStarting" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isStarting():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isStarting():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isStarting</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#isStopped" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isStopped():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isStopped():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isStopped</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#isStopping" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isStopping():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isStopping():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isStopping</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#isUnmanaged" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isUnmanaged(x$1:Any):Boolean"></a><a id="isUnmanaged(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#isUnmanaged(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isUnmanaged</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#manage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="manage(x$1:Any):Unit"></a><a id="manage(Any):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#manage(x$1:Any):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">manage</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -583,6 +1410,222 @@
       </span>
       
       
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#removeBean" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeBean(x$1:Any):Boolean"></a><a id="removeBean(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#removeBean(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeBean</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#removeBeans" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeBeans():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#removeBeans():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeBeans</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#removeEventListener" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeEventListener(x$1:org.eclipse.jetty.util.component.Container.Listener):Unit"></a><a id="removeEventListener(Listener):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#removeEventListener(x$1:org.eclipse.jetty.util.component.Container.Listener):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeEventListener</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.util.component.Container.Listener">Listener</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#removeLifeCycleListener" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeLifeCycleListener(x$1:org.eclipse.jetty.util.component.LifeCycle.Listener):Unit"></a><a id="removeLifeCycleListener(Listener):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#removeLifeCycleListener(x$1:org.eclipse.jetty.util.component.LifeCycle.Listener):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeLifeCycleListener</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.util.component.LifeCycle.Listener">Listener</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#setBeans" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setBeans(x$1:java.util.Collection[Object]):Unit"></a><a id="setBeans(Collection[AnyRef]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#setBeans(x$1:java.util.Collection[Object]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setBeans</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.HandlerWrapper#setHandler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setHandler(x$1:org.eclipse.jetty.server.Handler):Unit"></a><a id="setHandler(Handler):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#setHandler(x$1:org.eclipse.jetty.server.Handler):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setHandler</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HandlerWrapper</dd></dl></div>
+    </li><li name="org.eclipse.jetty.server.handler.AbstractHandlerContainer#setServer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setServer(x$1:org.eclipse.jetty.server.Server):Unit"></a><a id="setServer(Server):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#setServer(x$1:org.eclipse.jetty.server.Server):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setServer</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.server.Server">Server</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractHandlerContainer → AbstractHandler → Handler</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#setStopTimeout" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setStopTimeout(x$1:Long):Unit"></a><a id="setStopTimeout(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#setStopTimeout(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setStopTimeout</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → AbstractLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#start" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="start(x$1:org.eclipse.jetty.util.component.LifeCycle):Unit"></a><a id="start(LifeCycle):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#start(x$1:org.eclipse.jetty.util.component.LifeCycle):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">start</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.util.component.LifeCycle">LifeCycle</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.util.component">component</span>] </dd><dt>Definition Classes</dt><dd>ContainerLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#start" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="start():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#start():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">start</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#stop" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stop(x$1:org.eclipse.jetty.util.component.LifeCycle):Unit"></a><a id="stop(LifeCycle):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#stop(x$1:org.eclipse.jetty.util.component.LifeCycle):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stop</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.eclipse.jetty.util.component.LifeCycle">LifeCycle</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.util.component">component</span>] </dd><dt>Definition Classes</dt><dd>ContainerLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#stop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stop():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#stop():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stop</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → LifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -599,7 +1642,7 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eclipse.jetty.util.component.AbstractLifeCycle#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#toString():String" title="Permalink">
@@ -614,7 +1657,71 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractLifeCycle → AnyRef → Any</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#unmanage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unmanage(x$1:Any):Unit"></a><a id="unmanage(Any):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#unmanage(x$1:Any):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unmanage</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle → Container</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#updateBean" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateBean(x$1:Any,x$2:Any,x$3:Boolean):Unit"></a><a id="updateBean(Any,Any,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#updateBean(x$1:Any,x$2:Any,x$3:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateBean</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Any">Any</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#updateBean" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateBean(x$1:Any,x$2:Any):Unit"></a><a id="updateBean(Any,Any):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#updateBean(x$1:Any,x$2:Any):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateBean</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#updateBeans" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateBeans(x$1:Array[Object],x$2:Array[Object]):Unit"></a><a id="updateBeans(Array[AnyRef],Array[AnyRef]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#updateBeans(x$1:Array[Object],x$2:Array[Object]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateBeans</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>, <span name="arg1">arg1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ContainerLifeCycle</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -675,12 +1782,12 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -689,11 +1796,92 @@
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#dumpBeans" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpBeans(x$1:Appendable,x$2:String,x$3:java.util.Collection[_]*):Unit"></a><a id="dumpBeans(Appendable,String,&lt;repeated...&gt;[Collection[_]]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dumpBeans(x$1:Appendable,x$2:String,x$3:java.util.Collection[_]*):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version ) see corresponding Javadoc for more information.">dumpBeans</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Appendable">Appendable</span></span>, <span name="arg1">arg1: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="java.util.Collection">Collection</span>[_]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.util.component">component</span>] </dd><dt>Definition Classes</dt><dd>ContainerLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+                <span class="name">@transient</span><span class="args">()</span>
+              
+                <span class="name">@Deprecated</span>
+              
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version )</i> see corresponding Javadoc for more information.</p></dd></dl></div>
+    </li><li name="org.eclipse.jetty.util.component.ContainerLifeCycle#dumpThis" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpThis(x$1:Appendable):Unit"></a><a id="dumpThis(Appendable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebSocketServerHandler.html#dumpThis(x$1:Appendable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version ) see corresponding Javadoc for more information.">dumpThis</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Appendable">Appendable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="org.eclipse.jetty.util.component">component</span>] </dd><dt>Definition Classes</dt><dd>ContainerLifeCycle</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version )</i> see corresponding Javadoc for more information.</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="org.eclipse.jetty.websocket.server.WebSocketHandler">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.websocket.server.WebSocketHandler">WebSocketHandler</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.server.handler.HandlerWrapper">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.server.handler.HandlerWrapper">HandlerWrapper</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.server.handler.AbstractHandlerContainer">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.server.handler.AbstractHandlerContainer">AbstractHandlerContainer</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.server.HandlerContainer">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.server.HandlerContainer">HandlerContainer</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.server.handler.AbstractHandler">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.server.handler.AbstractHandler">AbstractHandler</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.server.Handler">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.server.Handler">Handler</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.util.component.ContainerLifeCycle">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.util.component.ContainerLifeCycle">ContainerLifeCycle</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.util.component.Dumpable">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.util.component.Dumpable">Dumpable</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.util.component.Destroyable">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.util.component.Destroyable">Destroyable</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.util.component.Container">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.util.component.Container">Container</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.util.component.AbstractLifeCycle">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.util.component.AbstractLifeCycle">AbstractLifeCycle</span></h3>
+            </div><div class="parent" name="org.eclipse.jetty.util.component.LifeCycle">
+              <h3>Inherited from <span class="extype" name="org.eclipse.jetty.util.component.LifeCycle">LifeCycle</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

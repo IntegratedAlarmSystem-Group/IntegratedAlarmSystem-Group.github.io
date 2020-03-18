@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.webserversender" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="webserversender"></a><a id="webserversender:webserversender"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#webserversender" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -139,8 +139,8 @@
                         <a href="MockCoreKafkaProducer.html" title="">MockCoreKafkaProducer</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="" title=""></a>
-                        <a href="" title="">WebServerSender</a>
+                        <a class="class" href="" title="The WebServerSender gets IASValues from the copre kafka topic and forwards them to the web server through websockets."></a>
+                        <a href="" title="The WebServerSender gets IASValues from the copre kafka topic and forwards them to the web server through websockets.">WebServerSender</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="WebServerSenderTest.html" title="Test that, when messages are published to the Kafka queue, the WebServerSender can read them and send them to the WebServer through a Websocket connection"></a>
@@ -172,16 +172,25 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">WebServerSender</span><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span></span>
+        <span class="name">WebServerSender</span><span class="result"> extends <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span> with <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The WebServerSender gets IASValues from the copre kafka topic and forwards
+them to the web server through websockets.</p><p>Received IASValues are cached before being sent at regular time intervals
+by a dedicated thread or when the max numer of logs to send has been reached,
+whatever happens first.</p><p>The limit of the max number of values is not strict. As logs are received in bounces,
+they are all aded to the cache and the size of the cache checked later. So the promise
+is to send the values as soon as the zize of the cache is equal or freater than the
+maximum allowed number of values.</p><p>Sending values when the max number of items in cache has been reached does not affect
+the periodic thread that continues running at his schedule.
+Afetr sending by max number of items, it can happen that the periodic task
+is executed shortly after.</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span>, <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -207,7 +216,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.webserversender.WebServerSender"><span>WebServerSender</span></li><li class="in" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener"><span>IasioListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.webserversender.WebServerSender"><span>WebServerSender</span></li><li class="in" name="java.lang.AutoCloseable"><span>AutoCloseable</span></li><li class="in" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener"><span>IasioListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -227,10 +236,10 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.eso.ias.webserversender.WebServerSender#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,hbProducer:org.eso.ias.heartbeat.HbProducer,acceptedIds:java.util.Set[String],acceptedTypes:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.webserversender.WebServerSender"></a><a id="&lt;init&gt;:WebServerSender"></a>
+              <ol><li name="org.eso.ias.webserversender.WebServerSender#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,acceptedIds:java.util.Set[String],acceptedTypes:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.webserversender.WebServerSender"></a><a id="&lt;init&gt;:WebServerSender"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,hbProducer:org.eso.ias.heartbeat.HbProducer,acceptedIds:java.util.Set[String],acceptedTypes:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.webserversender.WebServerSender" title="Permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#&lt;init&gt;(senderID:String,kafkaServers:String,props:java.util.Properties,listener:org.eso.ias.webserversender.WebServerSender.WebServerSenderListener,hbFrequency:Int,acceptedIds:java.util.Set[String],acceptedTypes:java.util.Set[org.eso.ias.types.IASTypes]):org.eso.ias.webserversender.WebServerSender" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -239,12 +248,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">WebServerSender</span><span class="params">(<span name="senderID">senderID: <span class="extype" name="java.lang.String">String</span></span>, <span name="kafkaServers">kafkaServers: <span class="extype" name="java.lang.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.webserversender.WebServerSender.WebServerSenderListener">WebServerSenderListener</span></span>, <span name="hbFrequency">hbFrequency: <span class="extype" name="scala.Int">Int</span></span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="acceptedIds">acceptedIds: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="acceptedTypes">acceptedTypes: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>)</span>
+        <span class="name">WebServerSender</span><span class="params">(<span name="senderID">senderID: <span class="extype" name="java.lang.String">String</span></span>, <span name="kafkaServers">kafkaServers: <span class="extype" name="java.lang.String">String</span></span>, <span name="props">props: <span class="extype" name="java.util.Properties">Properties</span></span>, <span name="listener">listener: <span class="extype" name="org.eso.ias.webserversender.WebServerSender.WebServerSenderListener">WebServerSenderListener</span></span>, <span name="hbFrequency">hbFrequency: <span class="extype" name="scala.Int">Int</span></span>, <span name="acceptedIds">acceptedIds: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>, <span name="acceptedTypes">acceptedTypes: <span class="extype" name="java.util.Set">Set</span>[<a href="../types/IASTypes.html" class="extype" name="org.eso.ias.types.IASTypes">IASTypes</a>]</span>)</span>
       </span>
       
-      <p class="shortcomment cmt">Constructor
-</p><div class="fullcomment"><div class="comment cmt"><p>Constructor
-</p></div><dl class="paramcmts block"><dt class="param">senderID</dt><dd class="cmt"><p>Identifier of the WebServerSender</p></dd><dt class="param">kafkaServers</dt><dd class="cmt"><p>Kafka servers URL</p></dd><dt class="param">props</dt><dd class="cmt"><p>the properties to get kafka servers, topic names and webserver uri</p></dd><dt class="param">listener</dt><dd class="cmt"><p>The listenr of the messages sent to the websocket server</p></dd><dt class="param">hbFrequency</dt><dd class="cmt"><p>the frequency of the heartbeat (seconds)</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>the sender of HBs</p></dd><dt class="param">acceptedIds</dt><dd class="cmt"><p>The IDs of the IASIOs to consume</p></dd><dt class="param">acceptedTypes</dt><dd class="cmt"><p>The IASTypes to consume</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"></span></dd></dl></div>
+      
     </li></ol>
             </div>
 
@@ -334,15 +341,33 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
+    </li><li name="org.eso.ias.webserversender.WebServerSender#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="close():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#close():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Shutdown the WebSocket client and Kafka consumer
+</p><div class="fullcomment"><div class="comment cmt"><p>Shutdown the WebSocket client and Kafka consumer
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.webserversender.WebServerSender">WebServerSender</a> → AutoCloseable</dd></dl></div>
     </li><li name="org.eso.ias.webserversender.WebServerSender#connect" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="connect():Unit"></a>
       <span class="permalink">
@@ -407,7 +432,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -555,7 +580,7 @@
       </span>
       
       <p class="shortcomment cmt">Notify the passed string to the listener.</p><div class="fullcomment"><div class="comment cmt"><p>Notify the passed string to the listener.
-</p></div><dl class="paramcmts block"><dt class="param">strToNotify</dt><dd class="cmt"><p>The string to notify to the listener</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.eso.ias.webserversender">org.eso.ias.webserversender</a>] </dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">strToNotify</dt><dd class="cmt"><p>The string to notify to the listener</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.eso.ias.webserversender">webserversender</a>] </dd></dl></div>
     </li><li name="org.eso.ias.webserversender.WebServerSender#onClose" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="onClose(statusCode:Int,reason:String):Unit"></a><a id="onClose(Int,String):Unit"></a>
       <span class="permalink">
@@ -590,7 +615,23 @@
       
       <p class="shortcomment cmt">Operations performed on connection start
 </p>
-    </li><li name="org.eso.ias.webserversender.WebServerSender#onMessage" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.webserversender.WebServerSender#onError" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="onError(cause:Throwable):Unit"></a><a id="onError(Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#onError(cause:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onError</span><span class="params">(<span name="cause">cause: <span class="extype" name="java.lang.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.eso.ias.webserversender.WebServerSender#onMessage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="onMessage(message:String):Unit"></a><a id="onMessage(String):Unit"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#onMessage(message:String):Unit" title="Permalink">
@@ -605,7 +646,10 @@
         <span class="name">onMessage</span><span class="params">(<span name="message">message: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Normally the WebServerSender does not send masseges.</p><div class="fullcomment"><div class="comment cmt"><p>Normally the WebServerSender does not send masseges.
+The test, WebServerSenderTest sends a message to this WebSocket to confirm the connection:
+if this method is removed, the tests fails.
+</p></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>The message received</p></dd></dl></div>
     </li><li name="org.eso.ias.webserversender.WebServerSender#setReconnectionInverval" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setReconnectionInverval(interval:Int):Unit"></a><a id="setReconnectionInverval(Int):Unit"></a>
       <span class="permalink">
@@ -624,7 +668,7 @@
       <p class="shortcomment cmt">Set the time to wait before attempt to reconnect
 </p><div class="fullcomment"><div class="comment cmt"><p>Set the time to wait before attempt to reconnect
 </p></div><dl class="paramcmts block"><dt class="param">interval</dt><dd class="cmt"><p>time in seconds</p></dd></dl></div>
-    </li><li name="org.eso.ias.webserversender.WebServerSender#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.webserversender.WebServerSender#setUp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setUp():Unit"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#setUp():Unit" title="Permalink">
@@ -639,24 +683,9 @@
         <span class="name">setUp</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
-    </li><li name="org.eso.ias.webserversender.WebServerSender#shutdown" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="shutdown():Unit"></a>
-      <span class="permalink">
-      <a href="../../../../org/eso/ias/webserversender/WebServerSender.html#shutdown():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">shutdown</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Shutdown the WebSocket client and Kafka consumer
-</p>
+      <p class="shortcomment cmt">Initialize the WSS
+</p><div class="fullcomment"><div class="comment cmt"><p>Initialize the WSS
+</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><span class="extype" name="Exception"><code>Exception</code></span> in case of error initializing</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -749,12 +778,12 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -767,7 +796,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">
+        <div class="parent" name="java.lang.AutoCloseable">
+              <h3>Inherited from <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></h3>
+            </div><div class="parent" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">
               <h3>Inherited from <span class="extype" name="org.eso.ias.kafkautils.SimpleKafkaIasiosConsumer.IasioListener">IasioListener</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
