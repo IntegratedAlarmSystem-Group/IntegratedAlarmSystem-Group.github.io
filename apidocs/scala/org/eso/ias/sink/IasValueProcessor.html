@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../../index.js"></script>
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="org"></a><a id="org:org"></a>
       <span class="permalink">
-      <a href="index.html#org" title="Permalink">
+      <a href="../../../../org/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="org.eso" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eso"></a><a id="eso:eso"></a>
       <span class="permalink">
-      <a href="../org/index.html#eso" title="Permalink">
+      <a href="../../../../org/eso/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="org.eso.ias" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ias"></a><a id="ias:ias"></a>
       <span class="permalink">
-      <a href="../../org/eso/index.html#ias" title="Permalink">
+      <a href="../../../../org/eso/ias/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="org.eso.ias.sink" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sink"></a><a id="sink:sink"></a>
       <span class="permalink">
-      <a href="../../../org/eso/ias/index.html#sink" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -136,7 +136,7 @@
     </li><li name="org.eso.ias.sink.email" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="email"></a><a id="email:email"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/sink/index.html#email" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/email/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -152,7 +152,7 @@
     </li><li name="org.eso.ias.sink.ltdb" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ltdb"></a><a id="ltdb:ltdb"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/sink/index.html#ltdb" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/ltdb/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -168,7 +168,7 @@
     </li><li name="org.eso.ias.sink.test" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="test"></a><a id="test:test"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/sink/index.html#test" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/test/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -218,7 +218,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IasValueProcessor</span><span class="result"> extends <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a></span>
+        <span class="name">IasValueProcessor</span><span class="result"> extends <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a> with <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
       </span>
       </h4>
 
@@ -236,12 +236,14 @@ values fast enough the oldest values in the buffer are removed to avoid
 out of memory.</p><p>The IasValueProcessor monitors the termination time of the threads
 and kill threads that do not terminate in killThreadAfter seconds.
 To kill a thread, its close method is invoked and it will be removed
-from the active listener.
+from the active listener.</p><p>The constructor builds the HB producer, the input subscriber and the command manager
+unless they are passed as optional parameters. This is useful for customization or for testing
+but normally, in operation they are expected to be empty.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span>, <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -267,7 +269,7 @@ from the active listener.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.sink.IasValueProcessor"><span>IasValueProcessor</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputsListener"><span>InputsListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.sink.IasValueProcessor"><span>IasValueProcessor</span></li><li class="in" name="java.lang.AutoCloseable"><span>AutoCloseable</span></li><li class="in" name="org.eso.ias.dasu.subscriber.InputsListener"><span>InputsListener</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -288,9 +290,9 @@ from the active listener.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.eso.ias.sink.IasValueProcessor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],hbProducer:org.eso.ias.heartbeat.HbProducer,inputsSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor"></a><a id="&lt;init&gt;:IasValueProcessor"></a>
+      <a id="&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],kafkaServers:String,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor"></a><a id="&lt;init&gt;:IasValueProcessor"></a>
       <span class="permalink">
-      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],hbProducer:org.eso.ias.heartbeat.HbProducer,inputsSubscriber:org.eso.ias.dasu.subscriber.InputSubscriber,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor" title="Permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],kafkaServers:String,iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -299,10 +301,28 @@ from the active listener.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IasValueProcessor</span><span class="params">(<span name="processorIdentifier">processorIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="listeners">listeners: <span class="extype" name="scala.List">List</span>[<a href="ValueListener.html" class="extype" name="org.eso.ias.sink.ValueListener">ValueListener</a>]</span>, <span name="hbProducer">hbProducer: <a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a></span>, <span name="inputsSubscriber">inputsSubscriber: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>, <span name="iasDao">iasDao: <a href="../cdb/pojos/IasDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasDao">IasDao</a></span>, <span name="iasioDaos">iasioDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/IasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a>]</span>, <span name="templateDaos">templateDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>)</span>
+        <span class="name">IasValueProcessor</span><span class="params">(<span name="processorIdentifier">processorIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="listeners">listeners: <span class="extype" name="scala.List">List</span>[<a href="ValueListener.html" class="extype" name="org.eso.ias.sink.ValueListener">ValueListener</a>]</span>, <span name="kafkaServers">kafkaServers: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="iasDao">iasDao: <a href="../cdb/pojos/IasDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasDao">IasDao</a></span>, <span name="iasioDaos">iasioDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/IasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a>]</span>, <span name="templateDaos">templateDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">processorIdentifier</dt><dd class="cmt"><p>the identifier of the value processor</p></dd><dt class="param">listeners</dt><dd class="cmt"><p>the processors of the IasValues read from the BSDB</p></dd><dt class="param">hbProducer</dt><dd class="cmt"><p>The HB generator</p></dd><dt class="param">inputsSubscriber</dt><dd class="cmt"><p>The subscriber to get events from the BDSB</p></dd><dt class="param">iasDao</dt><dd class="cmt"><p>The configuration of the IAS read from the CDB</p></dd><dt class="param">iasioDaos</dt><dd class="cmt"><p>The configuration of the IASIOs read from the CDB</p></dd></dl></div>
+      <p class="shortcomment cmt">Constructor that build data structor to connect to kafka using the passed server list</p><div class="fullcomment"><div class="comment cmt"><p>Constructor that build data structor to connect to kafka using the passed server list</p><p>This constructor is supposed to be used in operation
+</p></div><dl class="paramcmts block"><dt class="param">processorIdentifier</dt><dd class="cmt"><p>the identifier of the value processor</p></dd><dt class="param">listeners</dt><dd class="cmt"><p>the processors of the IasValues read from the BSDB</p></dd><dt class="param">kafkaServers</dt><dd class="cmt"><p>The string with the kafka servers</p></dd><dt class="param">iasDao</dt><dd class="cmt"><p>The configuration of the IAS read from the CDB</p></dd><dt class="param">iasioDaos</dt><dd class="cmt"><p>The configuration of the IASIOs read from the CDB</p></dd><dt class="param">templateDaos</dt><dd class="cmt"><p>The configuration of templates read from CDB</p></dd></dl></div>
+    </li><li name="org.eso.ias.sink.IasValueProcessor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],kafkaServersOpt:Option[String],hbProducerOpt:Option[org.eso.ias.heartbeat.HbProducer],cmdManagerOpt:Option[org.eso.ias.command.CommandManager],inputSubscriberOpt:Option[org.eso.ias.dasu.subscriber.InputSubscriber],iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor"></a><a id="&lt;init&gt;:IasValueProcessor"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#&lt;init&gt;(processorIdentifier:String,listeners:List[org.eso.ias.sink.ValueListener],kafkaServersOpt:Option[String],hbProducerOpt:Option[org.eso.ias.heartbeat.HbProducer],cmdManagerOpt:Option[org.eso.ias.command.CommandManager],inputSubscriberOpt:Option[org.eso.ias.dasu.subscriber.InputSubscriber],iasDao:org.eso.ias.cdb.pojos.IasDao,iasioDaos:List[org.eso.ias.cdb.pojos.IasioDao],templateDaos:List[org.eso.ias.cdb.pojos.TemplateDao]):org.eso.ias.sink.IasValueProcessor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IasValueProcessor</span><span class="params">(<span name="processorIdentifier">processorIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="listeners">listeners: <span class="extype" name="scala.List">List</span>[<a href="ValueListener.html" class="extype" name="org.eso.ias.sink.ValueListener">ValueListener</a>]</span>, <span name="kafkaServersOpt">kafkaServersOpt: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="hbProducerOpt">hbProducerOpt: <span class="extype" name="scala.Option">Option</span>[<a href="../heartbeat/HbProducer.html" class="extype" name="org.eso.ias.heartbeat.HbProducer">HbProducer</a>]</span>, <span name="cmdManagerOpt">cmdManagerOpt: <span class="extype" name="scala.Option">Option</span>[<a href="../command/CommandManager.html" class="extype" name="org.eso.ias.command.CommandManager">CommandManager</a>]</span>, <span name="inputSubscriberOpt">inputSubscriberOpt: <span class="extype" name="scala.Option">Option</span>[<a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a>]</span>, <span name="iasDao">iasDao: <a href="../cdb/pojos/IasDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasDao">IasDao</a></span>, <span name="iasioDaos">iasioDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/IasioDao.html" class="extype" name="org.eso.ias.cdb.pojos.IasioDao">IasioDao</a>]</span>, <span name="templateDaos">templateDaos: <span class="extype" name="scala.List">List</span>[<a href="../cdb/pojos/TemplateDao.html" class="extype" name="org.eso.ias.cdb.pojos.TemplateDao">TemplateDao</a>]</span>)</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">processorIdentifier</dt><dd class="cmt"><p>the identifier of the value processor</p></dd><dt class="param">listeners</dt><dd class="cmt"><p>the processors of the IasValues read from the BSDB</p></dd><dt class="param">kafkaServersOpt</dt><dd class="cmt"><p>The optional string with the kafka servers (if empty the default
+                       from KafkaHelper will be used</p></dd><dt class="param">hbProducerOpt</dt><dd class="cmt"><p>the optional HbProducer</p></dd><dt class="param">cmdManagerOpt</dt><dd class="cmt"><p>Th eoptional command manager</p></dd><dt class="param">inputSubscriberOpt</dt><dd class="cmt"><p>The optional input subscriber</p></dd><dt class="param">iasDao</dt><dd class="cmt"><p>The configuration of the IAS read from the CDB</p></dd><dt class="param">iasioDaos</dt><dd class="cmt"><p>The configuration of the IASIOs read from the CDB</p></dd><dt class="param">templateDaos</dt><dd class="cmt"><p>The configuration of templates read from CDB</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -446,16 +466,16 @@ processing vales read from the BSDB
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
-    </li><li name="org.eso.ias.sink.IasValueProcessor#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.sink.IasValueProcessor#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="close():Unit"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#close():Unit" title="Permalink">
@@ -470,7 +490,7 @@ processing vales read from the BSDB
         <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Closes the processor</p>
+      <p class="shortcomment cmt">Closes the processor</p><div class="fullcomment"><div class="comment cmt"><p>Closes the processor</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.sink.IasValueProcessor">IasValueProcessor</a> → AutoCloseable</dd></dl></div>
     </li><li name="org.eso.ias.sink.IasValueProcessor#closed" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="closed:java.util.concurrent.atomic.AtomicBoolean"></a><a id="closed:AtomicBoolean"></a>
       <span class="permalink">
@@ -487,6 +507,22 @@ processing vales read from the BSDB
       </span>
       
       <p class="shortcomment cmt">Signal if the processor has been closed</p>
+    </li><li name="org.eso.ias.sink.IasValueProcessor#commandManager" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="commandManager:org.eso.ias.command.CommandManager"></a><a id="commandManager:CommandManager"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#commandManager:org.eso.ias.command.CommandManager" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">commandManager</span><span class="result">: <a href="../command/CommandManager.html" class="extype" name="org.eso.ias.command.CommandManager">CommandManager</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The command manager</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -550,7 +586,7 @@ processing vales read from the BSDB
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -692,6 +728,22 @@ processing vales read from the BSDB
       </span>
       
       <p class="shortcomment cmt">Signal if the processor has been initialized</p>
+    </li><li name="org.eso.ias.sink.IasValueProcessor#inputsProvider" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="inputsProvider:org.eso.ias.dasu.subscriber.InputSubscriber"></a><a id="inputsProvider:InputSubscriber"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#inputsProvider:org.eso.ias.dasu.subscriber.InputSubscriber" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inputsProvider</span><span class="result">: <a href="../dasu/subscriber/InputSubscriber.html" class="extype" name="org.eso.ias.dasu.subscriber.InputSubscriber">InputSubscriber</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The consumer of IASIOs from the kafka tiopic</p>
     </li><li name="org.eso.ias.sink.IasValueProcessor#inputsReceived" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="inputsReceived(iasios:Iterable[org.eso.ias.types.IASValue[_]]):Unit"></a><a id="inputsReceived(Iterable[IASValue[_]]):Unit"></a>
       <span class="permalink">
@@ -741,6 +793,22 @@ processing vales read from the BSDB
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if there is at leat one active listener; false otherwise</p></dd></dl></div>
+    </li><li name="org.eso.ias.sink.IasValueProcessor#kafkaServersOpt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="kafkaServersOpt:Option[String]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#kafkaServersOpt:Option[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kafkaServersOpt</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
     </li><li name="org.eso.ias.sink.IasValueProcessor#killThreadAfter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="killThreadAfter:Int"></a>
       <span class="permalink">
@@ -999,6 +1067,22 @@ until being processed by the listeners
       </span>
       
       <p class="shortcomment cmt">The hook for a clean shutdown</p>
+    </li><li name="org.eso.ias.sink.IasValueProcessor#stringProducerOpt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stringProducerOpt:Option[org.eso.ias.kafkautils.SimpleStringProducer]"></a><a id="stringProducerOpt:Option[SimpleStringProducer]"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/sink/IasValueProcessor.html#stringProducerOpt:Option[org.eso.ias.kafkautils.SimpleStringProducer]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stringProducerOpt</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../kafkautils/SimpleStringProducer.html" class="extype" name="org.eso.ias.kafkautils.SimpleStringProducer">SimpleStringProducer</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The kafka string producer is defined only if needed</p>
     </li><li name="org.eso.ias.sink.IasValueProcessor#suppressedWarningMessages" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="suppressedWarningMessages:java.util.concurrent.atomic.AtomicLong"></a><a id="suppressedWarningMessages:AtomicLong"></a>
       <span class="permalink">
@@ -1173,12 +1257,12 @@ reporting the name of threads that did not yet terminate for investigation
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -1191,7 +1275,9 @@ reporting the name of threads that did not yet terminate for investigation
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.dasu.subscriber.InputsListener">
+        <div class="parent" name="java.lang.AutoCloseable">
+              <h3>Inherited from <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></h3>
+            </div><div class="parent" name="org.eso.ias.dasu.subscriber.InputsListener">
               <h3>Inherited from <a href="../dasu/subscriber/InputsListener.html" class="extype" name="org.eso.ias.dasu.subscriber.InputsListener">InputsListener</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
