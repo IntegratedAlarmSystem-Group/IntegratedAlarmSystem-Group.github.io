@@ -231,8 +231,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.eso.ias.cdb">cdb</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="trait" href="CdbReader.html" title="Interface to build CDB pojos from the configuration database."></a>
-                        <a href="CdbReader.html" title="Interface to build CDB pojos from the configuration database.">CdbReader</a>
+                        <a class="trait" href="CdbReader.html" title="Interface to read data from the configuration database."></a>
+                        <a href="CdbReader.html" title="Interface to read data from the configuration database.">CdbReader</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="CdbReaderFactory.html" title="The factory to get the CdbReader implementation to use."></a>
@@ -274,7 +274,11 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interface to flush the content of the CDB pojos
-in the configuration database
+in the configuration database</p><p>Life cycle:
+&lt;UL&gt;
+    &lt;LI&gt;<code><span class="extype" name="#init()">#init()</span></code> must be called to acquire the resources before invoking methods of this ineterface&lt;/LI&gt;
+    &lt;LI&gt;<code><span class="extype" name="#shutdown()">#shutdown()</span></code> must be invoked to free the allocated resource when done using this interface&lt;/LI&gt;
+&lt;/UL&gt;
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -399,8 +403,8 @@ in the configuration database
         <span class="name">writeClientConfig</span><span class="params">(<span name="clientConfigDao">clientConfigDao: <a href="pojos/ClientConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.ClientConfigDao">ClientConfigDao</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Write the configuration of the client with the passed identifier
-</p><div class="fullcomment"><div class="comment cmt"><p>Write the configuration of the client with the passed identifier
+      <p class="shortcomment cmt">Write the configuration of the passed client
+</p><div class="fullcomment"><div class="comment cmt"><p>Write the configuration of the passed client
 </p></div><dl class="paramcmts block"><dt class="param">clientConfigDao</dt><dd class="cmt"><p>the configuraton of the client</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error writing the configuration</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbWriter#writeDasu" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="writeDasu(dasu:org.eso.ias.cdb.pojos.DasuDao):Unit"></a><a id="writeDasu(DasuDao):Unit"></a>
@@ -470,6 +474,24 @@ in the configuration database
       
       <p class="shortcomment cmt">Write the IASIOs in the file.</p><div class="fullcomment"><div class="comment cmt"><p>Write the IASIOs in the file.
 </p></div><dl class="paramcmts block"><dt class="param">iasios</dt><dd class="cmt"><p>The IASIOs to write in the file</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error writing the IASIOs</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.CdbWriter#writePluginConfig" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="writePluginConfig(pluginConfigDao:org.eso.ias.cdb.pojos.PluginConfigDao):Unit"></a><a id="writePluginConfig(PluginConfigDao):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../org/eso/ias/cdb/CdbWriter.html#writePluginConfig(pluginConfigDao:org.eso.ias.cdb.pojos.PluginConfigDao):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writePluginConfig</span><span class="params">(<span name="pluginConfigDao">pluginConfigDao: <a href="pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Write the configuration of the passed plugin
+</p><div class="fullcomment"><div class="comment cmt"><p>Write the configuration of the passed plugin
+</p></div><dl class="paramcmts block"><dt class="param">pluginConfigDao</dt><dd class="cmt"><p>the configuraton of the plugin</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error writing the configuration</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.CdbWriter#writeSupervisor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="writeSupervisor(superv:org.eso.ias.cdb.pojos.SupervisorDao):Unit"></a><a id="writeSupervisor(SupervisorDao):Unit"></a>
       <span class="permalink">

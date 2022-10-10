@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASTools.html"><font color="#ffffff">IASTools</font></a>.FileSupport</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/ias/Utils/src/main/python/IASTools/FileSupport.py">/home/ias/ias/Utils/src/main/python/IASTools/FileSupport.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/IasRoot/lib/python/IASTools/FileSupport.py">/home/ias/IasRoot/lib/python/IASTools/FileSupport.py</a></font></td></tr></table>
     <p><tt>Created&nbsp;on&nbsp;Sep&nbsp;23,&nbsp;2016<br>
 &nbsp;<br>
 @author:&nbsp;acaproni</tt></p>
@@ -43,7 +43,9 @@
 <font color="#000000" face="helvetica, arial"><a name="FileSupport">class <strong>FileSupport</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>Support&nbsp;method&nbsp;for&nbsp;IAS&nbsp;files&nbsp;and&nbsp;folders<br>&nbsp;</tt></td></tr>
+<td colspan=2><tt><a href="#FileSupport">FileSupport</a>(fileName,&nbsp;fileType=None)<br>
+&nbsp;<br>
+Support&nbsp;method&nbsp;for&nbsp;IAS&nbsp;files&nbsp;and&nbsp;folders<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="FileSupport-__init__"><strong>__init__</strong></a>(self, fileName, fileType=None)</dt><dd><tt>Constructor<br>
@@ -120,7 +122,7 @@ Data and other attributes defined here:<br>
 <td width="100%"><dl><dt><a name="-access"><strong>access</strong></a>(path, mode, *, dir_fd=None, effective_ids=False, follow_symlinks=True)</dt><dd><tt>Use&nbsp;the&nbsp;real&nbsp;uid/gid&nbsp;to&nbsp;test&nbsp;for&nbsp;access&nbsp;to&nbsp;a&nbsp;path.<br>
 &nbsp;<br>
 &nbsp;&nbsp;path<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Path&nbsp;to&nbsp;be&nbsp;tested;&nbsp;can&nbsp;be&nbsp;string&nbsp;or&nbsp;bytes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Path&nbsp;to&nbsp;be&nbsp;tested;&nbsp;can&nbsp;be&nbsp;string,&nbsp;bytes,&nbsp;or&nbsp;a&nbsp;path-like&nbsp;<a href="builtins.html#object">object</a>.<br>
 &nbsp;&nbsp;mode<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Operating-system&nbsp;mode&nbsp;bitfield.&nbsp;&nbsp;Can&nbsp;be&nbsp;F_OK&nbsp;to&nbsp;test&nbsp;existence,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;the&nbsp;inclusive-OR&nbsp;of&nbsp;R_OK,&nbsp;W_OK,&nbsp;and&nbsp;X_OK.<br>
@@ -153,5 +155,5 @@ Note&nbsp;that&nbsp;most&nbsp;operations&nbsp;will&nbsp;use&nbsp;the&nbsp;effect
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>W_OK</strong> = 2<br>
 <strong>X_OK</strong> = 1<br>
-<strong>environ</strong> = environ({'IAS_ROOT': '/home/ias/IasRoot', 'LANG'...tpak/exports/share:/usr/local/share:/usr/share'})</td></tr></table>
+<strong>environ</strong> = environ({'KAFKA_HOME': '/opt/kafka_2.12-2.4.0', ...host:10.0', 'XDG_RUNTIME_DIR': '/run/user/1001'})</td></tr></table>
 </body></html>

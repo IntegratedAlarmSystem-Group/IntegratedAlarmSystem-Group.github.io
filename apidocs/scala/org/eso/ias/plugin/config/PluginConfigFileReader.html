@@ -151,14 +151,6 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="PluginConfig.html" title="The java pojo with the plugin configuration."></a>
-                        <a href="PluginConfig.html" title="The java pojo with the plugin configuration.">PluginConfig</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="trait" href="PluginConfigDao.html" title="Plugin configuration DAO."></a>
-                        <a href="PluginConfigDao.html" title="Plugin configuration DAO.">PluginConfigDao</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="PluginConfigException.html" title="The exception returned to notify problems with the configuration of a Plugin"></a>
                         <a href="PluginConfigException.html" title="The exception returned to notify problems with the configuration of a Plugin">PluginConfigException</a>
                       </li><li class="current-entities indented5">
@@ -167,12 +159,12 @@
                         <a href="" title="Read the plugin configuration from a JSON file.">PluginConfigFileReader</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="Property.html" title="A POJO to pass properties to the plugin in the form &amp;lt;name,value&amp;gt;"></a>
-                        <a href="Property.html" title="A POJO to pass properties to the plugin in the form &amp;lt;name,value&amp;gt;">Property</a>
+                        <a class="trait" href="PluginConfigGetter.html" title="Plugin configuration DAO."></a>
+                        <a href="PluginConfigGetter.html" title="Plugin configuration DAO.">PluginConfigGetter</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="Value.html" title="The value of a monitor point or alarm read from the monitored system."></a>
-                        <a href="Value.html" title="The value of a monitor point or alarm read from the monitored system.">Value</a>
+                        <a class="class" href="PluginFileConfig.html" title="The configuration of the plugin read from a JSON file differs from the provided in the CDB."></a>
+                        <a href="PluginFileConfig.html" title="The configuration of the plugin read from a JSON file differs from the provided in the CDB.">PluginFileConfig</a>
                       </li>
               </ul>
             </div>
@@ -196,7 +188,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">PluginConfigFileReader</span><span class="result"> extends <a href="PluginConfigDao.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigDao">PluginConfigDao</a></span>
+        <span class="name">PluginConfigFileReader</span><span class="result"> extends <a href="PluginConfigGetter.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigGetter">PluginConfigGetter</a></span>
       </span>
       </h4>
 
@@ -208,7 +200,7 @@ The configuration is read asynchronously by a dedicated thread.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="PluginConfigDao.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigDao">PluginConfigDao</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="PluginConfigGetter.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigGetter">PluginConfigGetter</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -234,7 +226,7 @@ The configuration is read asynchronously by a dedicated thread.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.plugin.config.PluginConfigFileReader"><span>PluginConfigFileReader</span></li><li class="in" name="org.eso.ias.plugin.config.PluginConfigDao"><span>PluginConfigDao</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.plugin.config.PluginConfigFileReader"><span>PluginConfigFileReader</span></li><li class="in" name="org.eso.ias.plugin.config.PluginConfigGetter"><span>PluginConfigGetter</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -476,9 +468,9 @@ The configuration is read asynchronously by a dedicated thread.
               
         </dd></dl></div>
     </li><li name="org.eso.ias.plugin.config.PluginConfigFileReader#getPluginConfig" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPluginConfig():java.util.concurrent.Future[org.eso.ias.plugin.config.PluginConfig]"></a><a id="getPluginConfig():Future[PluginConfig]"></a>
+      <a id="getPluginConfig():java.util.concurrent.Future[org.eso.ias.plugin.config.PluginFileConfig]"></a><a id="getPluginConfig():Future[PluginFileConfig]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfigFileReader.html#getPluginConfig():java.util.concurrent.Future[org.eso.ias.plugin.config.PluginConfig]" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginConfigFileReader.html#getPluginConfig():java.util.concurrent.Future[org.eso.ias.plugin.config.PluginFileConfig]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -487,11 +479,11 @@ The configuration is read asynchronously by a dedicated thread.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPluginConfig</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.concurrent.Future">Future</span>[<a href="PluginConfig.html" class="extype" name="org.eso.ias.plugin.config.PluginConfig">PluginConfig</a>]</span>
+        <span class="name">getPluginConfig</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.concurrent.Future">Future</span>[<a href="PluginFileConfig.html" class="extype" name="org.eso.ias.plugin.config.PluginFileConfig">PluginFileConfig</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Submit the callable to read the JSON file asynchronously.</p><div class="fullcomment"><div class="comment cmt"><p>Submit the callable to read the JSON file asynchronously.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Future to get the configuration produced by the thread</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.plugin.config.PluginConfigFileReader">PluginConfigFileReader</a> → <a href="PluginConfigDao.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigDao">PluginConfigDao</a></dd><dt>See also</dt><dd><span class="cmt"><p>PluginConfigDao</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the Future to get the configuration produced by the thread</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.plugin.config.PluginConfigFileReader">PluginConfigFileReader</a> → <a href="PluginConfigGetter.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigGetter">PluginConfigGetter</a></dd><dt>See also</dt><dd><span class="cmt"><p>PluginConfigGetter</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -691,8 +683,8 @@ The configuration is read asynchronously by a dedicated thread.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.eso.ias.plugin.config.PluginConfigDao">
-              <h3>Inherited from <a href="PluginConfigDao.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigDao">PluginConfigDao</a></h3>
+        <div class="parent" name="org.eso.ias.plugin.config.PluginConfigGetter">
+              <h3>Inherited from <a href="PluginConfigGetter.html" class="extype" name="org.eso.ias.plugin.config.PluginConfigGetter">PluginConfigGetter</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

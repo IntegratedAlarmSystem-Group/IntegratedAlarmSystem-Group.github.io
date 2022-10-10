@@ -501,6 +501,22 @@
       <p class="shortcomment cmt">Get the configuraton of the client with the passed identifier.</p><div class="fullcomment"><div class="comment cmt"><p>Get the configuraton of the client with the passed identifier.</p><p>The configuration is passed as a string whose format depends
 on the client implementation.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty ID of the IAS client</p></dd><dt>returns</dt><dd class="cmt"><p>The configuration of the client</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the configuration of the client</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.rdb.RdbReader#getClientIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClientIds():java.util.Optional[java.util.Set[String]]"></a><a id="getClientIds():Optional[Set[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/rdb/RdbReader.html#getClientIds():java.util.Optional[java.util.Set[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClientIds</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IDs of all the plugins in the CDB</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IDs of the clients</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.rdb.RdbReader#getDasu" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDasu(id:String):java.util.Optional[org.eso.ias.cdb.pojos.DasuDao]"></a><a id="getDasu(String):Optional[DasuDao]"></a>
       <span class="permalink">
@@ -629,6 +645,42 @@ the configuration in order to have more then one IAS with its own unique ID.
       <p class="shortcomment cmt">Return the IASIOs in input to the given ASCE.</p><div class="fullcomment"><div class="comment cmt"><p>Return the IASIOs in input to the given ASCE.
 </p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not <code>null</code> nor empty identifier of the ASCE</p></dd><dt>returns</dt><dd class="cmt"><p>A set of IASIOs running in the ASCE with the passed id</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> in case of error reading CDB or if the
                         ASCE with the give identifier does not exist</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.rdb.RdbReader#getPlugin" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPlugin(id:String):java.util.Optional[org.eso.ias.cdb.pojos.PluginConfigDao]"></a><a id="getPlugin(String):Optional[PluginConfigDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/rdb/RdbReader.html#getPlugin(id:String):java.util.Optional[org.eso.ias.cdb.pojos.PluginConfigDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPlugin</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the configuration of the plugin with the passed identifier.</p><div class="fullcomment"><div class="comment cmt"><p>Get the configuration of the plugin with the passed identifier.</p><p>The configuration of the plugin can be read from a file or from the CDB.
+In both cases, the configuration is returned as #PluginConfigDao.
+This m,ethod returns the configuration from the CDB; reading from file is
+not implemented here.
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The not null nor empty ID of the IAS plugin</p></dd><dt>returns</dt><dd class="cmt"><p>The configuration of the plugin</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the configuration of the plugin</p></span></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.rdb.RdbReader#getPluginIds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPluginIds():java.util.Optional[java.util.Set[String]]"></a><a id="getPluginIds():Optional[Set[String]]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/cdb/rdb/RdbReader.html#getPluginIds():java.util.Optional[java.util.Set[String]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPluginIds</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The IDs of all the plugins in the CDB</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.cdb.rdb.RdbReader">RdbReader</a> → <a href="../CdbReader.html" class="extype" name="org.eso.ias.cdb.CdbReader">CdbReader</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../IasCdbException.html" class="extype" name="org.eso.ias.cdb.IasCdbException"><code>IasCdbException</code></a> In case of error getting the IDs of the plugins</p></span></dd></dl></div>
     </li><li name="org.eso.ias.cdb.rdb.RdbReader#getSupervisor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSupervisor(id:String):java.util.Optional[org.eso.ias.cdb.pojos.SupervisorDao]"></a><a id="getSupervisor(String):Optional[SupervisorDao]"></a>
       <span class="permalink">

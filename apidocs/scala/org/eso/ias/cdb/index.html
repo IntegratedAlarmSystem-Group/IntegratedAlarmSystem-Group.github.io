@@ -263,8 +263,8 @@
       
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="trait" href="CdbReader.html" title="Interface to build CDB pojos from the configuration database."></a>
-                        <a href="CdbReader.html" title="Interface to build CDB pojos from the configuration database.">CdbReader</a>
+                        <a class="trait" href="CdbReader.html" title="Interface to read data from the configuration database."></a>
+                        <a href="CdbReader.html" title="Interface to read data from the configuration database.">CdbReader</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="CdbReaderFactory.html" title="The factory to get the CdbReader implementation to use."></a>
@@ -588,7 +588,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.eso.ias.cdb.CdbReader" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="org.eso.ias.cdb.CdbReader" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="CdbReaderextendsObject"></a><a id="CdbReader:CdbReader"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/cdb/CdbReader.html" title="Permalink">
@@ -600,10 +600,16 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Interface to build CDB pojos from the configuration database." href="CdbReader.html"><span class="name">CdbReader</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="Interface to read data from the configuration database." href="CdbReader.html"><span class="name">CdbReader</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <p class="shortcomment cmt">Interface to build CDB pojos from the configuration database.</p>
+      <p class="shortcomment cmt">Interface to read data from the configuration database.</p><div class="fullcomment"><div class="comment cmt"><p>Interface to read data from the configuration database.</p><p>All get methods return an <code><span class="extype" name="Optional">Optional</span></code> that is empty if the data to read was not found in the CDB.
+They throw an exception in case of error.</p><p>Life cycle:
+&lt;UL&gt;
+    &lt;LI&gt;<code><span class="extype" name="#init()">#init()</span></code> must be called before reading data from the CDB, to get the resources&lt;/LI&gt;
+    &lt;LI&gt;<code><span class="extype" name="#shutdown()">#shutdown()</span></code> must be invoked when te CDB reader is not needed anymore, to free the allocated resources&lt;/LI&gt;
+&lt;/UL&gt;
+</p></div></div>
     </li><li name="org.eso.ias.cdb.CdbReaderFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="CdbReaderFactoryextendsObject"></a><a id="CdbReaderFactory:CdbReaderFactory"></a>
       <span class="permalink">
@@ -627,7 +633,7 @@ for reading the CDB.</p><p>It offers a common strategy to be used consistently b
                 properties (-D...)</li><li>else if jCdb file.path param is present in the command line then the JSON CDB
                      implementation will be returned passing the passed file path</li><li>else the RDB implementation is returned (note that the parameters to connect to the RDB are passed
                 in the hibernate configuration file</li></ul><p>RDB implementation is the fallback if none of the other possibilities succeeds.</p></div></div>
-    </li><li name="org.eso.ias.cdb.CdbWriter" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.cdb.CdbWriter" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="CdbWriterextendsObject"></a><a id="CdbWriter:CdbWriter"></a>
       <span class="permalink">
       <a href="../../../../org/eso/ias/cdb/CdbWriter.html" title="Permalink">
@@ -643,8 +649,13 @@ for reading the CDB.</p><p>It offers a common strategy to be used consistently b
       </span>
       
       <p class="shortcomment cmt">Interface to flush the content of the CDB pojos
-in the configuration database
-</p>
+in the configuration database</p><div class="fullcomment"><div class="comment cmt"><p>Interface to flush the content of the CDB pojos
+in the configuration database</p><p>Life cycle:
+&lt;UL&gt;
+    &lt;LI&gt;<code><span class="extype" name="#init()">#init()</span></code> must be called to acquire the resources before invoking methods of this ineterface&lt;/LI&gt;
+    &lt;LI&gt;<code><span class="extype" name="#shutdown()">#shutdown()</span></code> must be invoked to free the allocated resource when done using this interface&lt;/LI&gt;
+&lt;/UL&gt;
+</p></div></div>
     </li><li name="org.eso.ias.cdb.IasCdbException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="IasCdbExceptionextendsException"></a><a id="IasCdbException:IasCdbException"></a>
       <span class="permalink">

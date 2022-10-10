@@ -151,14 +151,6 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.eso.ias.plugin">plugin</a></dd></dl></div>
     </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="" title="The java pojo with the plugin configuration."></a>
-                        <a href="" title="The java pojo with the plugin configuration.">PluginConfig</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
-                        <a class="trait" href="PluginConfigDao.html" title="Plugin configuration DAO."></a>
-                        <a href="PluginConfigDao.html" title="Plugin configuration DAO.">PluginConfigDao</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="PluginConfigException.html" title="The exception returned to notify problems with the configuration of a Plugin"></a>
                         <a href="PluginConfigException.html" title="The exception returned to notify problems with the configuration of a Plugin">PluginConfigException</a>
                       </li><li class="current-entities indented5">
@@ -167,12 +159,12 @@
                         <a href="PluginConfigFileReader.html" title="Read the plugin configuration from a JSON file.">PluginConfigFileReader</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="Property.html" title="A POJO to pass properties to the plugin in the form &amp;lt;name,value&amp;gt;"></a>
-                        <a href="Property.html" title="A POJO to pass properties to the plugin in the form &amp;lt;name,value&amp;gt;">Property</a>
+                        <a class="trait" href="PluginConfigGetter.html" title="Plugin configuration DAO."></a>
+                        <a href="PluginConfigGetter.html" title="Plugin configuration DAO.">PluginConfigGetter</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="class" href="Value.html" title="The value of a monitor point or alarm read from the monitored system."></a>
-                        <a href="Value.html" title="The value of a monitor point or alarm read from the monitored system.">Value</a>
+                        <a class="class" href="" title="The configuration of the plugin read from a JSON file differs from the provided in the CDB."></a>
+                        <a href="" title="The configuration of the plugin read from a JSON file differs from the provided in the CDB.">PluginFileConfig</a>
                       </li>
               </ul>
             </div>
@@ -182,8 +174,8 @@
       <div id="definition">
         <div class="big-circle class">c</div>
         <p id="owner"><a href="../../../../index.html" class="extype" name="org">org</a>.<a href="../../../index.html" class="extype" name="org.eso">eso</a>.<a href="../../index.html" class="extype" name="org.eso.ias">ias</a>.<a href="../index.html" class="extype" name="org.eso.ias.plugin">plugin</a>.<a href="index.html" class="extype" name="org.eso.ias.plugin.config">config</a></p>
-        <h1>PluginConfig<span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html" title="Permalink">
+        <h1>PluginFileConfig<span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -196,19 +188,18 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">PluginConfig</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">PluginFileConfig</span><span class="result"> extends <a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The java pojo with the plugin configuration.
-&lt;P&gt;
-This object is used by jakson2 parser to read the JSON file.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The configuration of the plugin read from a JSON file differs from the provided in the CDB.
+This class provides the missing fields.
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -234,7 +225,7 @@ This object is used by jakson2 parser to read the JSON file.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.eso.ias.plugin.config.PluginConfig"><span>PluginConfig</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.eso.ias.plugin.config.PluginFileConfig"><span>PluginFileConfig</span></li><li class="in" name="org.eso.ias.cdb.pojos.PluginConfigDao"><span>PluginConfigDao</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -254,10 +245,10 @@ This object is used by jakson2 parser to read the JSON file.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.eso.ias.plugin.config.PluginConfig#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():org.eso.ias.plugin.config.PluginConfig"></a><a id="&lt;init&gt;:PluginConfig"></a>
+              <ol><li name="org.eso.ias.plugin.config.PluginFileConfig#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():org.eso.ias.plugin.config.PluginFileConfig"></a><a id="&lt;init&gt;:PluginFileConfig"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#&lt;init&gt;():org.eso.ias.plugin.config.PluginConfig" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#&lt;init&gt;():org.eso.ias.plugin.config.PluginFileConfig" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -266,7 +257,7 @@ This object is used by jakson2 parser to read the JSON file.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PluginConfig</span><span class="params">()</span>
+        <span class="name">PluginFileConfig</span><span class="params">()</span>
       </span>
       
       
@@ -283,7 +274,7 @@ This object is used by jakson2 parser to read the JSON file.
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -299,7 +290,7 @@ This object is used by jakson2 parser to read the JSON file.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html###():Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -315,7 +306,7 @@ This object is used by jakson2 parser to read the JSON file.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -331,7 +322,7 @@ This object is used by jakson2 parser to read the JSON file.
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -347,7 +338,7 @@ This object is used by jakson2 parser to read the JSON file.
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#clone():Object" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -371,7 +362,7 @@ This object is used by jakson2 parser to read the JSON file.
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -384,10 +375,10 @@ This object is used by jakson2 parser to read the JSON file.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(o:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#equals(o:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -396,14 +387,14 @@ This object is used by jakson2 parser to read the JSON file.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="o">o: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.plugin.config.PluginFileConfig">PluginFileConfig</a> → <a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -422,10 +413,10 @@ This object is used by jakson2 parser to read the JSON file.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getAutoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#getAutoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getAutoSendTimeInterval():Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getAutoSendTimeInterval():Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getAutoSendTimeInterval():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -441,7 +432,7 @@ This object is used by jakson2 parser to read the JSON file.
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -457,10 +448,10 @@ This object is used by jakson2 parser to read the JSON file.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getDefaultFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getDefaultFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDefaultFilter():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getDefaultFilter():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getDefaultFilter():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -472,11 +463,11 @@ This object is used by jakson2 parser to read the JSON file.
         <span class="name">getDefaultFilter</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the DefaultFilter</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getDefaultFilterOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the DefaultFilter</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getDefaultFilterOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDefaultFilterOptions():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getDefaultFilterOptions():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getDefaultFilterOptions():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -488,11 +479,11 @@ This object is used by jakson2 parser to read the JSON file.
         <span class="name">getDefaultFilterOptions</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the getDefaultFilterOption</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getHbFrequency" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the getDefaultFilterOption</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#getHbFrequency" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getHbFrequency():Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getHbFrequency():Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getHbFrequency():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -505,10 +496,10 @@ This object is used by jakson2 parser to read the JSON file.
       </span>
       
       
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getId():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getId():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getId():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -520,28 +511,11 @@ This object is used by jakson2 parser to read the JSON file.
         <span class="name">getId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the id</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getMapOfValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMapOfValues():java.util.Map[String,org.eso.ias.plugin.config.Value]"></a><a id="getMapOfValues():Map[String,Value]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getMapOfValues():java.util.Map[String,org.eso.ias.plugin.config.Value]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMapOfValues</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="Value.html" class="extype" name="org.eso.ias.plugin.config.Value">Value</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A map of values whose key is
-        the ID of the value</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getMonitoredSystemId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the id</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getMonitoredSystemId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getMonitoredSystemId():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getMonitoredSystemId():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getMonitoredSystemId():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -553,11 +527,13 @@ This object is used by jakson2 parser to read the JSON file.
         <span class="name">getMonitoredSystemId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">Getteris</p><div class="fullcomment"><div class="comment cmt"><p>Getteris</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The ID of the system monitored by the plugin</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getProperties" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getProperties():Array[org.eso.ias.plugin.config.Property]"></a><a id="getProperties():Array[Property]"></a>
+      <p class="shortcomment cmt">Getter
+</p><div class="fullcomment"><div class="comment cmt"><p>Getter
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The ID of the system monitored by the plugin</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getProperties" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getProperties():java.util.Properties"></a><a id="getProperties():Properties"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getProperties():Array[org.eso.ias.plugin.config.Property]" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getProperties():java.util.Properties" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -566,51 +542,51 @@ This object is used by jakson2 parser to read the JSON file.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getProperties</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="Property.html" class="extype" name="org.eso.ias.plugin.config.Property">Property</a>]</span>
+        <span class="name">getProperties</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Properties">Properties</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the array of properties</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getProperty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getProperty(key:String):java.util.Optional[org.eso.ias.plugin.config.Property]"></a><a id="getProperty(String):Optional[Property]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getProperty(key:String):java.util.Optional[org.eso.ias.plugin.config.Property]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getProperty</span><span class="params">(<span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="Property.html" class="extype" name="org.eso.ias.plugin.config.Property">Property</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The non empty key of the property to get</p></dd><dt>returns</dt><dd class="cmt"><p>The value of the property with the given key
-        or empty if a property with the given key does not exist</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getProps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getProps():java.util.Properties"></a><a id="getProps():Properties"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getProps():java.util.Properties" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getProps</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Properties">Properties</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Flushes and return the array of <code><a href="Property.html" class="extype" name="org.eso.ias.plugin.config.Property">Property</a></code> in a <code><span class="extype" name="Properties">Properties</span></code> object.</p><div class="fullcomment"><div class="comment cmt"><p>Flushes and return the array of <code><a href="Property.html" class="extype" name="org.eso.ias.plugin.config.Property">Property</a></code> in a <code><span class="extype" name="Properties">Properties</span></code> object.
+      <p class="shortcomment cmt">Flushes and return the array of <code><a href="../../cdb/pojos/PropertyDao.html" class="extype" name="org.eso.ias.cdb.pojos.PropertyDao">PropertyDao</a></code> in a <code><span class="extype" name="Properties">Properties</span></code> object.</p><div class="fullcomment"><div class="comment cmt"><p>Flushes and return the array of <code><a href="../../cdb/pojos/PropertyDao.html" class="extype" name="org.eso.ias.cdb.pojos.PropertyDao">PropertyDao</a></code> in a <code><span class="extype" name="Properties">Properties</span></code> object.
 &lt;P&gt;
 If the a property with the same key appears more the once, it is discarded
 and a message logged.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The properties as <code><span class="extype" name="Properties">Properties</span></code></p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getSinkPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The properties as <code><span class="extype" name="Properties">Properties</span></code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getProperty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getProperty(key:String):java.util.Optional[org.eso.ias.cdb.pojos.PropertyDao]"></a><a id="getProperty(String):Optional[PropertyDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getProperty(key:String):java.util.Optional[org.eso.ias.cdb.pojos.PropertyDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getProperty</span><span class="params">(<span name="key">key: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../../cdb/pojos/PropertyDao.html" class="extype" name="org.eso.ias.cdb.pojos.PropertyDao">PropertyDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The non empty key of the property to get</p></dd><dt>returns</dt><dd class="cmt"><p>The value of the property with the given key
+        or empty if a property with the given key does not exist</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getProps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getProps():java.util.Set[org.eso.ias.cdb.pojos.PropertyDao]"></a><a id="getProps():Set[PropertyDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getProps():java.util.Set[org.eso.ias.cdb.pojos.PropertyDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getProps</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="../../cdb/pojos/PropertyDao.html" class="extype" name="org.eso.ias.cdb.pojos.PropertyDao">PropertyDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the array of properties</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#getSinkPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSinkPort():Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getSinkPort():Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getSinkPort():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -623,10 +599,10 @@ and a message logged.
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the sinkPort</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getSinkServer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#getSinkServer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSinkServer():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getSinkServer():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getSinkServer():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -639,10 +615,10 @@ and a message logged.
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the sinkServer</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getValue(id:String):java.util.Optional[org.eso.ias.plugin.config.Value]"></a><a id="getValue(String):Optional[Value]"></a>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValue(id:String):java.util.Optional[org.eso.ias.cdb.pojos.ValueDao]"></a><a id="getValue(String):Optional[ValueDao]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getValue(id:String):java.util.Optional[org.eso.ias.plugin.config.Value]" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getValue(id:String):java.util.Optional[org.eso.ias.cdb.pojos.ValueDao]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -651,16 +627,16 @@ and a message logged.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getValue</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="Value.html" class="extype" name="org.eso.ias.plugin.config.Value">Value</a>]</span>
+        <span class="name">getValue</span><span class="params">(<span name="id">id: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.util.Optional">Optional</span>[<a href="../../cdb/pojos/ValueDao.html" class="extype" name="org.eso.ias.cdb.pojos.ValueDao">ValueDao</a>]</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>The non empty identifier of the value to get</p></dd><dt>returns</dt><dd class="cmt"><p>The value with a give id that is
         empty if the array does not contain
-        a value with the passed identifier</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getValues():Array[org.eso.ias.plugin.config.Value]"></a><a id="getValues():Array[Value]"></a>
+        a value with the passed identifier</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#getValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getValues():java.util.Set[org.eso.ias.cdb.pojos.ValueDao]"></a><a id="getValues():Set[ValueDao]"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getValues():Array[org.eso.ias.plugin.config.Value]" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#getValues():java.util.Set[org.eso.ias.cdb.pojos.ValueDao]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -669,30 +645,14 @@ and a message logged.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="Value.html" class="extype" name="org.eso.ias.plugin.config.Value">Value</a>]</span>
+        <span class="name">getValues</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<a href="../../cdb/pojos/ValueDao.html" class="extype" name="org.eso.ias.cdb.pojos.ValueDao">ValueDao</a>]</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the values</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#getValuesAsCollection" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getValuesAsCollection():java.util.Collection[org.eso.ias.plugin.config.Value]"></a><a id="getValuesAsCollection():Collection[Value]"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#getValuesAsCollection():java.util.Collection[org.eso.ias.plugin.config.Value]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getValuesAsCollection</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Collection">Collection</span>[<a href="Value.html" class="extype" name="org.eso.ias.plugin.config.Value">Value</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The values as a <code><span class="extype" name="Collection">Collection</span></code></p></dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the values</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -704,14 +664,11 @@ and a message logged.
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.plugin.config.PluginFileConfig">PluginFileConfig</a> → <a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -724,10 +681,10 @@ and a message logged.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#isValid" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#isValid" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isValid():Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#isValid():Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#isValid():Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -754,11 +711,11 @@ and a message logged.
 	&lt;LI&gt;Non empty list of values
  &lt;LI&gt;No duplicated ID between the values
  &lt;LI&gt;Each value is valid</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the data contained in this object
-			are correct</p></dd></dl></div>
+			are correct</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.plugin.config.PluginFileConfig">PluginFileConfig</a> → <a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -774,7 +731,7 @@ and a message logged.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#notify():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -793,7 +750,7 @@ and a message logged.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -809,10 +766,10 @@ and a message logged.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setAutoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#setAutoSendTimeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setAutoSendTimeInterval(autoSendTimeINterval:Int):Unit"></a><a id="setAutoSendTimeInterval(Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setAutoSendTimeInterval(autoSendTimeINterval:Int):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setAutoSendTimeInterval(autoSendTimeINterval:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -825,10 +782,10 @@ and a message logged.
       </span>
       
       
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setDefaultFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#setDefaultFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefaultFilter(defaultFilter:String):Unit"></a><a id="setDefaultFilter(String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setDefaultFilter(defaultFilter:String):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setDefaultFilter(defaultFilter:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -840,11 +797,11 @@ and a message logged.
         <span class="name">setDefaultFilter</span><span class="params">(<span name="defaultFilter">defaultFilter: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">defaultFilter</dt><dd class="cmt"><p>the default filter to set</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setDefaultFilterOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">defaultFilter</dt><dd class="cmt"><p>the default filter to set</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#setDefaultFilterOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setDefaultFilterOptions(defaultFilterOptions:String):Unit"></a><a id="setDefaultFilterOptions(String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setDefaultFilterOptions(defaultFilterOptions:String):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setDefaultFilterOptions(defaultFilterOptions:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -856,11 +813,11 @@ and a message logged.
         <span class="name">setDefaultFilterOptions</span><span class="params">(<span name="defaultFilterOptions">defaultFilterOptions: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">defaultFilterOptions</dt><dd class="cmt"><p>the default filter options to set</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setHbFrequency" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">defaultFilterOptions</dt><dd class="cmt"><p>the default filter options to set</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#setHbFrequency" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setHbFrequency(hbFrequency:Int):Unit"></a><a id="setHbFrequency(Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setHbFrequency(hbFrequency:Int):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setHbFrequency(hbFrequency:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -873,10 +830,10 @@ and a message logged.
       </span>
       
       
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#setId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setId(id:String):Unit"></a><a id="setId(String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setId(id:String):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setId(id:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -890,11 +847,11 @@ and a message logged.
       
       <p class="shortcomment cmt">Setter
 </p><div class="fullcomment"><div class="comment cmt"><p>Setter
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the id of the plugin</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setMonitoredSystemId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the id of the plugin</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#setMonitoredSystemId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setMonitoredSystemId(monitoredSystemId:String):Unit"></a><a id="setMonitoredSystemId(String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setMonitoredSystemId(monitoredSystemId:String):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setMonitoredSystemId(monitoredSystemId:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -907,27 +864,12 @@ and a message logged.
       </span>
       
       <p class="shortcomment cmt">Setter
-</p>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setProperties" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setProperties(properties:Array[org.eso.ias.plugin.config.Property]):Unit"></a><a id="setProperties(Array[Property]):Unit"></a>
-      <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setProperties(properties:Array[org.eso.ias.plugin.config.Property]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setProperties</span><span class="params">(<span name="properties">properties: <span class="extype" name="scala.Array">Array</span>[<a href="Property.html" class="extype" name="org.eso.ias.plugin.config.Property">Property</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">properties</dt><dd class="cmt"><p>the properties to set</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setSinkPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+</p><div class="fullcomment"><div class="comment cmt"><p>Setter
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#setSinkPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setSinkPort(sinkPort:Int):Unit"></a><a id="setSinkPort(Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setSinkPort(sinkPort:Int):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setSinkPort(sinkPort:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -940,10 +882,10 @@ and a message logged.
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">sinkPort</dt><dd class="cmt"><p>the sinkPort to set</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setSinkServer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#setSinkServer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setSinkServer(sinkServer:String):Unit"></a><a id="setSinkServer(String):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setSinkServer(sinkServer:String):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setSinkServer(sinkServer:String):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -956,10 +898,10 @@ and a message logged.
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">sinkServer</dt><dd class="cmt"><p>the sinkServer to set</p></dd></dl></div>
-    </li><li name="org.eso.ias.plugin.config.PluginConfig#setValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setValues(values:Array[org.eso.ias.plugin.config.Value]):Unit"></a><a id="setValues(Array[Value]):Unit"></a>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#setValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setValues(values:java.util.Set[org.eso.ias.cdb.pojos.ValueDao]):Unit"></a><a id="setValues(Set[ValueDao]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#setValues(values:Array[org.eso.ias.plugin.config.Value]):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#setValues(values:java.util.Set[org.eso.ias.cdb.pojos.ValueDao]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -968,14 +910,14 @@ and a message logged.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setValues</span><span class="params">(<span name="values">values: <span class="extype" name="scala.Array">Array</span>[<a href="Value.html" class="extype" name="org.eso.ias.plugin.config.Value">Value</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setValues</span><span class="params">(<span name="values">values: <span class="extype" name="java.util.Set">Set</span>[<a href="../../cdb/pojos/ValueDao.html" class="extype" name="org.eso.ias.cdb.pojos.ValueDao">ValueDao</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">values</dt><dd class="cmt"><p>the values to set</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">values</dt><dd class="cmt"><p>the values to set</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -988,10 +930,10 @@ and a message logged.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.eso.ias.plugin.config.PluginFileConfig#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#toString():String" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1003,11 +945,44 @@ and a message logged.
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.eso.ias.plugin.config.PluginFileConfig">PluginFileConfig</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#valuesAsCollection" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="valuesAsCollection():java.util.Collection[org.eso.ias.cdb.pojos.ValueDao]"></a><a id="valuesAsCollection():Collection[ValueDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#valuesAsCollection():java.util.Collection[org.eso.ias.cdb.pojos.ValueDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valuesAsCollection</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Collection">Collection</span>[<a href="../../cdb/pojos/ValueDao.html" class="extype" name="org.eso.ias.cdb.pojos.ValueDao">ValueDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The values as a <code><span class="extype" name="Collection">Collection</span></code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
+    </li><li name="org.eso.ias.cdb.pojos.PluginConfigDao#valuesAsMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="valuesAsMap():java.util.Map[String,org.eso.ias.cdb.pojos.ValueDao]"></a><a id="valuesAsMap():Map[String,ValueDao]"></a>
+      <span class="permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#valuesAsMap():java.util.Map[String,org.eso.ias.cdb.pojos.ValueDao]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">valuesAsMap</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <a href="../../cdb/pojos/ValueDao.html" class="extype" name="org.eso.ias.cdb.pojos.ValueDao">ValueDao</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A map of values whose key is
+        the ID of the value</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#wait():Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1029,7 +1004,7 @@ and a message logged.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1051,7 +1026,7 @@ and a message logged.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../org/eso/ias/plugin/config/PluginConfig.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../org/eso/ias/plugin/config/PluginFileConfig.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1082,7 +1057,9 @@ and a message logged.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="org.eso.ias.cdb.pojos.PluginConfigDao">
+              <h3>Inherited from <a href="../../cdb/pojos/PluginConfigDao.html" class="extype" name="org.eso.ias.cdb.pojos.PluginConfigDao">PluginConfigDao</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
