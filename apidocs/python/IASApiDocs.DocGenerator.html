@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASApiDocs.html"><font color="#ffffff">IASApiDocs</font></a>.DocGenerator</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/IasRoot/lib/python/IASApiDocs/DocGenerator.py">/home/ias/IasRoot/lib/python/IASApiDocs/DocGenerator.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/IdeaProjects/ias/Tools/src/main/python/IASApiDocs/DocGenerator.py">/home/ias/IdeaProjects/ias/Tools/src/main/python/IASApiDocs/DocGenerator.py</a></font></td></tr></table>
     <p><tt>Base&nbsp;class&nbsp;for&nbsp;java,&nbsp;scala&nbsp;and&nbsp;python&nbsp;API&nbsp;docs&nbsp;generators<br>
 Created&nbsp;on&nbsp;Jul&nbsp;7,&nbsp;2017<br>
 &nbsp;<br>
@@ -45,12 +45,10 @@ Created&nbsp;on&nbsp;Jul&nbsp;7,&nbsp;2017<br>
 <font color="#000000" face="helvetica, arial"><a name="DocGenerator">class <strong>DocGenerator</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#DocGenerator">DocGenerator</a>(srcFolder,&nbsp;dstFolder,&nbsp;outFile=&amp;lt;_io.TextIOWrapper&nbsp;name='&amp;lt;stdout&amp;gt;'&nbsp;mode='w'&nbsp;encoding='utf-8'&amp;gt;)<br>
-&nbsp;<br>
-The&nbsp;base&nbsp;class&nbsp;for&nbsp;API&nbsp;docs&nbsp;generators<br>&nbsp;</tt></td></tr>
+<td colspan=2><tt>The&nbsp;base&nbsp;class&nbsp;for&nbsp;API&nbsp;docs&nbsp;generators<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="DocGenerator-__init__"><strong>__init__</strong></a>(self, srcFolder, dstFolder, outFile=&lt;_io.TextIOWrapper name='&lt;stdout&gt;' mode='w' encoding='utf-8'&gt;)</dt><dd><tt>Constructor<br>
+<dl><dt><a name="DocGenerator-__init__"><strong>__init__</strong></a>(self, srcFolder, dstFolder, outFile=&lt;_io.TextIOWrapper name='&lt;stdout&gt;' mode='w' encoding='UTF-8'&gt;)</dt><dd><tt>Constructor<br>
 @param&nbsp;srcFolder:&nbsp;the&nbsp;folder&nbsp;with&nbsp;sources&nbsp;to&nbsp;generate&nbsp;their&nbsp;documentation<br>
 @param&nbsp;dstFolder:&nbsp;destination&nbsp;folder&nbsp;for&nbsp;the&nbsp;api&nbsp;docs&nbsp;&nbsp;<br>
 @param&nbsp;outFile:&nbsp;the&nbsp;file&nbsp;where&nbsp;the&nbsp;output&nbsp;generated&nbsp;by&nbsp;calling&nbsp;java/scala/py-doc&nbsp;must&nbsp;be&nbsp;sent</tt></dd></dl>
@@ -65,13 +63,13 @@ throws&nbsp;an&nbsp;exception<br>
 @return:&nbsp;True&nbsp;if&nbsp;the&nbsp;passed&nbsp;folder&nbsp;contains&nbsp;java&nbsp;sources</tt></dd></dl>
 
 <dl><dt><a name="DocGenerator-getSrcPaths"><strong>getSrcPaths</strong></a>(self, sourceFolder, includeTestFolder, folderName, fileExtension)</dt><dd><tt>Scan&nbsp;the&nbsp;source&nbsp;folder&nbsp;and&nbsp;return&nbsp;a&nbsp;list&nbsp;of&nbsp;source&nbsp;folders<br>
-containg&nbsp;java&nbsp;files.<br>
-Java&nbsp;source&nbsp;can&nbsp;be&nbsp;contained&nbsp;into&nbsp;src&nbsp;or&nbsp;test&nbsp;(the&nbsp;latter&nbsp;is&nbsp;used&nbsp;only&nbsp;<br>
+containing&nbsp;source&nbsp;files.<br>
+Source&nbsp;can&nbsp;be&nbsp;contained&nbsp;into&nbsp;src&nbsp;or&nbsp;test&nbsp;(the&nbsp;latter&nbsp;is&nbsp;used&nbsp;only<br>
 if&nbsp;the&nbsp;includeTestFolder&nbsp;parameter&nbsp;is&nbsp;True)<br>
-The&nbsp;search&nbsp;is&nbsp;recursive&nbsp;because&nbsp;a&nbsp;folder&nbsp;can&nbsp;contains&nbsp;several&nbsp;modules<br>
+The&nbsp;search&nbsp;is&nbsp;recursive&nbsp;because&nbsp;a&nbsp;folder&nbsp;can&nbsp;contain&nbsp;several&nbsp;modules<br>
 &nbsp;<br>
 @param&nbsp;sourceFolder:&nbsp;root&nbsp;source&nbsp;folder&nbsp;(generally&nbsp;IAS,&nbsp;passed&nbsp;in&nbsp;the&nbsp;command&nbsp;line)<br>
-@param&nbsp;includeTestFolder:&nbsp;True&nbsp;to&nbsp;inculde&nbsp;test&nbsp;folders&nbsp;in&nbsp;the&nbsp;scan<br>
+@param&nbsp;includeTestFolder:&nbsp;True&nbsp;to&nbsp;include&nbsp;test&nbsp;folders&nbsp;in&nbsp;the&nbsp;scan<br>
 @param&nbsp;&nbsp;folderName:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;folder&nbsp;containing&nbsp;the&nbsp;sources&nbsp;like&nbsp;java&nbsp;or&nbsp;python&nbsp;<br>
 @param&nbsp;fileExtension:&nbsp;the&nbsp;extension&nbsp;of&nbsp;the&nbsp;files&nbsp;that&nbsp;the&nbsp;folder&nbsp;is&nbsp;supposed&nbsp;to&nbsp;contain</tt></dd></dl>
 

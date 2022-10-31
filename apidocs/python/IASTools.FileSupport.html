@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASTools.html"><font color="#ffffff">IASTools</font></a>.FileSupport</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/IasRoot/lib/python/IASTools/FileSupport.py">/home/ias/IasRoot/lib/python/IASTools/FileSupport.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ias/IdeaProjects/ias/Tools/src/main/python/IASTools/FileSupport.py">/home/ias/IdeaProjects/ias/Tools/src/main/python/IASTools/FileSupport.py</a></font></td></tr></table>
     <p><tt>Created&nbsp;on&nbsp;Sep&nbsp;23,&nbsp;2016<br>
 &nbsp;<br>
 @author:&nbsp;acaproni</tt></p>
@@ -43,9 +43,7 @@
 <font color="#000000" face="helvetica, arial"><a name="FileSupport">class <strong>FileSupport</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#FileSupport">FileSupport</a>(fileName,&nbsp;fileType=None)<br>
-&nbsp;<br>
-Support&nbsp;method&nbsp;for&nbsp;IAS&nbsp;files&nbsp;and&nbsp;folders<br>&nbsp;</tt></td></tr>
+<td colspan=2><tt>Support&nbsp;method&nbsp;for&nbsp;IAS&nbsp;files&nbsp;and&nbsp;folders<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="FileSupport-__init__"><strong>__init__</strong></a>(self, fileName, fileType=None)</dt><dd><tt>Constructor<br>
@@ -54,10 +52,8 @@ Support&nbsp;method&nbsp;for&nbsp;IAS&nbsp;files&nbsp;and&nbsp;folders<br>&nbsp;
 @param&nbsp;fileType:&nbsp;The&nbsp;type&nbsp;of&nbsp;the&nbsp;file&nbsp;(one&nbsp;in&nbsp;iasFileType)&nbsp;or&nbsp;None</tt></dd></dl>
 
 <dl><dt><a name="FileSupport-findFile"><strong>findFile</strong></a>(self)</dt><dd><tt>Looks&nbsp;for&nbsp;a&nbsp;file&nbsp;named&nbsp;fileName&nbsp;in&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders:<br>
-*&nbsp;current&nbsp;folder&nbsp;(only&nbsp;if&nbsp;it&nbsp;ends&nbsp;with&nbsp;src&nbsp;for&nbsp;example)<br>
-*&nbsp;module&nbsp;folders&nbsp;(lib&nbsp;for&nbsp;example)<br>
-*&nbsp;parent&nbsp;module&nbsp;folders&nbsp;(../lib&nbsp;for&nbsp;example)<br>
-*&nbsp;$IAS_ROOT&nbsp;folders<br>
+*&nbsp;-&nbsp;build&nbsp;module&nbsp;folders&nbsp;(build/lib&nbsp;or&nbsp;build/bin&nbsp;for&nbsp;example)<br>
+*&nbsp;-&nbsp;$IAS_ROOT&nbsp;folders<br>
 &nbsp;<br>
 @return:&nbsp;if&nbsp;the&nbsp;file&nbsp;is&nbsp;found&nbsp;The&nbsp;full&nbsp;path&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;throws&nbsp;a&nbsp;OSError&nbsp;exception</tt></dd></dl>
@@ -80,25 +76,28 @@ if&nbsp;it&nbsp;does&nbsp;not&nbsp;exists&nbsp;ALREADY<br>
 &nbsp;<br>
 An&nbsp;exception&nbsp;is&nbsp;thrown&nbsp;in&nbsp;case&nbsp;of&nbsp;error</tt></dd></dl>
 
-<dl><dt><a name="FileSupport-getIASFolders"><strong>getIASFolders</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders.<br>
-At&nbsp;the&nbsp;present&nbsp;it&nbsp;only&nbsp;contains&nbsp;the&nbsp;current&nbsp;module<br>
-(the&nbsp;parent&nbsp;of&nbsp;the&nbsp;current&nbsp;folder&nbsp;i.e.&nbsp;assumes&nbsp;that<br>
-the&nbsp;script&nbsp;runs&nbsp;in&nbsp;src&nbsp;that&nbsp;is&nbsp;the&nbsp;typical&nbsp;case<br>
-for&nbsp;development)&nbsp;and&nbsp;IAS&nbsp;root;&nbsp;<br>
-in&nbsp;future&nbsp;can&nbsp;be&nbsp;expanded&nbsp;with&nbsp;one&nbsp;or&nbsp;more&nbsp;integration<br>
-folders.<br>
+<dl><dt><a name="FileSupport-getClassFolders"><strong>getClassFolders</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;java&nbsp;and&nbsp;scala&nbsp;folders&nbsp;with&nbsp;test&nbsp;classes<br>
 &nbsp;<br>
-The&nbsp;tuple&nbsp;returned&nbsp;is&nbsp;ordered&nbsp;by&nbsp;priority.<br>
+Class&nbsp;files&nbsp;are&nbsp;only&nbsp;in&nbsp;the&nbsp;local&nbsp;build/test&nbsp;folder<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="FileSupport-getIASFolders"><strong>getIASFolders</strong></a>(fileType=None)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders.<br>
+At&nbsp;the&nbsp;present&nbsp;it&nbsp;contains<br>
+-&nbsp;the&nbsp;./build/lib&nbsp;(typical&nbsp;case&nbsp;for&nbsp;development)<br>
+-&nbsp;IAS&nbsp;root.<br>
+&nbsp;<br>
+The&nbsp;tuple&nbsp;returned&nbsp;is&nbsp;ordered&nbsp;by&nbsp;priority&nbsp;i.e.&nbsp;current&nbsp;module&nbsp;first<br>
 &nbsp;<br>
 &nbsp;@return&nbsp;A&nbsp;ordered&nbsp;tuple&nbsp;with&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;IAS&nbsp;folders<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(at&nbsp;the&nbsp;present&nbsp;the&nbsp;current&nbsp;module&nbsp;and&nbsp;IAS_ROOT)</tt></dd></dl>
 
 <dl><dt><a name="FileSupport-getIASRoot"><strong>getIASRoot</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>@return&nbsp;the&nbsp;IAS_ROOT</tt></dd></dl>
 
-<dl><dt><a name="FileSupport-getIASSearchFolders"><strong>getIASSearchFolders</strong></a>(fileType)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Return&nbsp;the&nbsp;folders&nbsp;to&nbsp;search&nbsp;for&nbsp;a&nbsp;a&nbsp;given&nbsp;file&nbsp;type<br>
+<dl><dt><a name="FileSupport-isValidType"><strong>isValidType</strong></a>(fileType)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;passed&nbsp;file&nbsp;type&nbsp;is&nbsp;supported.<br>
+None&nbsp;is&nbsp;an&nbsp;accepted&nbsp;type<br>
 &nbsp;<br>
-@param&nbsp;fileType:&nbsp;the&nbsp;type&nbsp;(iasFileType)&nbsp;of&nbsp;file&nbsp;to&nbsp;look&nbsp;for&nbsp;(example&nbsp;BINARY,LIB...)<br>
-@return&nbsp;a&nbsp;list&nbsp;with&nbsp;the&nbsp;order&nbsp;folders&nbsp;to&nbsp;search&nbsp;for&nbsp;a&nbsp;file&nbsp;of&nbsp;the&nbsp;given&nbsp;name</tt></dd></dl>
+:param&nbsp;fileType:&nbsp;the&nbsp;type&nbsp;to&nbsp;check&nbsp;(can&nbsp;be&nbsp;None)<br>
+:return:&nbsp;True&nbsp;if&nbsp;the&nbsp;type&nbsp;has&nbsp;been&nbsp;recognized,&nbsp;False&nbsp;otherwise</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
@@ -110,7 +109,9 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>iasFileType</strong> = ('lib', 'bin', 'config', 'src')</dl>
+<dl><dt><strong>iasModFileType</strong> = {'bin': 'build/bin', 'config': 'build/config', 'javaTestClasses': 'build/classes/java/test/', 'lib': 'build/lib', 'scalaTestClasses': 'build/classes/scala/test/', 'src': 'src'}</dl>
+
+<dl><dt><strong>iasRootFileType</strong> = {'bin': 'bin', 'config': 'config', 'lib': 'lib', 'src': None}</dl>
 
 </td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -155,5 +156,5 @@ Note&nbsp;that&nbsp;most&nbsp;operations&nbsp;will&nbsp;use&nbsp;the&nbsp;effect
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>W_OK</strong> = 2<br>
 <strong>X_OK</strong> = 1<br>
-<strong>environ</strong> = environ({'KAFKA_HOME': '/opt/kafka_2.12-2.4.0', ...host:10.0', 'XDG_RUNTIME_DIR': '/run/user/1001'})</td></tr></table>
+<strong>environ</strong> = environ({'LD_LIBRARY_PATH': '/usr/local/lib64/py...', '_': '/home/ias/IasRoot/bin/iasBuildApiDocs'})</td></tr></table>
 </body></html>
