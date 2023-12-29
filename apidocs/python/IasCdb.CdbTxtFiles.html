@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module IasCdb.CdbTxtFiles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasCdb.html"><font color="#ffffff">IasCdb</font></a>.CdbTxtFiles</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasCdb/CdbTxtFiles.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasCdb/CdbTxtFiles.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="shutil.html">shutil</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasCdb.CdbTxtFiles.html#CdbTxtFiles">CdbTxtFiles</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CdbTxtFiles">class <strong>CdbTxtFiles</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#CdbTxtFiles">CdbTxtFiles</a>(parent_folder:&nbsp;str,&nbsp;files_type:&nbsp;IasCdb.TextFileType.FileType)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CdbTxtFiles-__init__"><strong>__init__</strong></a>(self, parent_folder: str, files_type: IasCdb.TextFileType.FileType) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_asce_file_path"><strong>get_asce_file_path</strong></a>(self, asce_id: str) -&gt; str</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_client_file_path"><strong>get_client_file_path</strong></a>(self, client_id)</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_dasu_file_path"><strong>get_dasu_file_path</strong></a>(self, dasu_id: str) -&gt; str</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_ias_file_path"><strong>get_ias_file_path</strong></a>(self) -&gt; str</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_iasio_file_path"><strong>get_iasio_file_path</strong></a>(self) -&gt; str</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_plugin_file_path"><strong>get_plugin_file_path</strong></a>(self, plugin_id)</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_supervisor_file_path"><strong>get_supervisor_file_path</strong></a>(self, supervisor_id) -&gt; str</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_template_file_path"><strong>get_template_file_path</strong></a>(self, template_id: str) -&gt; str</dt></dl>
+
+<dl><dt><a name="CdbTxtFiles-get_tf_file_path"><strong>get_tf_file_path</strong></a>(self) -&gt; str</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="CdbTxtFiles-from_folder"><strong>from_folder</strong></a>(parent_folder: str)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Build&nbsp;the&nbsp;the&nbsp;<a href="#CdbTxtFiles">CdbTxtFiles</a>&nbsp;from&nbsp;the&nbsp;contento&nbsp;of&nbsp;the&nbsp;passed&nbsp;folder<br>
+i.e.&nbsp;it&nbsp;guess&nbsp;the&nbsp;type&nbsp;of&nbsp;the&nbsp;CDB&nbsp;(YAML,&nbsp;JSON)&nbsp;by&nbsp;looking&nbsp;at<br>
+the&nbsp;content&nbsp;of&nbsp;the&nbsp;foder</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>confFileExtension</strong> = '.conf'</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

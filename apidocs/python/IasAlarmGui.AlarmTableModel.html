@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module IasAlarmGui.AlarmTableModel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasAlarmGui.html"><font color="#ffffff">IasAlarmGui</font></a>.AlarmTableModel</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasAlarmGui/AlarmTableModel.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasAlarmGui/AlarmTableModel.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;This&nbsp;Python&nbsp;file&nbsp;uses&nbsp;the&nbsp;following&nbsp;encoding:&nbsp;utf-8</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="threading.html">threading</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="IasKafkaUtils.KafkaValueConsumer.html#IasValueListener">IasKafkaUtils.KafkaValueConsumer.IasValueListener</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasAlarmGui.AlarmTableModel.html#AlarmTableModel">AlarmTableModel</a>(<a href="PySide6.QtCore.html#QAbstractTableModel">PySide6.QtCore.QAbstractTableModel</a>, <a href="IasKafkaUtils.KafkaValueConsumer.html#IasValueListener">IasKafkaUtils.KafkaValueConsumer.IasValueListener</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="PySide6.QtCore.html#QAbstractTableModel">PySide6.QtCore.QAbstractTableModel</a>(<a href="PySide6.QtCore.html#QAbstractItemModel">PySide6.QtCore.QAbstractItemModel</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasAlarmGui.AlarmTableModel.html#AlarmTableModel">AlarmTableModel</a>(<a href="PySide6.QtCore.html#QAbstractTableModel">PySide6.QtCore.QAbstractTableModel</a>, <a href="IasKafkaUtils.KafkaValueConsumer.html#IasValueListener">IasKafkaUtils.KafkaValueConsumer.IasValueListener</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="AlarmTableModel">class <strong>AlarmTableModel</strong></a>(<a href="PySide6.QtCore.html#QAbstractTableModel">PySide6.QtCore.QAbstractTableModel</a>, <a href="IasKafkaUtils.KafkaValueConsumer.html#IasValueListener">IasKafkaUtils.KafkaValueConsumer.IasValueListener</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#AlarmTableModel">AlarmTableModel</a>(view:&nbsp;PySide6.QtWidgets.QTableView)<br>
+&nbsp;<br>
+The&nbsp;table&nbsp;model&nbsp;of&nbsp;alarms<br>
+&nbsp;<br>
+Alarms&nbsp;are&nbsp;collected&nbsp;for&nbsp;1&nbsp;second&nbsp;then&nbsp;they&nbsp;are&nbsp;flushed&nbsp;in&nbsp;table<br>
+to&nbsp;avoid&nbsp;refreshing&nbsp;too&nbsp;often.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="IasAlarmGui.AlarmTableModel.html#AlarmTableModel">AlarmTableModel</a></dd>
+<dd><a href="PySide6.QtCore.html#QAbstractTableModel">PySide6.QtCore.QAbstractTableModel</a></dd>
+<dd><a href="PySide6.QtCore.html#QAbstractItemModel">PySide6.QtCore.QAbstractItemModel</a></dd>
+<dd><a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a></dd>
+<dd>Shiboken.Object</dd>
+<dd><a href="IasKafkaUtils.KafkaValueConsumer.html#IasValueListener">IasKafkaUtils.KafkaValueConsumer.IasValueListener</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="AlarmTableModel-__init__"><strong>__init__</strong></a>(self, view: PySide6.QtWidgets.QTableView)</dt><dd><tt>Constructor</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-add_received_alarm"><strong>add_received_alarm</strong></a>(self, alarm: IasBasicTypes.IasValue.IasValue, alarm_list: list[IasBasicTypes.IasValue.IasValue]) -&gt; None</dt><dd><tt>Adds&nbsp;the&nbsp;alarm&nbsp;to&nbsp;the&nbsp;list,&nbsp;replacing&nbsp;an&nbsp;old&nbsp;alarm<br>
+if&nbsp;it&nbsp;is&nbsp;already&nbsp;in&nbsp;the&nbsp;list.<br>
+&nbsp;<br>
+Depending&nbsp;on&nbsp;the&nbsp;passed&nbsp;list,&nbsp;this&nbsp;function&nbsp;adds&nbsp;the&nbsp;alarm&nbsp;to<br>
+the&nbsp;alarm&nbsp;displayed&nbsp;by&nbsp;the&nbsp;view&nbsp;or&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;alarms&nbsp;buffered&nbsp;when<br>
+the&nbsp;view&nbsp;is&nbsp;paused<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alarm:&nbsp;the&nbsp;alarm&nbsp;to&nbsp;add<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alarm_list:&nbsp;the&nbsp;list&nbsp;to&nbsp;add&nbsp;the&nbsp;alarm&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-cleared_and_acked"><strong>cleared_and_acked</strong></a>(self, alarm: IasBasicTypes.IasValue.IasValue) -&gt; bool</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;alarm&nbsp;is&nbsp;cleared&nbsp;and&nbsp;acked.<br>
+Cleared&nbsp;and&nbsp;acked&nbsp;alarms&nbsp;must&nbsp;be&nbsp;removed&nbsp;from&nbsp;the&nbsp;table<br>
+if&nbsp;the&nbsp;auto-remove&nbsp;has&nbsp;been&nbsp;enabled&nbsp;in&nbsp;the&nbsp;tool&nbsp;bar<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alarm&nbsp;the&nbsp;alarm&nbsp;whose&nbsp;state&nbsp;must&nbsp;be&nbsp;checked<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;if&nbsp;the&nbsp;alarm&nbsp;is&nbsp;acked&nbsp;and&nbsp;clear,&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-columnCount"><strong>columnCount</strong></a>(self, index)</dt><dd><tt><a href="#AlarmTableModel-columnCount">columnCount</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-data"><strong>data</strong></a>(self, index, role=&lt;ItemDataRole.DisplayRole: 0&gt;)</dt><dd><tt><a href="#AlarmTableModel-data">data</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;role:&nbsp;int&nbsp;=&nbsp;Instance(Qt.DisplayRole))&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-flush_alarms"><strong>flush_alarms</strong></a>(self) -&gt; None</dt><dd><tt>Flush&nbsp;the&nbsp;alarms&nbsp;received&nbsp;in&nbsp;the&nbsp;last&nbsp;period&nbsp;in&nbsp;self.<strong>alarms</strong><br>
+so&nbsp;that&nbsp;they&nbsp;are&nbsp;displayed&nbsp;in&nbsp;the&nbsp;table<br>
+&nbsp;<br>
+New&nbsp;alarms&nbsp;are&nbsp;inserted&nbsp;in&nbsp;the&nbsp;head&nbsp;so&nbsp;they&nbsp;move&nbsp;on&nbsp;top&nbsp;of&nbsp;the&nbsp;table</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-get_index_of_alarm"><strong>get_index_of_alarm</strong></a>(self, alarm: IasBasicTypes.IasValue.IasValue) -&gt; int</dt><dd><tt>Get&nbsp;and&nbsp;return&nbsp;the&nbsp;position&nbsp;of&nbsp;an&nbsp;alarm&nbsp;in&nbsp;the&nbsp;list.<br>
+An&nbsp;alarm&nbsp;is&nbsp;in&nbsp;the&nbsp;list&nbsp;if&nbsp;the&nbsp;list&nbsp;contains&nbsp;an&nbsp;alarm&nbsp;with&nbsp;the<br>
+same&nbsp;fullRunningID<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alarm:&nbsp;the&nbsp;alarm&nbsp;to&nbsp;which&nbsp;we&nbsp;want&nbsp;to&nbsp;get&nbsp;the&nbsp;position&nbsp;in&nbsp;th&nbsp;elist<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;alarm&nbsp;in&nbsp;the&nbsp;list&nbsp;or&nbsp;-1&nbsp;if&nbsp;the&nbsp;alarm&nbsp;is&nbsp;not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;the&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-get_priority"><strong>get_priority</strong></a>(self, ias_value: IasBasicTypes.IasValue.IasValue) -&gt; IasBasicTypes.Priority.Priority</dt><dd><tt>returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;priority&nbsp;of&nbsp;the&nbsp;alarm</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-get_row_content"><strong>get_row_content</strong></a>(self, index: int) -&gt; IasBasicTypes.IasValue.IasValue</dt></dl>
+
+<dl><dt><a name="AlarmTableModel-get_state"><strong>get_state</strong></a>(self, ias_value: IasBasicTypes.IasValue.IasValue) -&gt; IasBasicTypes.AlarmState.AlarmState</dt><dd><tt>returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;priority&nbsp;of&nbsp;the&nbsp;alarm</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-headerData"><strong>headerData</strong></a>(self, section, orientation, role=&lt;ItemDataRole.DisplayRole: 0&gt;)</dt><dd><tt><a href="#AlarmTableModel-headerData">headerData</a>(self,&nbsp;section:&nbsp;int,&nbsp;orientation:&nbsp;PySide6.QtCore.Qt.Orientation,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Instance(Qt.DisplayRole))&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-iasValueReceived"><strong>iasValueReceived</strong></a>(self, iasValue)</dt><dd><tt>Gets&nbsp;alarms&nbsp;from&nbsp;Kafka&nbsp;and&nbsp;add&nbsp;them&nbsp;the&nbsp;model</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-pause"><strong>pause</strong></a>(self, enable: bool) -&gt; None</dt><dd><tt>Pause&nbsp;resume&nbsp;the&nbsp;update&nbsp;of&nbsp;the&nbsp;table<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;enable:&nbsp;if&nbsp;True&nbsp;pause&nbsp;the&nbsp;update&nbsp;otherwise&nbsp;resume</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-removeRows"><strong>removeRows</strong></a>(self, rows: list[int]) -&gt; None</dt><dd><tt>Removes&nbsp;the&nbsp;rows&nbsp;from&nbsp;the&nbsp;table<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rows:&nbsp;the&nbsp;rows&nbsp;to&nbsp;remove</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-remove_cleared"><strong>remove_cleared</strong></a>(self, enable: bool) -&gt; None</dt><dd><tt>Set&nbsp;the&nbsp;property&nbsp;to&nbsp;auto&nbsp;remove&nbsp;cleared&nbsp;alarms<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;enable:&nbsp;if&nbsp;True&nbsp;auto-remove&nbsp;of&nbsp;cleared&nbsp;alarms&nbsp;is&nbsp;enabled<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;is&nbsp;disabled</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-rowCount"><strong>rowCount</strong></a>(self, index)</dt><dd><tt><a href="#AlarmTableModel-rowCount">rowCount</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-setData"><strong>setData</strong></a>(self, index, value, role=&lt;ItemDataRole.EditRole: 2&gt;)</dt><dd><tt><a href="#AlarmTableModel-setData">setData</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;value:&nbsp;Any,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Instance(Qt.EditRole))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>staticMetaObject</strong> = PySide6.QtCore.QMetaObject("AlarmTableModel" inherits "QAbstractTableModel":
+)</dl>
+
+<hr>
+Methods inherited from <a href="PySide6.QtCore.html#QAbstractTableModel">PySide6.QtCore.QAbstractTableModel</a>:<br>
+<dl><dt><a name="AlarmTableModel-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-dropMimeData"><strong>dropMimeData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-dropMimeData">dropMimeData</a>(self,&nbsp;data:&nbsp;PySide6.QtCore.QMimeData,&nbsp;action:&nbsp;PySide6.QtCore.Qt.DropAction,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-flags"><strong>flags</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-flags">flags</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.ItemFlag</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-hasChildren"><strong>hasChildren</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-hasChildren">hasChildren</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-index"><strong>index</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-index">index</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;PySide6.QtCore.QModelIndex</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-parent">parent</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QObject<br>
+<a href="#AlarmTableModel-parent">parent</a>(self,&nbsp;child:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;PySide6.QtCore.QModelIndex</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-sibling"><strong>sibling</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-sibling">sibling</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;idx:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;PySide6.QtCore.QModelIndex</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="PySide6.QtCore.html#QAbstractTableModel">PySide6.QtCore.QAbstractTableModel</a>:<br>
+<dl><dt><a name="AlarmTableModel-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from Shiboken.ObjectType</font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PySide6.QtCore.html#QAbstractItemModel">PySide6.QtCore.QAbstractItemModel</a>:<br>
+<dl><dt><a name="AlarmTableModel-beginInsertColumns"><strong>beginInsertColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-beginInsertColumns">beginInsertColumns</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;first:&nbsp;int,&nbsp;last:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-beginInsertRows"><strong>beginInsertRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-beginInsertRows">beginInsertRows</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;first:&nbsp;int,&nbsp;last:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-beginMoveColumns"><strong>beginMoveColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-beginMoveColumns">beginMoveColumns</a>(self,&nbsp;sourceParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;sourceFirst:&nbsp;int,&nbsp;sourceLast:&nbsp;int,&nbsp;destinationParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;destinationColumn:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-beginMoveRows"><strong>beginMoveRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-beginMoveRows">beginMoveRows</a>(self,&nbsp;sourceParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;sourceFirst:&nbsp;int,&nbsp;sourceLast:&nbsp;int,&nbsp;destinationParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;destinationRow:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-beginRemoveColumns"><strong>beginRemoveColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-beginRemoveColumns">beginRemoveColumns</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;first:&nbsp;int,&nbsp;last:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-beginRemoveRows"><strong>beginRemoveRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-beginRemoveRows">beginRemoveRows</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;first:&nbsp;int,&nbsp;last:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-beginResetModel"><strong>beginResetModel</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-beginResetModel">beginResetModel</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-buddy"><strong>buddy</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-buddy">buddy</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;PySide6.QtCore.QModelIndex</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-canDropMimeData"><strong>canDropMimeData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-canDropMimeData">canDropMimeData</a>(self,&nbsp;data:&nbsp;PySide6.QtCore.QMimeData,&nbsp;action:&nbsp;PySide6.QtCore.Qt.DropAction,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-canFetchMore"><strong>canFetchMore</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-canFetchMore">canFetchMore</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-changePersistentIndex"><strong>changePersistentIndex</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-changePersistentIndex">changePersistentIndex</a>(self,&nbsp;from_:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;to:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-changePersistentIndexList"><strong>changePersistentIndexList</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-changePersistentIndexList">changePersistentIndexList</a>(self,&nbsp;from_:&nbsp;Sequence[PySide6.QtCore.QModelIndex],&nbsp;to:&nbsp;Sequence[PySide6.QtCore.QModelIndex])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-checkIndex"><strong>checkIndex</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-checkIndex">checkIndex</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;options:&nbsp;PySide6.QtCore.QAbstractItemModel.CheckIndexOption&nbsp;=&nbsp;Instance(PySide6.QtCore.QAbstractItemModel.CheckIndexOption.NoOption))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-clearItemData"><strong>clearItemData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-clearItemData">clearItemData</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<strong>columnsAboutToBeInserted</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>columnsAboutToBeMoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>columnsAboutToBeRemoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>columnsInserted</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>columnsMoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>columnsRemoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-createIndex"><strong>createIndex</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-createIndex">createIndex</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;id:&nbsp;int&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;PySide6.QtCore.QModelIndex<br>
+<a href="#AlarmTableModel-createIndex">createIndex</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;ptr:&nbsp;object)&nbsp;-&gt;&nbsp;PySide6.QtCore.QModelIndex</tt></dd></dl>
+
+<strong>dataChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-decodeData"><strong>decodeData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-decodeData">decodeData</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;stream:&nbsp;PySide6.QtCore.QDataStream)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-encodeData"><strong>encodeData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-encodeData">encodeData</a>(self,&nbsp;indexes:&nbsp;Sequence[PySide6.QtCore.QModelIndex],&nbsp;stream:&nbsp;PySide6.QtCore.QDataStream)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-endInsertColumns"><strong>endInsertColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-endInsertColumns">endInsertColumns</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-endInsertRows"><strong>endInsertRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-endInsertRows">endInsertRows</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-endMoveColumns"><strong>endMoveColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-endMoveColumns">endMoveColumns</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-endMoveRows"><strong>endMoveRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-endMoveRows">endMoveRows</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-endRemoveColumns"><strong>endRemoveColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-endRemoveColumns">endRemoveColumns</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-endRemoveRows"><strong>endRemoveRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-endRemoveRows">endRemoveRows</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-endResetModel"><strong>endResetModel</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-endResetModel">endResetModel</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-fetchMore"><strong>fetchMore</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-fetchMore">fetchMore</a>(self,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-hasIndex"><strong>hasIndex</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-hasIndex">hasIndex</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<strong>headerDataChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-insertColumn"><strong>insertColumn</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-insertColumn">insertColumn</a>(self,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-insertColumns"><strong>insertColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-insertColumns">insertColumns</a>(self,&nbsp;column:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-insertRow"><strong>insertRow</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-insertRow">insertRow</a>(self,&nbsp;row:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-insertRows"><strong>insertRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-insertRows">insertRows</a>(self,&nbsp;row:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-itemData"><strong>itemData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-itemData">itemData</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;Dict[int,&nbsp;Any]</tt></dd></dl>
+
+<strong>layoutAboutToBeChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>layoutChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-match"><strong>match</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-match">match</a>(self,&nbsp;start:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;role:&nbsp;int,&nbsp;value:&nbsp;Any,&nbsp;hits:&nbsp;int&nbsp;=&nbsp;1,&nbsp;flags:&nbsp;PySide6.QtCore.Qt.MatchFlag&nbsp;=&nbsp;Instance(Qt.MatchFlags(Qt.MatchStartsWith|Qt.MatchWrap)))&nbsp;-&gt;&nbsp;List[PySide6.QtCore.QModelIndex]</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-mimeData"><strong>mimeData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-mimeData">mimeData</a>(self,&nbsp;indexes:&nbsp;Sequence[PySide6.QtCore.QModelIndex])&nbsp;-&gt;&nbsp;PySide6.QtCore.QMimeData</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-mimeTypes"><strong>mimeTypes</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-mimeTypes">mimeTypes</a>(self)&nbsp;-&gt;&nbsp;List[str]</tt></dd></dl>
+
+<strong>modelAboutToBeReset</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>modelReset</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-moveColumn"><strong>moveColumn</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-moveColumn">moveColumn</a>(self,&nbsp;sourceParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;sourceColumn:&nbsp;int,&nbsp;destinationParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-moveColumns"><strong>moveColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-moveColumns">moveColumns</a>(self,&nbsp;sourceParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;sourceColumn:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;destinationParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-moveRow"><strong>moveRow</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-moveRow">moveRow</a>(self,&nbsp;sourceParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;sourceRow:&nbsp;int,&nbsp;destinationParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-moveRows"><strong>moveRows</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-moveRows">moveRows</a>(self,&nbsp;sourceParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;sourceRow:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;destinationParent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-persistentIndexList"><strong>persistentIndexList</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-persistentIndexList">persistentIndexList</a>(self)&nbsp;-&gt;&nbsp;List[PySide6.QtCore.QModelIndex]</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-removeColumn"><strong>removeColumn</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-removeColumn">removeColumn</a>(self,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-removeColumns"><strong>removeColumns</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-removeColumns">removeColumns</a>(self,&nbsp;column:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-removeRow"><strong>removeRow</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-removeRow">removeRow</a>(self,&nbsp;row:&nbsp;int,&nbsp;parent:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex]&nbsp;=&nbsp;Invalid(PySide6.QtCore.QModelIndex))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-resetInternalData"><strong>resetInternalData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-resetInternalData">resetInternalData</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-revert"><strong>revert</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-revert">revert</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-roleNames"><strong>roleNames</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-roleNames">roleNames</a>(self)&nbsp;-&gt;&nbsp;Dict[int,&nbsp;PySide6.QtCore.QByteArray]</tt></dd></dl>
+
+<strong>rowsAboutToBeInserted</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>rowsAboutToBeMoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>rowsAboutToBeRemoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>rowsInserted</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>rowsMoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<strong>rowsRemoved</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-setHeaderData"><strong>setHeaderData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-setHeaderData">setHeaderData</a>(self,&nbsp;section:&nbsp;int,&nbsp;orientation:&nbsp;PySide6.QtCore.Qt.Orientation,&nbsp;value:&nbsp;Any,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Instance(Qt.EditRole))&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-setItemData"><strong>setItemData</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-setItemData">setItemData</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex],&nbsp;roles:&nbsp;Dict[int,&nbsp;Any])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-sort"><strong>sort</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-sort">sort</a>(self,&nbsp;column:&nbsp;int,&nbsp;order:&nbsp;PySide6.QtCore.Qt.SortOrder&nbsp;=&nbsp;Instance(Qt.AscendingOrder))&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-span"><strong>span</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-span">span</a>(self,&nbsp;index:&nbsp;Union[PySide6.QtCore.QModelIndex,&nbsp;PySide6.QtCore.QPersistentModelIndex])&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-submit"><strong>submit</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-submit">submit</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-supportedDragActions"><strong>supportedDragActions</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-supportedDragActions">supportedDragActions</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.DropAction</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-supportedDropActions"><strong>supportedDropActions</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-supportedDropActions">supportedDropActions</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.DropAction</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PySide6.QtCore.html#QAbstractItemModel">PySide6.QtCore.QAbstractItemModel</a>:<br>
+<dl><dt><strong>CheckIndexOption</strong> = &lt;enum 'CheckIndexOption'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>LayoutChangeHint</strong> = &lt;enum 'LayoutChangeHint'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<hr>
+Methods inherited from <a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a>:<br>
+<dl><dt><a name="AlarmTableModel-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-childEvent"><strong>childEvent</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-childEvent">childEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QChildEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-children">children</a>(self)&nbsp;-&gt;&nbsp;List[PySide6.QtCore.QObject]</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-connectNotify"><strong>connectNotify</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-connectNotify">connectNotify</a>(self,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-customEvent"><strong>customEvent</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-customEvent">customEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-deleteLater">deleteLater</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-disconnectNotify">disconnectNotify</a>(self,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-dumpObjectInfo">dumpObjectInfo</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-dumpObjectTree">dumpObjectTree</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[PySide6.QtCore.QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-emit"><strong>emit</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-emit">emit</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;*args:&nbsp;None)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-event"><strong>event</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-event">event</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-eventFilter">eventFilter</a>(self,&nbsp;watched:&nbsp;PySide6.QtCore.QObject,&nbsp;event:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-findChild">findChild</a>(self,&nbsp;type:&nbsp;type,&nbsp;name:&nbsp;str&nbsp;=&nbsp;{},&nbsp;options:&nbsp;PySide6.QtCore.Qt.FindChildOption&nbsp;=&nbsp;Instance(Qt.FindChildrenRecursively))&nbsp;-&gt;&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;type,&nbsp;name:&nbsp;str&nbsp;=&nbsp;{},&nbsp;options:&nbsp;PySide6.QtCore.Qt.FindChildOption&nbsp;=&nbsp;Instance(Qt.FindChildrenRecursively))&nbsp;-&gt;&nbsp;Iterable<br>
+<a href="#AlarmTableModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;type,&nbsp;pattern:&nbsp;Union[PySide6.QtCore.QRegularExpression,&nbsp;str],&nbsp;options:&nbsp;PySide6.QtCore.Qt.FindChildOption&nbsp;=&nbsp;Instance(Qt.FindChildrenRecursively))&nbsp;-&gt;&nbsp;Iterable</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-inherits">inherits</a>(self,&nbsp;classname:&nbsp;bytes)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-installEventFilter">installEventFilter</a>(self,&nbsp;filterObj:&nbsp;PySide6.QtCore.QObject)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-isQuickItemType"><strong>isQuickItemType</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-isQuickItemType">isQuickItemType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-isSignalConnected">isSignalConnected</a>(self,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;PySide6.QtCore.QThread)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="AlarmTableModel-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-property">property</a>(self,&nbsp;name:&nbsp;str)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-receivers"><strong>receivers</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-receivers">receivers</a>(self,&nbsp;signal:&nbsp;bytes)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-removeEventFilter">removeEventFilter</a>(self,&nbsp;obj:&nbsp;PySide6.QtCore.QObject)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-sender"><strong>sender</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-sender">sender</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QObject</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-senderSignalIndex">senderSignalIndex</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[PySide6.QtCore.QObject])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;str,&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;PySide6.QtCore.Qt.TimerType&nbsp;=&nbsp;Instance(Qt.CoarseTimer))&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-thread">thread</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QThread</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-timerEvent"><strong>timerEvent</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-timerEvent">timerEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QTimerEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a>:<br>
+<dl><dt><a name="AlarmTableModel-tr"><strong>tr</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from Shiboken.ObjectType</font></font></dt><dd><tt><a href="#AlarmTableModel-tr">tr</a>(self,&nbsp;sourceText:&nbsp;str,&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a>:<br>
+<dl><dt><a name="AlarmTableModel-connect"><strong>connect</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-connect">connect</a>(arg__1:&nbsp;PySide6.QtCore.QObject,&nbsp;arg__2:&nbsp;bytes,&nbsp;arg__3:&nbsp;Callable,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#AlarmTableModel-connect">connect</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;arg__2:&nbsp;Callable,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#AlarmTableModel-connect">connect</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;arg__2:&nbsp;PySide6.QtCore.QObject,&nbsp;arg__3:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#AlarmTableModel-connect">connect</a>(self,&nbsp;sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;bytes,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#AlarmTableModel-connect">connect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;method:&nbsp;PySide6.QtCore.QMetaMethod,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#AlarmTableModel-connect">connect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;bytes,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection</tt></dd></dl>
+
+<dl><dt><a name="AlarmTableModel-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#AlarmTableModel-disconnect">disconnect</a>(arg__1:&nbsp;PySide6.QtCore.QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#AlarmTableModel-disconnect">disconnect</a>(arg__1:&nbsp;PySide6.QtCore.QObject,&nbsp;arg__2:&nbsp;bytes,&nbsp;arg__3:&nbsp;Callable)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#AlarmTableModel-disconnect">disconnect</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;arg__2:&nbsp;Callable)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#AlarmTableModel-disconnect">disconnect</a>(self,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;Optional[bytes]&nbsp;=&nbsp;None)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#AlarmTableModel-disconnect">disconnect</a>(self,&nbsp;signal:&nbsp;bytes,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#AlarmTableModel-disconnect">disconnect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#AlarmTableModel-disconnect">disconnect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;bytes,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from Shiboken.Object:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<hr>
+Data descriptors inherited from <a href="IasKafkaUtils.KafkaValueConsumer.html#IasValueListener">IasKafkaUtils.KafkaValueConsumer.IasValueListener</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

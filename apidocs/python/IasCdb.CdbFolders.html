@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module IasCdb.CdbFolders</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasCdb.html"><font color="#ffffff">IasCdb</font></a>.CdbFolders</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasCdb/CdbFolders.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasCdb/CdbFolders.py</a></font></td></tr></table>
+    <p><tt>Python&nbsp;implementation&nbsp;of&nbsp;<a href="#CdbFolders">CdbFolders</a>.java</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="shutil.html">shutil</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasCdb.CdbFolders.html#CdbFolders">CdbFolders</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="enum.html#Enum">enum.Enum</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasCdb.CdbFolders.html#Folders">Folders</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CdbFolders">class <strong>CdbFolders</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#CdbFolders">CdbFolders</a>(folder:&nbsp;IasCdb.<a href="#CdbFolders">CdbFolders</a>.<a href="#Folders">Folders</a>,&nbsp;cdb_parent_path:&nbsp;str)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+CdbFolder&nbsp;is&nbsp;the&nbsp;python&nbsp;translation&nbsp;of&nbsp;the&nbsp;java&nbsp;CdbFolder.java<br>
+&nbsp;<br>
+The&nbsp;differences&nbsp;are&nbsp;mostly&nbsp;due&nbsp;to&nbsp;the&nbsp;fact&nbsp;that&nbsp;python&nbsp;implemntation&nbsp;<br>
+of&nbsp;enumerated&nbsp;differs&nbsp;from&nbsp;java<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CdbFolders-__init__"><strong>__init__</strong></a>(self, folder: IasCdb.CdbFolders.Folders, cdb_parent_path: str) -&gt; None</dt><dd><tt>Constructor<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;folder:&nbsp;the&nbsp;forlder&nbsp;of&nbsp;this&nbsp;<a href="builtins.html#object">object</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;cdb_parent_path:&nbsp;the&nbsp;path&nbsp;of&nbsp;the&nbsp;folder&nbsp;containig&nbsp;the&nbsp;CDB</tt></dd></dl>
+
+<dl><dt><a name="CdbFolders-delete"><strong>delete</strong></a>(self) -&gt; bool</dt><dd><tt>Delete&nbsp;the&nbsp;subfolder&nbsp;represented&nbsp;by&nbsp;this&nbsp;<a href="builtins.html#object">object</a>,&nbsp;if&nbsp;it&nbsp;exists.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;if&nbsp;the&nbsp;folder&nbsp;has&nbsp;been&nbsp;deleted,&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="CdbFolders-exists"><strong>exists</strong></a>(self) -&gt; bool</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;subfolder&nbsp;exists<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;if&nbsp;the&nbsp;folder&nbsp;exists,&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="CdbFolders-get_folder"><strong>get_folder</strong></a>(self, create: bool) -&gt; str</dt><dd><tt>Get&nbsp;the&nbsp;path&nbsp;of&nbsp;the&nbsp;CDB&nbsp;sub&nbsp;folder&nbsp;and&nbsp;if&nbsp;it&nbsp;is&nbsp;the&nbsp;case,&nbsp;creates&nbsp;it.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;create:&nbsp;if&nbsp;True&nbsp;and&nbsp;the&nbsp;subfolder&nbsp;does&nbsp;not&nbsp;exist,&nbsp;then&nbsp;create&nbsp;it<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;path&nbsp;to&nbsp;the&nbsp;subfolder.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="CdbFolders-create_folders"><strong>create_folders</strong></a>(cdb_parent_path: str)</dt><dd><tt>Create&nbsp;all&nbsp;the&nbsp;subfolders&nbsp;of&nbsp;the&nbsp;CDB.<br>
+If&nbsp;a&nbsp;subfolder&nbsp;already&nbsp;exists&nbsp;then&nbsp;nothing&nbsp;is&nbsp;done<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cdbParentPath:&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;parent&nbsp;of&nbsp;the&nbsp;CDB</tt></dd></dl>
+
+<dl><dt><a name="CdbFolders-get_subfolder"><strong>get_subfolder</strong></a>(cdb_parent_path: str, folder: IasCdb.CdbFolders.Folders, create: bool) -&gt; str</dt><dd><tt>Get&nbsp;the&nbsp;path&nbsp;of&nbsp;a&nbsp;CDB&nbsp;folder&nbsp;and&nbsp;if&nbsp;it&nbsp;is&nbsp;the&nbsp;case,&nbsp;creates&nbsp;the&nbsp;folder<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cdbParentPath:&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;parent&nbsp;of&nbsp;the&nbsp;CDB<br>
+&nbsp;&nbsp;&nbsp;&nbsp;folder:&nbsp;the&nbsp;CDB&nbsp;folder&nbsp;to&nbsp;create<br>
+&nbsp;&nbsp;&nbsp;&nbsp;create:&nbsp;if&nbsp;True&nbsp;and&nbsp;the&nbsp;subfolder&nbsp;does&nbsp;not&nbsp;exist,&nbsp;then&nbsp;create&nbsp;it<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;path&nbsp;to&nbsp;the&nbsp;subfolder</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ALL_FOLDERS</strong> = {&lt;Folders.ROOT: 1&gt;: 'CDB', &lt;Folders.SUPERVISOR: 2&gt;: 'Supervisor', &lt;Folders.DASU: 3&gt;: 'DASU', &lt;Folders.ASCE: 4&gt;: 'ASCE', &lt;Folders.IASIO: 5&gt;: 'IASIO', &lt;Folders.TF: 6&gt;: 'TF', &lt;Folders.TEMPLATE: 7&gt;: 'TEMPLATE', &lt;Folders.PLUGIN: 8&gt;: 'PLUGIN', &lt;Folders.CLIENT: 9&gt;: 'CLIENT'}</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Folders">class <strong>Folders</strong></a>(<a href="enum.html#Enum">enum.Enum</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Folders">Folders</a>(value,&nbsp;names=None,&nbsp;*,&nbsp;module=None,&nbsp;qualname=None,&nbsp;type=None,&nbsp;start=1)<br>
+&nbsp;<br>
+An&nbsp;enumeration.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="IasCdb.CdbFolders.html#Folders">Folders</a></dd>
+<dd><a href="enum.html#Enum">enum.Enum</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ASCE</strong> = &lt;Folders.ASCE: 4&gt;</dl>
+
+<dl><dt><strong>CLIENT</strong> = &lt;Folders.CLIENT: 9&gt;</dl>
+
+<dl><dt><strong>DASU</strong> = &lt;Folders.DASU: 3&gt;</dl>
+
+<dl><dt><strong>IASIO</strong> = &lt;Folders.IASIO: 5&gt;</dl>
+
+<dl><dt><strong>PLUGIN</strong> = &lt;Folders.PLUGIN: 8&gt;</dl>
+
+<dl><dt><strong>ROOT</strong> = &lt;Folders.ROOT: 1&gt;</dl>
+
+<dl><dt><strong>SUPERVISOR</strong> = &lt;Folders.SUPERVISOR: 2&gt;</dl>
+
+<dl><dt><strong>TEMPLATE</strong> = &lt;Folders.TEMPLATE: 7&gt;</dl>
+
+<dl><dt><strong>TF</strong> = &lt;Folders.TF: 6&gt;</dl>
+
+<hr>
+Data descriptors inherited from <a href="enum.html#Enum">enum.Enum</a>:<br>
+<dl><dt><strong>name</strong></dt>
+<dd><tt>The&nbsp;name&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<dl><dt><strong>value</strong></dt>
+<dd><tt>The&nbsp;value&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<hr>
+Readonly properties inherited from <a href="enum.html#EnumMeta">enum.EnumMeta</a>:<br>
+<dl><dt><strong>__members__</strong></dt>
+<dd><tt>Returns&nbsp;a&nbsp;mapping&nbsp;of&nbsp;member&nbsp;name-&gt;value.<br>
+&nbsp;<br>
+This&nbsp;mapping&nbsp;lists&nbsp;all&nbsp;enum&nbsp;members,&nbsp;including&nbsp;aliases.&nbsp;Note&nbsp;that&nbsp;this<br>
+is&nbsp;a&nbsp;read-only&nbsp;view&nbsp;of&nbsp;the&nbsp;internal&nbsp;mapping.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

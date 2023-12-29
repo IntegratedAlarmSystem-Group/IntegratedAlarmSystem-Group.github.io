@@ -1,10 +1,10 @@
 org.eso.ias.asce.transfer
 org.eso.ias.asce.transfer.impls
 org.eso.ias.cdb
-org.eso.ias.cdb.json
-org.eso.ias.cdb.json.pojos
 org.eso.ias.cdb.pojos
 org.eso.ias.cdb.rdb
+org.eso.ias.cdb.structuredtext
+org.eso.ias.cdb.structuredtext.pojos
 org.eso.ias.command
 org.eso.ias.command.kafka
 org.eso.ias.converter

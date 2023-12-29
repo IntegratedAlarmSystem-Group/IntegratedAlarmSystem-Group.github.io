@@ -1,0 +1,878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module IasAlarmGui.connect_to_ias_dlg</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasAlarmGui.html"><font color="#ffffff">IasAlarmGui</font></a>.connect_to_ias_dlg</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasAlarmGui/connect_to_ias_dlg.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasAlarmGui/connect_to_ias_dlg.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;This&nbsp;Python&nbsp;file&nbsp;uses&nbsp;the&nbsp;following&nbsp;encoding:&nbsp;utf-8</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="IasAlarmGui.ui_connect_dialog.html#Ui_ConnectToIas">IasAlarmGui.ui_connect_dialog.Ui_ConnectToIas</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasAlarmGui.connect_to_ias_dlg.html#ConnectToIasDlg">ConnectToIasDlg</a>(<a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a>, <a href="IasAlarmGui.ui_connect_dialog.html#Ui_ConnectToIas">IasAlarmGui.ui_connect_dialog.Ui_ConnectToIas</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a>(<a href="PySide6.QtWidgets.html#QWidget">PySide6.QtWidgets.QWidget</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="IasAlarmGui.connect_to_ias_dlg.html#ConnectToIasDlg">ConnectToIasDlg</a>(<a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a>, <a href="IasAlarmGui.ui_connect_dialog.html#Ui_ConnectToIas">IasAlarmGui.ui_connect_dialog.Ui_ConnectToIas</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ConnectToIasDlg">class <strong>ConnectToIasDlg</strong></a>(<a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a>, <a href="IasAlarmGui.ui_connect_dialog.html#Ui_ConnectToIas">IasAlarmGui.ui_connect_dialog.Ui_ConnectToIas</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ConnectToIasDlg">ConnectToIasDlg</a>(ias_cdb,&nbsp;parent=None)<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="IasAlarmGui.connect_to_ias_dlg.html#ConnectToIasDlg">ConnectToIasDlg</a></dd>
+<dd><a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a></dd>
+<dd><a href="PySide6.QtWidgets.html#QWidget">PySide6.QtWidgets.QWidget</a></dd>
+<dd><a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a></dd>
+<dd><a href="PySide6.QtGui.html#QPaintDevice">PySide6.QtGui.QPaintDevice</a></dd>
+<dd>Shiboken.Object</dd>
+<dd><a href="IasAlarmGui.ui_connect_dialog.html#Ui_ConnectToIas">IasAlarmGui.ui_connect_dialog.Ui_ConnectToIas</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ConnectToIasDlg-__init__"><strong>__init__</strong></a>(self, ias_cdb, parent=None)</dt><dd><tt><a href="#ConnectToIasDlg-__init__">__init__</a>(self,&nbsp;parent:&nbsp;Optional[PySide6.QtWidgets.QWidget]&nbsp;=&nbsp;None,&nbsp;f:&nbsp;PySide6.QtCore.Qt.WindowType&nbsp;=&nbsp;Default(Qt.WindowFlags))&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-checkServersString"><strong>checkServersString</strong></a>(self, txt: str) -&gt; bool</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;txt&nbsp;is&nbsp;in&nbsp;the&nbsp;form&nbsp;"server:ip,&nbsp;server:ip..."<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;txt:&nbsp;the&nbsp;string&nbsp;containing&nbsp;the&nbsp;URL&nbsp;of&nbsp;the&nbsp;kafka&nbsp;brokers<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;valid&nbsp;connection&nbsp;string&nbsp;for&nbsp;kafka<br>
+&nbsp;&nbsp;&nbsp;&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-getBrokers"><strong>getBrokers</strong></a>(self) -&gt; str</dt><dd><tt>Return&nbsp;the&nbsp;kafka&nbsp;brokers<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;the&nbsp;kafka&nbsp;brokers&nbsp;if&nbsp;the&nbsp;user&nbsp;pressed&nbsp;the&nbsp;Ok&nbsp;button<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;None&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-onFetchBtnClicked"><strong>onFetchBtnClicked</strong></a>(self)</dt><dd><tt>Called&nbsp;when&nbsp;the&nbsp;user&nbsp;clicks&nbsp;the&nbsp;fecth&nbsp;from&nbsp;CDB&nbsp;button:<br>
+reads&nbsp;the&nbsp;kafka&nbsp;brokers&nbsp;string&nbsp;from&nbsp;the&nbsp;configuration</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-onLineEditTxtChanged"><strong>onLineEditTxtChanged</strong></a>(self)</dt><dd><tt>Invoked&nbsp;when&nbsp;the&nbsp;text&nbsp;in&nbsp;the&nbsp;line&nbsp;edit&nbsp;changed:<br>
+-&nbsp;checks&nbsp;the&nbsp;correctness&nbsp;of&nbsp;the&nbsp;string<br>
+-&nbsp;enable/disable&nbsp;the&nbsp;OK&nbsp;button</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-onOkBtnClicked"><strong>onOkBtnClicked</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ConnectToIasDlg-readUrlFromCdb"><strong>readUrlFromCdb</strong></a>(self) -&gt; str | None</dt><dd><tt>Read&nbsp;and&nbsp;return&nbsp;the&nbsp;URL&nbsp;from&nbsp;the&nbsp;CDB<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;URL&nbsp;of&nbsp;the&nbsp;kafka&nbsp;brokers&nbsp;read&nbsp;from&nbsp;the&nbsp;CDB<br>
+&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;None&nbsp;if&nbsp;the&nbsp;path&nbsp;to&nbsp;the&nbsp;cdb&nbsp;is&nbsp;not&nbsp;available</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setupPanelWidgets"><strong>setupPanelWidgets</strong></a>(self, brokers: str) -&gt; None</dt><dd><tt>Setup&nbsp;the&nbsp;content&nbsp;of&nbsp;the&nbsp;text&nbsp;field&nbsp;and&nbsp;enable/disable&nbsp;the&nbsp;Ok&nbsp;button<br>
+depending&nbsp;on&nbsp;the&nbsp;brokers&nbsp;string<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;brokers:&nbsp;the&nbsp;Kafka&nbsp;brokkers&nbsp;server:pot,server:port...</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>staticMetaObject</strong> = PySide6.QtCore.QMetaObject("ConnectToIasDlg" inh...#44 type=Slot, signature=onLineEditTxtChanged()
+)</dl>
+
+<hr>
+Methods inherited from <a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-accept"><strong>accept</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-accept">accept</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<strong>accepted</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-adjustPosition"><strong>adjustPosition</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-adjustPosition">adjustPosition</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-closeEvent"><strong>closeEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-closeEvent">closeEvent</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QCloseEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-contextMenuEvent">contextMenuEvent</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QContextMenuEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-done"><strong>done</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-done">done</a>(self,&nbsp;arg__1:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-eventFilter">eventFilter</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QObject,&nbsp;arg__2:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-exec"><strong>exec</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-exec">exec</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-exec_"><strong>exec_</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-exec_">exec_</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<strong>finished</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-isSizeGripEnabled"><strong>isSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isSizeGripEnabled">isSizeGripEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-keyPressEvent">keyPressEvent</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QKeyEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-open"><strong>open</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-open">open</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-reject"><strong>reject</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-reject">reject</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<strong>rejected</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-resizeEvent">resizeEvent</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QResizeEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-result"><strong>result</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-result">result</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setModal"><strong>setModal</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setModal">setModal</a>(self,&nbsp;modal:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setResult"><strong>setResult</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setResult">setResult</a>(self,&nbsp;r:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setSizeGripEnabled"><strong>setSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setSizeGripEnabled">setSizeGripEnabled</a>(self,&nbsp;arg__1:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-showEvent"><strong>showEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-showEvent">showEvent</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QShowEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from Shiboken.ObjectType</font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PySide6.QtWidgets.html#QDialog">PySide6.QtWidgets.QDialog</a>:<br>
+<dl><dt><strong>DialogCode</strong> = &lt;enum 'DialogCode'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<hr>
+Methods inherited from <a href="PySide6.QtWidgets.html#QWidget">PySide6.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-actionEvent"><strong>actionEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-actionEvent">actionEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QActionEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-actions"><strong>actions</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[PySide6.QtGui.QAction]</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-activateWindow">activateWindow</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-addAction"><strong>addAction</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;action:&nbsp;PySide6.QtGui.QAction)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;icon:&nbsp;Union[PySide6.QtGui.QIcon,&nbsp;PySide6.QtGui.QPixmap],&nbsp;text:&nbsp;str)&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;icon:&nbsp;Union[PySide6.QtGui.QIcon,&nbsp;PySide6.QtGui.QPixmap],&nbsp;text:&nbsp;str,&nbsp;callable:&nbsp;object)&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;icon:&nbsp;Union[PySide6.QtGui.QIcon,&nbsp;PySide6.QtGui.QPixmap],&nbsp;text:&nbsp;str,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;icon:&nbsp;Union[PySide6.QtGui.QIcon,&nbsp;PySide6.QtGui.QPixmap],&nbsp;text:&nbsp;str,&nbsp;shortcut:&nbsp;Union[PySide6.QtGui.QKeySequence,&nbsp;PySide6.QtCore.QKeyCombination,&nbsp;PySide6.QtGui.QKeySequence.StandardKey,&nbsp;str,&nbsp;int])&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;icon:&nbsp;Union[PySide6.QtGui.QIcon,&nbsp;PySide6.QtGui.QPixmap],&nbsp;text:&nbsp;str,&nbsp;shortcut:&nbsp;Union[PySide6.QtGui.QKeySequence,&nbsp;PySide6.QtCore.QKeyCombination,&nbsp;PySide6.QtGui.QKeySequence.StandardKey,&nbsp;str,&nbsp;int],&nbsp;callable:&nbsp;object)&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;icon:&nbsp;Union[PySide6.QtGui.QIcon,&nbsp;PySide6.QtGui.QPixmap],&nbsp;text:&nbsp;str,&nbsp;shortcut:&nbsp;Union[PySide6.QtGui.QKeySequence,&nbsp;PySide6.QtCore.QKeyCombination,&nbsp;PySide6.QtGui.QKeySequence.StandardKey,&nbsp;str,&nbsp;int],&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;text:&nbsp;str)&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;text:&nbsp;str,&nbsp;callable:&nbsp;object)&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;text:&nbsp;str,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;text:&nbsp;str,&nbsp;shortcut:&nbsp;Union[PySide6.QtGui.QKeySequence,&nbsp;PySide6.QtCore.QKeyCombination,&nbsp;PySide6.QtGui.QKeySequence.StandardKey,&nbsp;str,&nbsp;int])&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;text:&nbsp;str,&nbsp;shortcut:&nbsp;Union[PySide6.QtGui.QKeySequence,&nbsp;PySide6.QtCore.QKeyCombination,&nbsp;PySide6.QtGui.QKeySequence.StandardKey,&nbsp;str,&nbsp;int],&nbsp;callable:&nbsp;object)&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction<br>
+<a href="#ConnectToIasDlg-addAction">addAction</a>(self,&nbsp;text:&nbsp;str,&nbsp;shortcut:&nbsp;Union[PySide6.QtGui.QKeySequence,&nbsp;PySide6.QtCore.QKeyCombination,&nbsp;PySide6.QtGui.QKeySequence.StandardKey,&nbsp;str,&nbsp;int],&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtGui.QAction</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-addActions"><strong>addActions</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Sequence[PySide6.QtGui.QAction])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-adjustSize">adjustSize</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-backingStore"><strong>backingStore</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-backingStore">backingStore</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QBackingStore</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-changeEvent"><strong>changeEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-changeEvent">changeEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-childAt"><strong>childAt</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-childAt">childAt</a>(self,&nbsp;p:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget<br>
+<a href="#ConnectToIasDlg-childAt">childAt</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QRect</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QRegion</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-clearFocus">clearFocus</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-clearMask">clearMask</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-close"><strong>close</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QMargins</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QRect</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.ContextMenuPolicy</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-create"><strong>create</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-create">create</a>(self,&nbsp;arg__1:&nbsp;int&nbsp;=&nbsp;0,&nbsp;initializeWindow:&nbsp;bool&nbsp;=&nbsp;True,&nbsp;destroyOldWindow:&nbsp;bool&nbsp;=&nbsp;True)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-createWinId"><strong>createWinId</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-createWinId">createWinId</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-cursor"><strong>cursor</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QCursor</tt></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-destroy"><strong>destroy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-destroy">destroy</a>(self,&nbsp;destroyWindow:&nbsp;bool&nbsp;=&nbsp;True,&nbsp;destroySubWindows:&nbsp;bool&nbsp;=&nbsp;True)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-devType"><strong>devType</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-dragEnterEvent">dragEnterEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QDragEnterEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-dragLeaveEvent">dragLeaveEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QDragLeaveEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-dragMoveEvent">dragMoveEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QDragMoveEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-dropEvent"><strong>dropEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-dropEvent">dropEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QDropEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-ensurePolished">ensurePolished</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-enterEvent"><strong>enterEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-enterEvent">enterEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QEnterEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-event"><strong>event</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-event">event</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusInEvent">focusInEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QFocusEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusNextChild">focusNextChild</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusNextPrevChild">focusNextPrevChild</a>(self,&nbsp;next:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusOutEvent">focusOutEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QFocusEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.FocusPolicy</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusPreviousChild">focusPreviousChild</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-font"><strong>font</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-font">font</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QFont</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QFontInfo</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QFontMetrics</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QRect</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-geometry"><strong>geometry</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QRect</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-grab"><strong>grab</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-grab">grab</a>(self,&nbsp;rectangle:&nbsp;PySide6.QtCore.QRect&nbsp;=&nbsp;PySide6.QtCore.QRect(0,&nbsp;0,&nbsp;-1,&nbsp;-1))&nbsp;-&gt;&nbsp;PySide6.QtGui.QPixmap</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;PySide6.QtCore.Qt.GestureType,&nbsp;flags:&nbsp;PySide6.QtCore.Qt.GestureFlag&nbsp;=&nbsp;Default(Qt.GestureFlags))&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-grabKeyboard">grabKeyboard</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-grabMouse">grabMouse</a>(self)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-grabMouse">grabMouse</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QCursor,&nbsp;PySide6.QtCore.Qt.CursorShape,&nbsp;PySide6.QtGui.QPixmap])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[PySide6.QtGui.QKeySequence,&nbsp;PySide6.QtCore.QKeyCombination,&nbsp;PySide6.QtGui.QKeySequence.StandardKey,&nbsp;str,&nbsp;int],&nbsp;context:&nbsp;PySide6.QtCore.Qt.ShortcutContext&nbsp;=&nbsp;Instance(Qt.WindowShortcut))&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QGraphicsEffect</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QGraphicsProxyWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-height"><strong>height</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-height">height</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-heightForWidth">heightForWidth</a>(self,&nbsp;arg__1:&nbsp;int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-hide"><strong>hide</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-hide">hide</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-hideEvent"><strong>hideEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-hideEvent">hideEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QHideEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-initPainter"><strong>initPainter</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-initPainter">initPainter</a>(self,&nbsp;painter:&nbsp;PySide6.QtGui.QPainter)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-inputMethodEvent">inputMethodEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QInputMethodEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.InputMethodHint</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;PySide6.QtGui.QAction,&nbsp;action:&nbsp;PySide6.QtGui.QAction)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;PySide6.QtGui.QAction,&nbsp;actions:&nbsp;Sequence[PySide6.QtGui.QAction])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-internalWinId"><strong>internalWinId</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-internalWinId">internalWinId</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;PySide6.QtWidgets.QWidget)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isEnabledTo">isEnabledTo</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isModal"><strong>isModal</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isTopLevel"><strong>isTopLevel</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isTopLevel">isTopLevel</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isVisibleTo">isVisibleTo</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-keyReleaseEvent">keyReleaseEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QKeyEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-layout"><strong>layout</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-layout">layout</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QLayout</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.LayoutDirection</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-leaveEvent">leaveEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-locale"><strong>locale</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-locale">locale</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QLocale</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-lower"><strong>lower</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-lower">lower</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mapFrom">mapFrom</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget,&nbsp;arg__2:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtCore.QPoint<br>
+<a href="#ConnectToIasDlg-mapFrom">mapFrom</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget,&nbsp;arg__2:&nbsp;Union[PySide6.QtCore.QPointF,&nbsp;PySide6.QtCore.QPoint,&nbsp;PySide6.QtGui.QPainterPath.Element])&nbsp;-&gt;&nbsp;PySide6.QtCore.QPointF</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtCore.QPoint<br>
+<a href="#ConnectToIasDlg-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtCore.QPointF,&nbsp;PySide6.QtCore.QPoint,&nbsp;PySide6.QtGui.QPainterPath.Element])&nbsp;-&gt;&nbsp;PySide6.QtCore.QPointF</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mapFromParent">mapFromParent</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtCore.QPoint<br>
+<a href="#ConnectToIasDlg-mapFromParent">mapFromParent</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtCore.QPointF,&nbsp;PySide6.QtCore.QPoint,&nbsp;PySide6.QtGui.QPainterPath.Element])&nbsp;-&gt;&nbsp;PySide6.QtCore.QPointF</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mapTo">mapTo</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget,&nbsp;arg__2:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtCore.QPoint<br>
+<a href="#ConnectToIasDlg-mapTo">mapTo</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget,&nbsp;arg__2:&nbsp;Union[PySide6.QtCore.QPointF,&nbsp;PySide6.QtCore.QPoint,&nbsp;PySide6.QtGui.QPainterPath.Element])&nbsp;-&gt;&nbsp;PySide6.QtCore.QPointF</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mapToGlobal">mapToGlobal</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtCore.QPoint<br>
+<a href="#ConnectToIasDlg-mapToGlobal">mapToGlobal</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtCore.QPointF,&nbsp;PySide6.QtCore.QPoint,&nbsp;PySide6.QtGui.QPainterPath.Element])&nbsp;-&gt;&nbsp;PySide6.QtCore.QPointF</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mapToParent">mapToParent</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtCore.QPoint<br>
+<a href="#ConnectToIasDlg-mapToParent">mapToParent</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtCore.QPointF,&nbsp;PySide6.QtCore.QPoint,&nbsp;PySide6.QtGui.QPainterPath.Element])&nbsp;-&gt;&nbsp;PySide6.QtCore.QPointF</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mask"><strong>mask</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mask">mask</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QRegion</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-metric"><strong>metric</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-metric">metric</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QPaintDevice.PaintDeviceMetric)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mouseDoubleClickEvent">mouseDoubleClickEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QMouseEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mouseMoveEvent">mouseMoveEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QMouseEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mousePressEvent">mousePressEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QMouseEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mouseReleaseEvent">mouseReleaseEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QMouseEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-move"><strong>move</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-move">move</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-move">move</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-moveEvent"><strong>moveEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-moveEvent">moveEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QMoveEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-nativeEvent">nativeEvent</a>(self,&nbsp;eventType:&nbsp;Union[PySide6.QtCore.QByteArray,&nbsp;bytes],&nbsp;message:&nbsp;int)&nbsp;-&gt;&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QRect</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;PySide6.QtCore.Qt.WindowType)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;PySide6.QtCore.Qt.WindowState)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QPaintEngine</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-paintEvent"><strong>paintEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-paintEvent">paintEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QPaintEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-palette"><strong>palette</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-palette">palette</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QPalette</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-pos"><strong>pos</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-pos">pos</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QPoint</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-raise_"><strong>raise_</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-raise_">raise_</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-rect"><strong>rect</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-rect">rect</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QRect</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-redirected"><strong>redirected</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-redirected">redirected</a>(self,&nbsp;offset:&nbsp;PySide6.QtCore.QPoint)&nbsp;-&gt;&nbsp;PySide6.QtGui.QPaintDevice</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-releaseKeyboard">releaseKeyboard</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-releaseMouse">releaseMouse</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;PySide6.QtGui.QAction)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-render"><strong>render</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-render">render</a>(self,&nbsp;painter:&nbsp;PySide6.QtGui.QPainter,&nbsp;targetOffset:&nbsp;PySide6.QtCore.QPoint,&nbsp;sourceRegion:&nbsp;Union[PySide6.QtGui.QRegion,&nbsp;PySide6.QtGui.QBitmap,&nbsp;PySide6.QtGui.QPolygon,&nbsp;PySide6.QtCore.QRect]&nbsp;=&nbsp;Default(QRegion),&nbsp;renderFlags:&nbsp;PySide6.QtWidgets.QWidget.RenderFlag&nbsp;=&nbsp;Instance(QWidget.RenderFlags(QWidget.RenderFlag.DrawWindowBackground&nbsp;|&nbsp;QWidget.RenderFlag.DrawChildren)))&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-render">render</a>(self,&nbsp;target:&nbsp;PySide6.QtGui.QPaintDevice,&nbsp;targetOffset:&nbsp;PySide6.QtCore.QPoint&nbsp;=&nbsp;Default(QPoint),&nbsp;sourceRegion:&nbsp;Union[PySide6.QtGui.QRegion,&nbsp;PySide6.QtGui.QBitmap,&nbsp;PySide6.QtGui.QPolygon,&nbsp;PySide6.QtCore.QRect]&nbsp;=&nbsp;Default(QRegion),&nbsp;renderFlags:&nbsp;PySide6.QtWidgets.QWidget.RenderFlag&nbsp;=&nbsp;Instance(QWidget.RenderFlags(QWidget.RenderFlag.DrawWindowBackground&nbsp;|&nbsp;QWidget.RenderFlag.DrawChildren)))&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-repaint"><strong>repaint</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-repaint">repaint</a>(self)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-repaint">repaint</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QRect)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-repaint">repaint</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QRegion,&nbsp;PySide6.QtGui.QBitmap,&nbsp;PySide6.QtGui.QPolygon,&nbsp;PySide6.QtCore.QRect])&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-resize"><strong>resize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-resize">resize</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QSize)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[PySide6.QtCore.QByteArray,&nbsp;bytes])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QByteArray</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-screen"><strong>screen</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-screen">screen</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QScreen</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;arg__3:&nbsp;PySide6.QtCore.QRect)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setAttribute">setAttribute</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QPalette.ColorRole)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setBaseSize">setBaseSize</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QSize)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;PySide6.QtCore.QMargins)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;PySide6.QtCore.Qt.ContextMenuPolicy)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setCursor">setCursor</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QCursor,&nbsp;PySide6.QtCore.Qt.CursorShape,&nbsp;PySide6.QtGui.QPixmap])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setDisabled">setDisabled</a>(self,&nbsp;arg__1:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setEnabled">setEnabled</a>(self,&nbsp;arg__1:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setFixedSize">setFixedSize</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QSize)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setFocus">setFocus</a>(self)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;PySide6.QtCore.Qt.FocusReason)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;PySide6.QtCore.Qt.FocusPolicy)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setFocusProxy">setFocusProxy</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setFont"><strong>setFont</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setFont">setFont</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QFont,&nbsp;str,&nbsp;Sequence[str]])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setForegroundRole">setForegroundRole</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QPalette.ColorRole)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setGeometry">setGeometry</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QRect)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setGeometry">setGeometry</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;PySide6.QtWidgets.QGraphicsEffect)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;PySide6.QtCore.Qt.InputMethodHint)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setLayout">setLayout</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QLayout)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;PySide6.QtCore.Qt.LayoutDirection)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;Union[PySide6.QtCore.QLocale,&nbsp;PySide6.QtCore.QLocale.Language])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMask"><strong>setMask</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMask">setMask</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QBitmap,&nbsp;str])&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setMask">setMask</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QRegion,&nbsp;PySide6.QtGui.QBitmap,&nbsp;PySide6.QtGui.QPolygon,&nbsp;PySide6.QtCore.QRect])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMaximumSize">setMaximumSize</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QSize)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMinimumSize">setMinimumSize</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QSize)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setPalette">setPalette</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QPalette,&nbsp;PySide6.QtCore.Qt.GlobalColor,&nbsp;PySide6.QtGui.QColor])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[PySide6.QtWidgets.QWidget])&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[PySide6.QtWidgets.QWidget],&nbsp;f:&nbsp;PySide6.QtCore.Qt.WindowType)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setScreen"><strong>setScreen</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setScreen">setScreen</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtGui.QScreen)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enable:&nbsp;bool&nbsp;=&nbsp;True)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enable:&nbsp;bool&nbsp;=&nbsp;True)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QSize)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setSizePolicy">setSizePolicy</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QSizePolicy)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-setSizePolicy">setSizePolicy</a>(self,&nbsp;horizontal:&nbsp;PySide6.QtWidgets.QSizePolicy.Policy,&nbsp;vertical:&nbsp;PySide6.QtWidgets.QSizePolicy.Policy)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setStatusTip">setStatusTip</a>(self,&nbsp;arg__1:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setStyle">setStyle</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QStyle)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setToolTip">setToolTip</a>(self,&nbsp;arg__1:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWhatsThis">setWhatsThis</a>(self,&nbsp;arg__1:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowFlag">setWindowFlag</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;PySide6.QtCore.Qt.WindowType)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;Union[PySide6.QtGui.QIcon,&nbsp;PySide6.QtGui.QPixmap])&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowIconText">setWindowIconText</a>(self,&nbsp;arg__1:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;PySide6.QtCore.Qt.WindowModality)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowModified">setWindowModified</a>(self,&nbsp;arg__1:&nbsp;bool)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowRole">setWindowRole</a>(self,&nbsp;arg__1:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;PySide6.QtCore.Qt.WindowState)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setWindowTitle">setWindowTitle</a>(self,&nbsp;arg__1:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-sharedPainter">sharedPainter</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QPainter</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-show"><strong>show</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-show">show</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-showFullScreen">showFullScreen</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-showMaximized">showMaximized</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-showMinimized">showMinimized</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-showNormal">showNormal</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-size"><strong>size</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-size">size</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QSize</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QSizePolicy</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-stackUnder">stackUnder</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtWidgets.QWidget)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-style"><strong>style</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-style">style</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QStyle</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-tabletEvent">tabletEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QTabletEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-testAttribute">testAttribute</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-topLevelWidget"><strong>topLevelWidget</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-topLevelWidget">topLevelWidget</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;PySide6.QtCore.Qt.GestureType)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-unsetCursor">unsetCursor</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-unsetLayoutDirection">unsetLayoutDirection</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-unsetLocale">unsetLocale</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-update"><strong>update</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-update">update</a>(self)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-update">update</a>(self,&nbsp;arg__1:&nbsp;PySide6.QtCore.QRect)&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-update">update</a>(self,&nbsp;arg__1:&nbsp;Union[PySide6.QtGui.QRegion,&nbsp;PySide6.QtGui.QBitmap,&nbsp;PySide6.QtGui.QPolygon,&nbsp;PySide6.QtCore.QRect])&nbsp;-&gt;&nbsp;None<br>
+<a href="#ConnectToIasDlg-update">update</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-updateGeometry">updateGeometry</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-updateMicroFocus">updateMicroFocus</a>(self,&nbsp;query:&nbsp;PySide6.QtCore.Qt.InputMethodQuery&nbsp;=&nbsp;Instance(Qt.ImQueryAll))&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QRegion</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-wheelEvent">wheelEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtGui.QWheelEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-width"><strong>width</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-width">width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-winId"><strong>winId</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-winId">winId</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-window"><strong>window</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-window">window</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QWindow</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtGui.QIcon</tt></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.WindowModality</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowState"><strong>windowState</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.WindowState</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-windowType"><strong>windowType</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-x"><strong>x</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-x">x</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-y"><strong>y</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-y">y</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="PySide6.QtWidgets.html#QWidget">PySide6.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-createWindowContainer">createWindowContainer</a>(window:&nbsp;PySide6.QtGui.QWindow,&nbsp;parent:&nbsp;Optional[PySide6.QtWidgets.QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;PySide6.QtCore.Qt.WindowType&nbsp;=&nbsp;Default(Qt.WindowFlags))&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-find"><strong>find</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-find">find</a>(arg__1:&nbsp;int)&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;PySide6.QtWidgets.QWidget</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setTabOrder">setTabOrder</a>(arg__1:&nbsp;PySide6.QtWidgets.QWidget,&nbsp;arg__2:&nbsp;PySide6.QtWidgets.QWidget)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PySide6.QtWidgets.html#QWidget">PySide6.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>RenderFlag</strong> = &lt;enum 'RenderFlag'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<hr>
+Methods inherited from <a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-childEvent"><strong>childEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-childEvent">childEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QChildEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-children">children</a>(self)&nbsp;-&gt;&nbsp;List[PySide6.QtCore.QObject]</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-connectNotify"><strong>connectNotify</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-connectNotify">connectNotify</a>(self,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-customEvent"><strong>customEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-customEvent">customEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-deleteLater">deleteLater</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-disconnectNotify">disconnectNotify</a>(self,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-dumpObjectInfo">dumpObjectInfo</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-dumpObjectTree">dumpObjectTree</a>(self)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[PySide6.QtCore.QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-emit"><strong>emit</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-emit">emit</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;*args:&nbsp;None)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-findChild">findChild</a>(self,&nbsp;type:&nbsp;type,&nbsp;name:&nbsp;str&nbsp;=&nbsp;{},&nbsp;options:&nbsp;PySide6.QtCore.Qt.FindChildOption&nbsp;=&nbsp;Instance(Qt.FindChildrenRecursively))&nbsp;-&gt;&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;type,&nbsp;name:&nbsp;str&nbsp;=&nbsp;{},&nbsp;options:&nbsp;PySide6.QtCore.Qt.FindChildOption&nbsp;=&nbsp;Instance(Qt.FindChildrenRecursively))&nbsp;-&gt;&nbsp;Iterable<br>
+<a href="#ConnectToIasDlg-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;type,&nbsp;pattern:&nbsp;Union[PySide6.QtCore.QRegularExpression,&nbsp;str],&nbsp;options:&nbsp;PySide6.QtCore.Qt.FindChildOption&nbsp;=&nbsp;Instance(Qt.FindChildrenRecursively))&nbsp;-&gt;&nbsp;Iterable</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-inherits">inherits</a>(self,&nbsp;classname:&nbsp;bytes)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-installEventFilter">installEventFilter</a>(self,&nbsp;filterObj:&nbsp;PySide6.QtCore.QObject)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isQuickItemType"><strong>isQuickItemType</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isQuickItemType">isQuickItemType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isSignalConnected">isSignalConnected</a>(self,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;PySide6.QtCore.QThread)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;PySide6.QtCore.Signal object&gt;
+<dl><dt><a name="ConnectToIasDlg-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-parent">parent</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QObject</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-property">property</a>(self,&nbsp;name:&nbsp;str)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-receivers"><strong>receivers</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-receivers">receivers</a>(self,&nbsp;signal:&nbsp;bytes)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-removeEventFilter">removeEventFilter</a>(self,&nbsp;obj:&nbsp;PySide6.QtCore.QObject)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-sender"><strong>sender</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-sender">sender</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QObject</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-senderSignalIndex">senderSignalIndex</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;str)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;str,&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;PySide6.QtCore.Qt.TimerType&nbsp;=&nbsp;Instance(Qt.CoarseTimer))&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-thread">thread</a>(self)&nbsp;-&gt;&nbsp;PySide6.QtCore.QThread</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-timerEvent"><strong>timerEvent</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-timerEvent">timerEvent</a>(self,&nbsp;event:&nbsp;PySide6.QtCore.QTimerEvent)&nbsp;-&gt;&nbsp;None</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-tr"><strong>tr</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from Shiboken.ObjectType</font></font></dt><dd><tt><a href="#ConnectToIasDlg-tr">tr</a>(self,&nbsp;sourceText:&nbsp;str,&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="PySide6.QtCore.html#QObject">PySide6.QtCore.QObject</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-connect"><strong>connect</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-connect">connect</a>(arg__1:&nbsp;PySide6.QtCore.QObject,&nbsp;arg__2:&nbsp;bytes,&nbsp;arg__3:&nbsp;Callable,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#ConnectToIasDlg-connect">connect</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;arg__2:&nbsp;Callable,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#ConnectToIasDlg-connect">connect</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;arg__2:&nbsp;PySide6.QtCore.QObject,&nbsp;arg__3:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#ConnectToIasDlg-connect">connect</a>(self,&nbsp;sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;bytes,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#ConnectToIasDlg-connect">connect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;method:&nbsp;PySide6.QtCore.QMetaMethod,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection<br>
+<a href="#ConnectToIasDlg-connect">connect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;bytes,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes,&nbsp;type:&nbsp;PySide6.QtCore.Qt.ConnectionType&nbsp;=&nbsp;Instance(Qt.AutoConnection))&nbsp;-&gt;&nbsp;PySide6.QtCore.QMetaObject.Connection</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-disconnect">disconnect</a>(arg__1:&nbsp;PySide6.QtCore.QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ConnectToIasDlg-disconnect">disconnect</a>(arg__1:&nbsp;PySide6.QtCore.QObject,&nbsp;arg__2:&nbsp;bytes,&nbsp;arg__3:&nbsp;Callable)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ConnectToIasDlg-disconnect">disconnect</a>(self,&nbsp;arg__1:&nbsp;bytes,&nbsp;arg__2:&nbsp;Callable)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ConnectToIasDlg-disconnect">disconnect</a>(self,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;Optional[bytes]&nbsp;=&nbsp;None)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ConnectToIasDlg-disconnect">disconnect</a>(self,&nbsp;signal:&nbsp;bytes,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ConnectToIasDlg-disconnect">disconnect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;PySide6.QtCore.QMetaMethod,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;PySide6.QtCore.QMetaMethod)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ConnectToIasDlg-disconnect">disconnect</a>(sender:&nbsp;PySide6.QtCore.QObject,&nbsp;signal:&nbsp;bytes,&nbsp;receiver:&nbsp;PySide6.QtCore.QObject,&nbsp;member:&nbsp;bytes)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PySide6.QtGui.html#QPaintDevice">PySide6.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-depth"><strong>depth</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ConnectToIasDlg-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="PySide6.QtGui.html#QPaintDevice">PySide6.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><tt><a href="#ConnectToIasDlg-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PySide6.QtGui.html#QPaintDevice">PySide6.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>painters</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PySide6.QtGui.html#QPaintDevice">PySide6.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;enum 'PaintDeviceMetric'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<hr>
+Data descriptors inherited from Shiboken.Object:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="IasAlarmGui.ui_connect_dialog.html#Ui_ConnectToIas">IasAlarmGui.ui_connect_dialog.Ui_ConnectToIas</a>:<br>
+<dl><dt><a name="ConnectToIasDlg-retranslateUi"><strong>retranslateUi</strong></a>(self, ConnectToIas)</dt></dl>
+
+<dl><dt><a name="ConnectToIasDlg-setupUi"><strong>setupUi</strong></a>(self, ConnectToIas)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="IasAlarmGui.ui_connect_dialog.html#Ui_ConnectToIas">IasAlarmGui.ui_connect_dialog.Ui_ConnectToIas</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
