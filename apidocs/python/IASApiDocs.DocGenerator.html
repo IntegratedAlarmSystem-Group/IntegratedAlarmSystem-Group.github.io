@@ -1,70 +1,67 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><title>Python: module IASApiDocs.DocGenerator</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head><body bgcolor="#f0f0f8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module IASApiDocs.DocGenerator</title>
+</head><body>
 
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
-<tr bgcolor="#7799ee">
-<td valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASApiDocs.html"><font color="#ffffff">IASApiDocs</font></a>.DocGenerator</strong></big></big></font></td
-><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IASApiDocs/DocGenerator.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IASApiDocs/DocGenerator.py</a></font></td></tr></table>
-    <p><tt>Base&nbsp;class&nbsp;for&nbsp;java,&nbsp;scala&nbsp;and&nbsp;python&nbsp;API&nbsp;docs&nbsp;generators<br>
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="IASApiDocs.html" class="white">IASApiDocs</a>.DocGenerator</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/fedora/IasRoot/lib/python3.12/site-packages/IASApiDocs/DocGenerator.py">/home/fedora/IasRoot/lib/python3.12/site-packages/IASApiDocs/DocGenerator.py</a></td></tr></table>
+    <p><span class="code">Base&nbsp;class&nbsp;for&nbsp;java,&nbsp;scala&nbsp;and&nbsp;python&nbsp;API&nbsp;docs&nbsp;generators<br>
 Created&nbsp;on&nbsp;Jul&nbsp;7,&nbsp;2017<br>
 &nbsp;<br>
-@author:&nbsp;acaproni</tt></p>
+@author:&nbsp;acaproni</span></p>
 <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#aa55cc">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
     
-<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
-</td><td width="25%" valign=top><a href="os.html">os</a><br>
-</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
-</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ee77aa">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
     
-<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl>
-<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
-</font></dt><dd>
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
 <dl>
-<dt><font face="helvetica, arial"><a href="IASApiDocs.DocGenerator.html#DocGenerator">DocGenerator</a>
-</font></dt></dl>
+<dt class="heading-text"><a href="IASApiDocs.DocGenerator.html#DocGenerator">DocGenerator</a>
+</dt></dl>
 </dd>
 </dl>
  <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ffc8d8">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="DocGenerator">class <strong>DocGenerator</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="DocGenerator">class <strong>DocGenerator</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
-<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#DocGenerator">DocGenerator</a>(srcFolder,&nbsp;dstFolder,&nbsp;outFile=&amp;lt;_io.TextIOWrapper&nbsp;name='&amp;lt;stdout&amp;gt;'&nbsp;mode='w'&nbsp;encoding='utf-8'&amp;gt;)<br>
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#DocGenerator">DocGenerator</a>(srcFolder,&nbsp;dstFolder,&nbsp;outFile=&amp;lt;_io.TextIOWrapper&nbsp;name='&amp;lt;stdout&amp;gt;'&nbsp;mode='w'&nbsp;encoding='utf-8'&amp;gt;)<br>
 &nbsp;<br>
-The&nbsp;base&nbsp;class&nbsp;for&nbsp;API&nbsp;docs&nbsp;generators<br>&nbsp;</tt></td></tr>
+The&nbsp;base&nbsp;class&nbsp;for&nbsp;API&nbsp;docs&nbsp;generators<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
-<td width="100%">Methods defined here:<br>
-<dl><dt><a name="DocGenerator-__init__"><strong>__init__</strong></a>(self, srcFolder, dstFolder, outFile=&lt;_io.TextIOWrapper name='&lt;stdout&gt;' mode='w' encoding='utf-8'&gt;)</dt><dd><tt>Constructor<br>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="DocGenerator-__init__"><strong>__init__</strong></a>(self, srcFolder, dstFolder, outFile=&lt;_io.TextIOWrapper name='&lt;stdout&gt;' mode='w' encoding='utf-8'&gt;)</dt><dd><span class="code">Constructor<br>
 @param&nbsp;srcFolder:&nbsp;the&nbsp;folder&nbsp;with&nbsp;sources&nbsp;to&nbsp;generate&nbsp;their&nbsp;documentation<br>
 @param&nbsp;dstFolder:&nbsp;destination&nbsp;folder&nbsp;for&nbsp;the&nbsp;api&nbsp;docs&nbsp;&nbsp;<br>
-@param&nbsp;outFile:&nbsp;the&nbsp;file&nbsp;where&nbsp;the&nbsp;output&nbsp;generated&nbsp;by&nbsp;calling&nbsp;java/scala/py-doc&nbsp;must&nbsp;be&nbsp;sent</tt></dd></dl>
+@param&nbsp;outFile:&nbsp;the&nbsp;file&nbsp;where&nbsp;the&nbsp;output&nbsp;generated&nbsp;by&nbsp;calling&nbsp;java/scala/py-doc&nbsp;must&nbsp;be&nbsp;sent</span></dd></dl>
 
-<dl><dt><a name="DocGenerator-checkFolders"><strong>checkFolders</strong></a>(self, src, dst)</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;source&nbsp;and&nbsp;dest&nbsp;folders&nbsp;are&nbsp;valid&nbsp;and&nbsp;if&nbsp;it&nbsp;is&nbsp;not&nbsp;the&nbsp;case,<br>
+<dl><dt><a name="DocGenerator-checkFolders"><strong>checkFolders</strong></a>(self, src, dst)</dt><dd><span class="code">Check&nbsp;if&nbsp;the&nbsp;source&nbsp;and&nbsp;dest&nbsp;folders&nbsp;are&nbsp;valid&nbsp;and&nbsp;if&nbsp;it&nbsp;is&nbsp;not&nbsp;the&nbsp;case,<br>
 throws&nbsp;an&nbsp;exception<br>
 @param&nbsp;src:&nbsp;the&nbsp;folder&nbsp;with&nbsp;java&nbsp;sources&nbsp;to&nbsp;check<br>
-@param&nbsp;dst:&nbsp;destination&nbsp;folder&nbsp;to&nbsp;check</tt></dd></dl>
+@param&nbsp;dst:&nbsp;destination&nbsp;folder&nbsp;to&nbsp;check</span></dd></dl>
 
-<dl><dt><a name="DocGenerator-containsSources"><strong>containsSources</strong></a>(self, folder, fileExtension)</dt><dd><tt>@param&nbsp;folder:&nbsp;the&nbsp;folder&nbsp;(src&nbsp;or&nbsp;test)&nbsp;to&nbsp;check&nbsp;if&nbsp;contains&nbsp;java&nbsp;sources<br>
+<dl><dt><a name="DocGenerator-containsSources"><strong>containsSources</strong></a>(self, folder, fileExtension)</dt><dd><span class="code">@param&nbsp;folder:&nbsp;the&nbsp;folder&nbsp;(src&nbsp;or&nbsp;test)&nbsp;to&nbsp;check&nbsp;if&nbsp;contains&nbsp;java&nbsp;sources<br>
 @param&nbsp;fileExtension:&nbsp;the&nbsp;extension&nbsp;of&nbsp;the&nbsp;files&nbsp;that&nbsp;the&nbsp;folder&nbsp;is&nbsp;supposed&nbsp;to&nbsp;contain<br>
-@return:&nbsp;True&nbsp;if&nbsp;the&nbsp;passed&nbsp;folder&nbsp;contains&nbsp;java&nbsp;sources</tt></dd></dl>
+@return:&nbsp;True&nbsp;if&nbsp;the&nbsp;passed&nbsp;folder&nbsp;contains&nbsp;java&nbsp;sources</span></dd></dl>
 
-<dl><dt><a name="DocGenerator-getSrcPaths"><strong>getSrcPaths</strong></a>(self, sourceFolder, includeTestFolder, folderName, fileExtension)</dt><dd><tt>Scan&nbsp;the&nbsp;source&nbsp;folder&nbsp;and&nbsp;return&nbsp;a&nbsp;list&nbsp;of&nbsp;source&nbsp;folders<br>
+<dl><dt><a name="DocGenerator-getSrcPaths"><strong>getSrcPaths</strong></a>(self, sourceFolder, includeTestFolder, folderName, fileExtension)</dt><dd><span class="code">Scan&nbsp;the&nbsp;source&nbsp;folder&nbsp;and&nbsp;return&nbsp;a&nbsp;list&nbsp;of&nbsp;source&nbsp;folders<br>
 containing&nbsp;source&nbsp;files.<br>
 Source&nbsp;can&nbsp;be&nbsp;contained&nbsp;into&nbsp;src&nbsp;or&nbsp;test&nbsp;(the&nbsp;latter&nbsp;is&nbsp;used&nbsp;only<br>
 if&nbsp;the&nbsp;includeTestFolder&nbsp;parameter&nbsp;is&nbsp;True)<br>
@@ -73,15 +70,15 @@ The&nbsp;search&nbsp;is&nbsp;recursive&nbsp;because&nbsp;a&nbsp;folder&nbsp;can&
 @param&nbsp;sourceFolder:&nbsp;root&nbsp;source&nbsp;folder&nbsp;(generally&nbsp;IAS,&nbsp;passed&nbsp;in&nbsp;the&nbsp;command&nbsp;line)<br>
 @param&nbsp;includeTestFolder:&nbsp;True&nbsp;to&nbsp;include&nbsp;test&nbsp;folders&nbsp;in&nbsp;the&nbsp;scan<br>
 @param&nbsp;&nbsp;folderName:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;folder&nbsp;containing&nbsp;the&nbsp;sources&nbsp;like&nbsp;java&nbsp;or&nbsp;python&nbsp;<br>
-@param&nbsp;fileExtension:&nbsp;the&nbsp;extension&nbsp;of&nbsp;the&nbsp;files&nbsp;that&nbsp;the&nbsp;folder&nbsp;is&nbsp;supposed&nbsp;to&nbsp;contain</tt></dd></dl>
+@param&nbsp;fileExtension:&nbsp;the&nbsp;extension&nbsp;of&nbsp;the&nbsp;files&nbsp;that&nbsp;the&nbsp;folder&nbsp;is&nbsp;supposed&nbsp;to&nbsp;contain</span></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
 <dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
 </dl>
 <dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
 </dl>
 </td></tr></table></td></tr></table>
 </body></html>

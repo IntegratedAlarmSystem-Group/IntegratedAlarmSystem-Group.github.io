@@ -1,87 +1,87 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><title>Python: module IasCmdReply.IasCommand</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head><body bgcolor="#f0f0f8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module IasCmdReply.IasCommand</title>
+</head><body>
 
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
-<tr bgcolor="#7799ee">
-<td valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasCmdReply.html"><font color="#ffffff">IasCmdReply</font></a>.IasCommand</strong></big></big></font></td
-><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasCmdReply/IasCommand.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasCmdReply/IasCommand.py</a></font></td></tr></table>
-    <p><tt>Created&nbsp;on&nbsp;Dec&nbsp;16,&nbsp;2019<br>
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="IasCmdReply.html" class="white">IasCmdReply</a>.IasCommand</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/fedora/IasRoot/lib/python3.12/site-packages/IasCmdReply/IasCommand.py">/home/fedora/IasRoot/lib/python3.12/site-packages/IasCmdReply/IasCommand.py</a></td></tr></table>
+    <p><span class="code">Created&nbsp;on&nbsp;Dec&nbsp;16,&nbsp;2019<br>
 &nbsp;<br>
-@author:&nbsp;acaproni</tt></p>
+@author:&nbsp;acaproni</span></p>
 <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#aa55cc">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
     
-<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
-</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ee77aa">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
     
-<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl>
-<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
-</font></dt><dd>
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
 <dl>
-<dt><font face="helvetica, arial"><a href="IasCmdReply.IasCommand.html#IasCommand">IasCommand</a>
-</font></dt></dl>
+<dt class="heading-text"><a href="IasCmdReply.IasCommand.html#IasCommand">IasCommand</a>
+</dt></dl>
 </dd>
 </dl>
  <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ffc8d8">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="IasCommand">class <strong>IasCommand</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="IasCommand">class <strong>IasCommand</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
-<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#IasCommand">IasCommand</a>(dest,&nbsp;sender,&nbsp;cmd,&nbsp;id,&nbsp;tStamp,&nbsp;params=None,&nbsp;props=None)<br>
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#IasCommand">IasCommand</a>(dest:&nbsp;str,&nbsp;sender:&nbsp;str,&nbsp;cmd,&nbsp;id:&nbsp;int,&nbsp;tStamp:&nbsp;str,&nbsp;params=None,&nbsp;props=None)<br>
 &nbsp;<br>
 The&nbsp;python&nbsp;data&nbsp;structure&nbsp;for&nbsp;a&nbsp;Command&nbsp;to&nbsp;be&nbsp;sent&nbsp;to&nbsp;the&nbsp;kafka&nbsp;command&nbsp;topic.<br>
 &nbsp;<br>
 It&nbsp;is&nbsp;the&nbsp;python&nbsp;equivalent&nbsp;of&nbsp;the&nbsp;java&nbsp;org.eso.ias.command.CommandMessage<br>
 &nbsp;<br>
-All&nbsp;parameters&nbsp;are&nbsp;strings,&nbsp;the&nbsp;timestamps&nbsp;are&nbsp;string&nbsp;formatted&nbsp;as&nbsp;ISO-8601<br>&nbsp;</tt></td></tr>
+All&nbsp;parameters&nbsp;are&nbsp;strings,&nbsp;the&nbsp;timestamps&nbsp;are&nbsp;string&nbsp;formatted&nbsp;as&nbsp;ISO-8601<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
-<td width="100%">Methods defined here:<br>
-<dl><dt><a name="IasCommand-__init__"><strong>__init__</strong></a>(self, dest, sender, cmd, id, tStamp, params=None, props=None)</dt><dd><tt>Constructor<br>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="IasCommand-__init__"><strong>__init__</strong></a>(self, dest: str, sender: str, cmd, id: int, tStamp: str, params=None, props=None)</dt><dd><span class="code">Constructor<br>
 &nbsp;<br>
 Build&nbsp;a&nbsp;command&nbsp;with&nbsp;the&nbsp;given&nbsp;parameters<br>
 &nbsp;<br>
-@param&nbsp;dest&nbsp;The&nbsp;ID&nbsp;of&nbsp;destination&nbsp;(or&nbsp;BROADCAST)<br>
-@param&nbsp;sender&nbsp;The&nbsp;full&nbsp;running&nbsp;id&nbsp;of&nbsp;the&nbsp;sender&nbsp;(string)<br>
-@param&nbsp;cmd&nbsp;The&nbsp;command&nbsp;to&nbsp;execute&nbsp;(a&nbsp;string&nbsp;or&nbsp;a&nbsp;IasCommandType)<br>
-@param&nbsp;id&nbsp;The&nbsp;unique&nbsp;identifier&nbsp;of&nbsp;the&nbsp;command&nbsp;(int&nbsp;or&nbsp;string&nbsp;encoding&nbsp;an&nbsp;int)<br>
-@param&nbsp;tStamp&nbsp;The&nbsp;timestamp&nbsp;when&nbsp;the&nbsp;command&nbsp;has&nbsp;been&nbsp;published&nbsp;(in&nbsp;ISO&nbsp;8601&nbsp;format)<br>
-@param&nbsp;params&nbsp;The&nbsp;parameters&nbsp;of&nbsp;the&nbsp;command,&nbsp;if&nbsp;any&nbsp;(Nore&nbsp;or&nbsp;list&nbsp;of&nbsp;strings)<br>
-@param&nbsp;props&nbsp;Additional&nbsp;properties,&nbsp;if&nbsp;any&nbsp;(None&nbsp;or&nbsp;dictionary&nbsp;of&nbsp;strings)</tt></dd></dl>
+Params:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dest&nbsp;The&nbsp;ID&nbsp;of&nbsp;destination&nbsp;(or&nbsp;BROADCAST)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sender&nbsp;The&nbsp;full&nbsp;running&nbsp;id&nbsp;of&nbsp;the&nbsp;sender&nbsp;(string)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cmd&nbsp;The&nbsp;command&nbsp;to&nbsp;execute&nbsp;(a&nbsp;string&nbsp;or&nbsp;a&nbsp;IasCommandType)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;The&nbsp;unique&nbsp;identifier&nbsp;of&nbsp;the&nbsp;command&nbsp;(int&nbsp;or&nbsp;string&nbsp;encoding&nbsp;an&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tStamp&nbsp;The&nbsp;timestamp&nbsp;when&nbsp;the&nbsp;command&nbsp;has&nbsp;been&nbsp;published&nbsp;(in&nbsp;ISO&nbsp;8601&nbsp;format)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;params&nbsp;The&nbsp;parameters&nbsp;of&nbsp;the&nbsp;command,&nbsp;if&nbsp;any&nbsp;(Nore&nbsp;or&nbsp;list&nbsp;of&nbsp;strings)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;props&nbsp;Additional&nbsp;properties,&nbsp;if&nbsp;any&nbsp;(None&nbsp;or&nbsp;dictionary&nbsp;of&nbsp;strings)</span></dd></dl>
 
-<dl><dt><a name="IasCommand-toJSonString"><strong>toJSonString</strong></a>(self)</dt><dd><tt>@return&nbsp;the&nbsp;JSON&nbsp;representation&nbsp;of&nbsp;the&nbsp;<a href="#IasCommand">IasCommand</a></tt></dd></dl>
+<dl><dt><a name="IasCommand-toJSonString"><strong>toJSonString</strong></a>(self)</dt><dd><span class="code">@return&nbsp;the&nbsp;JSON&nbsp;representation&nbsp;of&nbsp;the&nbsp;<a href="#IasCommand">IasCommand</a></span></dd></dl>
 
 <hr>
 Static methods defined here:<br>
-<dl><dt><a name="IasCommand-fromJSon"><strong>fromJSon</strong></a>(jsonStr)</dt><dd><tt>Factory&nbsp;method&nbsp;to&nbsp;build&nbsp;a&nbsp;<a href="#IasCommand">IasCommand</a>&nbsp;from&nbsp;a&nbsp;JSON&nbsp;string<br>
+<dl><dt><a name="IasCommand-fromJSon"><strong>fromJSon</strong></a>(jsonStr)</dt><dd><span class="code">Factory&nbsp;method&nbsp;to&nbsp;build&nbsp;a&nbsp;<a href="#IasCommand">IasCommand</a>&nbsp;from&nbsp;a&nbsp;JSON&nbsp;string<br>
 &nbsp;<br>
-@param&nbsp;jsonStr&nbsp;the&nbsp;json&nbsp;string&nbsp;representing&nbsp;the&nbsp;<a href="#IasCommand">IasCommand</a></tt></dd></dl>
+@param&nbsp;jsonStr&nbsp;the&nbsp;json&nbsp;string&nbsp;representing&nbsp;the&nbsp;<a href="#IasCommand">IasCommand</a></span></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
 <dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
 </dl>
 <dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
 <dl><dt><strong>BROADCAST_ADDRESS</strong> = '*'</dl>
+
+<dl><dt><strong>__annotations__</strong> = {'command': &lt;enum 'IasCommandType'&gt;, 'id': &lt;class 'int'&gt;}</dl>
 
 <dl><dt><strong>command</strong> = None</dl>
 

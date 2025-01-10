@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module iasLogDumper</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">iasLogDumper</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/fedora/ias/KafkaUtils/src/main/python/iasLogDumper.py">/home/fedora/ias/KafkaUtils/src/main/python/iasLogDumper.py</a></td></tr></table>
+    <p><span class="code">Dumps&nbsp;in&nbsp;the&nbsp;stdout&nbsp;the&nbsp;logs&nbsp;published&nbsp;in&nbsp;a&nbsp;BSDB&nbsp;topic<br>
+&nbsp;<br>
+Created&nbsp;on&nbsp;Apr&nbsp;11,&nbsp;2024<br>
+&nbsp;<br>
+@author:&nbsp;acaproni</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="argparse.html">argparse</a><br>
+</td><td class="multicolumn"><a href="signal.html">signal</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a>(<a href="builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="iasLogDumper.html#DumperListener">DumperListener</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="DumperListener">class <strong>DumperListener</strong></a>(<a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#DumperListener">DumperListener</a>(quiet:&nbsp;bool,&nbsp;max_messages:&nbsp;int)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="iasLogDumper.html#DumperListener">DumperListener</a></dd>
+<dd><a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="DumperListener-__init__"><strong>__init__</strong></a>(self, quiet: bool, max_messages: int) -&gt; None</dt><dd><span class="code">Constructor<br>
+&nbsp;<br>
+Params:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;quiet:&nbsp;True&nbsp;if&nbsp;the&nbsp;logs&nbsp;must&nbsp;not&nbsp;be&nbsp;printed&nbsp;in&nbsp;the&nbsp;stdout<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(to&nbsp;be&nbsp;used&nbsp;with&nbsp;-m&nbsp;or&nbsp;-o)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;max_messages:&nbsp;the&nbsp;max&nbsp;number&nbsp;of&nbsp;messages&nbsp;to&nbsp;wait<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0&nbsp;means&nbsp;unlimited)</span></dd></dl>
+
+<dl><dt><a name="DumperListener-get_processed_logs"><strong>get_processed_logs</strong></a>(self)</dt><dd><span class="code">Returns:&nbsp;the&nbsp;numberof&nbsp;logs&nbsp;procesed&nbsp;so&nbsp;far</span></dd></dl>
+
+<dl><dt><a name="DumperListener-iasLogReceived"><strong>iasLogReceived</strong></a>(self, log: str) -&gt; None</dt><dd><span class="code">Process&nbsp;the&nbsp;log</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-Lock"><strong>Lock</strong></a> = allocate_lock(...)</dt><dd><span class="code">allocate_lock()&nbsp;-&gt;&nbsp;lock&nbsp;object<br>
+(allocate()&nbsp;is&nbsp;an&nbsp;obsolete&nbsp;synonym)<br>
+&nbsp;<br>
+Create&nbsp;a&nbsp;new&nbsp;lock&nbsp;object.&nbsp;See&nbsp;help(type(threading.<a href="#-Lock">Lock</a>()))&nbsp;for<br>
+information&nbsp;about&nbsp;locks.</span></dd></dl>
+ <dl><dt><a name="-interrupt_handler"><strong>interrupt_handler</strong></a>(signum, frame)</dt><dd><span class="code">The&nbsp;handler&nbsp;of&nbsp;CTRL-C</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>consumer</strong> = None<br>
+<strong>terminated</strong> = False<br>
+<strong>termination_lock</strong> = &lt;unlocked _thread.lock object&gt;</td></tr></table>
+</body></html>

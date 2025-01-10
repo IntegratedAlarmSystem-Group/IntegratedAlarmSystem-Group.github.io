@@ -1,50 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><title>Python: module IasPlugin3.UdpPlugin</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head><body bgcolor="#f0f0f8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module IasPlugin3.UdpPlugin</title>
+</head><body>
 
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
-<tr bgcolor="#7799ee">
-<td valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IasPlugin3.html"><font color="#ffffff">IasPlugin3</font></a>.UdpPlugin</strong></big></big></font></td
-><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasPlugin3/UdpPlugin.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IasPlugin3/UdpPlugin.py</a></font></td></tr></table>
-    <p><tt>Created&nbsp;on&nbsp;May&nbsp;9,&nbsp;2018<br>
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="IasPlugin3.html" class="white">IasPlugin3</a>.UdpPlugin</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/fedora/IasRoot/lib/python3.12/site-packages/IasPlugin3/UdpPlugin.py">/home/fedora/IasRoot/lib/python3.12/site-packages/IasPlugin3/UdpPlugin.py</a></td></tr></table>
+    <p><span class="code">Created&nbsp;on&nbsp;May&nbsp;9,&nbsp;2018<br>
 &nbsp;<br>
-@author:&nbsp;acaproni</tt></p>
+@author:&nbsp;acaproni</span></p>
 <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#aa55cc">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
     
-<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
-</td><td width="25%" valign=top><a href="os.html">os</a><br>
-</td><td width="25%" valign=top><a href="socket.html">socket</a><br>
-</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ee77aa">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="socket.html">socket</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
     
-<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl>
-<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
-</font></dt><dd>
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
 <dl>
-<dt><font face="helvetica, arial"><a href="IasPlugin3.UdpPlugin.html#UdpPlugin">UdpPlugin</a>
-</font></dt></dl>
+<dt class="heading-text"><a href="IasPlugin3.UdpPlugin.html#UdpPlugin">UdpPlugin</a>
+</dt></dl>
 </dd>
 </dl>
  <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ffc8d8">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="UdpPlugin">class <strong>UdpPlugin</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="UdpPlugin">class <strong>UdpPlugin</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
-<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#UdpPlugin">UdpPlugin</a>(hostname,&nbsp;port)<br>
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#UdpPlugin">UdpPlugin</a>(hostname,&nbsp;port)<br>
 &nbsp;<br>
 UpdPlugin&nbsp;sends&nbsp;monitor&nbsp;points&nbsp;to&nbsp;the&nbsp;java&nbsp;plugin&nbsp;by&nbsp;means&nbsp;<br>
 of&nbsp;UDP&nbsp;sockets.<br>
@@ -70,20 +67,20 @@ temporarily&nbsp;stored&nbsp;in&nbsp;a&nbsp;dictionary&nbsp;and&nbsp;sent&nbsp;a
 time&nbsp;intervals.<br>
 In&nbsp;this&nbsp;way&nbsp;if&nbsp;the&nbsp;same&nbsp;value&nbsp;is&nbsp;sent&nbsp;many&nbsp;times&nbsp;in&nbsp;the&nbsp;time&nbsp;interval&nbsp;<br>
 only&nbsp;the&nbsp;last&nbsp;value&nbsp;is&nbsp;effectively&nbsp;sent&nbsp;to&nbsp;the&nbsp;java&nbsp;plugin&nbsp;mitigating<br>
-a&nbsp;misbehaving&nbsp;implementation.<br>&nbsp;</tt></td></tr>
+a&nbsp;misbehaving&nbsp;implementation.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
-<td width="100%">Methods defined here:<br>
-<dl><dt><a name="UdpPlugin-__init__"><strong>__init__</strong></a>(self, hostname, port)</dt><dd><tt>Constructor.<br>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="UdpPlugin-__init__"><strong>__init__</strong></a>(self, hostname, port)</dt><dd><span class="code">Constructor.<br>
 &nbsp;<br>
 @param&nbsp;hostname&nbsp;the&nbsp;host&nbsp;name&nbsp;to&nbsp;send&nbsp;data&nbsp;packets&nbsp;to<br>
 @param&nbsp;port&nbsp;the&nbsp;port&nbsp;to&nbsp;send&nbsp;UDP&nbsp;packets&nbsp;to<br>
-@raise&nbsp;exception:&nbsp;if&nbsp;the&nbsp;hostname&nbsp;is&nbsp;not&nbsp;resolved</tt></dd></dl>
+@raise&nbsp;exception:&nbsp;if&nbsp;the&nbsp;hostname&nbsp;is&nbsp;not&nbsp;resolved</span></dd></dl>
 
-<dl><dt><a name="UdpPlugin-shutdown"><strong>shutdown</strong></a>(self)</dt><dd><tt>Shutdown&nbsp;the&nbsp;plugin</tt></dd></dl>
+<dl><dt><a name="UdpPlugin-shutdown"><strong>shutdown</strong></a>(self)</dt><dd><span class="code">Shutdown&nbsp;the&nbsp;plugin</span></dd></dl>
 
-<dl><dt><a name="UdpPlugin-start"><strong>start</strong></a>(self)</dt><dd><tt>Start&nbsp;the&nbsp;<a href="#UdpPlugin">UdpPlugin</a></tt></dd></dl>
+<dl><dt><a name="UdpPlugin-start"><strong>start</strong></a>(self)</dt><dd><span class="code">Start&nbsp;the&nbsp;<a href="#UdpPlugin">UdpPlugin</a></span></dd></dl>
 
-<dl><dt><a name="UdpPlugin-submit"><strong>submit</strong></a>(self, mPointID, value, valueType, timestamp=datetime.datetime(2023, 12, 29, 6, 34, 36, 795070), operationalMode=None)</dt><dd><tt>Submit&nbsp;a&nbsp;monitor&nbsp;point&nbsp;or&nbsp;alarm&nbsp;with&nbsp;the&nbsp;give&nbsp;ID&nbsp;to&nbsp;the&nbsp;java&nbsp;plugin.<br>
+<dl><dt><a name="UdpPlugin-submit"><strong>submit</strong></a>(self, mPointID, value, valueType, timestamp=datetime.datetime(2025, 1, 10, 15, 8, 19, 803616), operationalMode=None)</dt><dd><span class="code">Submit&nbsp;a&nbsp;monitor&nbsp;point&nbsp;or&nbsp;alarm&nbsp;with&nbsp;the&nbsp;give&nbsp;ID&nbsp;to&nbsp;the&nbsp;java&nbsp;plugin.<br>
 &nbsp;<br>
 The&nbsp;monitor&nbsp;point&nbsp;is&nbsp;added&nbsp;to&nbsp;the&nbsp;dictionary&nbsp;and&nbsp;will&nbsp;be&nbsp;sent&nbsp;later<br>
 &nbsp;<br>
@@ -93,19 +90,25 @@ The&nbsp;monitor&nbsp;point&nbsp;is&nbsp;added&nbsp;to&nbsp;the&nbsp;dictionary&
 @param&nbsp;timestamp:&nbsp;(datetime)&nbsp;the&nbsp;timestamp&nbsp;when&nbsp;the&nbsp;value&nbsp;has&nbsp;been<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;red&nbsp;from&nbsp;the&nbsp;monitored&nbsp;system<br>
 @param&nbsp;operationalMode&nbsp;(OperationalMode)&nbsp;the&nbsp;optional&nbsp;operational&nbsp;mode<br>
-@see:&nbsp;JsonMsg.IAS_SUPPORTED_TYPES</tt></dd></dl>
+@see:&nbsp;JsonMsg.IAS_SUPPORTED_TYPES</span></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
 <dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
 </dl>
 <dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
 <dl><dt><strong>SENDING_TIME_INTERVAL</strong> = 0.25</dl>
 
-</td></tr></table></td></tr></table>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>__warningregistry__</strong> = {'version': 0}</td></tr></table>
 </body></html>

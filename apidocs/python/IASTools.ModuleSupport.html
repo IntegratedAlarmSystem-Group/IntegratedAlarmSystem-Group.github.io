@@ -1,79 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><title>Python: module IASTools.ModuleSupport</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head><body bgcolor="#f0f0f8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module IASTools.ModuleSupport</title>
+</head><body>
 
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
-<tr bgcolor="#7799ee">
-<td valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="IASTools.html"><font color="#ffffff">IASTools</font></a>.ModuleSupport</strong></big></big></font></td
-><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ubuntu/IasRoot/lib/python3.10/site-packages/IASTools/ModuleSupport.py">/home/ubuntu/IasRoot/lib/python3.10/site-packages/IASTools/ModuleSupport.py</a></font></td></tr></table>
-    <p><tt>Created&nbsp;on&nbsp;Sep&nbsp;23,&nbsp;2016<br>
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="IASTools.html" class="white">IASTools</a>.ModuleSupport</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/fedora/IasRoot/lib/python3.12/site-packages/IASTools/ModuleSupport.py">/home/fedora/IasRoot/lib/python3.12/site-packages/IASTools/ModuleSupport.py</a></td></tr></table>
+    <p><span class="code">Created&nbsp;on&nbsp;Sep&nbsp;23,&nbsp;2016<br>
 &nbsp;<br>
-@author:&nbsp;acaproni</tt></p>
+@author:&nbsp;acaproni</span></p>
 <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#aa55cc">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
     
-<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="IASTools.FileSupport.html">IASTools.FileSupport</a><br>
-</td><td width="25%" valign=top><a href="logging.html">logging</a><br>
-</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ee77aa">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="IASTools.FileSupport.html">IASTools.FileSupport</a><br>
+</td><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
     
-<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl>
-<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
-</font></dt><dd>
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
 <dl>
-<dt><font face="helvetica, arial"><a href="IASTools.ModuleSupport.html#ModuleSupport">ModuleSupport</a>
-</font></dt></dl>
+<dt class="heading-text"><a href="IASTools.ModuleSupport.html#ModuleSupport">ModuleSupport</a>
+</dt></dl>
 </dd>
 </dl>
  <p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ffc8d8">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="ModuleSupport">class <strong>ModuleSupport</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ModuleSupport">class <strong>ModuleSupport</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
-<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>A&nbsp;class&nbsp;providing&nbsp;useful&nbsp;method&nbsp;for&nbsp;dealing&nbsp;with&nbsp;IAS<br>
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">A&nbsp;class&nbsp;providing&nbsp;useful&nbsp;method&nbsp;for&nbsp;dealing&nbsp;with&nbsp;IAS<br>
 modules&nbsp;including&nbsp;IAS_ROOT)<br>
 &nbsp;<br>
 @raise&nbsp;OSError:&nbsp;if&nbsp;the&nbsp;folder&nbsp;is&nbsp;not&nbsp;writable&nbsp;or&nbsp;the&nbsp;license&nbsp;file&nbsp;is&nbsp;not&nbsp;found<br>
-@raise&nbsp;ValueError:&nbsp;if&nbsp;the&nbsp;passed&nbsp;folder&nbsp;name&nbsp;is&nbsp;None&nbsp;or&nbsp;Empty<br>&nbsp;</tt></td></tr>
+@raise&nbsp;ValueError:&nbsp;if&nbsp;the&nbsp;passed&nbsp;folder&nbsp;name&nbsp;is&nbsp;None&nbsp;or&nbsp;Empty<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
-<td width="100%">Static methods defined here:<br>
-<dl><dt><a name="ModuleSupport-createModule"><strong>createModule</strong></a>(name)</dt><dd><tt>Create&nbsp;a&nbsp;IAS&nbsp;empty&nbsp;module.<br>
+<td class="singlecolumn">Static methods defined here:<br>
+<dl><dt><a name="ModuleSupport-createModule"><strong>createModule</strong></a>(name)</dt><dd><span class="code">Create&nbsp;a&nbsp;IAS&nbsp;empty&nbsp;module.<br>
 &nbsp;<br>
 The&nbsp;text&nbsp;of&nbsp;the&nbsp;LGPL&nbsp;license&nbsp;will&nbsp;be&nbsp;copied&nbsp;in&nbsp;the&nbsp;root&nbsp;of&nbsp;the&nbsp;module.<br>
 &nbsp;<br>
 @param&nbsp;name:&nbsp;The&nbsp;name&nbsp;(full&nbsp;path)&nbsp;of&nbsp;the&nbsp;module&nbsp;to&nbsp;create.<br>
 &nbsp;<br>
 @return:&nbsp;0&nbsp;in&nbsp;case&nbsp;of&nbsp;success;&nbsp;-1&nbsp;otherwise<br>
-@see:&nbsp;self.<strong>writeLicenseFile</strong></tt></dd></dl>
+@see:&nbsp;self.<strong>writeLicenseFile</strong></span></dd></dl>
 
-<dl><dt><a name="ModuleSupport-removeExistingModule"><strong>removeExistingModule</strong></a>(name)</dt><dd><tt>Remove&nbsp;an&nbsp;existing&nbsp;module<br>
+<dl><dt><a name="ModuleSupport-removeExistingModule"><strong>removeExistingModule</strong></a>(name)</dt><dd><span class="code">Remove&nbsp;an&nbsp;existing&nbsp;module<br>
 &nbsp;<br>
-@param&nbsp;name:&nbsp;The&nbsp;full&nbsp;path&nbsp;name&nbsp;of&nbsp;the&nbsp;module&nbsp;to&nbsp;remove</tt></dd></dl>
+@param&nbsp;name:&nbsp;The&nbsp;full&nbsp;path&nbsp;name&nbsp;of&nbsp;the&nbsp;module&nbsp;to&nbsp;remove</span></dd></dl>
 
-<dl><dt><a name="ModuleSupport-writeLicenseFile"><strong>writeLicenseFile</strong></a>(rootOfModule)</dt><dd><tt>Create&nbsp;a&nbsp;file&nbsp;with&nbsp;the&nbsp;license&nbsp;in&nbsp;the&nbsp;passed&nbsp;rootOfModule<br>
+<dl><dt><a name="ModuleSupport-writeLicenseFile"><strong>writeLicenseFile</strong></a>(rootOfModule)</dt><dd><span class="code">Create&nbsp;a&nbsp;file&nbsp;with&nbsp;the&nbsp;license&nbsp;in&nbsp;the&nbsp;passed&nbsp;rootOfModule<br>
 &nbsp;<br>
-@param&nbsp;The&nbsp;root&nbsp;folder&nbsp;of&nbsp;the&nbsp;module</tt></dd></dl>
+@param&nbsp;The&nbsp;root&nbsp;folder&nbsp;of&nbsp;the&nbsp;module</span></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
 <dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
 </dl>
 <dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
 </dl>
 </td></tr></table></td></tr></table>
 </body></html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module IasCmdReply.IasCommandSender</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="IasCmdReply.html" class="white">IasCmdReply</a>.IasCommandSender</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/fedora/IasRoot/lib/python3.12/site-packages/IasCmdReply/IasCommandSender.py">/home/fedora/IasRoot/lib/python3.12/site-packages/IasCmdReply/IasCommandSender.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="time.html">time</a><br>
+</td><td class="multicolumn"><a href="traceback.html">traceback</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a>(<a href="builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="IasCmdReply.IasCommandSender.html#IasCommandSender">IasCommandSender</a>
+</dt></dl>
+</dd>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text">cimpl.Producer
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="IasCommandSender">class <strong>IasCommandSender</strong></a>(<a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#IasCommandSender">IasCommandSender</a>(sender_full_running_id:&nbsp;str,&nbsp;sender_id:&nbsp;str,&nbsp;brokers:&nbsp;str,&nbsp;string_producer:&nbsp;cimpl.<a href="#Producer">Producer</a>&nbsp;|&nbsp;None&nbsp;=&nbsp;None)<br>
+&nbsp;<br>
+Objects&nbsp;of&nbsp;this&nbsp;class&nbsp;send&nbsp;commands&nbsp;and&nbsp;optionally&nbsp;wait&nbsp;for&nbsp;the&nbsp;reply&nbsp;through&nbsp;the&nbsp;kafka&nbsp;topics.<br>
+&nbsp;<br>
+Methods&nbsp;to&nbsp;send&nbsp;commands&nbsp;are&nbsp;synchronized&nbsp;i.e.&nbsp;it&nbsp;is&nbsp;not&nbsp;possible&nbsp;to&nbsp;send&nbsp;a&nbsp;command&nbsp;before&nbsp;the<br>
+previous&nbsp;send&nbsp;terminates.&nbsp;This&nbsp;is&nbsp;in&nbsp;particular&nbsp;true&nbsp;for&nbsp;the&nbsp;request/reply<br>
+&nbsp;<br>
+This&nbsp;forces&nbsp;the&nbsp;sender&nbsp;to&nbsp;serialize&nbsp;requests&nbsp;and&nbsp;replies&nbsp;and&nbsp;can&nbsp;be&nbsp;a&nbsp;limitation&nbsp;if&nbsp;the&nbsp;sender&nbsp;needs<br>
+to&nbsp;send&nbsp;a&nbsp;bounce&nbsp;of&nbsp;commands.&nbsp;There&nbsp;is&nbsp;room&nbsp;for&nbsp;improvement,&nbsp;but&nbsp;at&nbsp;the&nbsp;present&nbsp;it&nbsp;is&nbsp;all&nbsp;the&nbsp;IAS&nbsp;needs.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="IasCmdReply.IasCommandSender.html#IasCommandSender">IasCommandSender</a></dd>
+<dd><a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="IasCommandSender-__init__"><strong>__init__</strong></a>(self, sender_full_running_id: str, sender_id: str, brokers: str, string_producer: cimpl.Producer | None = None)</dt><dd><span class="code">Constructor<br>
+&nbsp;<br>
+Params:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;senderFullRuningId&nbsp;The&nbsp;full&nbsp;runing&nbsp;id&nbsp;of&nbsp;the&nbsp;sender<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stringProducer&nbsp;The&nbsp;string&nbsp;producer&nbsp;to&nbsp;publish&nbsp;commands<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(if&nbsp;None&nbsp;builds&nbsp;a&nbsp;new&nbsp;producer)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;senderId&nbsp;The&nbsp;id&nbsp;of&nbsp;the&nbsp;sender<br>
+&nbsp;&nbsp;&nbsp;&nbsp;brokers&nbsp;URL&nbsp;of&nbsp;kafka&nbsp;brokers</span></dd></dl>
+
+<dl><dt><a name="IasCommandSender-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="IasCommandSender-iasLogReceived"><strong>iasLogReceived</strong></a>(self, log: str) -&gt; None</dt><dd><span class="code">Overrides&nbsp;<a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasLogListener</a>.iasLogReceived&nbsp;to&nbsp;get&nbsp;replies<br>
+&nbsp;<br>
+Put&nbsp;the&nbsp;replies&nbsp;in&nbsp;the&nbsp;queue</span></dd></dl>
+
+<dl><dt><a name="IasCommandSender-send_async"><strong>send_async</strong></a>(self, dest_id: str, command: IasCmdReply.IasCommandType.IasCommandType, params: Optional[List[str]] = None, properties: Optional[Dict[str, str]] = None) -&gt; None</dt><dd><span class="code">Send&nbsp;a&nbsp;command&nbsp;asynchronously&nbsp;(i.e.&nbsp;do&nbsp;not&nbsp;wait&nbsp;for&nbsp;the&nbsp;reply)<br>
+&nbsp;<br>
+Delegates&nbsp;the&nbsp;publising&nbsp;in&nbsp;the&nbsp;kafka&nbsp;topic&nbsp;to&nbsp;self.<strong>_publish_cmd</strong>.<br>
+&nbsp;<br>
+Params:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;destId&nbsp;The&nbsp;id&nbsp;of&nbsp;the&nbsp;destination&nbsp;of&nbsp;the&nbsp;command&nbsp;(cannot&nbsp;be&nbsp;BROADCAST)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;command&nbsp;The&nbsp;command&nbsp;to&nbsp;send<br>
+&nbsp;&nbsp;&nbsp;&nbsp;params&nbsp;The&nbsp;optional&nbsp;parameters&nbsp;of&nbsp;the&nbsp;command<br>
+&nbsp;&nbsp;&nbsp;&nbsp;properties&nbsp;The&nbsp;optional&nbsp;properties&nbsp;of&nbsp;the&nbsp;command</span></dd></dl>
+
+<dl><dt><a name="IasCommandSender-send_sync"><strong>send_sync</strong></a>(self, dest_id: str, command: IasCmdReply.IasCommandType.IasCommandType, params: Optional[List[str]] = None, properties: Optional[Dict[str, str]] = None, timeout: float = 0) -&gt; IasCmdReply.IasReply.IasReply | None</dt><dd><span class="code">Send&nbsp;a&nbsp;command&nbsp;synchronously,<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;sends&nbsp;the&nbsp;commands&nbsp;and,&nbsp;optionally,&nbsp;waits&nbsp;for&nbsp;the&nbsp;reply.<br>
+&nbsp;<br>
+Send-reply&nbsp;is&nbsp;not&nbsp;available&nbsp;for&nbsp;broadcast.<br>
+&nbsp;<br>
+Delegates&nbsp;the&nbsp;publising&nbsp;in&nbsp;the&nbsp;kafka&nbsp;topic&nbsp;to&nbsp;self.<strong>_publish_cmd</strong>.<br>
+&nbsp;<br>
+Params:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;destId&nbsp;The&nbsp;id&nbsp;of&nbsp;the&nbsp;destination&nbsp;of&nbsp;the&nbsp;command&nbsp;(cannot&nbsp;be&nbsp;BROADCAST)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;command&nbsp;The&nbsp;command&nbsp;to&nbsp;send<br>
+&nbsp;&nbsp;&nbsp;&nbsp;params&nbsp;The&nbsp;optional&nbsp;parameters&nbsp;of&nbsp;the&nbsp;command<br>
+&nbsp;&nbsp;&nbsp;&nbsp;properties&nbsp;The&nbsp;optional&nbsp;properties&nbsp;of&nbsp;the&nbsp;command<br>
+&nbsp;&nbsp;&nbsp;&nbsp;timeout&nbsp;the&nbsp;time&nbsp;interval&nbsp;(&gt;=0)&nbsp;for&nbsp;the&nbsp;timeout&nbsp;getting&nbsp;the&nbsp;reply<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(if&nbsp;0&nbsp;does&nbsp;not&nbsp;wait&nbsp;for&nbsp;the&nbsp;reply)&nbsp;<br>
+Return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;reply&nbsp;received&nbsp;by&nbsp;the&nbsp;destinator&nbsp;of&nbsp;the&nbsp;command&nbsp;or&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None&nbsp;if&nbsp;the&nbsp;waiting&nbsp;time&nbsp;elapsed&nbsp;before&nbsp;getting&nbsp;the&nbsp;reply</span></dd></dl>
+
+<dl><dt><a name="IasCommandSender-set_up"><strong>set_up</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="IasKafkaUtils.IasKafkaConsumer.html#IasLogListener">IasKafkaUtils.IasKafkaConsumer.IasLogListener</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Producer">class <strong>Producer</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Asynchronous&nbsp;Kafka&nbsp;<a href="#Producer">Producer</a><br>
+&nbsp;<br>
+..&nbsp;py:function::&nbsp;<a href="#Producer">Producer</a>(config)<br>
+&nbsp;<br>
+&nbsp;&nbsp;:param&nbsp;dict&nbsp;config:&nbsp;Configuration&nbsp;properties.&nbsp;At&nbsp;a&nbsp;minimum&nbsp;``bootstrap.servers``&nbsp;**should**&nbsp;be&nbsp;set<br>
+&nbsp;<br>
+&nbsp;&nbsp;Create&nbsp;a&nbsp;new&nbsp;<a href="#Producer">Producer</a>&nbsp;instance&nbsp;using&nbsp;the&nbsp;provided&nbsp;configuration&nbsp;dict.<br>
+&nbsp;<br>
+&nbsp;<br>
+..&nbsp;py:function::&nbsp;<a href="#Producer-__len__">__len__</a>(self)<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="#Producer">Producer</a>&nbsp;implements&nbsp;__len__&nbsp;that&nbsp;can&nbsp;be&nbsp;used&nbsp;as&nbsp;len(producer)&nbsp;to&nbsp;obtain&nbsp;number&nbsp;of&nbsp;messages&nbsp;waiting.<br>
+&nbsp;&nbsp;:returns:&nbsp;Number&nbsp;of&nbsp;messages&nbsp;and&nbsp;Kafka&nbsp;protocol&nbsp;requests&nbsp;waiting&nbsp;to&nbsp;be&nbsp;delivered&nbsp;to&nbsp;broker.<br>
+&nbsp;&nbsp;:rtype:&nbsp;int<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Producer-__bool__"><strong>__bool__</strong></a>(self, /)</dt><dd><span class="code">True&nbsp;if&nbsp;self&nbsp;else&nbsp;False</span></dd></dl>
+
+<dl><dt><a name="Producer-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Producer-__len__"><strong>__len__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;len(self).</span></dd></dl>
+
+<dl><dt><a name="Producer-abort_transaction"><strong>abort_transaction</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-abort_transaction">abort_transaction</a>([timeout])<br>
+&nbsp;<br>
+Aborts&nbsp;the&nbsp;current&nbsp;transaction.<br>
+This&nbsp;function&nbsp;should&nbsp;also&nbsp;be&nbsp;used&nbsp;to&nbsp;recover&nbsp;from&nbsp;non-fatal<br>
+abortable&nbsp;transaction&nbsp;errors&nbsp;when&nbsp;KafkaError.txn_requires_abort()<br>
+is&nbsp;True.<br>
+&nbsp;<br>
+Any&nbsp;outstanding&nbsp;messages&nbsp;will&nbsp;be&nbsp;purged&nbsp;and&nbsp;fail&nbsp;with<br>
+_PURGE_INFLIGHT&nbsp;or&nbsp;_PURGE_QUEUE.<br>
+&nbsp;<br>
+Note:&nbsp;This&nbsp;function&nbsp;will&nbsp;block&nbsp;until&nbsp;all&nbsp;outstanding&nbsp;messages<br>
+are&nbsp;purged&nbsp;and&nbsp;the&nbsp;transaction&nbsp;abort&nbsp;request&nbsp;has&nbsp;been<br>
+successfully&nbsp;handled&nbsp;by&nbsp;the&nbsp;transaction&nbsp;coordinator,&nbsp;or&nbsp;until<br>
+the&nbsp;timeout&nbsp;expires,&nbsp;which&nbsp;ever&nbsp;comes&nbsp;first.&nbsp;On&nbsp;timeout&nbsp;the<br>
+application&nbsp;may&nbsp;call&nbsp;the&nbsp;function&nbsp;again.<br>
+&nbsp;<br>
+Note:&nbsp;Will&nbsp;automatically&nbsp;call&nbsp;<a href="#Producer-purge">purge</a>()&nbsp;and&nbsp;<a href="#Producer-flush">flush</a>()&nbsp;&nbsp;to&nbsp;ensure<br>
+all&nbsp;queued&nbsp;and&nbsp;in-flight&nbsp;messages&nbsp;are&nbsp;purged&nbsp;before&nbsp;attempting<br>
+to&nbsp;abort&nbsp;the&nbsp;transaction.<br>
+&nbsp;<br>
+:param&nbsp;float&nbsp;timeout:&nbsp;The&nbsp;maximum&nbsp;amount&nbsp;of&nbsp;time&nbsp;to&nbsp;block<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waiting&nbsp;for&nbsp;transaction&nbsp;to&nbsp;abort&nbsp;in&nbsp;seconds.<br>
+&nbsp;<br>
+:raises:&nbsp;KafkaError:&nbsp;Use&nbsp;exc.args[0].retriable()&nbsp;to&nbsp;check&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operation&nbsp;may&nbsp;be&nbsp;retried.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Treat&nbsp;any&nbsp;other&nbsp;error&nbsp;as&nbsp;a&nbsp;fatal&nbsp;error.</span></dd></dl>
+
+<dl><dt><a name="Producer-begin_transaction"><strong>begin_transaction</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-begin_transaction">begin_transaction</a>()<br>
+&nbsp;<br>
+Begin&nbsp;a&nbsp;new&nbsp;transaction.<br>
+&nbsp;<br>
+<a href="#Producer-init_transactions">init_transactions</a>()&nbsp;must&nbsp;have&nbsp;been&nbsp;called&nbsp;successfully&nbsp;(once)<br>
+before&nbsp;this&nbsp;function&nbsp;is&nbsp;called.<br>
+&nbsp;<br>
+Any&nbsp;messages&nbsp;produced&nbsp;or&nbsp;offsets&nbsp;sent&nbsp;to&nbsp;a&nbsp;transaction,&nbsp;after<br>
+the&nbsp;successful&nbsp;return&nbsp;of&nbsp;this&nbsp;function&nbsp;will&nbsp;be&nbsp;part&nbsp;of&nbsp;the<br>
+transaction&nbsp;and&nbsp;committed&nbsp;or&nbsp;aborted&nbsp;atomically.<br>
+&nbsp;<br>
+Complete&nbsp;the&nbsp;transaction&nbsp;by&nbsp;calling&nbsp;<a href="#Producer-commit_transaction">commit_transaction</a>()&nbsp;or<br>
+Abort&nbsp;the&nbsp;transaction&nbsp;by&nbsp;calling&nbsp;<a href="#Producer-abort_transaction">abort_transaction</a>().<br>
+&nbsp;<br>
+:raises:&nbsp;KafkaError:&nbsp;Use&nbsp;exc.args[0].retriable()&nbsp;to&nbsp;check&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operation&nbsp;may&nbsp;be&nbsp;retried,&nbsp;else&nbsp;treat&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error&nbsp;as&nbsp;a&nbsp;fatal&nbsp;error.</span></dd></dl>
+
+<dl><dt><a name="Producer-commit_transaction"><strong>commit_transaction</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-commit_transaction">commit_transaction</a>([timeout])<br>
+&nbsp;<br>
+Commmit&nbsp;the&nbsp;current&nbsp;transaction.<br>
+Any&nbsp;outstanding&nbsp;messages&nbsp;will&nbsp;be&nbsp;flushed&nbsp;(delivered)&nbsp;before<br>
+actually&nbsp;committing&nbsp;the&nbsp;transaction.<br>
+&nbsp;<br>
+If&nbsp;any&nbsp;of&nbsp;the&nbsp;outstanding&nbsp;messages&nbsp;fail&nbsp;permanently&nbsp;the&nbsp;current<br>
+transaction&nbsp;will&nbsp;enter&nbsp;the&nbsp;abortable&nbsp;error&nbsp;state&nbsp;and&nbsp;this<br>
+function&nbsp;will&nbsp;return&nbsp;an&nbsp;abortable&nbsp;error,&nbsp;in&nbsp;this&nbsp;case&nbsp;the<br>
+application&nbsp;must&nbsp;call&nbsp;<a href="#Producer-abort_transaction">abort_transaction</a>()&nbsp;before&nbsp;attempting<br>
+a&nbsp;new&nbsp;transaction&nbsp;with&nbsp;<a href="#Producer-begin_transaction">begin_transaction</a>().<br>
+&nbsp;<br>
+Note:&nbsp;This&nbsp;function&nbsp;will&nbsp;block&nbsp;until&nbsp;all&nbsp;outstanding&nbsp;messages<br>
+are&nbsp;delivered&nbsp;and&nbsp;the&nbsp;transaction&nbsp;commit&nbsp;request&nbsp;has&nbsp;been<br>
+successfully&nbsp;handled&nbsp;by&nbsp;the&nbsp;transaction&nbsp;coordinator,&nbsp;or&nbsp;until<br>
+the&nbsp;timeout&nbsp;expires,&nbsp;which&nbsp;ever&nbsp;comes&nbsp;first.&nbsp;On&nbsp;timeout&nbsp;the<br>
+application&nbsp;may&nbsp;call&nbsp;the&nbsp;function&nbsp;again.<br>
+&nbsp;<br>
+Note:&nbsp;Will&nbsp;automatically&nbsp;call&nbsp;<a href="#Producer-flush">flush</a>()&nbsp;to&nbsp;ensure&nbsp;all&nbsp;queued<br>
+messages&nbsp;are&nbsp;delivered&nbsp;before&nbsp;attempting&nbsp;to&nbsp;commit&nbsp;the<br>
+transaction.&nbsp;Delivery&nbsp;reports&nbsp;and&nbsp;other&nbsp;callbacks&nbsp;may&nbsp;thus&nbsp;be<br>
+triggered&nbsp;from&nbsp;this&nbsp;method.<br>
+&nbsp;<br>
+:param&nbsp;float&nbsp;timeout:&nbsp;The&nbsp;amount&nbsp;of&nbsp;time&nbsp;to&nbsp;block&nbsp;in&nbsp;seconds.<br>
+&nbsp;<br>
+:raises:&nbsp;KafkaError:&nbsp;Use&nbsp;exc.args[0].retriable()&nbsp;to&nbsp;check&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operation&nbsp;may&nbsp;be&nbsp;retried,&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exc.args[0].txn_requires_abort()&nbsp;if&nbsp;the&nbsp;current<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transaction&nbsp;has&nbsp;failed&nbsp;and&nbsp;must&nbsp;be&nbsp;aborted&nbsp;by&nbsp;calling<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Producer-abort_transaction">abort_transaction</a>()&nbsp;and&nbsp;then&nbsp;start&nbsp;a&nbsp;new&nbsp;transaction<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;<a href="#Producer-begin_transaction">begin_transaction</a>().<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Treat&nbsp;any&nbsp;other&nbsp;error&nbsp;as&nbsp;a&nbsp;fatal&nbsp;error.</span></dd></dl>
+
+<dl><dt><a name="Producer-flush"><strong>flush</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-flush">flush</a>([timeout])<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;Wait&nbsp;for&nbsp;all&nbsp;messages&nbsp;in&nbsp;the&nbsp;<a href="#Producer">Producer</a>&nbsp;queue&nbsp;to&nbsp;be&nbsp;delivered.<br>
+&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;a&nbsp;convenience&nbsp;method&nbsp;that&nbsp;calls&nbsp;:py:func:`<a href="#Producer-poll">poll</a>()`&nbsp;until&nbsp;:py:func:`len()`&nbsp;is&nbsp;zero&nbsp;or&nbsp;the&nbsp;optional&nbsp;timeout&nbsp;elapses.<br>
+&nbsp;<br>
+&nbsp;&nbsp;:param:&nbsp;float&nbsp;timeout:&nbsp;Maximum&nbsp;time&nbsp;to&nbsp;block&nbsp;(requires&nbsp;librdkafka&nbsp;&gt;=&nbsp;v0.9.4).&nbsp;(Seconds)<br>
+&nbsp;&nbsp;:returns:&nbsp;Number&nbsp;of&nbsp;messages&nbsp;still&nbsp;in&nbsp;queue.<br>
+&nbsp;<br>
+..&nbsp;note::&nbsp;See&nbsp;:py:func:`<a href="#Producer-poll">poll</a>()`&nbsp;for&nbsp;a&nbsp;description&nbsp;on&nbsp;what&nbsp;callbacks&nbsp;may&nbsp;be&nbsp;triggered.</span></dd></dl>
+
+<dl><dt><a name="Producer-init_transactions"><strong>init_transactions</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function:&nbsp;<a href="#Producer-init_transactions">init_transactions</a>([timeout])<br>
+&nbsp;<br>
+Initializes&nbsp;transactions&nbsp;for&nbsp;the&nbsp;producer&nbsp;instance.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;ensures&nbsp;any&nbsp;transactions&nbsp;initiated&nbsp;by&nbsp;previous<br>
+instances&nbsp;of&nbsp;the&nbsp;producer&nbsp;with&nbsp;the&nbsp;same&nbsp;`transactional.id`&nbsp;are<br>
+completed.<br>
+If&nbsp;the&nbsp;previous&nbsp;instance&nbsp;failed&nbsp;with&nbsp;a&nbsp;transaction&nbsp;in&nbsp;progress<br>
+the&nbsp;previous&nbsp;transaction&nbsp;will&nbsp;be&nbsp;aborted.<br>
+This&nbsp;function&nbsp;needs&nbsp;to&nbsp;be&nbsp;called&nbsp;before&nbsp;any&nbsp;other&nbsp;transactional<br>
+or&nbsp;produce&nbsp;functions&nbsp;are&nbsp;called&nbsp;when&nbsp;the&nbsp;`transactional.id`&nbsp;is<br>
+configured.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;last&nbsp;transaction&nbsp;had&nbsp;begun&nbsp;completion&nbsp;(following<br>
+transaction&nbsp;commit)&nbsp;but&nbsp;not&nbsp;yet&nbsp;finished,&nbsp;this&nbsp;function&nbsp;will<br>
+await&nbsp;the&nbsp;previous&nbsp;transaction's&nbsp;completion.<br>
+&nbsp;<br>
+When&nbsp;any&nbsp;previous&nbsp;transactions&nbsp;have&nbsp;been&nbsp;fenced&nbsp;this&nbsp;function<br>
+will&nbsp;acquire&nbsp;the&nbsp;internal&nbsp;producer&nbsp;id&nbsp;and&nbsp;epoch,&nbsp;used&nbsp;in&nbsp;all<br>
+future&nbsp;transactional&nbsp;messages&nbsp;issued&nbsp;by&nbsp;this&nbsp;producer&nbsp;instance.<br>
+&nbsp;<br>
+Upon&nbsp;successful&nbsp;return&nbsp;from&nbsp;this&nbsp;function&nbsp;the&nbsp;application&nbsp;has&nbsp;to<br>
+perform&nbsp;at&nbsp;least&nbsp;one&nbsp;of&nbsp;the&nbsp;following&nbsp;operations&nbsp;within&nbsp;<br>
+`transaction.timeout.ms`&nbsp;to&nbsp;avoid&nbsp;timing&nbsp;out&nbsp;the&nbsp;transaction<br>
+on&nbsp;the&nbsp;broker:<br>
+*&nbsp;<a href="#Producer-produce">produce</a>()&nbsp;(et.al)<br>
+*&nbsp;<a href="#Producer-send_offsets_to_transaction">send_offsets_to_transaction</a>()<br>
+*&nbsp;<a href="#Producer-commit_transaction">commit_transaction</a>()<br>
+*&nbsp;<a href="#Producer-abort_transaction">abort_transaction</a>()<br>
+&nbsp;<br>
+:param&nbsp;float&nbsp;timeout:&nbsp;Maximum&nbsp;time&nbsp;to&nbsp;block&nbsp;in&nbsp;seconds.<br>
+&nbsp;<br>
+:raises:&nbsp;KafkaError:&nbsp;Use&nbsp;exc.args[0].retriable()&nbsp;to&nbsp;check&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operation&nbsp;may&nbsp;be&nbsp;retried,&nbsp;else&nbsp;treat&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error&nbsp;as&nbsp;a&nbsp;fatal&nbsp;error.</span></dd></dl>
+
+<dl><dt><a name="Producer-list_topics"><strong>list_topics</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-list_topics">list_topics</a>([topic=None],&nbsp;[timeout=-1])<br>
+&nbsp;<br>
+Request&nbsp;metadata&nbsp;from&nbsp;the&nbsp;cluster.<br>
+This&nbsp;method&nbsp;provides&nbsp;the&nbsp;same&nbsp;information&nbsp;as&nbsp;&nbsp;listTopics(),&nbsp;describeTopics()&nbsp;and&nbsp;describeCluster()&nbsp;in&nbsp;&nbsp;the&nbsp;Java&nbsp;Admin&nbsp;client.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;topic:&nbsp;If&nbsp;specified,&nbsp;only&nbsp;request&nbsp;information&nbsp;about&nbsp;this&nbsp;topic,&nbsp;else&nbsp;return&nbsp;results&nbsp;for&nbsp;all&nbsp;topics&nbsp;in&nbsp;cluster.&nbsp;Warning:&nbsp;If&nbsp;auto.create.topics.enable&nbsp;is&nbsp;set&nbsp;to&nbsp;true&nbsp;on&nbsp;the&nbsp;broker&nbsp;and&nbsp;an&nbsp;unknown&nbsp;topic&nbsp;is&nbsp;specified,&nbsp;it&nbsp;will&nbsp;be&nbsp;created.<br>
+:param&nbsp;float&nbsp;timeout:&nbsp;The&nbsp;maximum&nbsp;response&nbsp;time&nbsp;before&nbsp;timing&nbsp;out,&nbsp;or&nbsp;-1&nbsp;for&nbsp;infinite&nbsp;timeout.<br>
+:rtype:&nbsp;ClusterMetadata<br>
+:raises:&nbsp;KafkaException</span></dd></dl>
+
+<dl><dt><a name="Producer-poll"><strong>poll</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-poll">poll</a>([timeout])<br>
+&nbsp;<br>
+Polls&nbsp;the&nbsp;producer&nbsp;for&nbsp;events&nbsp;and&nbsp;calls&nbsp;the&nbsp;corresponding&nbsp;callbacks&nbsp;(if&nbsp;registered).<br>
+&nbsp;<br>
+Callbacks:<br>
+&nbsp;<br>
+-&nbsp;``on_delivery``&nbsp;callbacks&nbsp;from&nbsp;:py:func:`<a href="#Producer-produce">produce</a>()`<br>
+-&nbsp;...<br>
+&nbsp;<br>
+:param&nbsp;float&nbsp;timeout:&nbsp;Maximum&nbsp;time&nbsp;to&nbsp;block&nbsp;waiting&nbsp;for&nbsp;events.&nbsp;(Seconds)<br>
+:returns:&nbsp;Number&nbsp;of&nbsp;events&nbsp;processed&nbsp;(callbacks&nbsp;served)<br>
+:rtype:&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Producer-produce"><strong>produce</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-produce">produce</a>(topic,&nbsp;[value],&nbsp;[key],&nbsp;[partition],&nbsp;[on_delivery],&nbsp;[timestamp],&nbsp;[headers])<br>
+&nbsp;<br>
+Produce&nbsp;message&nbsp;to&nbsp;topic.<br>
+This&nbsp;is&nbsp;an&nbsp;asynchronous&nbsp;operation,&nbsp;an&nbsp;application&nbsp;may&nbsp;use&nbsp;the&nbsp;``callback``&nbsp;(alias&nbsp;``on_delivery``)&nbsp;argument&nbsp;to&nbsp;pass&nbsp;a&nbsp;function&nbsp;(or&nbsp;lambda)&nbsp;that&nbsp;will&nbsp;be&nbsp;called&nbsp;from&nbsp;:py:func:`<a href="#Producer-poll">poll</a>()`&nbsp;when&nbsp;the&nbsp;message&nbsp;has&nbsp;been&nbsp;successfully&nbsp;delivered&nbsp;or&nbsp;permanently&nbsp;fails&nbsp;delivery.<br>
+&nbsp;<br>
+Currently&nbsp;message&nbsp;headers&nbsp;are&nbsp;not&nbsp;supported&nbsp;on&nbsp;the&nbsp;message&nbsp;returned&nbsp;to&nbsp;the&nbsp;callback.&nbsp;The&nbsp;``msg.headers()``&nbsp;will&nbsp;return&nbsp;None&nbsp;even&nbsp;if&nbsp;the&nbsp;original&nbsp;message&nbsp;had&nbsp;headers&nbsp;set.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;topic:&nbsp;Topic&nbsp;to&nbsp;produce&nbsp;message&nbsp;to<br>
+:param&nbsp;str|bytes&nbsp;value:&nbsp;Message&nbsp;payload<br>
+:param&nbsp;str|bytes&nbsp;key:&nbsp;Message&nbsp;key<br>
+:param&nbsp;int&nbsp;partition:&nbsp;Partition&nbsp;to&nbsp;produce&nbsp;to,&nbsp;else&nbsp;uses&nbsp;the&nbsp;configured&nbsp;built-in&nbsp;partitioner.<br>
+:param&nbsp;func&nbsp;on_delivery(err,msg):&nbsp;Delivery&nbsp;report&nbsp;callback&nbsp;to&nbsp;call&nbsp;(from&nbsp;:py:func:`<a href="#Producer-poll">poll</a>()`&nbsp;or&nbsp;:py:func:`<a href="#Producer-flush">flush</a>()`)&nbsp;on&nbsp;successful&nbsp;or&nbsp;failed&nbsp;delivery<br>
+:param&nbsp;int&nbsp;timestamp:&nbsp;Message&nbsp;timestamp&nbsp;(CreateTime)&nbsp;in&nbsp;milliseconds&nbsp;since&nbsp;epoch&nbsp;UTC&nbsp;(requires&nbsp;librdkafka&nbsp;&gt;=&nbsp;v0.9.4,&nbsp;api.version.request=true,&nbsp;and&nbsp;broker&nbsp;&gt;=&nbsp;0.10.0.0).&nbsp;Default&nbsp;value&nbsp;is&nbsp;current&nbsp;time.<br>
+&nbsp;<br>
+:param&nbsp;dict|list&nbsp;headers:&nbsp;Message&nbsp;headers&nbsp;to&nbsp;set&nbsp;on&nbsp;the&nbsp;message.&nbsp;The&nbsp;header&nbsp;key&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;while&nbsp;the&nbsp;value&nbsp;must&nbsp;be&nbsp;binary,&nbsp;unicode&nbsp;or&nbsp;None.&nbsp;Accepts&nbsp;a&nbsp;list&nbsp;of&nbsp;(key,value)&nbsp;or&nbsp;a&nbsp;dict.&nbsp;(Requires&nbsp;librdkafka&nbsp;&gt;=&nbsp;v0.11.4&nbsp;and&nbsp;broker&nbsp;version&nbsp;&gt;=&nbsp;0.11.0.0)<br>
+:rtype:&nbsp;None<br>
+:raises&nbsp;BufferError:&nbsp;if&nbsp;the&nbsp;internal&nbsp;producer&nbsp;message&nbsp;queue&nbsp;is&nbsp;full&nbsp;(``queue.buffering.max.messages``&nbsp;exceeded)<br>
+:raises&nbsp;KafkaException:&nbsp;for&nbsp;other&nbsp;errors,&nbsp;see&nbsp;exception&nbsp;code<br>
+:raises&nbsp;NotImplementedError:&nbsp;if&nbsp;timestamp&nbsp;is&nbsp;specified&nbsp;without&nbsp;underlying&nbsp;library&nbsp;support.</span></dd></dl>
+
+<dl><dt><a name="Producer-purge"><strong>purge</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-purge">purge</a>([in_queue=True],&nbsp;[in_flight=True],&nbsp;[blocking=True])<br>
+&nbsp;<br>
+&nbsp;Purge&nbsp;messages&nbsp;currently&nbsp;handled&nbsp;by&nbsp;the&nbsp;producer&nbsp;instance.<br>
+&nbsp;The&nbsp;application&nbsp;will&nbsp;need&nbsp;to&nbsp;call&nbsp;<a href="#Producer-poll">poll</a>()&nbsp;or&nbsp;<a href="#Producer-flush">flush</a>()&nbsp;afterwards&nbsp;to&nbsp;serve&nbsp;the&nbsp;delivery&nbsp;report&nbsp;callbacks&nbsp;of&nbsp;the&nbsp;purged&nbsp;messages.<br>
+&nbsp;<br>
+:param:&nbsp;bool&nbsp;in_queue:&nbsp;Purge&nbsp;messages&nbsp;from&nbsp;internal&nbsp;queues.&nbsp;By&nbsp;default,&nbsp;true.<br>
+:param:&nbsp;bool&nbsp;in_flight:&nbsp;Purge&nbsp;messages&nbsp;in&nbsp;flight&nbsp;to&nbsp;or&nbsp;from&nbsp;the&nbsp;broker.&nbsp;By&nbsp;default,&nbsp;true.<br>
+:param:&nbsp;bool&nbsp;blocking:&nbsp;If&nbsp;set&nbsp;to&nbsp;False,&nbsp;will&nbsp;not&nbsp;wait&nbsp;on&nbsp;background&nbsp;thread&nbsp;queue&nbsp;purging&nbsp;to&nbsp;finish.&nbsp;By&nbsp;default,&nbsp;true.</span></dd></dl>
+
+<dl><dt><a name="Producer-send_offsets_to_transaction"><strong>send_offsets_to_transaction</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-send_offsets_to_transaction">send_offsets_to_transaction</a>(positions,&nbsp;group_metadata,&nbsp;[timeout])<br>
+&nbsp;<br>
+Sends&nbsp;a&nbsp;list&nbsp;of&nbsp;topic&nbsp;partition&nbsp;offsets&nbsp;to&nbsp;the&nbsp;consumer&nbsp;group<br>
+coordinator&nbsp;for&nbsp;group_metadata&nbsp;and&nbsp;marks&nbsp;the&nbsp;offsets&nbsp;as&nbsp;part<br>
+of&nbsp;the&nbsp;current&nbsp;transaction.<br>
+These&nbsp;offsets&nbsp;will&nbsp;be&nbsp;considered&nbsp;committed&nbsp;only&nbsp;if&nbsp;the<br>
+transaction&nbsp;is&nbsp;committed&nbsp;successfully.<br>
+&nbsp;<br>
+The&nbsp;offsets&nbsp;should&nbsp;be&nbsp;the&nbsp;next&nbsp;message&nbsp;your&nbsp;application&nbsp;will<br>
+consume,&nbsp;i.e.,&nbsp;the&nbsp;last&nbsp;processed&nbsp;message's&nbsp;offset&nbsp;+&nbsp;1&nbsp;for&nbsp;each<br>
+partition.<br>
+Either&nbsp;track&nbsp;the&nbsp;offsets&nbsp;manually&nbsp;during&nbsp;processing&nbsp;or&nbsp;use<br>
+consumer.position()&nbsp;(on&nbsp;the&nbsp;consumer)&nbsp;to&nbsp;get&nbsp;the&nbsp;current&nbsp;offsets<br>
+for&nbsp;the&nbsp;partitions&nbsp;assigned&nbsp;to&nbsp;the&nbsp;consumer.<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;method&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;consume-transform-produce&nbsp;loop<br>
+prior&nbsp;to&nbsp;committing&nbsp;the&nbsp;transaction&nbsp;with&nbsp;<a href="#Producer-commit_transaction">commit_transaction</a>().<br>
+&nbsp;<br>
+Note:&nbsp;The&nbsp;consumer&nbsp;must&nbsp;disable&nbsp;auto&nbsp;commits<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(set&nbsp;`enable.auto.commit`&nbsp;to&nbsp;false&nbsp;on&nbsp;the&nbsp;consumer).<br>
+&nbsp;<br>
+Note:&nbsp;Logical&nbsp;and&nbsp;invalid&nbsp;offsets&nbsp;(e.g.,&nbsp;OFFSET_INVALID)&nbsp;in<br>
+offsets&nbsp;will&nbsp;be&nbsp;ignored.&nbsp;If&nbsp;there&nbsp;are&nbsp;no&nbsp;valid&nbsp;offsets&nbsp;in<br>
+offsets&nbsp;the&nbsp;function&nbsp;will&nbsp;return&nbsp;successfully&nbsp;and&nbsp;no&nbsp;action<br>
+will&nbsp;be&nbsp;taken.<br>
+&nbsp;<br>
+:param&nbsp;list(TopicPartition)&nbsp;offsets:&nbsp;current&nbsp;consumer/processing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position(offsets)&nbsp;for&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;partitions.<br>
+:param&nbsp;<a href="builtins.html#object">object</a>&nbsp;group_metadata:&nbsp;consumer&nbsp;group&nbsp;metadata&nbsp;retrieved<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;the&nbsp;input&nbsp;consumer's<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get_consumer_group_metadata().<br>
+:param&nbsp;float&nbsp;timeout:&nbsp;Amount&nbsp;of&nbsp;time&nbsp;to&nbsp;block&nbsp;in&nbsp;seconds.<br>
+&nbsp;<br>
+:raises:&nbsp;KafkaError:&nbsp;Use&nbsp;exc.args[0].retriable()&nbsp;to&nbsp;check&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operation&nbsp;may&nbsp;be&nbsp;retried,&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exc.args[0].txn_requires_abort()&nbsp;if&nbsp;the&nbsp;current<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transaction&nbsp;has&nbsp;failed&nbsp;and&nbsp;must&nbsp;be&nbsp;aborted&nbsp;by&nbsp;calling<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Producer-abort_transaction">abort_transaction</a>()&nbsp;and&nbsp;then&nbsp;start&nbsp;a&nbsp;new&nbsp;transaction<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;<a href="#Producer-begin_transaction">begin_transaction</a>().<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Treat&nbsp;any&nbsp;other&nbsp;error&nbsp;as&nbsp;a&nbsp;fatal&nbsp;error.</span></dd></dl>
+
+<dl><dt><a name="Producer-set_sasl_credentials"><strong>set_sasl_credentials</strong></a>(...)</dt><dd><span class="code">..&nbsp;py:function::&nbsp;<a href="#Producer-set_sasl_credentials">set_sasl_credentials</a>(username,&nbsp;password)<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;SASL&nbsp;credentials&nbsp;used&nbsp;for&nbsp;this&nbsp;client.<br>
+These&nbsp;credentials&nbsp;will&nbsp;overwrite&nbsp;the&nbsp;old&nbsp;ones,&nbsp;and&nbsp;will&nbsp;be&nbsp;used&nbsp;the&nbsp;next&nbsp;time&nbsp;the&nbsp;client&nbsp;needs&nbsp;to&nbsp;authenticate.<br>
+This&nbsp;method&nbsp;will&nbsp;not&nbsp;disconnect&nbsp;existing&nbsp;broker&nbsp;connections&nbsp;that&nbsp;have&nbsp;been&nbsp;established&nbsp;with&nbsp;the&nbsp;old&nbsp;credentials.<br>
+This&nbsp;method&nbsp;is&nbsp;applicable&nbsp;only&nbsp;to&nbsp;SASL&nbsp;PLAIN&nbsp;and&nbsp;SCRAM&nbsp;mechanisms.</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Producer-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Dict</strong> = typing.Dict<br>
+<strong>List</strong> = typing.List</td></tr></table>
+</body></html>

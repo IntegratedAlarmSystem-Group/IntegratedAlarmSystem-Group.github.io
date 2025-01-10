@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module IasCdb.SqlRunner</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="IasCdb.html" class="white">IasCdb</a>.SqlRunner</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/fedora/IasRoot/lib/python3.12/site-packages/IasCdb/SqlRunner.py">/home/fedora/IasRoot/lib/python3.12/site-packages/IasCdb/SqlRunner.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="atexit.html">atexit</a><br>
+</td><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="oracledb.html">oracledb</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="IasCdb.SqlRunner.html#SqlRunner">SqlRunner</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SqlRunner">class <strong>SqlRunner</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#SqlRunner">SqlRunner</a>(user,&nbsp;pswd,&nbsp;dbUrl)<br>
+&nbsp;<br>
+Runs&nbsp;SQL&nbsp;scripts&nbsp;and&nbsp;statements&nbsp;after&nbsp;connecting&nbsp;to&nbsp;the&nbsp;oracle<br>
+database.<br>
+&nbsp;<br>
+Requires&nbsp;oracledb&nbsp;from&nbsp;oracle&nbsp;(<a href="https://python-oracledb.readthedocs.io/en/latest/index.html">https://python-oracledb.readthedocs.io/en/latest/index.html</a>)<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="SqlRunner-__init__"><strong>__init__</strong></a>(self, user, pswd, dbUrl)</dt><dd><span class="code">Constructor<br>
+&nbsp;<br>
+:param&nbsp;user:&nbsp;the&nbsp;user&nbsp;name&nbsp;to&nbsp;login&nbsp;to&nbsp;the&nbsp;RDBMS<br>
+:param&nbsp;pswd:&nbsp;the&nbsp;password<br>
+:param&nbsp;dbUrl:&nbsp;the&nbsp;URL&nbsp;to&nbsp;connect&nbsp;to&nbsp;the&nbsp;RDBMS</span></dd></dl>
+
+<dl><dt><a name="SqlRunner-close"><strong>close</strong></a>(self)</dt><dd><span class="code">Close&nbsp;the&nbsp;connection&nbsp;and&nbsp;the&nbsp;cursor.<br>
+Normally&nbsp;invoked&nbsp;by&nbsp;atexit&nbsp;but&nbsp;can&nbsp;be&nbsp;invoked&nbsp;anytime.<br>
+&nbsp;<br>
+The&nbsp;<a href="#SqlRunner">SqlRunner</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;can't&nbsp;be&nbsp;used&nbsp;after&nbsp;closing,&nbsp;unless&nbsp;an&nbsp;alternate<br>
+cursor&nbsp;is&nbsp;passed&nbsp;to&nbsp;the&nbsp;methods.<br>
+&nbsp;<br>
+:return:</span></dd></dl>
+
+<dl><dt><a name="SqlRunner-executeSqlFromFile"><strong>executeSqlFromFile</strong></a>(self, fileName, alternateCursor=None, ignoreErrors=False)</dt><dd><span class="code">Execute&nbsp;the&nbsp;script&nbsp;read&nbsp;from&nbsp;the&nbsp;passed&nbsp;file<br>
+&nbsp;<br>
+:param&nbsp;fileName:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file&nbsp;with&nbsp;the&nbsp;SQL&nbsp;script<br>
+:param&nbsp;alternateCursor:&nbsp;the&nbsp;cursor&nbsp;to&nbsp;use&nbsp;instead&nbsp;of&nbsp;the&nbsp;one&nbsp;passed&nbsp;in&nbsp;the&nbsp;constructor<br>
+:param&nbsp;ignoreErrors:&nbsp;if&nbsp;True&nbsp;ignore&nbsp;the&nbsp;errors&nbsp;returned&nbsp;by&nbsp;runnng&nbsp;a&nbsp;SQL&nbsp;comamnd<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otherwise&nbsp;terminates&nbsp;immediately&nbsp;if&nbsp;an&nbsp;error&nbsp;occurs<br>
+:return:&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;rows&nbsp;that&nbsp;have&nbsp;currently&nbsp;been&nbsp;fetched&nbsp;from&nbsp;the&nbsp;cursor&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;select&nbsp;statements)&nbsp;or&nbsp;that&nbsp;have&nbsp;been&nbsp;affected&nbsp;by&nbsp;the&nbsp;operation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(for&nbsp;insert,&nbsp;update&nbsp;and&nbsp;delete&nbsp;statements</span></dd></dl>
+
+<dl><dt><a name="SqlRunner-executeSqlScript"><strong>executeSqlScript</strong></a>(self, script, alternateCursor=None)</dt><dd><span class="code">Execute&nbsp;the&nbsp;passed&nbsp;SQL&nbsp;script.<br>
+&nbsp;<br>
+Note:&nbsp;it&nbsp;asumes&nbsp;that<br>
+a)&nbsp;SQL&nbsp;staments&nbsp;are&nbsp;separated&nbsp;by&nbsp;&nbsp;';'<br>
+b)&nbsp;the&nbsp;script&nbsp;does&nbsp;not&nbsp;contain&nbsp;';'&nbsp;other&nbsp;than&nbsp;those&nbsp;for&nbsp;separating&nbsp;SQL&nbsp;statements<br>
+&nbsp;<br>
+:param&nbsp;script:&nbsp;the&nbsp;script&nbsp;to&nbsp;sun<br>
+:param&nbsp;alternateCursor:&nbsp;&nbsp;the&nbsp;cursor&nbsp;to&nbsp;use&nbsp;instead&nbsp;of&nbsp;the&nbsp;one&nbsp;passed&nbsp;in&nbsp;the&nbsp;constructor<br>
+:return:&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;rows&nbsp;that&nbsp;have&nbsp;currently&nbsp;been&nbsp;fetched&nbsp;from&nbsp;the&nbsp;cursor&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;select&nbsp;statements)&nbsp;or&nbsp;that&nbsp;have&nbsp;been&nbsp;affected&nbsp;by&nbsp;the&nbsp;operation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(for&nbsp;insert,&nbsp;update&nbsp;and&nbsp;delete&nbsp;statements)</span></dd></dl>
+
+<dl><dt><a name="SqlRunner-executeSqlStatement"><strong>executeSqlStatement</strong></a>(self, cmd, alternateCursor=None)</dt><dd><span class="code">Execute&nbsp;the&nbsp;SQL&nbsp;statement&nbsp;in&nbsp;the&nbsp;parameter<br>
+&nbsp;<br>
+:param&nbsp;cmd:&nbsp;the&nbsp;SQL&nbsp;statement&nbsp;to&nbsp;run<br>
+:param&nbsp;alternateCursor:&nbsp;the&nbsp;cursor&nbsp;to&nbsp;use&nbsp;instead&nbsp;of&nbsp;the&nbsp;one&nbsp;passed&nbsp;in&nbsp;the&nbsp;constructor<br>
+:return:&nbsp;the&nbsp;number&nbsp;of&nbsp;rows&nbsp;that&nbsp;have&nbsp;currently&nbsp;been&nbsp;fetched&nbsp;from&nbsp;the&nbsp;cursor&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;select&nbsp;statements)&nbsp;or&nbsp;that&nbsp;have&nbsp;been&nbsp;affected&nbsp;by&nbsp;the&nbsp;operation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(for&nbsp;insert,&nbsp;update&nbsp;and&nbsp;delete&nbsp;statements).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
